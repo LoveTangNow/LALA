@@ -9,7 +9,8 @@
         <!--4th-->
         <scene sceneID="Ggh-ys-1hy">
             <objects>
-                <viewController storyboardIdentifier="FourthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mwa-IZ-ExG" customClass="FourthViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb3-bn-1Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="mwa-IZ-ExG" customClass="FourthViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vyd-5u-RAV"/>
                         <viewControllerLayoutGuide type="bottom" id="Di2-xA-okE"/>
@@ -34,7 +35,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="4th" image="second" id="WvA-Ge-S0z"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kb3-bn-1Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="722" y="898"/>
         </scene>
@@ -54,6 +54,12 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="首页" id="HrL-J1-Awd">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gn5-MK-S8q">
+                                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="x6z-Sq-Rsc">
+                                                <rect key="frame" x="20" y="6" width="51" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </switch>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="0vH-Yg-uzp">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gzA-bi-E6k">
                                                 <rect key="frame" x="534" y="7" width="46" height="30"/>
@@ -70,17 +76,46 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otS-rx-Rcz">
                                 <rect key="frame" x="20" y="64" width="560" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" id="khz-eT-NsP">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="khz-eT-NsP" id="Zfd-C3-hbv">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QWQ-px-tGk">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QWQ-px-tGk" id="ax0-sE-hQ3">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Glm-Md-GhQ">
+                                        <rect key="frame" x="0.0" y="116" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Glm-Md-GhQ" id="bbZ-Se-QOS">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="otS-rx-Rcz" secondAttribute="bottom" id="7Zb-fa-dMF"/>
-                            <constraint firstItem="Gzc-f3-irM" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="BcM-Lj-8ah"/>
-                            <constraint firstItem="Gzc-f3-irM" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="F6P-fT-7M2"/>
-                            <constraint firstItem="otS-rx-Rcz" firstAttribute="top" secondItem="Gzc-f3-irM" secondAttribute="bottom" id="KDW-gL-0Vz"/>
-                            <constraint firstItem="Gzc-f3-irM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="LD6-gY-YX4"/>
-                            <constraint firstItem="otS-rx-Rcz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="gK0-8c-Jhs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="otS-rx-Rcz" secondAttribute="trailing" id="oaK-76-D10"/>
+                            <constraint firstItem="otS-rx-Rcz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="BrP-hp-1T7"/>
+                            <constraint firstItem="Gzc-f3-irM" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="G7X-ug-uSc"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="otS-rx-Rcz" secondAttribute="bottom" id="a3z-7f-Rpp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="otS-rx-Rcz" secondAttribute="trailing" id="d8Z-M9-3q9"/>
+                            <constraint firstItem="otS-rx-Rcz" firstAttribute="top" secondItem="Gzc-f3-irM" secondAttribute="bottom" id="hh5-HD-4c1"/>
+                            <constraint firstItem="Gzc-f3-irM" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="hlN-mL-ZmR"/>
+                            <constraint firstItem="Gzc-f3-irM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="yg5-ha-Zsf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
@@ -360,7 +395,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="898"/>
+            <point key="canvasLocation" x="-276" y="603"/>
         </scene>
     </scenes>
     <resources>

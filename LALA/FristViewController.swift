@@ -10,9 +10,14 @@ import UIKit
 
 class FristViewController: UIViewController {
 
+    
+    var data:[String] = ["China","LALA","Ruassian","Amerian","Indian"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        for da in data {
+            print(da)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +25,9 @@ class FristViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+
 
     /*
     // MARK: - Navigation
