@@ -1,5 +1,5 @@
 //
-//  1ViewController.swift
+//  FristViewController.swift
 //  LALA
 //
 //  Created by Thomas Liu on 16/7/28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class firstViewController: UIViewController {
+class FristViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

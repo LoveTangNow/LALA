@@ -9,7 +9,7 @@
         <!--4th-->
         <scene sceneID="Ggh-ys-1hy">
             <objects>
-                <viewController id="mwa-IZ-ExG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FourthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mwa-IZ-ExG" customClass="FourthViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vyd-5u-RAV"/>
                         <viewControllerLayoutGuide type="bottom" id="Di2-xA-okE"/>
@@ -41,7 +41,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="1ViewController" id="9pv-A4-QxB" customClass="firstViewController" customModule="1ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FristViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="FristViewController" customModule="LALA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -263,7 +263,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -312,7 +312,7 @@
         <!--thrid-->
         <scene sceneID="BQ3-xm-7Ia">
             <objects>
-                <viewController id="VJx-dG-IRg" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="VJx-dG-IRg" customClass="ThridViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tp1-bg-V39"/>
                         <viewControllerLayoutGuide type="bottom" id="K8Q-yv-mmy"/>

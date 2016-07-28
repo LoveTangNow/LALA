@@ -13,10 +13,10 @@
 		7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */; };
 		7F0E245F1D4A00290083F7CC /* LALATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E245E1D4A00290083F7CC /* LALATests.swift */; };
 		7F0E246A1D4A00290083F7CC /* LALAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E24691D4A00290083F7CC /* LALAUITests.swift */; };
-		7F6FCF5B1D4A519000E7F8E1 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */; };
 		7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */; };
 		7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */; };
 		7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */; };
+		7F6FCF631D4A52F600E7F8E1 /* FristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */; };
 		B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264958E5422DDE005D1E90C6 /* libPods-LALA.a */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +52,10 @@
 		7F0E24651D4A00290083F7CC /* LALAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LALAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24691D4A00290083F7CC /* LALAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALAUITests.swift; sourceTree = "<group>"; };
 		7F0E246B1D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
 		7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FristViewController.swift; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
-				7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */,
+				7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */,
 				7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */,
 				7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */,
 				7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */,
@@ -344,9 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */,
-				7F6FCF5B1D4A519000E7F8E1 /* firstViewController.swift in Sources */,
 				7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
+				7F6FCF631D4A52F600E7F8E1 /* FristViewController.swift in Sources */,
 				7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
