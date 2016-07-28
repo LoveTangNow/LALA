@@ -13,6 +13,11 @@
 		7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */; };
 		7F0E245F1D4A00290083F7CC /* LALATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E245E1D4A00290083F7CC /* LALATests.swift */; };
 		7F0E246A1D4A00290083F7CC /* LALAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E24691D4A00290083F7CC /* LALAUITests.swift */; };
+		7F6FCF5B1D4A519000E7F8E1 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */; };
+		7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */; };
+		7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */; };
+		7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */; };
+		B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264958E5422DDE005D1E90C6 /* libPods-LALA.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig"; sourceTree = "<group>"; };
+		264958E5422DDE005D1E90C6 /* libPods-LALA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LALA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24441D4A00290083F7CC /* LALA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LALA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24471D4A00290083F7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0E244E1D4A00290083F7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +52,11 @@
 		7F0E24651D4A00290083F7CC /* LALAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LALAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24691D4A00290083F7CC /* LALAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALAUITests.swift; sourceTree = "<group>"; };
 		7F0E246B1D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
+		7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
+		7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,8 @@
 				7F0E245D1D4A00290083F7CC /* LALATests */,
 				7F0E24681D4A00290083F7CC /* LALAUITests */,
 				7F0E24451D4A00290083F7CC /* Products */,
+				F1D80D2772AECD6960B037E4 /* Pods */,
+				FDFE9952A379317531B78C99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
+				7F6FCF5A1D4A519000E7F8E1 /* firstViewController.swift */,
+				7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */,
+				7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */,
+				7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */,
 				7F0E244D1D4A00290083F7CC /* Main.storyboard */,
 				7F0E24501D4A00290083F7CC /* Assets.xcassets */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
@@ -122,6 +141,23 @@
 			path = LALAUITests;
 			sourceTree = "<group>";
 		};
+		F1D80D2772AECD6960B037E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */,
+				13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDFE9952A379317531B78C99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				264958E5422DDE005D1E90C6 /* libPods-LALA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALA" */;
 			buildPhases = (
+				0E413DBB784B760B1E8D8062 /* [CP] Check Pods Manifest.lock */,
 				7F0E24401D4A00290083F7CC /* Sources */,
 				7F0E24411D4A00290083F7CC /* Frameworks */,
 				7F0E24421D4A00290083F7CC /* Resources */,
+				9809B5F4A8A1F9D4A55E86A7 /* [CP] Embed Pods Frameworks */,
+				2AFC620EE51E4F835028F1C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +290,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E413DBB784B760B1E8D8062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2AFC620EE51E4F835028F1C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LALA/Pods-LALA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9809B5F4A8A1F9D4A55E86A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F0E24401D4A00290083F7CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */,
+				7F6FCF5B1D4A519000E7F8E1 /* firstViewController.swift in Sources */,
+				7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
+				7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +487,7 @@
 		};
 		7F0E246F1D4A00290083F7CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LALA/Info.plist;
@@ -407,6 +499,7 @@
 		};
 		7F0E24701D4A00290083F7CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LALA/Info.plist;
@@ -481,6 +574,7 @@
 				7F0E24701D4A00290083F7CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F0E24711D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALATests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +583,7 @@
 				7F0E24731D4A00290083F7CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F0E24741D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALAUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +592,7 @@
 				7F0E24761D4A00290083F7CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
