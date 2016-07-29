@@ -1,12 +1,76 @@
 PODS:
   - Alamofire (3.4.1)
+  - AlamofireImage (2.4.1):
+    - Alamofire (~> 3.3)
+  - Charts/Core (2.2.5)
+  - Charts/Realm (2.2.5):
+    - Charts/Core
+    - RealmSwift (~> 0.97)
+  - DZNEmptyDataSet (1.8.1)
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManagerSwift (4.0.4)
+  - KeychainAccess (2.3.6)
+  - LTMorphingLabel (0.2.1)
+  - Onboard (2.2.1)
+  - PDTSimpleCalendar (0.9.1)
+  - PNChartSwift (0.0.2)
+  - RAMAnimatedTabBarController (1.5.3)
+  - Realm (0.103.2):
+    - Realm/Headers (= 0.103.2)
+  - Realm/Headers (0.103.2)
+  - RealmSwift (0.103.2):
+    - Realm (= 0.103.2)
+  - SVProgressHUD (2.0.3)
+  - TextFieldEffects (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - AlamofireImage (~> 2.0)
+  - Charts/Realm
+  - DZNEmptyDataSet
+  - FDFullscreenPopGesture (= 1.1)
+  - IQKeyboardManagerSwift
+  - KeychainAccess
+  - LTMorphingLabel
+  - Onboard
+  - PDTSimpleCalendar (~> 0.9.1)
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
+  - RAMAnimatedTabBarController
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - TextFieldEffects
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: 88eb8bcb4cd415d02775b2d355542b8bd338712d
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+  SVProgressHUD:
+    :commit: 5148825c5a0625da61aec451189b7fe62bf05fbf
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
+  KeychainAccess: 7f10e2ef998ddf954a64d5d608be08677774684d
+  LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
+  Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
+  PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
+  RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
+  Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
+  RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: 2a2ec2e22ab45e7ea9991eb0df3f3678330c65a6
+PODFILE CHECKSUM: e2dd1fc7642a357326d02f8d52f7d87dd7b0d364
 
 COCOAPODS: 1.0.1

@@ -12,12 +12,26 @@ import Alamofire
 class SecondSonViewController: UIViewController {
     
     var datall:String = ""
+    var clickNum:Int = 0
     
     
     @IBOutlet weak var Lable: UILabel!
 
     @IBAction func btnClick(sender: AnyObject) {
-        print("data       "+connect())
+        if clickNum == 0  {
+            print("data       "+connect())
+            clickNum += 1
+        }
+        else
+        {
+            print("data       "+connect())
+            let t = JAS(datall)
+            for (a,b) in t {
+                print("键="+a+"     值="+b)
+            }
+            clickNum -= 1
+        }
+        
         
 //        let strArray = datall.componentsSeparatedByString(",")
 //        for u in strArray {
@@ -28,14 +42,11 @@ class SecondSonViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationController!.interactivePopGestureRecognizer!.enabled = true;
         // Do any additional setup after loading the view.
-        
         //设置Label的test
         Lable.text = "哈哈"
         connect()
-        testJson()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,48 +71,60 @@ class SecondSonViewController: UIViewController {
                 //print("Response String: \(response.result.value)");
                 
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                    //print("JSON: \(JSON)")
                     self.datall = JSON
                 }
             }.responseJSON { response in
-                print("Response JSON: \(response.result.value)")
+                //print("Response JSON: \(response.result.value)")
         }
         return datall
         
     }
     
-    func testJson() {
-        //Swift对象
-//        let user = [
-//            "uname": "张三",
-//            "tel": ["mobile": "138", "home": "010"]
-//        ]
-        //首先判断能不能转换
+    //解析特定的格式Json数据 如{"a":"1","b":"2","c":"3","d":"4","e":"5"}
+    func JAS(A:String)  -> Dictionary<String, String>{
         
-        let user = (datall)
-        
-        if (!NSJSONSerialization.isValidJSONObject(user)) {
-            print("is not a valid json object")
-            return
+        var woshiyigekongzidian = Dictionary<String, String>()
+        var data:String = ""
+        if (A != "") {
+            data = A
         }
-        //利用OC的json库转换成OC的NSData，
-        //如果设置options为NSJSONWritingOptions.PrettyPrinted，则打印格式更好阅读
-        let data : NSData! = try? NSJSONSerialization.dataWithJSONObject(user, options: [])
-        //NSData转换成NSString打印输出
-        let str = NSString(data:data, encoding: NSUTF8StringEncoding)
-        //输出json字符串
-        print("Json Str:"); print(str)
-        
-        //把NSData对象转换回JSON对象
-        let json : AnyObject! = try? NSJSONSerialization
-            .JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments)
-        print("Json Object:"); print(json)
-        //验证JSON对象可用性
-        let uname : AnyObject = json.objectForKey("uname")!
-        let mobile : AnyObject = json.objectForKey("tel")!.objectForKey("mobile")!
-        print("get Json Object:");
-        print("uname: \(uname), mobile: \(mobile)")
+        else{
+            return woshiyigekongzidian
+        }
+        var strArray = data.componentsSeparatedByString(",")
+        //将data分解成数组，用strArray存贮
+        //我们要将第一个和最后一个有括号的做处理
+        let strArray_changdu = strArray.endIndex.advancedBy(-0)
+        for j in 0..<strArray_changdu
+        {
+            //把strArray分割
+            var strArraychind0 = strArray[j].componentsSeparatedByString("\"")
+            //计算长度
+            let strArraychind0_changdu = strArraychind0.endIndex.advancedBy(-0)
+            //去首去尾
+            strArraychind0.removeAtIndex(strArraychind0_changdu-1)
+            strArraychind0.removeAtIndex(0)
+            //再次计算长度
+            let strArraychind0_changdu2 = strArraychind0.endIndex.advancedBy(-0)
+            //下面就是组装了
+            var zhuzhuang = ""
+            for i in 0..<strArraychind0_changdu2
+            {
+                zhuzhuang = zhuzhuang + strArraychind0[i]
+            }
+            //组装完成之后，传出来
+            strArray[j] = zhuzhuang
+            
+        }
+        let strArray_changdu2 = strArray.endIndex.advancedBy(-0)
+        for jj in 0..<strArray_changdu2
+        {
+            //子项分割为更小想们 访入strArraychind00
+            var strArraychind00 = strArray[jj].componentsSeparatedByString(":")
+            woshiyigekongzidian[strArraychind00[0]] = strArraychind00[1]
+        }
+        return woshiyigekongzidian
     }
-
 
 }

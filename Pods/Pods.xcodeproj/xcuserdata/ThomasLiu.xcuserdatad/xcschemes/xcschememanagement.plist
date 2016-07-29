@@ -9,7 +9,82 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FDFullscreenPopGesture.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LTMorphingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Onboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PDTSimpleCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PNChartSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LALA.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RAMAnimatedTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +92,87 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F6C5AB948AD9E76EC7A36E9053FCAE8</key>
+		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AB3555320E8DA9E9EA868FE1C2E56D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0BB7FEC1EDF7D27E4FBB837911BB3966</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16FB872D0D2D4BA0F378AB34D47CF95F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>303B3AC6DD17B1EE7D98EF8BF8898BEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>546C2880B38215BD2DE9BC0031009253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C3D95F6E70761747A3458B375704DE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FF2742C9AD186F4E8FB6EE29F8EE088</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77AB16E71967928775ACD2706514E867</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>838A2C6DA366DE138E5FDF1AF19D94C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8BA709253E0350B01F1F6F15B89DC96B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD3C850DFBD93B80864D9CD1E68F5AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD99E122B72A2826DB124174A45311BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7FF48F3092783E4E42B336F0DEF2D1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
