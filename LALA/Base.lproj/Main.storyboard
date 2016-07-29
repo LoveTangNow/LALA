@@ -264,8 +264,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nzo-Fr-e2s" kind="relationship" relationship="viewControllers" id="Alo-Wd-OZ9"/>
                         <segue destination="csa-cA-Xit" kind="relationship" relationship="viewControllers" id="LAt-CJ-h9x"/>
+                        <segue destination="nzo-Fr-e2s" kind="relationship" relationship="viewControllers" id="Alo-Wd-OZ9"/>
                         <segue destination="MBr-kH-MDi" kind="relationship" relationship="viewControllers" id="eLd-XX-pPe"/>
                         <segue destination="WcF-wy-eea" kind="relationship" relationship="viewControllers" id="bNL-gm-Ida"/>
                     </connections>

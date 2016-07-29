@@ -13,7 +13,7 @@ class FSecondViewController: UIViewController {
 
     @IBAction func Click(sender: AnyObject) {
         let vc = UIStoryboard(name: "SecondSon", bundle: nil)
-            .instantiateViewControllerWithIdentifier("SecondSon")
+            .instantiateViewControllerWithIdentifier("SecondSonViewController")
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

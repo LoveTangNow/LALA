@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second Son View Controller-->
         <scene sceneID="g15-9b-t9P">
             <objects>
-                <viewController storyboardIdentifier="SecondSon" id="1RT-ry-Sjt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondSonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1RT-ry-Sjt" customClass="SecondSonViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q9D-F7-jwS"/>
                         <viewControllerLayoutGuide type="bottom" id="w2C-z2-TsS"/>
@@ -16,8 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="I05-Gq-zpN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDj-Xc-ypq">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-1s-mLx">
+                                <rect key="frame" x="277" y="195" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="1RT-ry-Sjt" eventType="touchUpInside" id="HSU-ZC-Epp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sDj-Xc-ypq" firstAttribute="centerY" secondItem="I05-Gq-zpN" secondAttribute="centerY" id="32a-gY-w5K"/>
+                            <constraint firstItem="qgM-1s-mLx" firstAttribute="centerX" secondItem="sDj-Xc-ypq" secondAttribute="centerX" id="SPd-y7-leV"/>
+                            <constraint firstItem="sDj-Xc-ypq" firstAttribute="centerX" secondItem="I05-Gq-zpN" secondAttribute="centerX" id="w1X-sD-Lqe"/>
+                            <constraint firstItem="sDj-Xc-ypq" firstAttribute="top" secondItem="qgM-1s-mLx" secondAttribute="bottom" constant="64" id="yKW-pF-QpS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Lable" destination="sDj-Xc-ypq" id="mrV-dJ-ZaJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5r-bx-jb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
