@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FFristViewController: UIViewController {
+class FFristViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
