@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503FCDD6036AD8007E3A79CA /* Pods_LALA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */; };
 		7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E24471D4A00290083F7CC /* AppDelegate.swift */; };
 		7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E244D1D4A00290083F7CC /* Main.storyboard */; };
 		7F0E24511D4A00290083F7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E24501D4A00290083F7CC /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		7FB8A8A41D4B289F00F2F22D /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
-		B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264958E5422DDE005D1E90C6 /* libPods-LALA.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig"; sourceTree = "<group>"; };
-		264958E5422DDE005D1E90C6 /* libPods-LALA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LALA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24441D4A00290083F7CC /* LALA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LALA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24471D4A00290083F7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0E244E1D4A00290083F7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,12 +56,14 @@
 		7F0E246B1D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F21818E1D4B2BCC0091B51F /* SecondSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondSonViewController.swift; path = Assets.xcassets/SecondSonViewController.swift; sourceTree = "<group>"; };
 		7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridSonViewController.swift; sourceTree = "<group>"; };
+		7F288ADB1D4B649E00842A9C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/LALA-gcpqeuqtnmwzqncsdxsxanlvzlfi/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThridSon.storyboard; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
+		C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LALA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */,
+				503FCDD6036AD8007E3A79CA /* Pods_LALA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +187,8 @@
 		FDFE9952A379317531B78C99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				264958E5422DDE005D1E90C6 /* libPods-LALA.a */,
+				7F288ADB1D4B649E00842A9C /* Alamofire.framework */,
+				C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
