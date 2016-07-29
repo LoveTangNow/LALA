@@ -31,13 +31,6 @@ class SecondSonViewController: UIViewController {
             }
             clickNum -= 1
         }
-        
-        
-//        let strArray = datall.componentsSeparatedByString(",")
-//        for u in strArray {
-//            print(u)
-//        }
-        
     }
    
     override func viewDidLoad() {
@@ -47,6 +40,7 @@ class SecondSonViewController: UIViewController {
         //设置Label的test
         Lable.text = "哈哈"
         connect()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,11 +69,12 @@ class SecondSonViewController: UIViewController {
                     self.datall = JSON
                 }
             }.responseJSON { response in
-                //print("Response JSON: \(response.result.value)")
+                print("Response JSON: \(response.result.value)")
         }
         return datall
-        
     }
+    
+    
     
     //解析特定的格式Json数据 如{"a":"1","b":"2","c":"3","d":"4","e":"5"}
     func JAS(A:String)  -> Dictionary<String, String>{
