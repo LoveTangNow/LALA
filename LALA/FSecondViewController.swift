@@ -1,23 +1,24 @@
 //
-//  FristViewController.swift
+//  FFristViewController.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/7/28.
+//  Created by Thomas Liu on 16/7/29.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 
-class FristViewController: UIViewController {
+class FSecondViewController: UIViewController {
 
-    
-    var data:[String] = ["China","LALA","Ruassian","Amerian","Indian"]
-    
+    @IBAction func Click(sender: AnyObject) {
+        let vc = UIStoryboard(name: "SecondSon", bundle: nil)
+            .instantiateViewControllerWithIdentifier("SecondSon")
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        for da in data {
-            print(da)
-        }
+
         // Do any additional setup after loading the view.
     }
 
@@ -25,9 +26,7 @@ class FristViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-
 
     /*
     // MARK: - Navigation

@@ -1,14 +1,14 @@
 //
-//  ThridViewController.swift
+//  FFristViewController.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/7/28.
+//  Created by Thomas Liu on 16/7/29.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 
-class ThridViewController: UIViewController {
+class FFristViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

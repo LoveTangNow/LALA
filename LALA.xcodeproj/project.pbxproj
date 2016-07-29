@@ -13,10 +13,11 @@
 		7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */; };
 		7F0E245F1D4A00290083F7CC /* LALATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E245E1D4A00290083F7CC /* LALATests.swift */; };
 		7F0E246A1D4A00290083F7CC /* LALAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E24691D4A00290083F7CC /* LALAUITests.swift */; };
-		7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */; };
-		7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */; };
-		7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */; };
-		7F6FCF631D4A52F600E7F8E1 /* FristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */; };
+		7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */; };
+		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
+		7FB8A8A41D4B289F00F2F22D /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */; };
+		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
+		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		B0FCF42D96A81D82C991C501 /* libPods-LALA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264958E5422DDE005D1E90C6 /* libPods-LALA.a */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +53,11 @@
 		7F0E24651D4A00290083F7CC /* LALAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LALAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24691D4A00290083F7CC /* LALAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALAUITests.swift; sourceTree = "<group>"; };
 		7F0E246B1D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
-		7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FristViewController.swift; sourceTree = "<group>"; };
+		7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThridSon.storyboard; sourceTree = "<group>"; };
+		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
+		7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
+		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
+		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,14 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
-				7F6FCF621D4A52F600E7F8E1 /* FristViewController.swift */,
-				7F6FCF5C1D4A524900E7F8E1 /* SecondViewController.swift */,
-				7F6FCF5E1D4A525B00E7F8E1 /* ThridViewController.swift */,
-				7F6FCF601D4A526B00E7F8E1 /* FourthViewController.swift */,
-				7F0E244D1D4A00290083F7CC /* Main.storyboard */,
+				7FB8A89E1D4B27D200F2F22D /* Main */,
+				7FB8A89F1D4B27E700F2F22D /* Second */,
+				7FB8A8A01D4B27F800F2F22D /* Thrid */,
+				7F0E24551D4A00290083F7CC /* Info.plist */,
 				7F0E24501D4A00290083F7CC /* Assets.xcassets */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
-				7F0E24551D4A00290083F7CC /* Info.plist */,
 			);
 			path = LALA;
 			sourceTree = "<group>";
@@ -139,6 +139,33 @@
 				7F0E246B1D4A00290083F7CC /* Info.plist */,
 			);
 			path = LALAUITests;
+			sourceTree = "<group>";
+		};
+		7FB8A89E1D4B27D200F2F22D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E244D1D4A00290083F7CC /* Main.storyboard */,
+				7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */,
+				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
+				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		7FB8A89F1D4B27E700F2F22D /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */,
+				7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */,
+			);
+			name = Second;
+			sourceTree = "<group>";
+		};
+		7FB8A8A01D4B27F800F2F22D /* Thrid */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Thrid;
 			sourceTree = "<group>";
 		};
 		F1D80D2772AECD6960B037E4 /* Pods */ = {
@@ -270,6 +297,8 @@
 			files = (
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
 				7F0E24511D4A00290083F7CC /* Assets.xcassets in Resources */,
+				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
+				7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */,
 				7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,11 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F6FCF5D1D4A524900E7F8E1 /* SecondViewController.swift in Sources */,
-				7F6FCF5F1D4A525B00E7F8E1 /* ThridViewController.swift in Sources */,
+				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
+				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
-				7F6FCF631D4A52F600E7F8E1 /* FristViewController.swift in Sources */,
-				7F6FCF611D4A526B00E7F8E1 /* FourthViewController.swift in Sources */,
+				7FB8A8A41D4B289F00F2F22D /* FFristViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
