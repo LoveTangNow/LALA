@@ -17,14 +17,18 @@ class SecondSonViewController: UIViewController {
     
     @IBOutlet weak var Lable: UILabel!
 
+    @IBAction func b3c(sender: AnyObject) {
+        //connect("http://localhost:80/test2/test.php")
+        
+    }
     @IBAction func btnClick(sender: AnyObject) {
         if clickNum == 0  {
-            print("data       "+connect())
+            print("data       "+connect("http://localhost:80/test2/Afiretest.php"))
             clickNum += 1
         }
         else
         {
-            print("data       "+connect())
+            print("data       "+connect("http://localhost:80/test2/Afiretest.php"))
             let t = JAS(datall)
             for (a,b) in t {
                 print("键="+a+"     值="+b)
@@ -39,7 +43,7 @@ class SecondSonViewController: UIViewController {
         // Do any additional setup after loading the view.
         //设置Label的test
         Lable.text = "哈哈"
-        connect()
+        connect("http://localhost:80/test2/Afiretest.php")
         
     }
     override func didReceiveMemoryWarning() {
@@ -57,8 +61,8 @@ class SecondSonViewController: UIViewController {
     */
     
     
-    func connect () -> String{
-        Alamofire.request(.GET, "http://localhost:80/test2/Afiretest.php",parameters: ["data": "bar"])
+    func connect (A:String) -> String{
+        Alamofire.request(.GET, A,parameters: ["data": "bar"])
             .validate()
             .responseString { response in
                 //print("Success: \(response.result.isSuccess)")

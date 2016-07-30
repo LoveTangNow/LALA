@@ -30,10 +30,19 @@
                                     <action selector="btnClick:" destination="1RT-ry-Sjt" eventType="touchUpInside" id="HSU-ZC-Epp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tY1-bb-Txu">
+                                <rect key="frame" x="277" y="115" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="b3c:" destination="1RT-ry-Sjt" eventType="touchUpInside" id="NPU-ss-PNP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sDj-Xc-ypq" firstAttribute="centerY" secondItem="I05-Gq-zpN" secondAttribute="centerY" id="32a-gY-w5K"/>
+                            <constraint firstItem="tY1-bb-Txu" firstAttribute="leading" secondItem="qgM-1s-mLx" secondAttribute="leading" id="HgP-Jm-XAD"/>
+                            <constraint firstItem="qgM-1s-mLx" firstAttribute="top" secondItem="tY1-bb-Txu" secondAttribute="bottom" constant="50" id="Pae-Ry-sYS"/>
                             <constraint firstItem="qgM-1s-mLx" firstAttribute="centerX" secondItem="sDj-Xc-ypq" secondAttribute="centerX" id="SPd-y7-leV"/>
                             <constraint firstItem="sDj-Xc-ypq" firstAttribute="centerX" secondItem="I05-Gq-zpN" secondAttribute="centerX" id="w1X-sD-Lqe"/>
                             <constraint firstItem="sDj-Xc-ypq" firstAttribute="top" secondItem="qgM-1s-mLx" secondAttribute="bottom" constant="64" id="yKW-pF-QpS"/>
