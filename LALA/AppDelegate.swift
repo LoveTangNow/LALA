@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Onboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let firstPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: UIImage(named: "dark.png"), buttonText: "Text For Button") { () -> Void in
+            // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+        }
+            //image
+        let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "dark.png"), contents:[firstPage])
+            
+            // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+
+        onboardingVC.allowSkipping = true;
+        
         return true
     }
 
