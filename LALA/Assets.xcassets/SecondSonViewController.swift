@@ -3,11 +3,12 @@
 //  LALA
 //
 //  Created by Thomas Liu on 16/7/29.
-//  Copyright © 2016年 Thomas Liu. All rights reserved.
+//  Copyright © 2016 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class SecondSonViewController: UIViewController {
     
@@ -17,10 +18,6 @@ class SecondSonViewController: UIViewController {
     
     @IBOutlet weak var Lable: UILabel!
 
-    @IBAction func b3c(sender: AnyObject) {
-        //connect("http://localhost:80/test2/test.php")
-        
-    }
     @IBAction func btnClick(sender: AnyObject) {
         if clickNum == 0  {
             print("data       "+connect("http://localhost:80/test2/Afiretest.php"))
@@ -62,19 +59,34 @@ class SecondSonViewController: UIViewController {
     
     
     func connect (A:String) -> String{
-        Alamofire.request(.GET, A,parameters: ["data": "bar"])
-            .validate()
-            .responseString { response in
-                //print("Success: \(response.result.isSuccess)")
-                //print("Response String: \(response.result.value)");
-                
-                if let JSON = response.result.value {
-                    //print("JSON: \(JSON)")
-                    self.datall = JSON
-                }
-            }.responseJSON { response in
-                print("Response JSON: \(response.result.value)")
+        
+        //new way
+        Alamofire.request(.GET, A, parameters: ["data": "bar"], encoding: .URL, headers: nil).responseJSON{
+            if let v = $0.result.value{
+                let json = JSON(v)
+                //SwiftyJSON 成功解析JSON 数据
+                debugPrint(json["a"].stringValue)
+            }
+            else
+            {
+                //如果错误输出错误
+                debugPrint($0.result.error)
+            }
         }
+        
+//        Alamofire.request(.GET, A,parameters: ["data": "bar"])
+//            .validate()
+//            .responseString { response in
+//                //print("Success: \(response.result.isSuccess)")
+//                //print("Response String: \(response.result.value)");
+//                
+//                if let JSON = response.result.value {
+//                    //print("JSON: \(JSON)")
+//                    self.datall = JSON
+//                }
+//            }.responseJSON { response in
+//                print("Response JSON: \(response.result.value)")
+//        }
         return datall
     }
     

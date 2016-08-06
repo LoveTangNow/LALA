@@ -7,4 +7,6 @@ target ‘LALA’ do
 	pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 	pod 'Onboard'
 	pod 'AlamofireImage', '~> 2.0'
+    pod 'SwiftyJSON'
+    pod 'WeiboSDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
 end

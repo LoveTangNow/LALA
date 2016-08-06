@@ -4,28 +4,39 @@ PODS:
     - Alamofire (~> 3.3)
   - Onboard (2.2.1)
   - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.3.2)
+  - WeiboSDK (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.0)
   - Onboard
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - SwiftyJSON
+  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
 
 EXTERNAL SOURCES:
   SVProgressHUD:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+  WeiboSDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
     :commit: 5148825c5a0625da61aec451189b7fe62bf05fbf
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+  WeiboSDK:
+    :commit: 6031a8da4ce17867ff5887b8dfc59ea45930274e
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
   Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
 
-PODFILE CHECKSUM: 82726a281e7a24669be8b15ec00f75a5b9263601
+PODFILE CHECKSUM: cf6492414acee9ef8a4cc8d884a1d65a6b912f1a
 
 COCOAPODS: 1.0.1
