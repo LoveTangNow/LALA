@@ -29,6 +29,7 @@
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		7FE705B11D5729460025A0E5 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFourthViewController.swift */; };
+		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
+		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LALA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 				7FB8A89F1D4B27E700F2F22D /* Second */,
 				7FB8A8A01D4B27F800F2F22D /* Thrid */,
 				7F0E24551D4A00290083F7CC /* Info.plist */,
+				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 				7F0E24501D4A00290083F7CC /* Assets.xcassets */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
 				7F9C494F1D561D350017D282 /* CoreData.xcdatamodeld */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
+				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
 				7F0E24511D4A00290083F7CC /* Assets.xcassets in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
 				7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */,
