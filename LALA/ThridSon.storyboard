@@ -8,7 +8,7 @@
         <!--Thrid Son View Controller-->
         <scene sceneID="dqY-XH-EIR">
             <objects>
-                <viewController storyboardIdentifier="ThridSonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3PI-nc-fGb" customClass="ThridSonViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThridSonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3PI-nc-fGb" customClass="ThridSonViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Ff-U5-AIO"/>
                         <viewControllerLayoutGuide type="bottom" id="5iD-qQ-xLh"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="Entity" representedClassName=".Entity" syncable="YES">
+        <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Is_user_cunzai_biao" representedClassName=".Is_user_cunzai_biao" syncable="YES">
+        <attribute name="iduser" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entity" positionX="-227" positionY="5" width="128" height="58"/>
+        <element name="Is_user_cunzai_biao" positionX="-54" positionY="0" width="128" height="60"/>
+    </elements>
+</model>
