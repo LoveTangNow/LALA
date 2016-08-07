@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qlp-lJ-lQe">
-                                <rect key="frame" x="20" y="64" width="560" height="487"/>
+                                <rect key="frame" x="20" y="0.0" width="560" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KBl-kg-NqP" id="1fN-Dh-DlM"/>
@@ -186,11 +186,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dJM-lE-FT0" firstAttribute="top" secondItem="Qlp-lJ-lQe" secondAttribute="bottom" id="MFg-Ks-eun"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qlp-lJ-lQe" secondAttribute="trailing" id="e2i-UV-ZtA"/>
-                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="leading" secondItem="aNg-xy-tLG" secondAttribute="leadingMargin" id="g27-9c-OGr"/>
-                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="bottom" secondItem="dJM-lE-FT0" secondAttribute="top" id="nNa-2i-jiY"/>
-                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="top" secondItem="q0g-ll-20a" secondAttribute="bottom" id="ycT-Xy-zZi"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="top" secondItem="aNg-xy-tLG" secondAttribute="topMargin" id="83n-8R-0Yo"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="height" secondItem="aNg-xy-tLG" secondAttribute="height" constant="-49" id="CQ7-kv-leg"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="trailing" secondItem="aNg-xy-tLG" secondAttribute="trailingMargin" id="QHH-eA-5TN"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="leading" secondItem="aNg-xy-tLG" secondAttribute="leadingMargin" id="dkg-XT-xWW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TableView" id="Oum-bB-biL"/>
