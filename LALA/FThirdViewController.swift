@@ -20,13 +20,14 @@ class FThirdViewController: UIViewController {
     //获取Plist中的数据
     @IBAction func CoreDaraClick(sender: AnyObject) {
         print("点击了CoreData")
-        
+        //读取数据
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
-       // let diaries:DarwinBoolean = data.objectForKey("islog") as! DarwinBoolean
         let da:NSString = data.objectForKey("username") as! NSString
         print(da)
+        pl.text = da as String
         
+        //写入数据
         let plistpath:NSString = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
         let usersdic:NSMutableDictionary = NSMutableDictionary(contentsOfFile:plistpath as String)!
         
@@ -43,11 +44,7 @@ class FThirdViewController: UIViewController {
         
     }
 
-    @IBAction func DengluClick(sender: AnyObject) {
-        let vc = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewControllerWithIdentifier("DengLuViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+
     
     @IBAction func ZhuCecClick(sender: AnyObject) {
         let vc = UIStoryboard(name: "Main", bundle: nil)

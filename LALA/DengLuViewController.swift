@@ -9,9 +9,34 @@
 import UIKit
 
 class DengLuViewController: UIViewController {
+    
+    @IBOutlet weak var username_space: UITextField!
+    @IBOutlet weak var userpassword_space: UITextField!
+    
+    
+    
+    
+    
 
+    @IBAction func denglu_button(sender: AnyObject) {
+    }
+
+    @IBAction func zhuce_dianji_button(sender: AnyObject) {
+        
+        print("还没有账号,点这里")
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let vc = sb.instantiateViewControllerWithIdentifier("ZhuCeViewController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        username_space.placeholder = "请输入邮箱或手机号"
+        userpassword_space.placeholder = "请输入密码"
+        
 
         // Do any additional setup after loading the view.
     }

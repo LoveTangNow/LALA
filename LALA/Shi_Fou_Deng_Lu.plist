@@ -5,6 +5,6 @@
 	<key>username</key>
 	<string>Liu111</string>
 	<key>islog</key>
-	<false/>
+	<string>NO</string>
 </dict>
 </plist>

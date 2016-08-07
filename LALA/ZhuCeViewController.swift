@@ -9,10 +9,24 @@
 import UIKit
 
 class ZhuCeViewController: UIViewController {
+    
+    
+    @IBOutlet weak var user_email: UITextField!
+    @IBOutlet weak var user_phone: UITextField!
+    
+    @IBOutlet weak var user_password: UITextField!
+    @IBOutlet weak var user_password_c: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        user_email.placeholder = "邮箱"
+        user_phone.placeholder = "手机号"
+        user_password.placeholder = "密码"
+        user_password_c.placeholder = "确认密码"
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +36,11 @@ class ZhuCeViewController: UIViewController {
     }
     
 
+    @IBAction func Zhuce_Click(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
