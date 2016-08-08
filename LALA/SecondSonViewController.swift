@@ -17,14 +17,17 @@ class SecondSonViewController: UIViewController {
     //Alamofire + SwiftyJSON
     @IBAction func _Button(sender: AnyObject) {
         
-        Alamofire.request(.GET, "https://localhost/test2/Afiretest.php", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "http://localhost:80/LALA/SIGNIN.php",parameters: ["data": "bar"])
+            .validate()
             .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        print(json["data"]["newslist"]["title"])
+                    }
+                case .Failure(let error):
+                    print(error)
                 }
         }
         print("")
