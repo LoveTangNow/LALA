@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F0E24431D4A00290083F7CC"
-               BuildableName = "Link_Now.app"
-               BlueprintName = "Link_Now"
-               ReferencedContainer = "container:Link_Now.xcodeproj">
+               BuildableName = "LALA.app"
+               BlueprintName = "LALA"
+               ReferencedContainer = "container:LALA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F0E24591D4A00290083F7CC"
-               BuildableName = "Link_Now.xctest"
-               BlueprintName = "Link_NowTests"
-               ReferencedContainer = "container:Link_Now.xcodeproj">
+               BuildableName = "LALA.xctest"
+               BlueprintName = "LALATests"
+               ReferencedContainer = "container:LALA.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F0E24641D4A00290083F7CC"
-               BuildableName = "Link_Now.xctest"
-               BlueprintName = "Link_NowUITests"
-               ReferencedContainer = "container:Link_Now.xcodeproj">
+               BuildableName = "LALA.xctest"
+               BlueprintName = "LALAUITests"
+               ReferencedContainer = "container:LALA.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0E24431D4A00290083F7CC"
-            BuildableName = "Link_Now.app"
-            BlueprintName = "Link_Now"
-            ReferencedContainer = "container:Link_Now.xcodeproj">
+            BuildableName = "LALA.app"
+            BlueprintName = "LALA"
+            ReferencedContainer = "container:LALA.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0E24431D4A00290083F7CC"
-            BuildableName = "Link_Now.app"
-            BlueprintName = "Link_Now"
-            ReferencedContainer = "container:Link_Now.xcodeproj">
+            BuildableName = "LALA.app"
+            BlueprintName = "LALA"
+            ReferencedContainer = "container:LALA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0E24431D4A00290083F7CC"
-            BuildableName = "Link_Now.app"
-            BlueprintName = "Link_Now"
-            ReferencedContainer = "container:Link_Now.xcodeproj">
+            BuildableName = "LALA.app"
+            BlueprintName = "LALA"
+            ReferencedContainer = "container:LALA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

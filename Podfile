@@ -9,4 +9,6 @@ target ‘LALA’ do
 	pod 'AlamofireImage', '~> 2.0'
     pod 'SwiftyJSON'
     pod 'WeiboSDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
+    pod 'SQLite.swift', '~> 0.10.1'
+    pod 'Kingfisher', '~> 2.4'
 end

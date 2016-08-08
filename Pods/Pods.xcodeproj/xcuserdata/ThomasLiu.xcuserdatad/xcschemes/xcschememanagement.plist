@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Onboard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-LALA.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5785DB880A94C9FE9BC4CCB1BE8FD9C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5DEA3927F734F950899A9A6F562E390C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6DECBF877643BA6DDBA49EDD4D2CB7E1</key>
+		<key>6D0F0BD2E8D313E4389370F80CEA9769</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A794BEBB34E494DB9EE40ED383DA9A19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B4500FEF550E77A1B5C9282CE7F4938F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0622EC3FF66F1724140231C8DE15988</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D7FF48F3092783E4E42B336F0DEF2D1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E96E13C4D3B5B5FC0651440734C2BF4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

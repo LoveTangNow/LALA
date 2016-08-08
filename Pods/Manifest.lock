@@ -2,7 +2,9 @@ PODS:
   - Alamofire (3.4.1)
   - AlamofireImage (2.4.1):
     - Alamofire (~> 3.3)
+  - Kingfisher (2.4.2)
   - Onboard (2.2.1)
+  - SQLite.swift (0.10.1)
   - SVProgressHUD (2.0.3)
   - SwiftyJSON (2.3.2)
   - WeiboSDK (3.1.4)
@@ -10,7 +12,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.0)
+  - Kingfisher (~> 2.4)
   - Onboard
+  - SQLite.swift (~> 0.10.1)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - SwiftyJSON
   - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
@@ -32,11 +36,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
+  Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
   Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
+  SQLite.swift: 6a6e4b034efc317ce4e203b6af2d3024fee2b570
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
 
-PODFILE CHECKSUM: cf6492414acee9ef8a4cc8d884a1d65a6b912f1a
+PODFILE CHECKSUM: cae69637e3ffa92533998f7084b5e6d6fa6f077a
 
 COCOAPODS: 1.0.1

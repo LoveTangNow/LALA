@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/ThomasLiu/Documents/workspace/Xcodeworkspace/Aplications/LALA/Link_Now.xcodeproj">
+      location = "group:/Users/ThomasLiu/Documents/workspace/Xcodeworkspace/Aplications/LALA/LALA.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LALA.xcodeproj">
    </FileRef>
 </Workspace>

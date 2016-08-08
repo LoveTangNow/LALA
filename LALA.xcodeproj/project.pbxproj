@@ -130,6 +130,7 @@
 		7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F19A1361D58C1020030A16F /* Data.xcdatamodeld */; };
 		7F19A13B1D58C1370030A16F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19A1391D58C1370030A16F /* User+CoreDataProperties.swift */; };
 		7F19A13C1D58C1370030A16F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19A13A1D58C1370030A16F /* User.swift */; };
+		7F19A13E1D58C5080030A16F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F19A13D1D58C5080030A16F /* libsqlite3.tbd */; };
 		7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
@@ -161,15 +162,14 @@
 
 /* Begin PBXFileReference section */
 		13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig"; sourceTree = "<group>"; };
-		7F0E24441D4A00290083F7CC /* Link_Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Link_Now.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0E24441D4A00290083F7CC /* LALA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LALA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24471D4A00290083F7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0E244E1D4A00290083F7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F0E24531D4A00290083F7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F0E24551D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F0E245A1D4A00290083F7CC /* Link_Now.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Link_Now.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0E245A1D4A00290083F7CC /* LALA.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LALA.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E245E1D4A00290083F7CC /* LALATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALATests.swift; sourceTree = "<group>"; };
-		7F0E24601D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F0E24651D4A00290083F7CC /* Link_Now.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Link_Now.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0E24651D4A00290083F7CC /* LALA.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LALA.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24691D4A00290083F7CC /* LALAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALAUITests.swift; sourceTree = "<group>"; };
 		7F0E246B1D4A00290083F7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F19A0191D5866F80030A16F /* SecondSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSonViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +289,8 @@
 		7F19A1371D58C1020030A16F /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		7F19A1391D58C1370030A16F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7F19A13A1D58C1370030A16F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7F19A13D1D58C5080030A16F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7F19A1411D58CF8E0030A16F /* sqlite1.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sqlite1.sqlite; sourceTree = "<group>"; };
 		7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridSonViewController.swift; sourceTree = "<group>"; };
 		7F288ADB1D4B649E00842A9C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/LALA-gcpqeuqtnmwzqncsdxsxanlvzlfi/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F19A13E1D58C5080030A16F /* libsqlite3.tbd in Frameworks */,
 				503FCDD6036AD8007E3A79CA /* Pods_LALA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +348,9 @@
 		7F0E24451D4A00290083F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F0E24441D4A00290083F7CC /* Link_Now.app */,
-				7F0E245A1D4A00290083F7CC /* Link_Now.xctest */,
-				7F0E24651D4A00290083F7CC /* Link_Now.xctest */,
+				7F0E24441D4A00290083F7CC /* LALA.app */,
+				7F0E245A1D4A00290083F7CC /* LALA.xctest */,
+				7F0E24651D4A00290083F7CC /* LALA.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,10 +367,10 @@
 				7F19A1301D58BCFD0030A16F /* Server.plist */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
 				7F19A12C1D58695B0030A16F /* Assets.xcassets */,
-				7F19A0201D5868F80030A16F /* icons */,
 				7F19A1361D58C1020030A16F /* Data.xcdatamodeld */,
 				7F19A1391D58C1370030A16F /* User+CoreDataProperties.swift */,
 				7F19A13A1D58C1370030A16F /* User.swift */,
+				7F19A0201D5868F80030A16F /* icons */,
 			);
 			path = LALA;
 			sourceTree = "<group>";
@@ -376,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				7F0E245E1D4A00290083F7CC /* LALATests.swift */,
-				7F0E24601D4A00290083F7CC /* Info.plist */,
 			);
 			path = LALATests;
 			sourceTree = "<group>";
@@ -515,6 +517,7 @@
 				7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */,
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
+				7F19A1411D58CF8E0030A16F /* sqlite1.sqlite */,
 				7FE705B01D5729460025A0E5 /* FFourthViewController.swift */,
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
@@ -561,6 +564,7 @@
 		FDFE9952A379317531B78C99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F19A13D1D58C5080030A16F /* libsqlite3.tbd */,
 				7F288ADB1D4B649E00842A9C /* Alamofire.framework */,
 				C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */,
 			);
@@ -570,9 +574,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F0E24431D4A00290083F7CC /* Link_Now */ = {
+		7F0E24431D4A00290083F7CC /* LALA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_Now" */;
+			buildConfigurationList = 7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALA" */;
 			buildPhases = (
 				0E413DBB784B760B1E8D8062 /* [CP] Check Pods Manifest.lock */,
 				7F0E24401D4A00290083F7CC /* Sources */,
@@ -585,14 +589,14 @@
 			);
 			dependencies = (
 			);
-			name = Link_Now;
+			name = LALA;
 			productName = LALA;
-			productReference = 7F0E24441D4A00290083F7CC /* Link_Now.app */;
+			productReference = 7F0E24441D4A00290083F7CC /* LALA.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7F0E24591D4A00290083F7CC /* Link_NowTests */ = {
+		7F0E24591D4A00290083F7CC /* LALATests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F0E24711D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_NowTests" */;
+			buildConfigurationList = 7F0E24711D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALATests" */;
 			buildPhases = (
 				7F0E24561D4A00290083F7CC /* Sources */,
 				7F0E24571D4A00290083F7CC /* Frameworks */,
@@ -603,14 +607,14 @@
 			dependencies = (
 				7F0E245C1D4A00290083F7CC /* PBXTargetDependency */,
 			);
-			name = Link_NowTests;
+			name = LALATests;
 			productName = LALATests;
-			productReference = 7F0E245A1D4A00290083F7CC /* Link_Now.xctest */;
+			productReference = 7F0E245A1D4A00290083F7CC /* LALA.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7F0E24641D4A00290083F7CC /* Link_NowUITests */ = {
+		7F0E24641D4A00290083F7CC /* LALAUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F0E24741D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_NowUITests" */;
+			buildConfigurationList = 7F0E24741D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALAUITests" */;
 			buildPhases = (
 				7F0E24611D4A00290083F7CC /* Sources */,
 				7F0E24621D4A00290083F7CC /* Frameworks */,
@@ -621,9 +625,9 @@
 			dependencies = (
 				7F0E24671D4A00290083F7CC /* PBXTargetDependency */,
 			);
-			name = Link_NowUITests;
+			name = LALAUITests;
 			productName = LALAUITests;
-			productReference = 7F0E24651D4A00290083F7CC /* Link_Now.xctest */;
+			productReference = 7F0E24651D4A00290083F7CC /* LALA.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -652,7 +656,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7F0E243F1D4A00290083F7CC /* Build configuration list for PBXProject "Link_Now" */;
+			buildConfigurationList = 7F0E243F1D4A00290083F7CC /* Build configuration list for PBXProject "LALA" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -665,9 +669,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F0E24431D4A00290083F7CC /* Link_Now */,
-				7F0E24591D4A00290083F7CC /* Link_NowTests */,
-				7F0E24641D4A00290083F7CC /* Link_NowUITests */,
+				7F0E24431D4A00290083F7CC /* LALA */,
+				7F0E24591D4A00290083F7CC /* LALATests */,
+				7F0E24641D4A00290083F7CC /* LALAUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -903,12 +907,12 @@
 /* Begin PBXTargetDependency section */
 		7F0E245C1D4A00290083F7CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7F0E24431D4A00290083F7CC /* Link_Now */;
+			target = 7F0E24431D4A00290083F7CC /* LALA */;
 			targetProxy = 7F0E245B1D4A00290083F7CC /* PBXContainerItemProxy */;
 		};
 		7F0E24671D4A00290083F7CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7F0E24431D4A00290083F7CC /* Link_Now */;
+			target = 7F0E24431D4A00290083F7CC /* LALA */;
 			targetProxy = 7F0E24661D4A00290083F7CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1027,7 +1031,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link;
-				PRODUCT_NAME = Link_Now;
+				PRODUCT_NAME = LALA;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1043,7 +1047,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link;
-				PRODUCT_NAME = Link_Now;
+				PRODUCT_NAME = LALA;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -1055,8 +1059,8 @@
 				INFOPLIST_FILE = LALATests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALATests;
-				PRODUCT_NAME = Link_Now;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Link_Now.app/Link_Now";
+				PRODUCT_NAME = LALA;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LALA.app/LALA";
 			};
 			name = Debug;
 		};
@@ -1067,8 +1071,8 @@
 				INFOPLIST_FILE = LALATests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALATests;
-				PRODUCT_NAME = Link_Now;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Link_Now.app/Link_Now";
+				PRODUCT_NAME = LALA;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LALA.app/LALA";
 			};
 			name = Release;
 		};
@@ -1078,7 +1082,7 @@
 				INFOPLIST_FILE = LALAUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALAUITests;
-				PRODUCT_NAME = Link_Now;
+				PRODUCT_NAME = LALA;
 				TEST_TARGET_NAME = LALA;
 			};
 			name = Debug;
@@ -1089,7 +1093,7 @@
 				INFOPLIST_FILE = LALAUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALAUITests;
-				PRODUCT_NAME = Link_Now;
+				PRODUCT_NAME = LALA;
 				TEST_TARGET_NAME = LALA;
 			};
 			name = Release;
@@ -1097,7 +1101,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F0E243F1D4A00290083F7CC /* Build configuration list for PBXProject "Link_Now" */ = {
+		7F0E243F1D4A00290083F7CC /* Build configuration list for PBXProject "LALA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0E246C1D4A00290083F7CC /* Debug */,
@@ -1106,7 +1110,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_Now" */ = {
+		7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0E246F1D4A00290083F7CC /* Debug */,
@@ -1115,7 +1119,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F0E24711D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_NowTests" */ = {
+		7F0E24711D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALATests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0E24721D4A00290083F7CC /* Debug */,
@@ -1124,7 +1128,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F0E24741D4A00290083F7CC /* Build configuration list for PBXNativeTarget "Link_NowUITests" */ = {
+		7F0E24741D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALAUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0E24751D4A00290083F7CC /* Debug */,
