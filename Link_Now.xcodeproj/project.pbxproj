@@ -1141,10 +1141,13 @@
 			baseConfigurationReference = AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link;
 				PRODUCT_NAME = Link_Now;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1153,10 +1156,13 @@
 			baseConfigurationReference = 13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.LALA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link;
 				PRODUCT_NAME = Link_Now;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

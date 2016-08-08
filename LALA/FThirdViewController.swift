@@ -40,7 +40,7 @@ class FThirdViewController: UIViewController {
     }
 
     
-    @IBAction func ZhuCecClick(sender: AnyObject) {
+    func ZhuCecClick(sender: AnyObject) {
         let vc = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewControllerWithIdentifier("ZhuCeViewController")
         self.navigationController?.pushViewController(vc, animated: true)
