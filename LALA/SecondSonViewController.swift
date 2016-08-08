@@ -24,14 +24,18 @@ class SecondSonViewController: UIViewController {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
+                        
+                        let a = json["data"]["newslist"]["title"].string
+                        
                         print(json["data"]["newslist"]["title"])
+                        self._Lable.text = a
+                        
                     }
                 case .Failure(let error):
                     print(error)
                 }
         }
-        print("")
-        
+        print("1")
         
     }
     
