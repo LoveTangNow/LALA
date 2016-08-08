@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--2-->
+        <!--消息-->
         <scene sceneID="hxm-V9-khG">
             <objects>
                 <navigationController id="csa-cA-Xit" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="2" image="first" id="CcS-o3-l3D"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="18-envelope.png" id="CcS-o3-l3D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4d-Pn-rY7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,11 +23,11 @@
             </objects>
             <point key="canvasLocation" x="730" y="121"/>
         </scene>
-        <!--1-->
+        <!--时间-->
         <scene sceneID="nfK-gS-Ats">
             <objects>
                 <navigationController id="nzo-Fr-e2s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="1" image="second" id="Q0R-6P-HYg"/>
+                    <tabBarItem key="tabBarItem" title="时间" image="08-chat.png" id="Q0R-6P-HYg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sK9-bK-eql">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="1360" y="-511"/>
         </scene>
-        <!--2-->
+        <!--消息-->
         <scene sceneID="2b0-qE-RO7">
             <objects>
                 <viewController id="6Hu-4V-fE0" customClass="FSecondViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,14 +86,14 @@
                             <constraint firstItem="uNU-Fd-oND" firstAttribute="centerY" secondItem="uMV-zH-cIf" secondAttribute="centerY" id="s8a-gM-qia"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="2" id="1GC-4q-NR1"/>
+                    <navigationItem key="navigationItem" title="消息" id="1GC-4q-NR1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSq-uq-0cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360" y="121"/>
         </scene>
-        <!--3-->
+        <!--发现-->
         <scene sceneID="6VU-ra-K9o">
             <objects>
                 <viewController id="o6z-DN-RUI" customClass="FThirdViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,9 +108,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nts-Br-mfY">
                                 <rect key="frame" x="145" y="253" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
-                                <connections>
-                                    <action selector="DengluClick:" destination="o6z-DN-RUI" eventType="touchUpInside" id="ljb-R2-HLT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v59-SH-4Io">
                                 <rect key="frame" x="145" y="314" width="30" height="30"/>
@@ -119,16 +116,6 @@
                                     <action selector="ZhuCecClick:" destination="o6z-DN-RUI" eventType="touchUpInside" id="40M-qt-83T"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-nO-Uuf">
-                                <rect key="frame" x="104" y="202" width="113" height="29"/>
-                                <segments>
-                                    <segment title="denglu"/>
-                                    <segment title="zhuce"/>
-                                </segments>
-                                <connections>
-                                    <action selector="dian:" destination="o6z-DN-RUI" eventType="valueChanged" id="k7V-XD-8x6"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zw-HM-x0E">
                                 <rect key="frame" x="126" y="377" width="69" height="30"/>
                                 <state key="normal" title="Core Data"/>
@@ -139,10 +126,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ8-su-5Dp">
                                 <rect key="frame" x="131" y="455" width="59" height="30"/>
                                 <state key="normal" title="plist数据"/>
-                                <connections>
-                                    <action selector="PLC:" destination="o6z-DN-RUI" eventType="touchUpInside" id="j4e-oM-frx"/>
-                                    <action selector="PlistClick:" destination="o6z-DN-RUI" eventType="touchUpInside" id="5TN-LQ-tXC"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-0o-Pzp">
                                 <rect key="frame" x="139" y="426" width="42" height="21"/>
@@ -153,8 +136,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nts-Br-mfY" firstAttribute="top" secondItem="mnP-nO-Uuf" secondAttribute="bottom" constant="23" id="4cO-Vz-gGV"/>
-                            <constraint firstItem="5Zw-HM-x0E" firstAttribute="centerX" secondItem="mnP-nO-Uuf" secondAttribute="centerX" id="76P-lf-C2w"/>
                             <constraint firstItem="Nts-Br-mfY" firstAttribute="centerY" secondItem="4uX-or-LOy" secondAttribute="centerY" id="7Uy-g0-4MI"/>
                             <constraint firstItem="v59-SH-4Io" firstAttribute="top" secondItem="Nts-Br-mfY" secondAttribute="bottom" constant="31" id="B1Y-W5-8GO"/>
                             <constraint firstItem="5Zw-HM-x0E" firstAttribute="top" secondItem="v59-SH-4Io" secondAttribute="bottom" constant="33" id="HE9-3t-dCY"/>
@@ -177,7 +158,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="3" id="nyb-gN-3dC"/>
+                    <navigationItem key="navigationItem" title="发现" id="nyb-gN-3dC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="pl" destination="was-0o-Pzp" id="nfW-dG-XlJ"/>
@@ -187,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="1360" y="777"/>
         </scene>
-        <!--TableView-->
+        <!--我-->
         <scene sceneID="zvt-mg-kTc">
             <objects>
                 <viewController storyboardIdentifier="FFourthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KBl-kg-NqP" customClass="FFourthViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,6 +183,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qlp-lJ-lQe">
                                 <rect key="frame" x="16" y="0.0" width="288" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="KBl-kg-NqP" id="1fN-Dh-DlM"/>
                                     <outlet property="delegate" destination="KBl-kg-NqP" id="3iZ-as-04V"/>
@@ -216,7 +198,12 @@
                             <constraint firstItem="Qlp-lJ-lQe" firstAttribute="leading" secondItem="aNg-xy-tLG" secondAttribute="leadingMargin" id="dkg-XT-xWW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TableView" id="Oum-bB-biL">
+                    <navigationItem key="navigationItem" title="我" id="Oum-bB-biL">
+                        <barButtonItem key="leftBarButtonItem" image="19-gear.png" id="MOw-tl-oeb">
+                            <connections>
+                                <action selector="ButtonTopLeftClick:" destination="KBl-kg-NqP" id="kDK-sa-oRJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nhI-YR-MhH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="64Y-3H-tkA">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -230,6 +217,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="ButtonTopLeft" destination="MOw-tl-oeb" id="eNB-jb-fQu"/>
                         <outlet property="ButtonTopRight" destination="64Y-3H-tkA" id="EgZ-MX-Gyf"/>
                         <outlet property="aTableView" destination="Qlp-lJ-lQe" id="vyf-kg-NhS"/>
                     </connections>
@@ -287,6 +275,74 @@
             </objects>
             <point key="canvasLocation" x="1892" y="1132"/>
         </scene>
+        <!--设置-->
+        <scene sceneID="1YM-ey-NQG">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gp0-6R-jtv" userLabel="设置" customClass="SettingTableViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5v2-e6-OtP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="XMb-Sv-r8Z" detailTextLabel="HQ6-Z5-m1K" imageView="aw2-xY-xMZ" style="IBUITableViewCellStyleValue1" id="7lD-QQ-LSV">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lD-QQ-LSV" id="cFV-gm-hVs">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XMb-Sv-r8Z">
+                                            <rect key="frame" x="58" y="12" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HQ6-Z5-m1K">
+                                            <rect key="frame" x="263.5" y="12" width="41.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="05-shuffle.png" id="aw2-xY-xMZ">
+                                            <rect key="frame" x="15" y="11" width="28" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="gp0-6R-jtv" id="xmB-Gm-HkX"/>
+                            <outlet property="delegate" destination="gp0-6R-jtv" id="lAT-cn-evm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XLd-Bx-x02"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bah-Dg-Hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="1848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mLM-xM-4my">
+            <objects>
+                <navigationController id="qRE-eh-hTl" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X95-6A-emn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gp0-6R-jtv" kind="relationship" relationship="rootViewController" id="aci-tr-Rjr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kci-fS-Ol9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="2520"/>
+        </scene>
         <!--Zhu Ce View Controller-->
         <scene sceneID="jyr-hk-pl1">
             <objects>
@@ -341,11 +397,11 @@
             </objects>
             <point key="canvasLocation" x="2365" y="1132"/>
         </scene>
-        <!--4-->
+        <!--我的-->
         <scene sceneID="g4z-mm-f00">
             <objects>
                 <navigationController id="WcF-wy-eea" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="4" image="first" id="um6-uR-NmH"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="21-skull.png" id="um6-uR-NmH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PBO-R6-p72">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -358,11 +414,11 @@
             </objects>
             <point key="canvasLocation" x="730" y="1446"/>
         </scene>
-        <!--3-->
+        <!--发现-->
         <scene sceneID="S0M-rZ-sKy">
             <objects>
                 <navigationController id="MBr-kH-MDi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="3" image="second" id="5ap-cg-g5Z"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="06-magnifying-glass.png" id="5ap-cg-g5Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JCO-2H-21Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -387,10 +443,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WcF-wy-eea" kind="relationship" relationship="viewControllers" id="bNL-gm-Ida"/>
-                        <segue destination="csa-cA-Xit" kind="relationship" relationship="viewControllers" id="LAt-CJ-h9x"/>
                         <segue destination="nzo-Fr-e2s" kind="relationship" relationship="viewControllers" id="Alo-Wd-OZ9"/>
+                        <segue destination="csa-cA-Xit" kind="relationship" relationship="viewControllers" id="LAt-CJ-h9x"/>
                         <segue destination="MBr-kH-MDi" kind="relationship" relationship="viewControllers" id="eLd-XX-pPe"/>
+                        <segue destination="WcF-wy-eea" kind="relationship" relationship="viewControllers" id="bNL-gm-Ida"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -399,7 +455,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="05-shuffle.png" width="28" height="20"/>
+        <image name="06-magnifying-glass.png" width="24" height="24"/>
+        <image name="08-chat.png" width="24" height="22"/>
+        <image name="18-envelope.png" width="24" height="16"/>
+        <image name="19-gear.png" width="26" height="26"/>
+        <image name="21-skull.png" width="22" height="24"/>
     </resources>
 </document>

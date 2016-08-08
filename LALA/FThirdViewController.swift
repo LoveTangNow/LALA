@@ -39,12 +39,6 @@ class FThirdViewController: UIViewController {
         
     }
 
-    //更新Lable文字
-    @IBAction func PLC(sender: AnyObject) {
-        
-    }
-
-
     
     @IBAction func ZhuCecClick(sender: AnyObject) {
         let vc = UIStoryboard(name: "Main", bundle: nil)

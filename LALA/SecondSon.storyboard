@@ -27,7 +27,7 @@
                                 <rect key="frame" x="277" y="195" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btnClick:" destination="1RT-ry-Sjt" eventType="touchUpInside" id="HSU-ZC-Epp"/>
+                                    <action selector="_Button:" destination="1RT-ry-Sjt" eventType="touchUpInside" id="36Y-zo-H8I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,7 +40,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Lable" destination="sDj-Xc-ypq" id="mrV-dJ-ZaJ"/>
+                        <outlet property="_Lable" destination="sDj-Xc-ypq" id="10h-2I-b9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5r-bx-jb3" userLabel="First Responder" sceneMemberID="firstResponder"/>

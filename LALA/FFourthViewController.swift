@@ -20,6 +20,7 @@ class FFourthViewController: UIViewController, UITableViewDataSource{
     
     
     @IBOutlet weak var ButtonTopRight: UIButton!
+    @IBOutlet weak var ButtonTopLeft: UIBarButtonItem!
     
     
     var shifoudenglu :NSString = ""
@@ -35,6 +36,10 @@ class FFourthViewController: UIViewController, UITableViewDataSource{
         print(da)
         shifoudenglu = da
 
+    }
+    @IBAction func ButtonTopLeftClick(sender: AnyObject) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func ButtonTopRightClick(sender: AnyObject) {
