@@ -3,16 +3,33 @@
 //  Link_Now
 //
 //  Created by Thomas Liu on 16/8/8.
-//  Copyright © 2016年 Thomas Liu. All rights reserved.
+//  Copyright © 2016 Thomas Liu. All rights reserved.
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SecondSonViewController: UIViewController {
 
     @IBOutlet weak var _Lable: UILabel!
     
+    //Alamofire + SwiftyJSON
     @IBAction func _Button(sender: AnyObject) {
+        
+        Alamofire.request(.GET, "https://localhost/test2/Afiretest.php", parameters: ["foo": "bar"])
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+        print("")
+        
+        
     }
     
     override func viewDidLoad() {

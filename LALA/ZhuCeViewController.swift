@@ -26,6 +26,7 @@ class ZhuCeViewController: UIViewController {
         user_phone.placeholder = "手机号"
         user_password.placeholder = "密码"
         user_password_c.placeholder = "确认密码"
+
         
         // Do any additional setup after loading the view.
     }
@@ -37,6 +38,7 @@ class ZhuCeViewController: UIViewController {
     
 
     @IBAction func Zhuce_Click(sender: AnyObject) {
+        print("点了注册按钮")
         self.dismissViewControllerAnimated(true, completion:nil)
     }
     

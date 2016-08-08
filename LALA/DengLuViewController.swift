@@ -13,13 +13,22 @@ class DengLuViewController: UIViewController {
     @IBOutlet weak var username_space: UITextField!
     @IBOutlet weak var userpassword_space: UITextField!
     
+    //收起键盘：空白，用户名
+    @IBAction func SpaceClick(sender: AnyObject) {
+        username_space.resignFirstResponder()
+        userpassword_space.resignFirstResponder()
+    }
     
-    
-    
+    //
+    @IBAction func Goooooooo(sender: AnyObject) {
+        print(zhu_ce())
+    }
     
 
     @IBAction func denglu_button(sender: AnyObject) {
+        print(zhu_ce())
     }
+    
 
     @IBAction func zhuce_dianji_button(sender: AnyObject) {
         
@@ -29,6 +38,9 @@ class DengLuViewController: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
     }
 
+    func zhu_ce() -> Int {
+        return 1;
+    }
     
     
     override func viewDidLoad() {
@@ -36,6 +48,7 @@ class DengLuViewController: UIViewController {
         
         username_space.placeholder = "请输入邮箱或手机号"
         userpassword_space.placeholder = "请输入密码"
+        self.title = "登录"
         
 
         // Do any additional setup after loading the view.

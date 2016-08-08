@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Thrid Son View Controller-->
         <scene sceneID="dqY-XH-EIR">
             <objects>
-                <viewController storyboardIdentifier="ThridSonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3PI-nc-fGb" customClass="ThridSonViewController" customModule="Link_Now" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThridSonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3PI-nc-fGb" customClass="ThridSonViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Ff-U5-AIO"/>
                         <viewControllerLayoutGuide type="bottom" id="5iD-qQ-xLh"/>

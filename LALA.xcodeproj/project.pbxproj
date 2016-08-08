@@ -337,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24461D4A00290083F7CC /* LALA */,
+				7F19A1421D58D9950030A16F /* Documents */,
 				7F0E245D1D4A00290083F7CC /* LALATests */,
 				7F0E24681D4A00290083F7CC /* LALAUITests */,
 				7F0E24451D4A00290083F7CC /* Products */,
@@ -510,6 +511,13 @@
 			path = ../../../../../../Desktop/icons/icons;
 			sourceTree = "<group>";
 		};
+		7F19A1421D58D9950030A16F /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
 		7FB8A89E1D4B27D200F2F22D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,9 +525,9 @@
 				7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */,
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
-				7F19A1411D58CF8E0030A16F /* sqlite1.sqlite */,
 				7FE705B01D5729460025A0E5 /* FFourthViewController.swift */,
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
+				7F19A1411D58CF8E0030A16F /* sqlite1.sqlite */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
 			);
 			name = Main;
