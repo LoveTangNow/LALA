@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>httphead</key>
+	<string>http://</string>
+	<key>server</key>
+	<string>localhost</string>
+	<key>signin</key>
+	<string>/LALA/SIGNIN.php</string>
+	<key>login</key>
+	<string>/LALA/LOGIN.php</string>
+</dict>
+</plist>

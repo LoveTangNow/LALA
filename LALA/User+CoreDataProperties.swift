@@ -1,8 +1,8 @@
 //
-//  Is_user_cunzai_biao+CoreDataProperties.swift
+//  User+CoreDataProperties.swift
 //  Link_Now
 //
-//  Created by Thomas Liu on 16/8/6.
+//  Created by Thomas Liu on 16/8/8.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,8 +12,10 @@
 import Foundation
 import CoreData
 
-extension Is_user_cunzai_biao {
 
-    @NSManaged var iduser: NSNumber?
+
+extension User {
+
+    @NSManaged var userid: String?
 
 }

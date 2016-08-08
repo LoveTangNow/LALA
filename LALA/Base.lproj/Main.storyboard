@@ -109,31 +109,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zw-HM-x0E">
-                                <rect key="frame" x="126" y="377" width="69" height="30"/>
-                                <state key="normal" title="Core Data"/>
+                                <rect key="frame" x="145" y="184" width="30" height="30"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="plist"/>
                                 <connections>
                                     <action selector="CoreDaraClick:" destination="o6z-DN-RUI" eventType="touchUpInside" id="oXK-0i-5TY"/>
+                                    <outletCollection property="gestureRecognizers" destination="aUo-nL-jBN" appends="YES" id="fTj-aB-yHz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ8-su-5Dp">
-                                <rect key="frame" x="131" y="455" width="59" height="30"/>
-                                <state key="normal" title="plist数据"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-0o-Pzp">
-                                <rect key="frame" x="139" y="426" width="42" height="21"/>
+                                <rect key="frame" x="139" y="291" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ8-su-5Dp">
+                                <rect key="frame" x="128" y="376" width="65" height="30"/>
+                                <state key="normal" title="CoreData"/>
+                                <connections>
+                                    <action selector="CoreData:" destination="o6z-DN-RUI" eventType="touchUpInside" id="B3h-zL-G3E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="838-wW-jLC" firstAttribute="top" secondItem="GJ8-su-5Dp" secondAttribute="bottom" constant="34" id="GTF-uY-wMZ"/>
-                            <constraint firstItem="GJ8-su-5Dp" firstAttribute="top" secondItem="5Zw-HM-x0E" secondAttribute="bottom" constant="48" id="JrL-yD-yHX"/>
-                            <constraint firstItem="GJ8-su-5Dp" firstAttribute="top" secondItem="was-0o-Pzp" secondAttribute="bottom" constant="8" id="id3-c6-dRo"/>
+                            <constraint firstItem="838-wW-jLC" firstAttribute="top" secondItem="GJ8-su-5Dp" secondAttribute="bottom" constant="113" id="GTF-uY-wMZ"/>
+                            <constraint firstItem="GJ8-su-5Dp" firstAttribute="top" secondItem="5Zw-HM-x0E" secondAttribute="bottom" constant="162" id="JrL-yD-yHX"/>
+                            <constraint firstItem="GJ8-su-5Dp" firstAttribute="top" secondItem="was-0o-Pzp" secondAttribute="bottom" constant="64" id="id3-c6-dRo"/>
                             <constraint firstItem="5Zw-HM-x0E" firstAttribute="centerX" secondItem="4uX-or-LOy" secondAttribute="centerX" id="kHH-Xu-YlV"/>
                             <constraint firstItem="was-0o-Pzp" firstAttribute="centerX" secondItem="GJ8-su-5Dp" secondAttribute="centerX" id="lEk-K8-giE"/>
-                            <constraint firstItem="5Zw-HM-x0E" firstAttribute="leading" secondItem="GJ8-su-5Dp" secondAttribute="trailing" constant="-64" id="vMU-2y-WgH"/>
+                            <constraint firstItem="5Zw-HM-x0E" firstAttribute="leading" secondItem="GJ8-su-5Dp" secondAttribute="trailing" constant="-48" id="vMU-2y-WgH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发现" id="nyb-gN-3dC"/>
@@ -143,8 +148,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iT-GB-zqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="aUo-nL-jBN">
+                    <connections>
+                        <action selector="LLLPP:" destination="o6z-DN-RUI" id="1nH-XW-oUd"/>
+                        <outlet property="delegate" destination="5Zw-HM-x0E" id="lPV-HD-Jak"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1360" y="777"/>
+            <point key="canvasLocation" x="1332" y="753"/>
         </scene>
         <!--我-->
         <scene sceneID="zvt-mg-kTc">
