@@ -25,7 +25,7 @@ class FThirdViewController: UIViewController {
     }
     //获取Plist中的数据
     @IBAction func CoreDaraClick(sender: AnyObject) {
-        print("点击了CoreData")
+        print("点击了plist")
         //读取数据
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
