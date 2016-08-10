@@ -22,12 +22,16 @@
 		7F19A13C1D58C1370030A16F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19A13A1D58C1370030A16F /* User.swift */; };
 		7F19A13E1D58C5080030A16F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F19A13D1D58C5080030A16F /* libsqlite3.tbd */; };
 		7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */; };
-		7F7701401D5B476C008D07A2 /* FFristTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFristTableViewCell.swift */; };
+		7F7701401D5B476C008D07A2 /* FFourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFourthTableViewCell.swift */; };
+		7F7701421D5B629C008D07A2 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFristViewController.swift */; };
+		7F7701451D5B6386008D07A2 /* FFristTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */; };
+		7F7701481D5B8824008D07A2 /* ImagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImagedViewController.swift */; };
+		7F77014B1D5B890E008D07A2 /* Imaged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F77014A1D5B890E008D07A2 /* Imaged.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
 		7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */; };
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
-		7FB8A8A41D4B289F00F2F22D /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */; };
+		7FB8A8A41D4B289F00F2F22D /* FFristViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		7FE705B11D5729460025A0E5 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFourthViewController.swift */; };
@@ -73,12 +77,16 @@
 		7F19A13D1D58C5080030A16F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridSonViewController.swift; sourceTree = "<group>"; };
 		7F288ADB1D4B649E00842A9C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/LALA-gcpqeuqtnmwzqncsdxsxanlvzlfi/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		7F77013F1D5B476C008D07A2 /* FFristTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristTableViewCell.swift; sourceTree = "<group>"; };
+		7F77013F1D5B476C008D07A2 /* FFourthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthTableViewCell.swift; sourceTree = "<group>"; };
+		7F7701411D5B629C008D07A2 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
+		7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristTableViewCell.swift; sourceTree = "<group>"; };
+		7F7701471D5B8824008D07A2 /* ImagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagedViewController.swift; sourceTree = "<group>"; };
+		7F77014A1D5B890E008D07A2 /* Imaged.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Imaged.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
 		7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThridSon.storyboard; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
-		7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
+		7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController2.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
@@ -188,17 +196,45 @@
 			name = temp;
 			sourceTree = "<group>";
 		};
+		7F7701431D5B62A6008D07A2 /* laji */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */,
+			);
+			name = laji;
+			sourceTree = "<group>";
+		};
+		7F7701461D5B87F2008D07A2 /* Setting_shezhi */ = {
+			isa = PBXGroup;
+			children = (
+				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
+				7F77014A1D5B890E008D07A2 /* Imaged.storyboard */,
+				7F7701471D5B8824008D07A2 /* ImagedViewController.swift */,
+			);
+			name = Setting_shezhi;
+			sourceTree = "<group>";
+		};
+		7F7701491D5B88D1008D07A2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7F77013F1D5B476C008D07A2 /* FFourthTableViewCell.swift */,
+				7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		7FB8A89E1D4B27D200F2F22D /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				7F0E244D1D4A00290083F7CC /* Main.storyboard */,
-				7FB8A8A31D4B289F00F2F22D /* FFristViewController.swift */,
-				7F77013F1D5B476C008D07A2 /* FFristTableViewCell.swift */,
+				7F7701411D5B629C008D07A2 /* FFristViewController.swift */,
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
 				7FE705B01D5729460025A0E5 /* FFourthViewController.swift */,
-				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
+				7F7701491D5B88D1008D07A2 /* cells */,
+				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
+				7F7701431D5B62A6008D07A2 /* laji */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -366,6 +402,7 @@
 				7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */,
 				7F19A12D1D58695B0030A16F /* Assets.xcassets in Resources */,
 				7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */,
+				7F77014B1D5B890E008D07A2 /* Imaged.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,17 +477,20 @@
 			files = (
 				7F19A13C1D58C1370030A16F /* User.swift in Sources */,
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
+				7F7701421D5B629C008D07A2 /* FFristViewController.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
 				7F19A13B1D58C1370030A16F /* User+CoreDataProperties.swift in Sources */,
+				7F7701451D5B6386008D07A2 /* FFristTableViewCell.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,
 				7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
+				7F7701481D5B8824008D07A2 /* ImagedViewController.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
-				7F7701401D5B476C008D07A2 /* FFristTableViewCell.swift in Sources */,
-				7FB8A8A41D4B289F00F2F22D /* FFristViewController.swift in Sources */,
+				7F7701401D5B476C008D07A2 /* FFourthTableViewCell.swift in Sources */,
+				7FB8A8A41D4B289F00F2F22D /* FFristViewController2.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,7 +634,6 @@
 			baseConfigurationReference = AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;
@@ -611,7 +650,6 @@
 			baseConfigurationReference = 13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;

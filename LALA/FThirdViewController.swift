@@ -12,6 +12,8 @@ import CoreData
 import Foundation
 import SQLite
 
+
+//Tab bar发现页面
 class FThirdViewController: UIViewController {
     
     @IBOutlet weak var pl: UILabel!

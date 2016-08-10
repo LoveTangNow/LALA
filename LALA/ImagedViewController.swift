@@ -1,26 +1,21 @@
 //
-//  FFristViewController.swift
+//  ImagedownloadViewController.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/7/29.
+//  Created by Thomas Liu on 16/8/11.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
-import Alamofire
 
+class ImagedViewController: UIViewController {
 
-//Tab bar消息页面
-class FSecondViewController: UIViewController {
-
-    @IBAction func Click(sender: AnyObject) {
-        let vc = UIStoryboard(name: "SecondSon", bundle: nil)
-            .instantiateViewControllerWithIdentifier("SecondSonViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
-
-    }
+    @IBOutlet weak var TUIImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "图片下载测试"
 
         // Do any additional setup after loading the view.
     }

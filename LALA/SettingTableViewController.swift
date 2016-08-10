@@ -7,8 +7,25 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
+
+//设置页面
 class SettingTableViewController: UITableViewController {
+    
+    @IBAction func Setting_Top_Right_Button_Clivk(sender: AnyObject) {
+        print("现在是图片下载测试")
+//        
+//        let sb = UIStoryboard(name: "Imaged", bundle:nil)
+//        let vc = sb.instantiateViewControllerWithIdentifier("ImagedownloadViewController") as UIViewController
+//        self.presentViewController(vc, animated: true, completion: nil)
+        
+        let vc = UIStoryboard(name: "Imaged", bundle: nil)
+            .instantiateViewControllerWithIdentifier("ImagedViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

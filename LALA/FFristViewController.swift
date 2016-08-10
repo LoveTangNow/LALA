@@ -2,86 +2,106 @@
 //  FFristViewController.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/7/29.
+//  Created by Thomas Liu on 16/8/10.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
-import Foundation
-import Alamofire
 
-class ZYFruiT: NSObject {
-    var name: String = String ()
-    var desc: String = String ()
-    var fruit: NSArray = NSArray ()
-}
+class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
 
+    @IBOutlet weak var MainTableView: UITableView!
 
-class FFristViewController: UITableViewController {
-
-    @IBOutlet weak var aTableView: UITableView!
+    var datamain = [
     
+        ttimecell(
+            image_left_top: "user-female-vector", image_right_top: "user-female-vector",
+            image_mid_left: "user-female-vector", image_mid_mid: "user-female-vector",   image_mid_right: "user-female-vector",
+            image_left_bottom: "user-female-vector",  image_right_bottom: "user-female-vector",
+            /////////
+            lable_sender: "用户1"   ,
+            lable_time: "1234",
+            lable_pinglun_number:"123",  lable_zan_number:"123"
+        ),
+        
+        ttimecell(
+        image_left_top: "user-female-vector", image_right_top: "user-female-vector",
+        image_mid_left: "user-female-vector", image_mid_mid: "user-female-vector",   image_mid_right: "user-female-vector",
+        image_left_bottom: "user-female-vector",  image_right_bottom: "user-female-vector",
+        /////////
+        lable_sender: "用户2"   ,
+        lable_time: "123456",
+        lable_pinglun_number:"123",  lable_zan_number:"234"
+        ),
+        
+        ttimecell(
+            image_left_top: "user-female-vector", image_right_top: "user-female-vector",
+            image_mid_left: "user-female-vector", image_mid_mid: "user-female-vector",   image_mid_right: "user-female-vector",
+            image_left_bottom: "user-female-vector",  image_right_bottom: "user-female-vector",
+            /////////
+            lable_sender: "用户3"   ,
+            lable_time: "123456789",
+            lable_pinglun_number:"123",  lable_zan_number:"345"
+        )
+    
+    //video(image: "videoScreenshot01", title: "Introduce 3DS Mario", source: "Youtube - 06:32"),
+    
+    ]
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        MainTableView.dataSource = self
+        MainTableView.delegate = self
+    
     }
+//////////////////tableView_start
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    lazy var dataList: NSArray = {
-        
-        
-        var zyFriut1: ZYFruiT = ZYFruiT()
-        zyFriut1.name = "第一筐水果"
-        zyFriut1.desc = "多汁"
-        var list: NSMutableArray = NSMutableArray ()
-        for index: Int in 0 ..< 10 {
-            list .addObject("\(zyFriut1.name) - " + "\(index)")
-        }
-        zyFriut1.fruit = list
-        
-        
-        var zyFriut2: ZYFruiT = ZYFruiT()
-        zyFriut2.name = "第二筐水果"
-        zyFriut2.desc = "好吃"
-        var list2: NSMutableArray = NSMutableArray ()
-        for index: Int in 0 ..< 20 {
-            list2 .addObject("\(zyFriut2.name) - " + "\(index)")
-        }
-        zyFriut2.fruit = list2
-        
-        var tempList: NSArray = [zyFriut1, zyFriut2]
-        return tempList;
-    }()
-    
-    
-    //Tableview中一共有几个Sections
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return dataList.count;
-    }
-    
-    //tableview具体设置吧？？？？
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return dataList[section].fruit.count;
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell:UITableViewCell = UITableViewCell (style: .Default, reuseIdentifier: nil)
-        let zyFruiT: ZYFruiT = dataList[indexPath.section] as! ZYFruiT
-        cell.textLabel?.text = zyFruiT.fruit[indexPath.row] as? String
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataList[section].name
-    }
-    
-    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return dataList[section].desc
 
-    }
+func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+{
+    return 205
+}
+
+func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
+}
+
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return datamain.count
+}
+
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    let cell = MainTableView.dequeueReusableCellWithIdentifier("FFristTableViewCell", forIndexPath: indexPath) as! FFristTableViewCell
+    let video0 = datamain[indexPath.row]
+    
+    cell.image_left_top.image = UIImage(named:video0.image_left_top )
+    cell.image_right_top.image = UIImage(named:video0.image_right_top )
+    cell.image_mid_left.image = UIImage(named:video0.image_mid_left )
+    cell.image_mid_mid.image = UIImage(named:video0.image_mid_mid )
+    cell.image_mid_right.image = UIImage(named:video0.image_mid_right )
+    cell.image_left_bottom.image = UIImage(named:video0.image_left_top )
+    cell.image_right_bottom.image = UIImage(named:video0.image_right_bottom )
+    /////////
+    cell.lable_sender.text = video0.lable_sender
+    cell.lable_time.text = video0.lable_time
+    cell.lable_zan_number.text = video0.lable_zan_number
+    cell.lable_pinglun_number.text = video0.lable_pinglun_number
+    
+    return cell
+    
+}
+
+/////////////tableView_end
+
+
+
+
+override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+}
+
 }
