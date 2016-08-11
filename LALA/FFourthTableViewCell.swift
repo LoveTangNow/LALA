@@ -23,7 +23,6 @@ struct timecell {
     let lable_time: String
     let lable_pinglun_number:String
     let lable_zan_number:String
-    
 }
 
 class FFourthTableViewCell: UITableViewCell {

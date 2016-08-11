@@ -10,8 +10,6 @@ import UIKit
 import AVKit
 import AVFoundation
 
-
-
 //Tab bar我的页面
 class FFourthViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
@@ -20,6 +18,12 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
     @IBOutlet weak var ButtonTopLeft: UIBarButtonItem!
     
     @IBOutlet weak var TimeTableView: UITableView!
+    
+    var Tableview_count:Int = 0
+    var data_n = -1
+    var data2_n = -1
+    
+    
     
     var shifoudenglu :NSString = ""
     var data = [
@@ -50,13 +54,35 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
             image_left_bottom: "user-female-vector",  image_right_bottom: "user-female-vector",
             /////////
             lable_sender: "用户3"   ,
-            lable_time: "123456789",
-            lable_pinglun_number:"123",  lable_zan_number:"345"
-        )
+            lable_time: "123456",
+            lable_pinglun_number:"123",  lable_zan_number:"234"
+        ),
+        timecell(
+            image_left_top: "user-female-vector", image_right_top: "user-female-vector",
+            image_mid_left: "user-female-vector", image_mid_mid: "user-female-vector",   image_mid_right: "user-female-vector",
+            image_left_bottom: "user-female-vector",  image_right_bottom: "user-female-vector",
+            /////////
+            lable_sender: "用户4"   ,
+            lable_time: "123456",
+            lable_pinglun_number:"123",  lable_zan_number:"234"
+        ),
+
         
         //video(image: "videoScreenshot01", title: "Introduce 3DS Mario", source: "Youtube - 06:32"),
         
     ]
+    
+    var data2 = [
+            a456TableViewCell(
+                Image_top_left:"Black", Image_top_right: "Black",
+                Image1: "Black",     Image2: "Black",     Image3: "Black",
+                Image4: "Black",     Image5: "Black",     Image6: "Black",
+                Image_Bottom: "Black",
+                ////////////
+                Lable_sender: "liu",   Lable_others: "12467880988"
+            )
+    ]
+    
     
     
     override func viewDidLoad() {
@@ -76,45 +102,104 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
     //////////////////tableView_start
     
     
+    //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
+        print("Tableview cell高度")
         return 205
+        
     }
     
+    //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print("TableView中Sections的数量")
         return 1
     }
     
+    //几个Tableview cell
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        print("几个Tableview cell")
         return data.count
     }
     
+    //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("Tableview初始化")
         
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFourthTableViewCell", forIndexPath: indexPath) as! FFourthTableViewCell
-        let video = data[indexPath.row]
+        print(indexPath.row)
+        let a = indexPath.row
         
-//        cell.videoScreenshot.image = UIImage(named: video.image)
-//        cell.videoTitleLabel.text = video.title
-//        cell.videoSourceLabel.text = video.source
+
+        if a % 2 == 0 {
+            
+            if data_n < data.count {
+                data_n += 1
+            }
+            else
+            {
+            data_n = 0
+            }
         
-        cell.image_left_top.image = UIImage(named:video.image_left_top )
-        cell.image_right_top.image = UIImage(named:video.image_right_top )
-        cell.image_mid_left.image = UIImage(named:video.image_mid_left )
-        cell.image_mid_mid.image = UIImage(named:video.image_mid_mid )
-        cell.image_mid_right.image = UIImage(named:video.image_mid_right )
-        cell.image_left_bottom.image = UIImage(named:video.image_left_top )
-        cell.image_right_bottom.image = UIImage(named:video.image_right_bottom )
-        /////////
-        cell.lable_sender.text = video.lable_sender
-        cell.lable_time.text = video.lable_time
-        cell.lable_zan_number.text = video.lable_zan_number
-        cell.lable_pinglun_number.text = video.lable_pinglun_number
-        
-        return cell
-        
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFourthTableViewCell", forIndexPath: indexPath) as! FFourthTableViewCell
+            //let video = data[data_n]
+            let video = data[1]
+            
+            print("kan ==")
+            
+            //        cell.videoScreenshot.image = UIImage(named: video.image)
+            //        cell.videoTitleLabel.text = video.title
+            //        cell.videoSourceLabel.text = video.source
+            
+            cell.image_left_top.image = UIImage(named:video.image_left_top )
+            cell.image_right_top.image = UIImage(named:video.image_right_top )
+            cell.image_mid_left.image = UIImage(named:video.image_mid_left )
+            cell.image_mid_mid.image = UIImage(named:video.image_mid_mid )
+            cell.image_mid_right.image = UIImage(named:video.image_mid_right )
+            cell.image_left_bottom.image = UIImage(named:video.image_left_top )
+            cell.image_right_bottom.image = UIImage(named:video.image_right_bottom )
+            /////////
+            cell.lable_sender.text = video.lable_sender
+            cell.lable_time.text = video.lable_time
+            cell.lable_zan_number.text = video.lable_zan_number
+            cell.lable_pinglun_number.text = video.lable_pinglun_number
+            
+            return cell
+        }
+        else
+        {
+            if data2_n < data2.count {
+                data2_n += 1
+            }
+            else
+            {
+                data2_n = 0
+            }
+            
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
+            let v = data2[0]
+            
+            print("kan !=")
+            
+            cell.Image_top_left.image = UIImage(named: v.Image_top_left)
+            cell.Image_top_right.image = UIImage(named: v.Image_top_right)
+            cell.Image1.image = UIImage(named: v.Image1)
+            cell.Image2.image = UIImage(named: v.Image2)
+            cell.Image3.image = UIImage(named: v.Image3)
+            cell.Image4.image = UIImage(named: v.Image4)
+            cell.Image5.image = UIImage(named: v.Image5)
+            cell.Image6.image = UIImage(named: v.Image6)
+            cell.Image_Bottom.image = UIImage(named: v.Image_Bottom)
+            
+            cell.Lable_sender.text = v.Lable_sender
+            cell.Lable_others.text = v.Lable_others
+            
+            return cell
+        }
+
     }
     
+
     ///////////////tableView_end
 
     

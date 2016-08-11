@@ -15,7 +15,7 @@ import Alamofire
 class SettingTableViewController: UITableViewController {
     
     @IBAction func Setting_Top_Right_Button_Clivk(sender: AnyObject) {
-        print("现在是图片下载测试")
+        
 //        
 //        let sb = UIStoryboard(name: "Imaged", bundle:nil)
 //        let vc = sb.instantiateViewControllerWithIdentifier("ImagedownloadViewController") as UIViewController
@@ -56,9 +56,9 @@ class SettingTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
-            return 1
-        }else{
             return 2
+        }else{
+            return 3
         }
     }
 

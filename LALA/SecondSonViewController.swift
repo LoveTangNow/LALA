@@ -41,6 +41,8 @@ class SecondSonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.alpha = 0.5
 
         // Do any additional setup after loading the view.
     }

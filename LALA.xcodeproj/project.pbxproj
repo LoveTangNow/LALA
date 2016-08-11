@@ -27,6 +27,10 @@
 		7F7701451D5B6386008D07A2 /* FFristTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */; };
 		7F7701481D5B8824008D07A2 /* ImagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImagedViewController.swift */; };
 		7F77014B1D5B890E008D07A2 /* Imaged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F77014A1D5B890E008D07A2 /* Imaged.storyboard */; };
+		7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */; };
+		7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */; };
+		7F7701511D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */; };
+		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
 		7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */; };
@@ -82,6 +86,10 @@
 		7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristTableViewCell.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagedViewController.swift; sourceTree = "<group>"; };
 		7F77014A1D5B890E008D07A2 /* Imaged.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Imaged.storyboard; sourceTree = "<group>"; };
+		7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist789TableViewCell.swift; sourceTree = "<group>"; };
+		7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist456TableViewCell.swift; sourceTree = "<group>"; };
+		7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist_1_big_TableViewCell.swift; sourceTree = "<group>"; };
+		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
 		7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThridSon.storyboard; sourceTree = "<group>"; };
@@ -210,6 +218,7 @@
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
 				7F77014A1D5B890E008D07A2 /* Imaged.storyboard */,
 				7F7701471D5B8824008D07A2 /* ImagedViewController.swift */,
+				7F7701521D5CB69F008D07A2 /* ImageU.storyboard */,
 			);
 			name = Setting_shezhi;
 			sourceTree = "<group>";
@@ -217,8 +226,11 @@
 		7F7701491D5B88D1008D07A2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				7F77013F1D5B476C008D07A2 /* FFourthTableViewCell.swift */,
 				7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */,
+				7F77013F1D5B476C008D07A2 /* FFourthTableViewCell.swift */,
+				7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */,
+				7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */,
+				7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -400,6 +412,7 @@
 				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
 				7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */,
+				7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */,
 				7F19A12D1D58695B0030A16F /* Assets.xcassets in Resources */,
 				7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */,
 				7F77014B1D5B890E008D07A2 /* Imaged.storyboard in Resources */,
@@ -485,6 +498,9 @@
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,
 				7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */,
+				7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */,
+				7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */,
+				7F7701511D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
 				7F7701481D5B8824008D07A2 /* ImagedViewController.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,

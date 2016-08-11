@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class ImagedViewController: UIViewController {
 
     @IBOutlet weak var TUIImageView: UIImageView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        print("现在是图片下载测试")
+        
         self.title = "图片下载测试"
+        ///照片测试 start
+        
+        Alamofire.request(.GET, "http://localhost:80/LALA/aiqinhai04.jpg")
+            .responseImage { response in
+                
+//                debugPrint(response)
+//                print(response.request)
+//                print(response.response)
+//                debugPrint(response.result)
+                
+                if let image = response.result.value {
+                    print("image downloaded: \(image)")
+                    self.TUIImageView.image = image
+                }
+        }
+        
+        ///照片测试 end
 
         // Do any additional setup after loading the view.
     }

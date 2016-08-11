@@ -22,6 +22,7 @@ class FSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //self.tabBarController?.tabBar.alpha = 1
         // Do any additional setup after loading the view.
     }
 
