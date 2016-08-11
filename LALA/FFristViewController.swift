@@ -56,52 +56,50 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         MainTableView.delegate = self
     
     }
-//////////////////tableView_start
+    //////////////////tableView_start
 
 
-func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-{
-    return 205
-}
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 205
+    }
 
-func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-}
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 
-func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return datamain.count
-}
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datamain.count
+    }
 
-func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    let cell = MainTableView.dequeueReusableCellWithIdentifier("FFristTableViewCell", forIndexPath: indexPath) as! FFristTableViewCell
-    let video0 = datamain[indexPath.row]
+        let cell = MainTableView.dequeueReusableCellWithIdentifier("FFristTableViewCell", forIndexPath: indexPath) as!  FFristTableViewCell
+        let video0 = datamain[indexPath.row]
     
-    cell.image_left_top.image = UIImage(named:video0.image_left_top )
-    cell.image_right_top.image = UIImage(named:video0.image_right_top )
-    cell.image_mid_left.image = UIImage(named:video0.image_mid_left )
-    cell.image_mid_mid.image = UIImage(named:video0.image_mid_mid )
-    cell.image_mid_right.image = UIImage(named:video0.image_mid_right )
-    cell.image_left_bottom.image = UIImage(named:video0.image_left_top )
-    cell.image_right_bottom.image = UIImage(named:video0.image_right_bottom )
-    /////////
-    cell.lable_sender.text = video0.lable_sender
-    cell.lable_time.text = video0.lable_time
-    cell.lable_zan_number.text = video0.lable_zan_number
-    cell.lable_pinglun_number.text = video0.lable_pinglun_number
+        cell.image_left_top.image = UIImage(named:video0.image_left_top )
+        cell.image_right_top.image = UIImage(named:video0.image_right_top )
+        cell.image_mid_left.image = UIImage(named:video0.image_mid_left )
+        cell.image_mid_mid.image = UIImage(named:video0.image_mid_mid )
+        cell.image_mid_right.image = UIImage(named:video0.image_mid_right )
+        cell.image_left_bottom.image = UIImage(named:video0.image_left_top )
+        cell.image_right_bottom.image = UIImage(named:video0.image_right_bottom )
+        /////////
+        cell.lable_sender.text = video0.lable_sender
+        cell.lable_time.text = video0.lable_time
+        cell.lable_zan_number.text = video0.lable_zan_number
+        cell.lable_pinglun_number.text = video0.lable_pinglun_number
     
-    return cell
+        return cell
     
-}
+    }
 
-/////////////tableView_end
-
-
+    /////////////tableView_end
 
 
-override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-}
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }

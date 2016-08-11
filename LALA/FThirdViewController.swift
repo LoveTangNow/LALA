@@ -18,7 +18,15 @@ class FThirdViewController: UIViewController {
     
     @IBOutlet weak var pl: UILabel!
     
+    @IBOutlet weak var Top_Search_TextField: UITextField!
+    
     var managedObjectContext = true
+    
+    @IBAction func SpaceClick(sender: AnyObject) {
+        Top_Search_TextField.resignFirstResponder();
+    }
+    
+    
     
     
     //长按时间

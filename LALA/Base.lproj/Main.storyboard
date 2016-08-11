@@ -274,7 +274,7 @@
                         <viewControllerLayoutGuide type="top" id="v6Q-Zk-GNm"/>
                         <viewControllerLayoutGuide type="bottom" id="838-wW-jLC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4uX-or-LOy">
+                    <view key="view" contentMode="scaleToFill" id="4uX-or-LOy" customClass="UIControl">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -310,6 +310,9 @@
                             <constraint firstItem="was-0o-Pzp" firstAttribute="centerX" secondItem="GJ8-su-5Dp" secondAttribute="centerX" id="lEk-K8-giE"/>
                             <constraint firstItem="5Zw-HM-x0E" firstAttribute="leading" secondItem="GJ8-su-5Dp" secondAttribute="trailing" constant="-48" id="vMU-2y-WgH"/>
                         </constraints>
+                        <connections>
+                            <action selector="SpaceClick:" destination="o6z-DN-RUI" eventType="touchUpInside" id="253-Cp-daz"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="nyb-gN-3dC">
                         <nil key="title"/>
@@ -322,6 +325,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="Top_Search_TextField" destination="VI9-ht-mNM" id="6IJ-TJ-Dhp"/>
                         <outlet property="pl" destination="was-0o-Pzp" id="nfW-dG-XlJ"/>
                     </connections>
                 </viewController>
