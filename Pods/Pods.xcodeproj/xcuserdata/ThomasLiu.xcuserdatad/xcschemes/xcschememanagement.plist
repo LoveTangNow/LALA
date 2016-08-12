@@ -19,17 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Onboard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-LALA.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SQLite.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TOWebViewController-TOWebViewControllerLocalizable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOWebViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D0F0BD2E8D313E4389370F80CEA9769</key>
+		<key>57F838A2A4408B928E38DF12A48B575B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A794BEBB34E494DB9EE40ED383DA9A19</key>
+		<key>A1D7A568540E3835FAE141BB228A114E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4500FEF550E77A1B5C9282CE7F4938F</key>
+		<key>A61E35B5D0A8544F92E7997A6782734F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0622EC3FF66F1724140231C8DE15988</key>
+		<key>B270D934C3B43338A205BCE306F32C73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E96E13C4D3B5B5FC0651440734C2BF4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFE9EC55E4C75AD75E6DFCF6593052A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
