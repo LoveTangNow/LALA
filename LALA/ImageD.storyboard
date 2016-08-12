@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ImageD View Controller-->
         <scene sceneID="czH-i8-TqN">
             <objects>
-                <viewController id="fkv-eV-5hm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mageDViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fkv-eV-5hm" customClass="ImageDViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hf5-pX-lYM"/>
                         <viewControllerLayoutGuide type="bottom" id="cfg-Hq-IMQ"/>
@@ -29,6 +29,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="TUIImageView" destination="AVS-qf-p69" id="g9M-vF-4hw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjA-Ng-UKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
