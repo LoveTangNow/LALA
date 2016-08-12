@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jSS-o5-nfv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--ImageU View Controller-->
+        <scene sceneID="vYr-st-FCV">
+            <objects>
+                <viewController storyboardIdentifier="ImageUViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jSS-o5-nfv" customClass="ImageUViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mya-zL-KJe"/>
+                        <viewControllerLayoutGuide type="bottom" id="tdC-jf-uIw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3hE-jT-s9u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-8f-WUU">
+                                <rect key="frame" x="50" y="193" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8E-Ra-1js">
+                                <rect key="frame" x="145" y="429" width="30" height="30"/>
+                                <state key="normal" title="上传"/>
+                                <connections>
+                                    <action selector="Upload_Click:" destination="jSS-o5-nfv" eventType="touchUpInside" id="P0V-Wg-Eab"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="UIImageView_For_Upload" destination="Ol9-8f-WUU" id="z3u-h2-4lo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mdn-wO-1Il" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Black" width="30" height="30"/>
+    </resources>
 </document>

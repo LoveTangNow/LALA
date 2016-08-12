@@ -8,7 +8,23 @@
 
 import UIKit
 
+
+
+struct TableViewCell_1_big {
+    let UIImageView_Top_Left:UIImage
+    let UIImageView_Top_Right:UIImage
+    let UIImageView_Main:UIImage
+    let UIImageView_Bottom:UIImage
+
+}
+
 class FFrist_1_big_TableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var UIImageView_Top_Left: UIImageView!
+    @IBOutlet weak var UIImageView_Top_Right: UIImageView!
+    @IBOutlet weak var UIImageView_Mian: UIImageView!
+    @IBOutlet weak var UIImageView_bottom: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

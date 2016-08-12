@@ -19,12 +19,27 @@ class FSecondViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
+    
+    @IBAction func Download_Image(sender: AnyObject) {
+        let vc = UIStoryboard(name: "ImageD", bundle: nil)
+            .instantiateViewControllerWithIdentifier("ImageDViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func Upload_Image(sender: AnyObject) {
+        let vc = UIStoryboard(name: "ImageU", bundle: nil)
+            .instantiateViewControllerWithIdentifier("ImageUViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //self.tabBarController?.tabBar.alpha = 1
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

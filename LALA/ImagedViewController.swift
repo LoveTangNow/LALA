@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ImagedViewController: UIViewController {
+class ImageDViewController: UIViewController {
 
     @IBOutlet weak var TUIImageView: UIImageView!
     
