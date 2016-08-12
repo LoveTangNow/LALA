@@ -7,7 +7,7 @@
         <!--ImageD View Controller-->
         <scene sceneID="czH-i8-TqN">
             <objects>
-                <viewController storyboardIdentifier="mageDViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fkv-eV-5hm" customClass="ImageDViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageDViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fkv-eV-5hm" customClass="ImageDViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hf5-pX-lYM"/>
                         <viewControllerLayoutGuide type="bottom" id="cfg-Hq-IMQ"/>

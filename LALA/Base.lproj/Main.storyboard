@@ -368,8 +368,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="205" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qlp-lJ-lQe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="205" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qlp-lJ-lQe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FFourthTableViewCell" rowHeight="205" id="FED-26-bMN" customClass="FFourthTableViewCell" customModule="LALA">
@@ -614,7 +614,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
                                                     <rect key="frame" x="8" y="77" width="304" height="168"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="304" id="ZUh-7f-Ny0"/>
@@ -671,9 +671,21 @@
                         <constraints>
                             <constraint firstItem="Qlp-lJ-lQe" firstAttribute="top" secondItem="aNg-xy-tLG" secondAttribute="topMargin" id="83n-8R-0Yo"/>
                             <constraint firstItem="Qlp-lJ-lQe" firstAttribute="height" secondItem="aNg-xy-tLG" secondAttribute="height" constant="-49" id="CQ7-kv-leg"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="centerY" secondItem="aNg-xy-tLG" secondAttribute="centerY" id="Hhh-t1-srt"/>
                             <constraint firstItem="Qlp-lJ-lQe" firstAttribute="trailing" secondItem="aNg-xy-tLG" secondAttribute="trailingMargin" constant="20" id="QHH-eA-5TN"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="height" secondItem="aNg-xy-tLG" secondAttribute="height" id="dJX-oQ-neU"/>
                             <constraint firstItem="Qlp-lJ-lQe" firstAttribute="leading" secondItem="aNg-xy-tLG" secondAttribute="leadingMargin" constant="-20" id="dkg-XT-xWW"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="centerX" secondItem="aNg-xy-tLG" secondAttribute="centerX" id="eYE-wV-Gq1"/>
+                            <constraint firstItem="Qlp-lJ-lQe" firstAttribute="width" secondItem="aNg-xy-tLG" secondAttribute="width" id="lkx-I6-GLc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="83n-8R-0Yo"/>
+                                <exclude reference="CQ7-kv-leg"/>
+                                <exclude reference="QHH-eA-5TN"/>
+                                <exclude reference="dkg-XT-xWW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="时间线" id="Oum-bB-biL">
                         <barButtonItem key="leftBarButtonItem" image="settings-vector" id="MOw-tl-oeb">
@@ -1086,6 +1098,7 @@
     </scenes>
     <resources>
         <image name="Black" width="30" height="30"/>
+        <image name="aiqinhai04.jpg" width="960" height="1441"/>
         <image name="archive-vector" width="30" height="30"/>
         <image name="box-vector" width="30" height="30"/>
         <image name="contacts-vector" width="30" height="30"/>
