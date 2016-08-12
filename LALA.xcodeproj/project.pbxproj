@@ -41,6 +41,7 @@
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
+		7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
+		7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageD.storyboard; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LALA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
+				7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */,
 				7F7701471D5B8824008D07A2 /* ImageDViewController.swift */,
 				7F7701521D5CB69F008D07A2 /* ImageU.storyboard */,
 				7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */,
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F19A1311D58BCFD0030A16F /* Server.plist in Resources */,
+				7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */,
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
 				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fkv-eV-5hm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="czH-i8-TqN">
+            <objects>
+                <viewController id="fkv-eV-5hm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hf5-pX-lYM"/>
+                        <viewControllerLayoutGuide type="bottom" id="cfg-Hq-IMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KPS-oe-TWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVS-qf-p69">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AVS-qf-p69" firstAttribute="centerY" secondItem="KPS-oe-TWZ" secondAttribute="centerY" id="GWi-Sx-1jO"/>
+                            <constraint firstItem="AVS-qf-p69" firstAttribute="height" secondItem="KPS-oe-TWZ" secondAttribute="height" id="TFS-Do-aV6"/>
+                            <constraint firstItem="AVS-qf-p69" firstAttribute="width" secondItem="KPS-oe-TWZ" secondAttribute="width" id="Wcb-Dj-dfu"/>
+                            <constraint firstItem="AVS-qf-p69" firstAttribute="centerX" secondItem="KPS-oe-TWZ" secondAttribute="centerX" id="l55-ki-NQe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjA-Ng-UKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="-1142"/>
+        </scene>
+    </scenes>
+</document>
