@@ -211,6 +211,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             
             print("kan 3")
             
+            //圆形方法
+            cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
+            cell.Image_top_left.clipsToBounds = true
             cell.Image_top_left.image = UIImage(named: v.Image_top_left)
             cell.Image_top_right.image = UIImage(named: v.Image_top_right)
             cell.Image1.image = UIImage(named: v.Image1)
