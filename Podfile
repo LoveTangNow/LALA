@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.1'
 use_frameworks!
 
 target ‘LALA’ do
@@ -12,5 +12,4 @@ target ‘LALA’ do
     pod 'WeiboSDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
     pod 'Kingfisher', '~> 2.4'
     pod 'TOWebViewController'
-
 end
