@@ -36,7 +36,6 @@
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
 		7FB8A89D1D4B278A00F2F22D /* ThridSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */; };
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
-		7FB8A8A41D4B289F00F2F22D /* FFristViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
@@ -98,7 +97,6 @@
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
 		7FB8A89C1D4B278A00F2F22D /* ThridSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThridSon.storyboard; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
-		7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController2.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 		7F7701431D5B62A6008D07A2 /* laji */ = {
 			isa = PBXGroup;
 			children = (
-				7FB8A8A31D4B289F00F2F22D /* FFristViewController2.swift */,
 			);
 			name = laji;
 			sourceTree = "<group>";
@@ -518,7 +515,6 @@
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFourthTableViewCell.swift in Sources */,
 				7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */,
-				7FB8A8A41D4B289F00F2F22D /* FFristViewController2.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
