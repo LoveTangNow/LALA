@@ -166,8 +166,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             //        cell.videoScreenshot.image = UIImage(named: video.image)
             //        cell.videoTitleLabel.text = video.title
             //        cell.videoSourceLabel.text = video.source
-            
+            cell.image_left_top.layer.cornerRadius = cell.image_left_top.frame.width/2
+            cell.image_left_top.clipsToBounds = true
             cell.image_left_top.image = UIImage(named:video.image_left_top )
+            
             cell.image_right_top.image = UIImage(named:video.image_right_top )
             cell.image_mid_left.image = UIImage(named:video.image_mid_left )
             cell.image_mid_mid.image = UIImage(named:video.image_mid_mid )
@@ -195,7 +197,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
                 print("kan 2")
                 
+//                cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
+//                cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
+//                cell.UIImageView_Top_Left.layer.shadowOpacity = 1
+//                cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
+
+                //圆形 图片
+                cell.UIImageView_Top_Left.layer.cornerRadius = cell.UIImageView_Top_Left.frame.width/2
+                cell.UIImageView_Top_Left.clipsToBounds = true
                 cell.UIImageView_Top_Left.image = v.UIImageView_Top_Left
+                
                 cell.UIImageView_Top_Right.image = v.UIImageView_Top_Right
                 cell.UIImageView_Mian.image = v.UIImageView_Main
                 cell.UIImageView_bottom.image = v.UIImageView_Bottom
@@ -215,6 +226,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
             cell.Image_top_left.clipsToBounds = true
             cell.Image_top_left.image = UIImage(named: v.Image_top_left)
+            
             cell.Image_top_right.image = UIImage(named: v.Image_top_right)
             cell.Image1.image = UIImage(named: v.Image1)
             cell.Image2.image = UIImage(named: v.Image2)
