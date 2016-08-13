@@ -614,7 +614,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
                                                     <rect key="frame" x="8" y="77" width="304" height="168"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="304" id="ZUh-7f-Ny0"/>
@@ -623,11 +623,11 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ttc-AN-jYJ" firstAttribute="top" secondItem="ncE-AW-Z4d" secondAttribute="bottom" constant="10" id="05W-Ky-4jz"/>
+                                                <constraint firstItem="ttc-AN-jYJ" firstAttribute="top" secondItem="ncE-AW-Z4d" secondAttribute="bottom" constant="8" id="05W-Ky-4jz"/>
                                                 <constraint firstItem="9Qr-Pm-3rG" firstAttribute="leading" secondItem="TQp-1D-IhU" secondAttribute="leadingMargin" constant="10" id="4my-IG-QTl"/>
                                                 <constraint firstItem="ncE-AW-Z4d" firstAttribute="centerX" secondItem="TQp-1D-IhU" secondAttribute="centerX" id="Bqt-t7-0Vy"/>
                                                 <constraint firstItem="mte-rr-6mC" firstAttribute="top" secondItem="8hD-4x-c61" secondAttribute="bottom" constant="5" id="Okr-pg-nZz"/>
-                                                <constraint firstItem="ncE-AW-Z4d" firstAttribute="top" secondItem="mte-rr-6mC" secondAttribute="bottom" constant="10" id="SBc-FK-n4N"/>
+                                                <constraint firstItem="ncE-AW-Z4d" firstAttribute="top" secondItem="mte-rr-6mC" secondAttribute="bottom" constant="12" id="SBc-FK-n4N"/>
                                                 <constraint firstItem="mte-rr-6mC" firstAttribute="leading" secondItem="TQp-1D-IhU" secondAttribute="leadingMargin" constant="10" id="XYc-Mf-ncY"/>
                                                 <constraint firstItem="WNE-GY-JQc" firstAttribute="leading" secondItem="8hD-4x-c61" secondAttribute="trailing" constant="10" id="e7E-lv-VcT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mte-rr-6mC" secondAttribute="trailing" constant="10" id="g4R-iW-POB"/>
