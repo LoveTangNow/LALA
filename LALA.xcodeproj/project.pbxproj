@@ -42,6 +42,7 @@
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
 		7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */; };
+		7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageD.storyboard; sourceTree = "<group>"; };
+		7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNewsViewController.swift; sourceTree = "<group>"; };
 		AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LALA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,6 +251,7 @@
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
 				7F7701411D5B629C008D07A2 /* FFourthViewController.swift */,
+				7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */,
 				7F7701491D5B88D1008D07A2 /* cells */,
 				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
@@ -514,6 +517,7 @@
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFourthTableViewCell.swift in Sources */,
+				7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */,
 				7FB8A8A41D4B289F00F2F22D /* FFristViewController2.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
 			);

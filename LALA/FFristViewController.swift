@@ -275,22 +275,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     
     @IBAction func ButtonTopLeftClick(sender: AnyObject) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendNewsViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func ButtonTopRightClick(sender: AnyObject) {
-        if shifoudenglu == "NO" {
-            //没有登录
-            print("还没有登录呢")
-            //跳去登录页面
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DengLuViewController")
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        else
-        {
-            print("早就登录了")
-        }
+
     }
     
     override func didReceiveMemoryWarning() {
