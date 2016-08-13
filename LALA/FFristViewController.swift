@@ -105,16 +105,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     )
                     self.TimeTableView.reloadData()
                     
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
-                    print("lala")
                 }
         }
         
