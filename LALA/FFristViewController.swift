@@ -24,6 +24,17 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var Tableview_count:Int = 0
     
     var shifoudenglu :NSString = ""
+    
+    /*
+     这里应该是这么几种不同的载入方式的数据
+     适用于 9，8，7等长宽 图片的载入方式
+     适用于 6，5，4等长宽 图片的载入方式.
+     适用于 3，2等长宽 图片的载入方式.
+     适用于 黄金比例 竖向 2图片的载入方式
+     适用于 黄金比例 横向 1图片的载入方式.
+     */
+    
+    //适用于 3，2等长宽 图片的载入方式
     var data = [
         
         timecell(
@@ -34,39 +45,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             lable_sender: "用户1"   ,
             lable_time: "1234",
             lable_pinglun_number:"123",  lable_zan_number:"123"
-        ),
-        
-        timecell(
-            image_left_top: "Black", image_right_top: "Black",
-            image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
-            image_left_bottom: "Black",  image_right_bottom: "Black",
-            /////////
-            lable_sender: "用户2"   ,
-            lable_time: "123456",
-            lable_pinglun_number:"123",  lable_zan_number:"234"
-        ),
-        
-        timecell(
-            image_left_top: "Black", image_right_top: "Black",
-            image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
-            image_left_bottom: "Black",  image_right_bottom: "Black",
-            /////////
-            lable_sender: "用户3"   ,
-            lable_time: "123456",
-            lable_pinglun_number:"123",  lable_zan_number:"234"
-        ),
-        timecell(
-            image_left_top: "Black", image_right_top: "Black",
-            image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
-            image_left_bottom: "Black",  image_right_bottom: "Black",
-            /////////
-            lable_sender: "用户4"   ,
-            lable_time: "123456",
-            lable_pinglun_number:"123",  lable_zan_number:"234"
-        ),
+        )
 
     ]
     
+    //适用于 6，5，4等长宽 图片的载入方式
     var data2 = [
             a456TableViewCell(
                 Image_top_left:"Black", Image_top_right: "Black",
@@ -78,9 +61,17 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             )
     ]
     
+    //适用于 黄金比例 横向 1图片的载入方式
     var data3:[TableViewCell_1_big] = []
     
 
+    //适用于 9，8，7等长宽 图片的载入方式
+    var data4 = []
+    
+    
+    //适用于 黄金比例 竖向 2图片的载入方式
+    var data5 = []
+    
     
     
     override func viewDidLoad() {
@@ -117,6 +108,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     self.TimeTableView.reloadData()
                 }
         }
+        
+        /*
+            Alamofire在异步获取数据之后，像数据数组插入数据
+            数据插入之后 重新 load Data
+        */
     }
     //////////////////tableView_start
     
@@ -153,6 +149,17 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         print(indexPath.row)
         let a = indexPath.row
+        
+        /*
+            这里应该有这么几种不同的载入方式
+            适用于 9，8，7等长宽 图片的载入方式
+            适用于 6，5，4等长宽 图片的载入方式
+            适用于 3，2等长宽 图片的载入方式
+            适用于 黄金比例 竖向 2图片的载入方式
+            适用于 黄金比例 横向 1图片的载入方式
+            
+            黄金比例：0.618
+        */
         
         if a % 3 == 0 {
             
