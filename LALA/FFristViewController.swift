@@ -104,8 +104,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         UIImageView_Bottom:image)
                     )
                     self.TimeTableView.reloadData()
-                    
-                    print("lala")
                 }
         }
         
