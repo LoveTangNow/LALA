@@ -56,19 +56,30 @@ class FThirdViewController: UIViewController {
     }
 
     //CoreData按钮的点击
+    //这里将是Coredata的试验场
     @IBAction func CoreData(sender: AnyObject) {
         print("点击了Coredata按钮")
+        //文件名：Data 表名：User 字段：userid
+        
+        print(funccccccc().InnnnnnnnnCoreDataSimida("", B: ""))
+        
+        //写入：感觉需要写一个方法
+        
+        //读取：同样的需要写一个方法
 
         }
-     
-    ///////////////////////一下不重要、、/////////////////
     
-    
-    func ZhuCecClick(sender: AnyObject) {
-        let vc = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewControllerWithIdentifier("ZhuCeViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+    func InnnnnnnnnCoreDataSimida1(A:String) -> Int {
+        return 1
     }
+    
+    func InnnnnnnnnCoreDataSimida1(A:String,B:String) -> Int {
+        return 1
+    }
+    
+    
+    ///////////////////////以下不重要、、/////////////////
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
