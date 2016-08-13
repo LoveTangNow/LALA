@@ -766,7 +766,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="Goooooooo:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="eDy-c5-bN8"/>
+                                    <action selector="Goooooooo:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="TbU-1X-SWu"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-Wy-fT7">
@@ -788,7 +788,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="SpaceClick:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="Nwd-qX-YBv"/>
+                                    <action selector="Username_click:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="0Q3-Pq-585"/>
                                 </connections>
                             </textField>
                         </subviews>
