@@ -209,13 +209,6 @@
 			name = temp;
 			sourceTree = "<group>";
 		};
-		7F7701431D5B62A6008D07A2 /* laji */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = laji;
-			sourceTree = "<group>";
-		};
 		7F7701461D5B87F2008D07A2 /* Setting_shezhi */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +245,6 @@
 				7F7701491D5B88D1008D07A2 /* cells */,
 				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
-				7F7701431D5B62A6008D07A2 /* laji */,
 			);
 			name = Main;
 			sourceTree = "<group>";
