@@ -87,8 +87,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print(da)
         shifoudenglu = da
         
-        //data3 += []
-        
         Alamofire.request(.GET, "http://localhost:80/LALA/aiqinhai04.jpg")
             .responseImage { response in
                 
