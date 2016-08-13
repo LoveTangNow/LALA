@@ -40,18 +40,15 @@ class DengLuViewController: UIViewController {
      功能：和登录按钮的功能一样，就是登录
      */
     
-    
     @IBAction func Goooooooo(sender: AnyObject) {
         print(zhu_ce())
     }
     
-
     //登录按钮点击事件
     @IBAction func denglu_button(sender: AnyObject) {
         print(zhu_ce())
     }
     
-
     //没有账号按钮点击事件
     @IBAction func zhuce_dianji_button(sender: AnyObject) {
         
