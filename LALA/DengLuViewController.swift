@@ -27,12 +27,11 @@ class DengLuViewController: UIViewController {
      额外功能
      提示：提示邮箱
      包括qq啊，gmail啊之类的
+     提示功能应该是在 内容更改的事件中，不应该是在现在的点击事件之中，有待讨论。
      */
     
     @IBAction func Username_click(sender: AnyObject) {
-    
-    
-    
+        
     }
     
     /*
