@@ -27,16 +27,14 @@ class SecondSonViewController: UIViewController {
                         
                         let a = json["data"]["newslist"]["title"].string
                         
-                        print(json["data"]["newslist"]["title"])
+                        print(json["data"]["newslist"]["source"])
                         self._Lable.text = a
                         
                     }
                 case .Failure(let error):
                     print(error)
                 }
-        }
-        print("1")
-        
+        }        
     }
     
     override func viewDidLoad() {

@@ -6,6 +6,7 @@ PODS:
   - MBProgressHUD (1.0.0)
   - Onboard (2.2.1)
   - SVProgressHUD (2.0.3)
+  - SwiftRecord (0.0.5)
   - SwiftyJSON (2.3.2)
   - TOWebViewController (2.2.6):
     - TOWebViewController/Core (= 2.2.6)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - Onboard
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - SwiftRecord
   - SwiftyJSON
   - TOWebViewController
   - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
@@ -44,10 +46,11 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftRecord: f7fed44d27ef7703afd4a87ebf0d57cb26aacf12
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
   WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
 
-PODFILE CHECKSUM: a952509f1be7f4c2dfd892ca9f5a569d24fdf5e6
+PODFILE CHECKSUM: cd0ff6118455c0a6f69e35d00f828aca88259bfc
 
 COCOAPODS: 1.0.1

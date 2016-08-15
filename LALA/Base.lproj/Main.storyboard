@@ -413,7 +413,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FFourthTableViewCell" rowHeight="205" id="FED-26-bMN" customClass="FFourthTableViewCell" customModule="LALA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FFrist23TableViewCell" rowHeight="205" id="FED-26-bMN" customClass="FFrist23TableViewCell" customModule="LALA">
                                         <rect key="frame" x="0.0" y="28" width="320" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FED-26-bMN" id="Qrp-TV-UhY">
@@ -468,17 +468,17 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="image_left_bottom" destination="74B-tm-k9O" id="T60-Ld-z3l"/>
-                                            <outlet property="image_left_top" destination="f20-oz-EWF" id="Ge7-mW-t75"/>
-                                            <outlet property="image_mid_left" destination="7ey-Iy-OUR" id="JxK-gZ-NT4"/>
-                                            <outlet property="image_mid_mid" destination="wgR-VO-bpr" id="ZbL-CX-naN"/>
-                                            <outlet property="image_mid_right" destination="H9i-zn-J5t" id="SZk-fN-LO6"/>
-                                            <outlet property="image_right_bottom" destination="bZM-Le-Te6" id="P48-FP-SUV"/>
-                                            <outlet property="image_right_top" destination="hiC-nV-UDN" id="MYn-ho-z9c"/>
-                                            <outlet property="lable_pinglun_number" destination="3YP-IZ-WVe" id="xiG-Po-7lQ"/>
-                                            <outlet property="lable_sender" destination="dNE-Dh-sAI" id="h5J-w0-tez"/>
-                                            <outlet property="lable_time" destination="nLw-T5-Myz" id="XQR-7i-uE2"/>
-                                            <outlet property="lable_zan_number" destination="S8q-Gt-Uv3" id="Aky-mT-n51"/>
+                                            <outlet property="image_left_bottom" destination="74B-tm-k9O" id="8Md-h9-4l2"/>
+                                            <outlet property="image_left_top" destination="f20-oz-EWF" id="Dns-ey-3xy"/>
+                                            <outlet property="image_mid_left" destination="7ey-Iy-OUR" id="pZ4-5G-dNl"/>
+                                            <outlet property="image_mid_mid" destination="wgR-VO-bpr" id="BgA-2C-XVs"/>
+                                            <outlet property="image_mid_right" destination="H9i-zn-J5t" id="0g1-Bm-JM0"/>
+                                            <outlet property="image_right_bottom" destination="bZM-Le-Te6" id="YGg-TK-kT6"/>
+                                            <outlet property="image_right_top" destination="hiC-nV-UDN" id="ACf-nQ-gWc"/>
+                                            <outlet property="lable_pinglun_number" destination="3YP-IZ-WVe" id="F9i-5m-61M"/>
+                                            <outlet property="lable_sender" destination="dNE-Dh-sAI" id="Vop-3v-U6j"/>
+                                            <outlet property="lable_time" destination="nLw-T5-Myz" id="KDx-J6-jXJ"/>
+                                            <outlet property="lable_zan_number" destination="S8q-Gt-Uv3" id="XFJ-Fu-MN6"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FFrist456TableViewCell" rowHeight="300" id="LPI-RA-54Y" customClass="FFrist456TableViewCell" customModule="LALA" customModuleProvider="target">
@@ -766,7 +766,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="Goooooooo:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="eDy-c5-bN8"/>
+                                    <action selector="Goooooooo:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="TbU-1X-SWu"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-Wy-fT7">
@@ -788,7 +788,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="SpaceClick:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="Nwd-qX-YBv"/>
+                                    <action selector="Username_click:" destination="0Zb-cj-Rsb" eventType="editingDidEndOnExit" id="0Q3-Pq-585"/>
                                 </connections>
                             </textField>
                         </subviews>

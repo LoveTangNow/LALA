@@ -38,6 +38,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var data = [
         
         timecell(
+            detail_height:30,
             image_left_top: "Black", image_right_top: "Black",
             image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
             image_left_bottom: "Black",  image_right_bottom: "Black",
@@ -52,6 +53,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //适用于 6，5，4等长宽 图片的载入方式
     var data2 = [
             a456TableViewCell(
+                detail_height:30,
                 Image_top_left:"Black", Image_top_right: "Black",
                 Image1: "Black",     Image2: "Black",     Image3: "Black",
                 Image4: "Black",     Image5: "Black",     Image6: "Black",
@@ -98,13 +100,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 if let image = response.result.value {
                     print("image downloaded: \(image)")
                     self.data3.append(TableViewCell_1_big(
+                        detail_height:30,
                         UIImageView_Top_Left:image,
                         UIImageView_Top_Right:image,
                         UIImageView_Main:image,
                         UIImageView_Bottom:image)
                     )
                     self.TimeTableView.reloadData()
-                    
                 }
         }
         
@@ -114,27 +116,74 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         */
     }
     //////////////////tableView_start
+
+    var height_tableview:CGFloat = 0
     
+    
+    //set Footer Height
+     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 15;
+    }
+    
+    //set Header Height
+     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 15;
+    }
+    
+    //set Header Title
+     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Hello"
+    }
+    
+    //set Footer Title
+     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "World"
+    }
+    
+    //cell  DidSelectAction
+     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
+     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+        
+        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
+        view.backgroundColor = UIColor.yellowColor();
+        
+        return  view;
+    }
+    
+    //在footerView 添加个button
+     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
+        
+        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
+        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
+        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
+        myButton.backgroundColor = UIColor.greenColor();
+        return myButton;
+    }
     
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         print("Tableview cell高度")
-        return 292
+        return height_tableview
+        
         
     }
     
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return 1
+        return data.count + data2.count + data3.count + data4.count + data5.count
     }
     
     //几个Tableview cell
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return 3
+        return 1
     }
     
 //    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
@@ -149,6 +198,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print(indexPath.row)
         let a = indexPath.row
         
+        print()
+        print("SECTION_TYPE")
+        
+        
         /*
             这里应该有这么几种不同的载入方式
             适用于 9，8，7等长宽 图片的载入方式
@@ -160,10 +213,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             黄金比例：0.618
         */
         
-        if a % 3 == 0 {
+        if a % 3 == 1 {
             
         
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFourthTableViewCell", forIndexPath: indexPath) as! FFourthTableViewCell
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
             //let video = data[data_n]
             let video = data[0]
             
@@ -187,10 +240,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.lable_time.text = video.lable_time
             cell.lable_zan_number.text = video.lable_zan_number
             cell.lable_pinglun_number.text = video.lable_pinglun_number
+
             
             return cell
         }
-        else if a % 3 == 1
+        else if a % 3 == 0
         {
             
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
@@ -216,7 +270,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 cell.UIImageView_Top_Right.image = v.UIImageView_Top_Right
                 cell.UIImageView_Mian.image = v.UIImageView_Main
                 cell.UIImageView_bottom.image = v.UIImageView_Bottom
+                
+                height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+
             }
+            
+
             
             
             
@@ -253,7 +312,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     // Override to support conditional editing of the table view.
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
-     return true
+        return true
      }
     
     
