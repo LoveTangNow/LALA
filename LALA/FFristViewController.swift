@@ -196,7 +196,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("Tableview初始化")
         
         print(indexPath.row)
-        let a = indexPath.row
         
         print()
         print("SECTION_TYPE")
@@ -212,10 +211,40 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             
             黄金比例：0.618
         */
-        
-        if a % 3 == 1 {
             
+        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
         
+        if data3.isEmpty {
+            
+        }
+        else{
+            let v = data3[0]
+        
+            print("kan 2")
+                
+//          cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
+//          cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
+//          cell.UIImageView_Top_Left.layer.shadowOpacity = 1
+//          cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
+
+            //圆形 图片
+            cell.UIImageView_Top_Left.layer.cornerRadius = cell.UIImageView_Top_Left.frame.width/2
+            cell.UIImageView_Top_Left.clipsToBounds = true
+            cell.UIImageView_Top_Left.image = v.UIImageView_Top_Left
+            
+            cell.UIImageView_Top_Right.image = v.UIImageView_Top_Right
+            cell.UIImageView_Mian.image = v.UIImageView_Main
+            cell.UIImageView_bottom.image = v.UIImageView_Bottom
+            
+            height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+        }
+        return cell
+
+
+    }
+    
+    func load(indexPath: NSIndexPath) ->  FFrist23TableViewCell{
+
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
             //let video = data[data_n]
             let video = data[0]
@@ -240,72 +269,36 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.lable_time.text = video.lable_time
             cell.lable_zan_number.text = video.lable_zan_number
             cell.lable_pinglun_number.text = video.lable_pinglun_number
-
-            
+        
             return cell
-        }
-        else if a % 3 == 0
-        {
-            
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-            
-            if data3.isEmpty {
-                
-            }
-            else{
-                let v = data3[0]
-                
-                print("kan 2")
-                
-//                cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
-//                cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
-//                cell.UIImageView_Top_Left.layer.shadowOpacity = 1
-//                cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
+    }
+    
+    func f456cell(indexPath: NSIndexPath) -> FFrist456TableViewCell {
+        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
+        let v = data2[0]
+        
+        print("kan 3")
+        
+        //圆形方法
+        cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
+        cell.Image_top_left.clipsToBounds = true
+        cell.Image_top_left.image = UIImage(named: v.Image_top_left)
+        
+        cell.Image_top_right.image = UIImage(named: v.Image_top_right)
+        cell.Image1.image = UIImage(named: v.Image1)
+        cell.Image2.image = UIImage(named: v.Image2)
+        cell.Image3.image = UIImage(named: v.Image3)
+        cell.Image4.image = UIImage(named: v.Image4)
+        cell.Image5.image = UIImage(named: v.Image5)
+        cell.Image6.image = UIImage(named: v.Image6)
+        cell.Image_Bottom.image = UIImage(named: v.Image_Bottom)
+        
+        cell.Lable_sender.text = v.Lable_sender
+        cell.Lable_others.text = v.Lable_others
+        
+        return cell
+        
 
-                //圆形 图片
-                cell.UIImageView_Top_Left.layer.cornerRadius = cell.UIImageView_Top_Left.frame.width/2
-                cell.UIImageView_Top_Left.clipsToBounds = true
-                cell.UIImageView_Top_Left.image = v.UIImageView_Top_Left
-                
-                cell.UIImageView_Top_Right.image = v.UIImageView_Top_Right
-                cell.UIImageView_Mian.image = v.UIImageView_Main
-                cell.UIImageView_bottom.image = v.UIImageView_Bottom
-                
-                height_tableview = CGFloat(v.detail_height + v.height_without_detail)
-
-            }
-            
-
-            
-            
-            
-            return cell
-        }
-        else{
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-            let v = data2[0]
-            
-            print("kan 3")
-            
-            //圆形方法
-            cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
-            cell.Image_top_left.clipsToBounds = true
-            cell.Image_top_left.image = UIImage(named: v.Image_top_left)
-            
-            cell.Image_top_right.image = UIImage(named: v.Image_top_right)
-            cell.Image1.image = UIImage(named: v.Image1)
-            cell.Image2.image = UIImage(named: v.Image2)
-            cell.Image3.image = UIImage(named: v.Image3)
-            cell.Image4.image = UIImage(named: v.Image4)
-            cell.Image5.image = UIImage(named: v.Image5)
-            cell.Image6.image = UIImage(named: v.Image6)
-            cell.Image_Bottom.image = UIImage(named: v.Image_Bottom)
-            
-            cell.Lable_sender.text = v.Lable_sender
-            cell.Lable_others.text = v.Lable_others
-            
-            return cell
-        }
     }
     
     //??

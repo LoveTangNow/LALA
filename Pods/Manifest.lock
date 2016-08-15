@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
-    :commit: 5148825c5a0625da61aec451189b7fe62bf05fbf
+    :commit: ba369a13136be785e3ca90c162b2c15ced68b719
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
   WeiboSDK:
     :commit: 6031a8da4ce17867ff5887b8dfc59ea45930274e
