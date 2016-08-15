@@ -152,7 +152,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         view.backgroundColor = UIColor.yellowColor();
         
         return  view;
-        
     }
     
     //在footerView 添加个button
