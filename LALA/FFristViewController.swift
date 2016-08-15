@@ -35,8 +35,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      */
     
     //适用于 3，2等长宽 图片的载入方式
-    var data = [
-        
+    var data1 = [
         timecell(
             detail_height:30,
             image_left_top: "Black", image_right_top: "Black",
@@ -47,7 +46,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             lable_time: "1234",
             lable_pinglun_number:"123",  lable_zan_number:"123"
         )
-
     ]
     
     //适用于 6，5，4等长宽 图片的载入方式
@@ -65,19 +63,28 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //适用于 黄金比例 横向 1图片的载入方式
     var data3:[TableViewCell_1_big] = []
-    
-
     //适用于 9，8，7等长宽 图片的载入方式
     var data4 = []
-    
-    
     //适用于 黄金比例 竖向 2图片的载入方式
     var data5 = []
     
+    //用两个Dictionary来存储下载下来的数据
+    //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
+    //从字典标识符1开始存储 ，0 表示不存在数据
+    var dataimage = Dictionary<Int,[Dictionary<String,UIImageView>]>()
+    var datadetails = Dictionary<Int,[Dictionary<String,String>]>()
     
+    var datat = Dictionary<String,[String: AnyObject]>()
+    var datt  = Dictionary<String,String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        datat["1"] = ["1":1]
+        datt["1"] = "1"
+        
+        print(datat["1"]!["1"])
+        print(datt["1"])
         
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
@@ -142,7 +149,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        print("点击了"+String(indexPath.row))
     }
     
     // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
@@ -176,14 +183,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return data.count + data2.count + data3.count + data4.count + data5.count
+        return 1
     }
     
     //几个Tableview cell
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return 1
+        return data1.count + data2.count + data3.count + data4.count + data5.count
     }
     
 //    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
@@ -200,54 +207,54 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print()
         print("SECTION_TYPE")
         
-        
         /*
             这里应该有这么几种不同的载入方式
-            适用于 9，8，7等长宽 图片的载入方式
-            适用于 6，5，4等长宽 图片的载入方式
-            适用于 3，2等长宽 图片的载入方式
+            适用于 9，8，7等长宽 图片的载入方式 .
+            适用于 6，5，4等长宽 图片的载入方式 .
+            适用于 3，2等长宽 图片的载入方式    .
             适用于 黄金比例 竖向 2图片的载入方式
-            适用于 黄金比例 横向 1图片的载入方式
+            适用于 黄金比例 横向 1图片的载入方式.
             
             黄金比例：0.618
         */
             
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+        let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+        let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
+        let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
+        let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
+
+        //          cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
+        //          cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
+        //          cell.UIImageView_Top_Left.layer.shadowOpacity = 1
+        //          cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
+        
+
+        print("kan 2")
         
         if data3.isEmpty {
-            
         }
         else{
             let v = data3[0]
-        
-            print("kan 2")
-                
-//          cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
-//          cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
-//          cell.UIImageView_Top_Left.layer.shadowOpacity = 1
-//          cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
-
-            //圆形 图片
-            cell.UIImageView_Top_Left.layer.cornerRadius = cell.UIImageView_Top_Left.frame.width/2
-            cell.UIImageView_Top_Left.clipsToBounds = true
-            cell.UIImageView_Top_Left.image = v.UIImageView_Top_Left
             
-            cell.UIImageView_Top_Right.image = v.UIImageView_Top_Right
-            cell.UIImageView_Mian.image = v.UIImageView_Main
-            cell.UIImageView_bottom.image = v.UIImageView_Bottom
+            cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
+            cell1.UIImageView_Top_Left.clipsToBounds = true
+            cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
+            
+            cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
+            cell1.UIImageView_Mian.image = v.UIImageView_Main
+            cell1.UIImageView_bottom.image = v.UIImageView_Bottom
             
             height_tableview = CGFloat(v.detail_height + v.height_without_detail)
         }
-        return cell
-
-
+        return cell1
     }
     
-    func load(indexPath: NSIndexPath) ->  FFrist23TableViewCell{
+    
+    func f345cell(indexPath: NSIndexPath) ->  FFrist23TableViewCell{
 
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
             //let video = data[data_n]
-            let video = data[0]
+            let video = data1[0]
             
             print("kan 1")
             
