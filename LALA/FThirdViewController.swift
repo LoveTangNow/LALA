@@ -61,20 +61,12 @@ class FThirdViewController: UIViewController {
         print("点击了Coredata按钮")
         //文件名：Data 表名：User 字段：userid
         
-        print(funccccccc().InnnnnnnnnCoreDataSimida("", B: ""))
+        print(funccccccc().InnnnnnnnnCoreDataSimida(""))
         
         //写入：感觉需要写一个方法
         
         //读取：同样的需要写一个方法
 
-        }
-    
-    func InnnnnnnnnCoreDataSimida1(A:String) -> Int {
-        return 1
-    }
-    
-    func InnnnnnnnnCoreDataSimida1(A:String,B:String) -> Int {
-        return 1
     }
     
     

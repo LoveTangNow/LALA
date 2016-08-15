@@ -12,4 +12,5 @@ target ‘LALA’ do
     pod 'WeiboSDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
     pod 'Kingfisher', '~> 2.4'
     pod 'TOWebViewController'
+    pod 'SwiftRecord'
 end
