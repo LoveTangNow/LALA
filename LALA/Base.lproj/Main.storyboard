@@ -543,7 +543,7 @@
                                             <outlet property="Lable_sender" destination="8Pa-vk-9Nm" id="58z-zM-Mc7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="402" id="OrU-3J-mKc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FFrist789TableViewCell" rowHeight="402" id="OrU-3J-mKc" customClass="FFrist789TableViewCell" customModule="LALA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="533" width="320" height="402"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OrU-3J-mKc" id="dfi-Se-HzH">
@@ -600,6 +600,20 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="UIImageView_Bottom" destination="Nf8-CX-7Fa" id="EZd-OO-Gg5"/>
+                                            <outlet property="UIImageView_Main1" destination="qIw-xb-I8o" id="zY8-2y-JIM"/>
+                                            <outlet property="UIImageView_Main2" destination="gQy-xf-dzo" id="jYa-Pu-O2G"/>
+                                            <outlet property="UIImageView_Main3" destination="FgK-nW-Aie" id="4es-Qr-QqF"/>
+                                            <outlet property="UIImageView_Main4" destination="1PQ-G8-Yot" id="KXC-54-it9"/>
+                                            <outlet property="UIImageView_Main5" destination="JRi-eb-Kro" id="HJr-fw-Qpq"/>
+                                            <outlet property="UIImageView_Main6" destination="TnW-BC-Gm0" id="Vjv-1o-hI5"/>
+                                            <outlet property="UIImageView_Main7" destination="QZP-So-9ed" id="bKe-wU-X9v"/>
+                                            <outlet property="UIImageView_Main8" destination="TrQ-SP-or5" id="hzb-wN-sC9"/>
+                                            <outlet property="UIImageView_Main9" destination="P9P-Td-adF" id="cbY-TN-XPh"/>
+                                            <outlet property="UIImageView_Top_Left" destination="N4Y-O6-1zm" id="bcz-fz-pjV"/>
+                                            <outlet property="UIImageView_Top_Right" destination="nCa-IM-GlT" id="Iyv-Bb-Uz7"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FFrist_1_big_TableViewCell" rowHeight="292" id="ukt-5w-wF4" customClass="FFrist_1_big_TableViewCell" customModule="LALA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="935" width="320" height="292"/>

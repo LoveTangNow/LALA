@@ -48,6 +48,11 @@ class FFrist456TableViewCell: UITableViewCell {
     
     @IBOutlet weak var Lable_sender: UILabel!
     @IBOutlet weak var Lable_others: UILabel!
+    
+    var detail_height = 0
+    
+    let height_without_detail = 5 + 30 + 5 + 5 + 90 + 5 + 90 + 5 + 30 + 5 + 20 + 5
+    // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
 
     override func awakeFromNib() {
         super.awakeFromNib()
