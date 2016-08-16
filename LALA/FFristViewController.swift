@@ -72,22 +72,35 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
     //从字典标识符1开始存储 ，0 表示不存在数据
     var dataimage = Dictionary<Int,[Dictionary<String,UIImageView>]>()
-    var datadetails = Dictionary<Int,[Dictionary<String,String>]>()
+    var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
     
-    var datat = Dictionary<String,[String: AnyObject]>()
-    var datt  = Dictionary<String,String>()
+    //var datat = Dictionary<String,[String: AnyObject]>()
+    //var datt  = Dictionary<String,String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        datat["1"] = ["1":1]
-        datt["1"] = "1"
+        //datat["1"] = ["1":1]
+        //datt["1"] = "1"
         
-        print(datat["1"]!["1"])
-        print(datt["1"])
+        //print(datat["1"]!["1"])
+        //print(datt["1"])
         
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
+        
+        datadetails[1] = [["sender":"宋喆"],["title":"老子干的"],["style":"Suit_1_big_photos"]]
+        datadetails[2] = [["sender":"马蓉"],["title":"老娘干的"],["style":"Suit_2_3_photos"]]
+        datadetails[3] = [["sender":"王宝强"],["title":"他俩干的"],["style":"Suit_4_5_6_photos"]]
+        datadetails[4] = [["sender":"隔壁老王"],["title":"不是我干的"],["style":"Suit_7_8_9_photos"]]
+        
+        /*
+         
+         */
+        print("------------------------------")
+        print(datadetails[1]![1]["title"])
+        print("------------------------------")
+        
         
         //读取数据，用户是否登录
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
@@ -199,7 +212,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
-        print("Tableview cell高度")
+        //print("Tableview cell高度")
         return height_tableview
         
         
@@ -215,7 +228,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return data1.count + data2.count + data3.count + data4.count + data5.count
+        return datadetails.count
     }
     
 //    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
@@ -227,12 +240,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("Tableview初始化")
         
-        print(indexPath.row)
-        
-        print()
-        print("SECTION_TYPE")
+        print(indexPath.row + 1)
+        print("indexPath")
         
         /*
+         indexPath.row 是从 “0” 开始的
             这里应该有这么几种不同的载入方式
             适用于 9，8，7等长宽 图片的载入方式 .
             适用于 6，5，4等长宽 图片的载入方式 .
@@ -242,11 +254,116 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             
             黄金比例：0.618
         */
+        
+        
+        if datadetails[indexPath.row + 1]![2]["style"] != nil {
             
-        let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-        let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-        let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-        let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
+            switch datadetails[indexPath.row + 1]![2]["style"]! {
+            case "Suit_1_big_photos"://
+                print("Suit_1_big_photos")
+                let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+                
+                if data3.isEmpty {
+                }
+                else{
+                    let v = data3[0]
+                    
+                    cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
+                    cell1.UIImageView_Top_Left.clipsToBounds = true
+                    cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
+                    
+                    cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
+                    cell1.UIImageView_Mian.image = v.UIImageView_Main
+                    cell1.UIImageView_bottom.image = v.UIImageView_Bottom
+                    
+                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                }
+                return cell1
+                
+            case "Suit_2_3_photos"://
+                print("Suit_2_3_photos")
+                let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
+                if data3.isEmpty {
+                }
+                else{
+                    let v = data3[0]
+                    
+                    cell2.image_left_top.image = v.UIImageView_Bottom
+                    cell2.image_right_top.image = v.UIImageView_Bottom
+                    
+                    cell2.image_mid_left.image = v.UIImageView_Bottom
+                    cell2.image_mid_mid.image = v.UIImageView_Bottom
+                    cell2.image_mid_right.image = v.UIImageView_Bottom
+                    
+                    cell2.image_left_bottom.image = v.UIImageView_Bottom
+                    cell2.image_right_bottom.image = v.UIImageView_Bottom
+                    
+                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                }
+                return cell2
+                
+                
+            case "Suit_4_5_6_photos"://
+                print("Suit_4_5_6_photos")
+                let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
+                if data3.isEmpty {
+                }
+                else{
+                    let v = data3[0]
+                    
+                    cell3.Image_top_left.image = v.UIImageView_Bottom
+                    cell3.Image_top_right.image = v.UIImageView_Bottom
+                    
+                    cell3.Image1.image =  v.UIImageView_Bottom
+                    cell3.Image2.image =  v.UIImageView_Bottom
+                    cell3.Image3.image =  v.UIImageView_Bottom
+                    cell3.Image4.image =  v.UIImageView_Bottom
+                    cell3.Image5.image =  v.UIImageView_Bottom
+                    cell3.Image6.image =  v.UIImageView_Bottom
+                    
+                    cell3.Image_Bottom.image = v.UIImageView_Bottom
+                    
+                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                }
+                return cell3
+                
+            case "Suit_7_8_9_photos"://
+                print("Suit_7_8_9_photos")
+                let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
+                if data3.isEmpty {
+                }
+                else{
+                    let v = data3[0]
+                    
+                    cell4.UIImageView_Top_Left.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Top_Right.image = v.UIImageView_Top_Left
+                    
+                    cell4.UIImageView_Main1.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main2.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main3.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main4.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main5.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main6.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main7.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main8.image = v.UIImageView_Top_Left
+                    cell4.UIImageView_Main9.image = v.UIImageView_Top_Left
+                    
+                    cell4.UIImageView_Bottom.image = v.UIImageView_Bottom
+                    
+                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                    
+                }
+                return cell4
+                
+            default:
+                print("nothing")
+                
+            }
+            
+                    }
+        
+        
+        
 
         //          cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
         //          cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
@@ -254,6 +371,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         //          cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
         
 
+        let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
         print("kan 2")
         
         if data3.isEmpty {
@@ -272,6 +390,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             height_tableview = CGFloat(v.detail_height + v.height_without_detail)
         }
         return cell1
+        
+
+        
     }
     
     
