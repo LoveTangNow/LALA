@@ -276,7 +276,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_Mian.image = v.UIImageView_Main
                     cell1.UIImageView_bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                    height_tableview = CGFloat(cell1.height_without_detail + cell1.detail_height)
                 }
                 return cell1
                 
@@ -298,7 +298,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_left_bottom.image = v.UIImageView_Bottom
                     cell2.image_right_bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                    height_tableview = CGFloat(cell2.height_without_detail + cell2.detail_height)
                 }
                 return cell2
                 
@@ -323,7 +323,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell3.Image_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                    height_tableview = CGFloat(cell3.height_without_detail + cell3.detail_height)
                 }
                 return cell3
                 
@@ -350,7 +350,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell4.UIImageView_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(v.detail_height + v.height_without_detail)
+                    height_tableview = CGFloat(cell4.height_without_detail + cell4.detail_height)
                     
                 }
                 return cell4

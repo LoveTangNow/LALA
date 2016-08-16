@@ -52,6 +52,11 @@ class FFrist23TableViewCell: UITableViewCell {
     @IBOutlet weak var lable_pinglun_number: UILabel!
     @IBOutlet weak var lable_zan_number: UILabel!
     
+    var detail_height:Int = 0
+    
+    let height_without_detail = 5 + 30 + 5 + 5 + 90 + 5 + 30 + 5 + 20 + 5
+    // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
