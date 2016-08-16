@@ -2,7 +2,7 @@
 ###到现在为止使用到的库：
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [AlamofireImage](https://github.com/Alamofire/AlamofireImage)
-- [SwiftyJSON](SwiftyJSON / SwiftyJSON)
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
 ###导入却没有使用的库：
 * [Kingfisher](https://github.com/onevcat/Kingfisher)
