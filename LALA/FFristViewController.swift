@@ -288,6 +288,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 else{
                     let v = data3[0]
                     
+                    cell2.image_left_top.layer.cornerRadius = cell2.image_left_top.frame.width/2
+                    cell2.image_left_top.clipsToBounds = true
                     cell2.image_left_top.image = v.UIImageView_Bottom
                     cell2.image_right_top.image = v.UIImageView_Bottom
                     
@@ -311,6 +313,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 else{
                     let v = data3[0]
                     
+                    cell3.Image_top_left.layer.cornerRadius = cell3.Image_top_left.frame.width/2
+                    cell3.Image_top_left.clipsToBounds = true
                     cell3.Image_top_left.image = v.UIImageView_Bottom
                     cell3.Image_top_right.image = v.UIImageView_Bottom
                     
@@ -335,6 +339,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 else{
                     let v = data3[0]
                     
+                    cell4.UIImageView_Top_Left.layer.cornerRadius = cell4.UIImageView_Top_Left.frame.width/2
+                    cell4.UIImageView_Top_Left.clipsToBounds = true
                     cell4.UIImageView_Top_Left.image = v.UIImageView_Top_Left
                     cell4.UIImageView_Top_Right.image = v.UIImageView_Top_Left
                     
@@ -360,15 +366,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
             }
             
-                    }
-        
-        
-        
-
-        //          cell.UIImageView_Top_Left.layer.shadowColor = UIColor.blackColor().CGColor
-        //          cell.UIImageView_Top_Left.layer.shadowOffset = CGSizeMake(0, 1)
-        //          cell.UIImageView_Top_Left.layer.shadowOpacity = 1
-        //          cell.UIImageView_Top_Left.layer.shadowRadius = 1.0
+            }
         
 
         let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
