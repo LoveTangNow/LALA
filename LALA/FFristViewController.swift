@@ -24,7 +24,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var Tableview_count:Int = 0
     
     var shifoudenglu :NSString = ""
-    //
     
     /*
      这里应该是这么几种不同的载入方式的数据
