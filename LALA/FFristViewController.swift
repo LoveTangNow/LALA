@@ -121,6 +121,31 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             Alamofire在异步获取数据之后，像数据数组插入数据
             数据插入之后 重新 load Data
         */
+        let str = "iOS Developer Tips encoded in Base64"
+        print("Original: \(str)")
+        
+        // UTF 8 str from original
+        // NSData! type returned (optional)
+        let utf8str = str.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        // Base64 encode UTF 8 string
+        // fromRaw(0) is equivalent to objc 'base64EncodedStringWithOptions:0'
+        // Notice the unwrapping given the NSData! optional
+        // NSString! returned (optional)
+        let base64Encoded = utf8str!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        print("Encoded:  \(base64Encoded)")
+        //正确以上
+        
+        // Base64 Decode (go back the other way)
+        // Notice the unwrapping given the NSString! optional
+        // NSData returned
+        let dataa = NSData(base64EncodedString: base64Encoded, options: NSDataBase64DecodingOptions(rawValue: 0))
+//        
+//        // Convert back to a string
+        let base64Decoded = NSString(data: dataa!, encoding: NSUTF8StringEncoding)
+        print("Decoded:  \(base64Decoded)")
+        
+        //解密也可以了
     }
     //////////////////tableView_start
 
