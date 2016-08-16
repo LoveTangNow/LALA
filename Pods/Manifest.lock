@@ -11,7 +11,6 @@ PODS:
   - TOWebViewController (2.2.6):
     - TOWebViewController/Core (= 2.2.6)
   - TOWebViewController/Core (2.2.6)
-  - WeiboSDK (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
@@ -23,21 +22,15 @@ DEPENDENCIES:
   - SwiftRecord
   - SwiftyJSON
   - TOWebViewController
-  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
 
 EXTERNAL SOURCES:
   SVProgressHUD:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
-  WeiboSDK:
-    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
     :commit: ba369a13136be785e3ca90c162b2c15ced68b719
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
-  WeiboSDK:
-    :commit: 6031a8da4ce17867ff5887b8dfc59ea45930274e
-    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -49,8 +42,7 @@ SPEC CHECKSUMS:
   SwiftRecord: f7fed44d27ef7703afd4a87ebf0d57cb26aacf12
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
-  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
 
-PODFILE CHECKSUM: cd0ff6118455c0a6f69e35d00f828aca88259bfc
+PODFILE CHECKSUM: 5fb6eef066e48cf398bbecbb2fbae15682332eeb
 
 COCOAPODS: 1.0.1
