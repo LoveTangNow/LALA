@@ -171,14 +171,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     
     //set Footer Height
-     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15;
-    }
+//     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 15;
+//    }
     
     //set Header Height
-     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15;
-    }
+//     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 15;
+//    }
     
     //set Header Title
 //     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
