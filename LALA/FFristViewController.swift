@@ -35,9 +35,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      适用于 黄金比例 竖向 2图片的载入方式
      适用于 黄金比例 横向 1图片的载入方式.
      */
-    
-    //适用于 3，2等长宽 图片的载入方式
-
     var data3:[TableViewCell_1_big] = []
 
     
@@ -285,14 +282,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     print(screenBounds)
                     print("screnn")
-                    
+
                     cell1.UIImageView_Mian.image = v.UIImageView_Main
-//                  cell1.UIImageView_Mian.frame = CGRectMake(0, 0, 10, screenBounds)
-//                  cell1.UIImageView_Mian.contentMode = UIViewContentMode.ScaleAspectFit
                     
                     cell1.UIImageView_bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + screenBounds * 0.618
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
                 }
                 return cell1
                 
@@ -407,6 +402,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
 
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let imgback=UIImage(named:"Black.png")
+        let imgbackV=UIImageView(image: imgback)
+        cell.backgroundView = imgbackV
     }
     
     //??
