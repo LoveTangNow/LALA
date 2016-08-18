@@ -48,7 +48,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //var datt  = Dictionary<String,String>()
     
     var listItems  = [NSManagedObject]()
-
+    
+    var Imageload:Image = UIImage(named: "Black.png")!
     
     func saveItem(itemToSave: String) {
         
@@ -75,6 +76,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         }
         
     }
+    
+
+    
 
     override func viewDidLoad() {
         
@@ -269,6 +273,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if data3.isEmpty {
+                    cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
+                    cell1.UIImageView_Top_Left.clipsToBounds = true
+                    cell1.UIImageView_Top_Left.image = Imageload
+                    cell1.UIImageView_Top_Right.image = Imageload
+                    cell1.UIImageView_Mian.image = Imageload
+                    cell1.UIImageView_bottom.image = Imageload
+        
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
                 }
                 else{
                     let v = data3[0]
@@ -278,15 +292,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
                     
                     cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
-                    
-                    let screenBounds = UIScreen.mainScreen().bounds.width
-                    print(screenBounds)
-                    print("screnn")
 
                     cell1.UIImageView_Mian.image = v.UIImageView_Main
                     
                     cell1.UIImageView_bottom.image = v.UIImageView_Bottom
                     
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+
                     height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
                 }
                 return cell1
@@ -320,6 +332,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_4_5_6_photos")
                 let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
                 if data3.isEmpty {
+                    cell3.Image_top_left.layer.cornerRadius = cell3.Image_top_left.frame.width/2
+                    cell3.Image_top_left.clipsToBounds = true
+                    cell3.Image_top_left.image = Imageload
+                    cell3.Image_top_right.image = Imageload
+                    
+                    cell3.Image1.image =  Imageload
+                    cell3.Image2.image =  Imageload
+                    cell3.Image3.image =  Imageload
+                    cell3.Image4.image =  Imageload
+                    cell3.Image5.image = Imageload
+                    cell3.Image6.image =  Imageload
+                    
+                    cell3.Image_Bottom.image = Imageload
+                    
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
                 }
                 else{
                     let v = data3[0]
@@ -338,7 +367,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell3.Image_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell3.height_without_detail + cell3.detail_height)
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
                 }
                 return cell3
                 
@@ -367,7 +398,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell4.UIImageView_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell4.height_without_detail + cell4.detail_height)
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
                     
                 }
                 return cell4
