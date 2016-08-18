@@ -15,8 +15,8 @@ struct TableViewCell_1_big {
     var detail_height = 0
     
     
-    let height_without_detail = 5 + 30 + 5 + 5 + 90 + 5 + 90 + 5 + 30 + 5 + 20 + 5
-    // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
+    let height_without_detail = 5 + 30 + 5 + 0 +  5 + 30 + 5 + 20 + 5
+    // 顶部间隔 + 第一行 + 间隔 + 具体文字?  + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
     
     let UIImageView_Top_Left:UIImage
     let UIImageView_Top_Right:UIImage
@@ -34,7 +34,7 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     
     var detail_height = 0
     
-    let height_without_detail = 5 + 30 + 5 + 5 + 90 + 5 + 90 + 5 + 30 + 5 + 20 + 5
+    let height_without_detail = 5 + 30 + 5 + 5 + 30 + 5 + 20 + 5
     // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
 
     override func awakeFromNib() {

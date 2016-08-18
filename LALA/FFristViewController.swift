@@ -11,6 +11,8 @@ import AVKit
 import AVFoundation
 import AlamofireImage
 import Alamofire
+import CoreData
+import Foundation
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
@@ -77,7 +79,42 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //var datat = Dictionary<String,[String: AnyObject]>()
     //var datt  = Dictionary<String,String>()
     
+    var listItems  = [NSManagedObject]()
+
+    
+    func saveItem(itemToSave: String) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContex = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
+        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
+        
+        item.setValue(itemToSave, forKey: "userid")
+        
+        do {
+            try managedContex.save()
+            listItems.append(item)
+        } catch {
+            print("error")
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        for a in 0...10 {
+            let item = listItems[a]
+            print(item.valueForKey("userid") as? String)
+        }
+        
+    }
+
     override func viewDidLoad() {
+        
+        for a in 0...10 {
+            print(a)
+            saveItem(String(a))
+        }
+        
         super.viewDidLoad()
         
         //datat["1"] = ["1":1]
@@ -176,14 +213,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     //set Header Title
-     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Hello"
-    }
+//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Hello"
+//    }
     
     //set Footer Title
-     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "World"
-    }
+//     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        return "World"
+//    }
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -191,23 +228,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
-     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-        
-        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
-        view.backgroundColor = UIColor.yellowColor();
-        
-        return  view;
-    }
+//     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+//        
+//        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
+//        view.backgroundColor = UIColor.yellowColor();
+//        
+//        return  view;
+//    }
     
     //在footerView 添加个button
-     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
-        
-        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
-        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        myButton.backgroundColor = UIColor.greenColor();
-        return myButton;
-    }
+//     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
+//        
+//        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
+//        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
+//        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
+//        myButton.backgroundColor = UIColor.greenColor();
+//        return myButton;
+//    }
     
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
@@ -273,10 +310,18 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
                     
                     cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
+                    
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    print(screenBounds)
+                    print("screnn")
+                    
                     cell1.UIImageView_Mian.image = v.UIImageView_Main
+//                  cell1.UIImageView_Mian.frame = CGRectMake(0, 0, 10, screenBounds)
+//                  cell1.UIImageView_Mian.contentMode = UIViewContentMode.ScaleAspectFit
+                    
                     cell1.UIImageView_bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell1.height_without_detail + cell1.detail_height)
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + screenBounds * 0.618
                 }
                 return cell1
                 

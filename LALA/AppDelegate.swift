@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  CoreData
+//  CoredataTT
 //
-//  Created by Thomas Liu on 16/8/6.
-//  Copyright © 2016年 Thomas Liu. All rights reserved.
+//  Created by Thomas Liu on 16/8/18.
+//  Copyright © 2016年 ThomasLiu. All rights reserved.
 //
 
 import UIKit
@@ -17,9 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        //[NSThread, sleepForTimeInterval:3.0];//设置启动页面时间
-        
         return true
     }
     
@@ -50,15 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ThomasLiu.jiacheng.CoreData" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ThomasLiu.jiacheng.CoredataTT" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("CoreData", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
+        let modelURK = NSBundle.mainBundle().URLForResource("Data", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOfURL: modelURK)!
     }()
     
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
