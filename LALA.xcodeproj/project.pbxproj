@@ -36,6 +36,8 @@
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
+		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
+		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
 		7FFC423F1D65416A0085377B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFC423E1D65416A0085377B /* CoreData.framework */; };
@@ -97,6 +99,8 @@
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
+		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		7FFC423E1D65416A0085377B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -202,6 +206,8 @@
 				7F19A1301D58BCFD0030A16F /* Server.plist */,
 				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 				7F19A1361D58C1020030A16F /* Data.xcdatamodeld */,
+				7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */,
+				7FC8D7D21D65FF6400EBC8AD /* User.swift */,
 			);
 			name = datasss;
 			sourceTree = "<group>";
@@ -504,6 +510,7 @@
 				7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */,
 				7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */,
 				7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */,
+				7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */,
 				7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */,
 				7F7701511D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
@@ -511,6 +518,7 @@
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */,
+				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
 				7F5632271D5FD6780017958A /* funccccccc.swift in Sources */,

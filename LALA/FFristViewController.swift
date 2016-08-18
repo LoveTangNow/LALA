@@ -470,11 +470,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        let imgback=UIImage(named:"Black.png")
-        let imgbackV=UIImageView(image: imgback)
-        cell.backgroundView = imgbackV
-    }
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        let imgback=UIImage(named:"Black.png")
+//        let imgbackV=UIImageView(image: imgback)
+//        cell.backgroundView = imgbackV
+//    }
     
     //??
     // Override to support conditional editing of the table view.
