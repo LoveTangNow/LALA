@@ -37,38 +37,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      */
     
     //适用于 3，2等长宽 图片的载入方式
-    var data1 = [
-        timecell(
-            detail_height:30,
-            image_left_top: "Black", image_right_top: "Black",
-            image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
-            image_left_bottom: "Black",  image_right_bottom: "Black",
-            /////////
-            lable_sender: "用户1"   ,
-            lable_time: "1234",
-            lable_pinglun_number:"123",  lable_zan_number:"123"
-        )
-    ]
-    
-    //适用于 6，5，4等长宽 图片的载入方式
-    var data2 = [
-            a456TableViewCell(
-                detail_height:30,
-                Image_top_left:"Black", Image_top_right: "Black",
-                Image1: "Black",     Image2: "Black",     Image3: "Black",
-                Image4: "Black",     Image5: "Black",     Image6: "Black",
-                Image_Bottom: "Black",
-                ////////////
-                Lable_sender: "liu",   Lable_others: "12467880988"
-            )
-    ]
-    
-    //适用于 黄金比例 横向 1图片的载入方式
+
     var data3:[TableViewCell_1_big] = []
-    //适用于 9，8，7等长宽 图片的载入方式
-    var data4 = []
-    //适用于 黄金比例 竖向 2图片的载入方式
-    var data5 = []
+
     
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
@@ -436,65 +407,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
 
         
-    }
-    
-    
-    func f345cell(indexPath: NSIndexPath) ->  FFrist23TableViewCell{
-
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-            //let video = data[data_n]
-            let video = data1[0]
-            
-            print("kan 1")
-            
-            //        cell.videoScreenshot.image = UIImage(named: video.image)
-            //        cell.videoTitleLabel.text = video.title
-            //        cell.videoSourceLabel.text = video.source
-            cell.image_left_top.layer.cornerRadius = cell.image_left_top.frame.width/2
-            cell.image_left_top.clipsToBounds = true
-            cell.image_left_top.image = UIImage(named:video.image_left_top )
-            
-            cell.image_right_top.image = UIImage(named:video.image_right_top )
-            cell.image_mid_left.image = UIImage(named:video.image_mid_left )
-            cell.image_mid_mid.image = UIImage(named:video.image_mid_mid )
-            cell.image_mid_right.image = UIImage(named:video.image_mid_right )
-            cell.image_left_bottom.image = UIImage(named:video.image_left_top )
-            cell.image_right_bottom.image = UIImage(named:video.image_right_bottom )
-            /////////
-            cell.lable_sender.text = video.lable_sender
-            cell.lable_time.text = video.lable_time
-            cell.lable_zan_number.text = video.lable_zan_number
-            cell.lable_pinglun_number.text = video.lable_pinglun_number
-        
-            return cell
-    }
-    
-    func f456cell(indexPath: NSIndexPath) -> FFrist456TableViewCell {
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-        let v = data2[0]
-        
-        print("kan 3")
-        
-        //圆形方法
-        cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
-        cell.Image_top_left.clipsToBounds = true
-        cell.Image_top_left.image = UIImage(named: v.Image_top_left)
-        
-        cell.Image_top_right.image = UIImage(named: v.Image_top_right)
-        cell.Image1.image = UIImage(named: v.Image1)
-        cell.Image2.image = UIImage(named: v.Image2)
-        cell.Image3.image = UIImage(named: v.Image3)
-        cell.Image4.image = UIImage(named: v.Image4)
-        cell.Image5.image = UIImage(named: v.Image5)
-        cell.Image6.image = UIImage(named: v.Image6)
-        cell.Image_Bottom.image = UIImage(named: v.Image_Bottom)
-        
-        cell.Lable_sender.text = v.Lable_sender
-        cell.Lable_others.text = v.Lable_others
-        
-        return cell
-        
-
     }
     
     //??
