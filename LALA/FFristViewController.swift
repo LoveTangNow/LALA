@@ -69,13 +69,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        for a in 0...10 {
-            let item = listItems[a]
-            print(item.valueForKey("userid") as? String)
-        }
-        
-    }
+//    override func viewDidAppear(animated: Bool) {
+//        for a in 0...10 {
+//            let item = listItems[a]
+//            print(item.valueForKey("userid") as? String)
+//        }
+//        
+//    }
     
 
     
@@ -307,6 +307,19 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_2_3_photos")
                 let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
                 if data3.isEmpty {
+                    cell2.image_left_top.layer.cornerRadius = cell2.image_left_top.frame.width/2
+                    cell2.image_left_top.clipsToBounds = true
+                    cell2.image_left_top.image = Imageload
+                    cell2.image_right_top.image = Imageload
+                    
+                    cell2.image_mid_left.image = Imageload
+                    cell2.image_mid_mid.image = Imageload
+                    cell2.image_mid_right.image = Imageload
+                    
+                    cell2.image_bottom.image = Imageload
+                    
+                    
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3
                 }
                 else{
                     let v = data3[0]
@@ -320,10 +333,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_mid_mid.image = v.UIImageView_Bottom
                     cell2.image_mid_right.image = v.UIImageView_Bottom
                     
-                    cell2.image_left_bottom.image = v.UIImageView_Bottom
-                    cell2.image_right_bottom.image = v.UIImageView_Bottom
+                    cell2.image_bottom.image = v.UIImageView_Bottom
+
                     
-                    height_tableview = CGFloat(cell2.height_without_detail + cell2.detail_height)
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3
                 }
                 return cell2
                 
@@ -377,6 +390,26 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_7_8_9_photos")
                 let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
                 if data3.isEmpty {
+                    cell4.UIImageView_Top_Left.layer.cornerRadius = cell4.UIImageView_Top_Left.frame.width/2
+                    cell4.UIImageView_Top_Left.clipsToBounds = true
+                    cell4.UIImageView_Top_Left.image = Imageload
+                    cell4.UIImageView_Top_Right.image = Imageload
+                    
+                    cell4.UIImageView_Main1.image = Imageload
+                    cell4.UIImageView_Main2.image = Imageload
+                    cell4.UIImageView_Main3.image = Imageload
+                    cell4.UIImageView_Main4.image = Imageload
+                    cell4.UIImageView_Main5.image = Imageload
+                    cell4.UIImageView_Main6.image = Imageload
+                    cell4.UIImageView_Main7.image = Imageload
+                    cell4.UIImageView_Main8.image = Imageload
+                    cell4.UIImageView_Main9.image = Imageload
+                    
+                    cell4.UIImageView_Bottom.image = Imageload
+                    
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
                 }
                 else{
                     let v = data3[0]

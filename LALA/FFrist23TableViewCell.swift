@@ -26,13 +26,10 @@ struct timecell {
     let image_mid_mid: String
     let image_mid_right: String
     
-    let image_left_bottom: String
-    let image_right_bottom: String
+    let image_bottom: String
     
     let lable_sender: String
     let lable_time: String
-    let lable_pinglun_number:String
-    let lable_zan_number:String
 }
 
 class FFrist23TableViewCell: UITableViewCell {
@@ -43,14 +40,11 @@ class FFrist23TableViewCell: UITableViewCell {
     @IBOutlet weak var image_mid_left: UIImageView!
     @IBOutlet weak var image_mid_mid: UIImageView!
     @IBOutlet weak var image_mid_right: UIImageView!
-    
-    @IBOutlet weak var image_left_bottom: UIImageView!
-    @IBOutlet weak var image_right_bottom: UIImageView!
+
+    @IBOutlet weak var image_bottom: UIImageView!
     
     @IBOutlet weak var lable_sender: UILabel!
     @IBOutlet weak var lable_time: UILabel!
-    @IBOutlet weak var lable_pinglun_number: UILabel!
-    @IBOutlet weak var lable_zan_number: UILabel!
     
     var detail_height:Int = 0
     
