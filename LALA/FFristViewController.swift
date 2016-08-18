@@ -11,6 +11,8 @@ import AVKit
 import AVFoundation
 import AlamofireImage
 import Alamofire
+import CoreData
+import Foundation
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
@@ -33,40 +35,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      适用于 黄金比例 竖向 2图片的载入方式
      适用于 黄金比例 横向 1图片的载入方式.
      */
-    
-    //适用于 3，2等长宽 图片的载入方式
-    var data1 = [
-        timecell(
-            detail_height:30,
-            image_left_top: "Black", image_right_top: "Black",
-            image_mid_left: "Black", image_mid_mid: "Black",   image_mid_right: "Black",
-            image_left_bottom: "Black",  image_right_bottom: "Black",
-            /////////
-            lable_sender: "用户1"   ,
-            lable_time: "1234",
-            lable_pinglun_number:"123",  lable_zan_number:"123"
-        )
-    ]
-    
-    //适用于 6，5，4等长宽 图片的载入方式
-    var data2 = [
-            a456TableViewCell(
-                detail_height:30,
-                Image_top_left:"Black", Image_top_right: "Black",
-                Image1: "Black",     Image2: "Black",     Image3: "Black",
-                Image4: "Black",     Image5: "Black",     Image6: "Black",
-                Image_Bottom: "Black",
-                ////////////
-                Lable_sender: "liu",   Lable_others: "12467880988"
-            )
-    ]
-    
-    //适用于 黄金比例 横向 1图片的载入方式
     var data3:[TableViewCell_1_big] = []
-    //适用于 9，8，7等长宽 图片的载入方式
-    var data4 = []
-    //适用于 黄金比例 竖向 2图片的载入方式
-    var data5 = []
+
     
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
@@ -77,7 +47,46 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //var datat = Dictionary<String,[String: AnyObject]>()
     //var datt  = Dictionary<String,String>()
     
+    var listItems  = [NSManagedObject]()
+    
+    var Imageload:Image = UIImage(named: "Black.png")!
+    
+    func saveItem(itemToSave: String) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContex = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
+        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
+        
+        item.setValue(itemToSave, forKey: "userid")
+        
+        do {
+            try managedContex.save()
+            listItems.append(item)
+        } catch {
+            print("error")
+        }
+    }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        for a in 0...10 {
+//            let item = listItems[a]
+//            print(item.valueForKey("userid") as? String)
+//        }
+//        
+//    }
+    
+
+    
+
     override func viewDidLoad() {
+        
+        for a in 0...10 {
+            print(a)
+            saveItem(String(a))
+        }
+        
         super.viewDidLoad()
         
         //datat["1"] = ["1":1]
@@ -166,24 +175,24 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     
     //set Footer Height
-     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15;
-    }
+//     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 15;
+//    }
     
     //set Header Height
-     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15;
-    }
+//     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 15;
+//    }
     
     //set Header Title
-     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Hello"
-    }
+//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Hello"
+//    }
     
     //set Footer Title
-     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "World"
-    }
+//     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        return "World"
+//    }
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -191,23 +200,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
-     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-        
-        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
-        view.backgroundColor = UIColor.yellowColor();
-        
-        return  view;
-    }
+//     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+//        
+//        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
+//        view.backgroundColor = UIColor.yellowColor();
+//        
+//        return  view;
+//    }
     
     //在footerView 添加个button
-     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
-        
-        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
-        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        myButton.backgroundColor = UIColor.greenColor();
-        return myButton;
-    }
+//     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
+//        
+//        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
+//        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
+//        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
+//        myButton.backgroundColor = UIColor.greenColor();
+//        return myButton;
+//    }
     
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
@@ -264,6 +273,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if data3.isEmpty {
+                    cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
+                    cell1.UIImageView_Top_Left.clipsToBounds = true
+                    cell1.UIImageView_Top_Left.image = Imageload
+                    cell1.UIImageView_Top_Right.image = Imageload
+                    cell1.UIImageView_Mian.image = Imageload
+                    cell1.UIImageView_bottom.image = Imageload
+        
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
                 }
                 else{
                     let v = data3[0]
@@ -273,10 +292,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
                     
                     cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
+
                     cell1.UIImageView_Mian.image = v.UIImageView_Main
+                    
                     cell1.UIImageView_bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell1.height_without_detail + cell1.detail_height)
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
                 }
                 return cell1
                 
@@ -284,6 +307,19 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_2_3_photos")
                 let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
                 if data3.isEmpty {
+                    cell2.image_left_top.layer.cornerRadius = cell2.image_left_top.frame.width/2
+                    cell2.image_left_top.clipsToBounds = true
+                    cell2.image_left_top.image = Imageload
+                    cell2.image_right_top.image = Imageload
+                    
+                    cell2.image_mid_left.image = Imageload
+                    cell2.image_mid_mid.image = Imageload
+                    cell2.image_mid_right.image = Imageload
+                    
+                    cell2.image_bottom.image = Imageload
+                    
+                    
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3
                 }
                 else{
                     let v = data3[0]
@@ -297,10 +333,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_mid_mid.image = v.UIImageView_Bottom
                     cell2.image_mid_right.image = v.UIImageView_Bottom
                     
-                    cell2.image_left_bottom.image = v.UIImageView_Bottom
-                    cell2.image_right_bottom.image = v.UIImageView_Bottom
+                    cell2.image_bottom.image = v.UIImageView_Bottom
+
                     
-                    height_tableview = CGFloat(cell2.height_without_detail + cell2.detail_height)
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3
                 }
                 return cell2
                 
@@ -309,6 +345,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_4_5_6_photos")
                 let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
                 if data3.isEmpty {
+                    cell3.Image_top_left.layer.cornerRadius = cell3.Image_top_left.frame.width/2
+                    cell3.Image_top_left.clipsToBounds = true
+                    cell3.Image_top_left.image = Imageload
+                    cell3.Image_top_right.image = Imageload
+                    
+                    cell3.Image1.image =  Imageload
+                    cell3.Image2.image =  Imageload
+                    cell3.Image3.image =  Imageload
+                    cell3.Image4.image =  Imageload
+                    cell3.Image5.image = Imageload
+                    cell3.Image6.image =  Imageload
+                    
+                    cell3.Image_Bottom.image = Imageload
+                    
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
                 }
                 else{
                     let v = data3[0]
@@ -327,7 +380,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell3.Image_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell3.height_without_detail + cell3.detail_height)
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
                 }
                 return cell3
                 
@@ -335,6 +390,26 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_7_8_9_photos")
                 let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
                 if data3.isEmpty {
+                    cell4.UIImageView_Top_Left.layer.cornerRadius = cell4.UIImageView_Top_Left.frame.width/2
+                    cell4.UIImageView_Top_Left.clipsToBounds = true
+                    cell4.UIImageView_Top_Left.image = Imageload
+                    cell4.UIImageView_Top_Right.image = Imageload
+                    
+                    cell4.UIImageView_Main1.image = Imageload
+                    cell4.UIImageView_Main2.image = Imageload
+                    cell4.UIImageView_Main3.image = Imageload
+                    cell4.UIImageView_Main4.image = Imageload
+                    cell4.UIImageView_Main5.image = Imageload
+                    cell4.UIImageView_Main6.image = Imageload
+                    cell4.UIImageView_Main7.image = Imageload
+                    cell4.UIImageView_Main8.image = Imageload
+                    cell4.UIImageView_Main9.image = Imageload
+                    
+                    cell4.UIImageView_Bottom.image = Imageload
+                    
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
                 }
                 else{
                     let v = data3[0]
@@ -356,7 +431,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     cell4.UIImageView_Bottom.image = v.UIImageView_Bottom
                     
-                    height_tableview = CGFloat(cell4.height_without_detail + cell4.detail_height)
+                    let screenBounds = UIScreen.mainScreen().bounds.width
+                    
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
                     
                 }
                 return cell4
@@ -393,64 +470,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
     }
     
-    
-    func f345cell(indexPath: NSIndexPath) ->  FFrist23TableViewCell{
-
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-            //let video = data[data_n]
-            let video = data1[0]
-            
-            print("kan 1")
-            
-            //        cell.videoScreenshot.image = UIImage(named: video.image)
-            //        cell.videoTitleLabel.text = video.title
-            //        cell.videoSourceLabel.text = video.source
-            cell.image_left_top.layer.cornerRadius = cell.image_left_top.frame.width/2
-            cell.image_left_top.clipsToBounds = true
-            cell.image_left_top.image = UIImage(named:video.image_left_top )
-            
-            cell.image_right_top.image = UIImage(named:video.image_right_top )
-            cell.image_mid_left.image = UIImage(named:video.image_mid_left )
-            cell.image_mid_mid.image = UIImage(named:video.image_mid_mid )
-            cell.image_mid_right.image = UIImage(named:video.image_mid_right )
-            cell.image_left_bottom.image = UIImage(named:video.image_left_top )
-            cell.image_right_bottom.image = UIImage(named:video.image_right_bottom )
-            /////////
-            cell.lable_sender.text = video.lable_sender
-            cell.lable_time.text = video.lable_time
-            cell.lable_zan_number.text = video.lable_zan_number
-            cell.lable_pinglun_number.text = video.lable_pinglun_number
-        
-            return cell
-    }
-    
-    func f456cell(indexPath: NSIndexPath) -> FFrist456TableViewCell {
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-        let v = data2[0]
-        
-        print("kan 3")
-        
-        //圆形方法
-        cell.Image_top_left.layer.cornerRadius = cell.Image_top_left.frame.size.width/2
-        cell.Image_top_left.clipsToBounds = true
-        cell.Image_top_left.image = UIImage(named: v.Image_top_left)
-        
-        cell.Image_top_right.image = UIImage(named: v.Image_top_right)
-        cell.Image1.image = UIImage(named: v.Image1)
-        cell.Image2.image = UIImage(named: v.Image2)
-        cell.Image3.image = UIImage(named: v.Image3)
-        cell.Image4.image = UIImage(named: v.Image4)
-        cell.Image5.image = UIImage(named: v.Image5)
-        cell.Image6.image = UIImage(named: v.Image6)
-        cell.Image_Bottom.image = UIImage(named: v.Image_Bottom)
-        
-        cell.Lable_sender.text = v.Lable_sender
-        cell.Lable_others.text = v.Lable_others
-        
-        return cell
-        
-
-    }
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        let imgback=UIImage(named:"Black.png")
+//        let imgbackV=UIImageView(image: imgback)
+//        cell.backgroundView = imgbackV
+//    }
     
     //??
     // Override to support conditional editing of the table view.
