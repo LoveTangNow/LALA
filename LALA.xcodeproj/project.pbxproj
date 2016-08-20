@@ -77,7 +77,7 @@
 		7F19A0191D5866F80030A16F /* SecondSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSonViewController.swift; sourceTree = "<group>"; };
 		7F19A12C1D58695B0030A16F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		7F19A1301D58BCFD0030A16F /* Server.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Server.plist; sourceTree = "<group>"; };
+		7F19A1301D58BCFD0030A16F /* Server.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Server.plist; path = LALA/Server.plist; sourceTree = "<group>"; };
 		7F19A1371D58C1020030A16F /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		7F19A13D1D58C5080030A16F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridSonViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
-		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
+		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		7FFC423E1D65416A0085377B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageD.storyboard; sourceTree = "<group>"; };
 		7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNewsViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +196,8 @@
 		7F19A1421D58D9950030A16F /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				7F19A1301D58BCFD0030A16F /* Server.plist */,
+				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 			);
 			name = Documents;
 			sourceTree = "<group>";
@@ -203,8 +205,6 @@
 		7F5632281D6178230017958A /* datasss */ = {
 			isa = PBXGroup;
 			children = (
-				7F19A1301D58BCFD0030A16F /* Server.plist */,
-				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 				7F19A1361D58C1020030A16F /* Data.xcdatamodeld */,
 				7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */,
 				7FC8D7D21D65FF6400EBC8AD /* User.swift */,
