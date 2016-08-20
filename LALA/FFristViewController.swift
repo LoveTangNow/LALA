@@ -498,6 +498,39 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
 
     ///////////////tableView_end
+    
+    func getDeviceVersion () -> String? {
+        let name = UnsafeMutablePointer<utsname>.alloc(1)
+        uname(name)
+        let machine = withUnsafePointer(&name.memory.machine, { (ptr) -> String? in
+            
+            let int8Ptr = unsafeBitCast(ptr, UnsafePointer<CChar>.self)
+            return String.fromCString(int8Ptr)
+        })
+        name.dealloc(1)
+        if let deviceString = machine {
+            switch deviceString {
+            //iPhone
+            case "iPhone1,1":                return "iPhone 1G"
+            case "iPhone1,2":                return "iPhone 3G"
+            case "iPhone2,1":                return "iPhone 3GS"
+            case "iPhone3,1", "iPhone3,2":   return "iPhone 4"
+            case "iPhone4,1":                return "iPhone 4S"
+            case "iPhone5,1", "iPhone5,2":   return "iPhone 5"
+            case "iPhone5,3", "iPhone5,4":   return "iPhone 5C"
+            case "iPhone6,1", "iPhone6,2":   return "iPhone 5S"
+            case "iPhone7,1":                return "iPhone 6 Plus"
+            case "iPhone7,2":                return "iPhone 6"
+            case "iPhone8,1":                return "iPhone 6s"
+            case "iPhone8,2":                return "iPhone 6s Plus"
+            case "iPhone8,3":                return "iPhone SE"
+            default:
+                return deviceString
+            }
+        } else {
+            return nil
+        }
+    }
 
     
     @IBAction func ButtonTopLeftClick(sender: AnyObject) {
