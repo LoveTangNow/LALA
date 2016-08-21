@@ -118,7 +118,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         //datat["1"] = ["1":1]
         //datt["1"] = "1"
-        
         //print(datat["1"]!["1"])
         //print(datt["1"])
         
@@ -130,13 +129,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         datadetails[3] = [["sender":"王宝强"],["title":"他俩干的"],["style":"Suit_4_5_6_photos"]]
         datadetails[4] = [["sender":"隔壁老王"],["title":"不是我干的"],["style":"Suit_7_8_9_photos"]]
         
-        /*
-         
-         */
         print("------------------------------")
         print(datadetails[1]![1]["title"])
         print("------------------------------")
-        
         
         //读取数据，用户是否登录
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
@@ -166,12 +161,21 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 }
         }
         
+        //-------------------------------Reall----Start---------------------------------//
+        
+        //判断用户是否登录
+        
+        /*
+         获取跟用户ID相关的前 20 （以后这个数字可以用户自定义）条NEWS ID
+         根据NEWS ID 查询有几个照片
+         根据NEWS ID 查询照片路径
+         
+        */
         
         
         
         
-        
-        
+        //-------------------------------Reall----End-----------------------------------//
         
         /*
             Alamofire在异步获取数据之后，像数据数组插入数据
