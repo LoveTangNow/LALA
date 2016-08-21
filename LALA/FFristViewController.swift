@@ -212,52 +212,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var height_tableview:CGFloat = 0
     
     
-    //set Footer Height
-//     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 15;
-//    }
-    
-    //set Header Height
-//     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 15;
-//    }
-    
-    //set Header Title
-//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Hello"
-//    }
-    
-    //set Footer Title
-//     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "World"
-//    }
-    
-    
     //MARK:Tableview
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("点击了"+String(indexPath.row))
     }
-    
-    // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
-//     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-//        
-//        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
-//        view.backgroundColor = UIColor.yellowColor();
-//        
-//        return  view;
-//    }
-    
-    //在footerView 添加个button
-//     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
-//        
-//        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
-//        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
-//        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-//        myButton.backgroundColor = UIColor.greenColor();
-//        return myButton;
-//    }
     
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
@@ -280,11 +240,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("几个Tableview cell")
         return datadetails.count
     }
-    
-//    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-//        return ["a","b","c","d","e","f","g","h","i","j","k","l"]
-//    }
-    
     
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -323,7 +278,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618 + 5
                 }
                 else{
                     let v = data3[0]
@@ -340,7 +295,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
 
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618  + 5
                 }
                 return cell1
                 
@@ -360,7 +315,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_bottom.image = Imageload
                     
                     
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3 + 5
                 }
                 else{
                     let v = data3[0]
@@ -377,7 +332,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_bottom.image = v.UIImageView_Bottom
 
                     
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3 + 5
                 }
                 return cell2
                 
@@ -402,7 +357,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15 + 5
                 }
                 else{
                     let v = data3[0]
@@ -423,7 +378,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15 + 5
                 }
                 return cell3
                 
@@ -450,7 +405,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 5
                 }
                 else{
                     let v = data3[0]
@@ -474,7 +429,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 5
                     
                 }
                 return cell4
