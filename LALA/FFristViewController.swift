@@ -13,6 +13,7 @@ import AlamofireImage
 import Alamofire
 import CoreData
 import Foundation
+import SwiftyJSON
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
@@ -42,7 +43,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
     //从字典标识符1开始存储 ，0 表示不存在数据
-    var dataimage = Dictionary<Int,[Dictionary<String,UIImageView>]>()
+    var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
     var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
     
     //var datat = Dictionary<String,[String: AnyObject]>()
@@ -124,15 +125,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
         
-        datadetails[1] = [["sender":"宋喆"],["title":"老子干的"],["style":"Suit_1_big_photos"]]
-        datadetails[2] = [["sender":"马蓉"],["title":"老娘干的"],["style":"Suit_2_3_photos"]]
-        datadetails[3] = [["sender":"王宝强"],["title":"他俩干的"],["style":"Suit_4_5_6_photos"]]
-        datadetails[4] = [["sender":"隔壁老王"],["title":"不是我干的"],["style":"Suit_7_8_9_photos"]]
-        
-        print("------------------------------")
-        print(datadetails[1]![1]["title"])
-        print("------------------------------")
-        
         //读取数据，用户是否登录
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
@@ -163,17 +155,86 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         //-------------------------------Reall----Start---------------------------------//
         
-        //判断用户是否登录
-        
-        /*
-         获取跟用户ID相关的前 20 （以后这个数字可以用户自定义）条NEWS ID
-         根据NEWS ID 查询有几个照片
-         根据NEWS ID 查询照片路径
-         
-        */
-        
-        
-        
+        Alamofire.request(.GET, "http://localhost:80/LALA/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        //在这里把数据写入字典里？
+                        print("--------------------start--------------------")
+                        
+                        //用两个Dictionary来存储下载下来的数据
+                        //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
+                        //从字典标识符1开始存储 ，0 表示不存在数据
+                        //var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
+                        
+                        
+                        
+                        for i in 0  ..< json.count
+                        {
+                            let newstime:String = json[i]["newstime"].string!
+                            let device:String = json[i]["device"].string!
+                            let senderid:String = json[i]["senderid"].string!
+                            let sendername:String = json[i]["sendername"].string!
+                            let photonumber = json[i]["photo"].count
+                            let s = self.datadetails.count
+                            
+                            var PhotoArray =  [String]()
+                            
+                            for j in 0  ..< photonumber
+                            {
+                                let path:String = json[i]["photo"][j].string!
+                                PhotoArray.append(path)
+                            }
+                            
+                            switch photonumber
+                            {
+                            case 1:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]]]
+                            case 2:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]]]
+                            case 3:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]]]
+                            case 4:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]]]
+                            case 5:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]]]
+                            case 6:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]]]
+                            case 7:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]]]
+                            case 8:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]]]
+                            case 9:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]],["Photo9":PhotoArray[8]]]
+                            default:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"]]
+                                
+                            }
+                        }
+                        
+                        print(self.datadetails)
+                        print("")
+                        print(self.dataimage)
+                        
+                        print("---------------------end---------------------")
+                        
+                    }
+                case .Failure(let error):
+                    print(error)
+                }
+        }
         
         //-------------------------------Reall----End-----------------------------------//
         
@@ -238,7 +299,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return datadetails.count
+        return datadetails.count - 2
     }
     
     //Tableview初始化
@@ -254,21 +315,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             适用于 9，8，7等长宽 图片的载入方式 .
             适用于 6，5，4等长宽 图片的载入方式 .
             适用于 3，2等长宽 图片的载入方式    .
-            适用于 黄金比例 竖向 2图片的载入方式
             适用于 黄金比例 横向 1图片的载入方式.
+         
+            适用于无图片的载入方式。
             
             黄金比例：0.618
         */
         
         
-        if datadetails[indexPath.row + 1]![2]["style"] != nil {
+        if datadetails[indexPath.row + 1]![4]["style"] != nil {
             
-            switch datadetails[indexPath.row + 1]![2]["style"]! {
+            switch datadetails[indexPath.row + 1]![4]["style"]! {
             case "Suit_1_big_photos"://
                 print("Suit_1_big_photos")
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
-                if data3.isEmpty {
+                if datadetails.isEmpty || dataimage.isEmpty {
+ 
                     cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
                     cell1.UIImageView_Top_Left.clipsToBounds = true
                     cell1.UIImageView_Top_Left.image = Imageload

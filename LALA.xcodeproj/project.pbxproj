@@ -20,6 +20,7 @@
 		7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F19A1361D58C1020030A16F /* Data.xcdatamodeld */; };
 		7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */; };
 		7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */; };
+		7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */; };
 		7F5632271D5FD6780017958A /* funccccccc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* funccccccc.swift */; };
 		7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */; };
 		7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFourthViewController.swift */; };
@@ -83,6 +84,7 @@
 		7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridSonViewController.swift; sourceTree = "<group>"; };
 		7F288ADB1D4B649E00842A9C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/LALA-gcpqeuqtnmwzqncsdxsxanlvzlfi/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUViewController.swift; sourceTree = "<group>"; };
+		7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist_Without_Photo_TableViewCell.swift; sourceTree = "<group>"; };
 		7F5632261D5FD6780017958A /* funccccccc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funccccccc.swift; sourceTree = "<group>"; };
 		7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist23TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701411D5B629C008D07A2 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		7F7701491D5B88D1008D07A2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */,
 				7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */,
 				7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */,
 				7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */,
@@ -517,6 +520,7 @@
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
+				7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */,
