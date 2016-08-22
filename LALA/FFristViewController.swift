@@ -46,9 +46,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
     var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
     
-    //var datat = Dictionary<String,[String: AnyObject]>()
-    //var datt  = Dictionary<String,String>()
-    
     var listItems  = [NSManagedObject]()
     
     var Imageload:Image = UIImage(named: "Black.png")!
@@ -117,11 +114,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         super.viewDidLoad()
         
-        //datat["1"] = ["1":1]
-        //datt["1"] = "1"
-        //print(datat["1"]!["1"])
-        //print(datt["1"])
-        
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
         
@@ -169,8 +161,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
                         //从字典标识符1开始存储 ，0 表示不存在数据
                         //var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
-                        
-                        
                         
                         for i in 0  ..< json.count
                         {
@@ -299,7 +289,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return datadetails.count - 2
+        return datadetails.count
     }
     
     //Tableview初始化
@@ -323,9 +313,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         */
         
         
-        if datadetails[indexPath.row + 1]![4]["style"] != nil {
+        if datadetails[indexPath.row]![4]["style"] != nil {
             
-            switch datadetails[indexPath.row + 1]![4]["style"]! {
+            switch datadetails[indexPath.row]![4]["style"]! {
             case "Suit_1_big_photos"://
                 print("Suit_1_big_photos")
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
@@ -344,17 +334,31 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618 + 5
                 }
                 else{
-                    let v = data3[0]
+                    let detail = datadetails[indexPath.row]
+                    let images = dataimage[indexPath.row]
+                    
+                    cell1.UILabel_sender.text = detail![3]["sendername"]
+                    cell1.UILabel_detail.text = "我设置了哟~"
                     
                     cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
                     cell1.UIImageView_Top_Left.clipsToBounds = true
-                    cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
-                    
-                    cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
 
-                    cell1.UIImageView_Mian.image = v.UIImageView_Main
+                    cell1.UIImageView_Top_Left.image = Imageload
                     
-                    cell1.UIImageView_bottom.image = v.UIImageView_Bottom
+                    cell1.UIImageView_Top_Right.image = Imageload
+                    
+                    let server:String = "http://localhost:80/LALA/photo/"
+                    print(server)
+                    print(images)
+                    
+                    Alamofire.request(.GET, server + images![0]["Photo1"]!)
+                        .responseImage { response in
+                            if let image = response.result.value {
+                                cell1.UIImageView_Mian.image = image
+                            }
+                    }
+                    
+                    cell1.UIImageView_bottom.image = Imageload
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
 

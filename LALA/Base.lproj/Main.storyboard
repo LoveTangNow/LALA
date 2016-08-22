@@ -792,18 +792,8 @@
                                                         <constraint firstAttribute="height" constant="35" id="fWd-QG-WWR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hD-4x-c61">
-                                                    <rect key="frame" x="53" y="13" width="308" height="23"/>
-                                                    <color key="backgroundColor" red="0.10072604566812515" green="0.76419538259506226" blue="0.079636774957180023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="lRn-fd-ILh"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
-                                                    <rect key="frame" x="13" y="73" width="388" height="170.5"/>
+                                                    <rect key="frame" x="13" y="73" width="388" height="170"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttc-AN-jYJ">
                                                     <rect key="frame" x="13" y="248" width="388" height="30"/>
@@ -828,6 +818,16 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hD-4x-c61">
+                                                    <rect key="frame" x="53" y="13" width="308" height="23"/>
+                                                    <color key="backgroundColor" red="0.10072604566812515" green="0.76419538259506226" blue="0.079636774957180023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="lRn-fd-ILh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.5" blue="0.81390102580000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -856,6 +856,8 @@
                                             <outlet property="UIImageView_Top_Left" destination="9Qr-Pm-3rG" id="2wq-Ip-UiS"/>
                                             <outlet property="UIImageView_Top_Right" destination="WNE-GY-JQc" id="enO-5k-6wK"/>
                                             <outlet property="UIImageView_bottom" destination="ttc-AN-jYJ" id="sE8-sP-wf2"/>
+                                            <outlet property="UILabel_detail" destination="mte-rr-6mC" id="JdN-aK-gNM"/>
+                                            <outlet property="UILabel_sender" destination="8hD-4x-c61" id="OrO-MI-dcB"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FFrist_Without_Photo_TableViewCell" rowHeight="161" id="mcI-g1-3Nv" customClass="FFrist_Without_Photo_TableViewCell" customModule="LALA" customModuleProvider="target">

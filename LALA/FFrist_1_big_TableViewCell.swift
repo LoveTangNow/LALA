@@ -31,6 +31,8 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIImageView_Top_Right: UIImageView!
     @IBOutlet weak var UIImageView_Mian: UIImageView!
     @IBOutlet weak var UIImageView_bottom: UIImageView!
+    @IBOutlet weak var UILabel_sender: UILabel!
+    @IBOutlet weak var UILabel_detail: UILabel!
     
     var detail_height = 0
     
