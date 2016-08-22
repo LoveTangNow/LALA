@@ -9,7 +9,12 @@ target ‘LALA’ do
 	pod 'Onboard'
 	pod 'AlamofireImage', '~> 2.0'
     pod 'SwiftyJSON'
+    
     pod 'Kingfisher', '~> 2.4'
     pod 'TOWebViewController'
     pod 'SwiftRecord'
+    
+    pod 'LTMorphingLabel'
+    pod 'RAMAnimatedTabBarController'
+    pod 'ProtocolBuffers'
 end

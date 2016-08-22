@@ -13,10 +13,12 @@ import AlamofireImage
 import Alamofire
 import CoreData
 import Foundation
+import SwiftyJSON
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
+    //MARK:Data
     
     @IBOutlet weak var ButtonTopRight: UIButton!
     @IBOutlet weak var ButtonTopLeft: UIBarButtonItem!
@@ -35,17 +37,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      适用于 黄金比例 竖向 2图片的载入方式
      适用于 黄金比例 横向 1图片的载入方式.
      */
+    
     var data3:[TableViewCell_1_big] = []
 
-    
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
     //从字典标识符1开始存储 ，0 表示不存在数据
-    var dataimage = Dictionary<Int,[Dictionary<String,UIImageView>]>()
+    var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
     var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
-    
-    //var datat = Dictionary<String,[String: AnyObject]>()
-    //var datt  = Dictionary<String,String>()
     
     var listItems  = [NSManagedObject]()
     
@@ -69,18 +68,44 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         }
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        for a in 0...10 {
-//            let item = listItems[a]
-//            print(item.valueForKey("userid") as? String)
-//        }
-//        
-//    }
     
-
+    /*
+     当一个视图控制器被创建，并在屏幕上显示的时候。 代码的执行顺序
+     1、 alloc                                   创建对象，分配空间
+     2、init (initWithNibName) 初始化对象，初始化数据
+     3、loadView                  从nib载入视图 ，通常这一步不需要去干涉。除非你没有使用xib文件创建视图
+     4、viewDidLoad               载入完成，可以进行自定义数据以及动态创建其他控件
+     5、viewWillAppear            视图将出现在屏幕之前，马上这个视图就会被展现在屏幕上了
+     6、viewDidAppear             视图已在屏幕上渲染完成
+     
+     当一个视图被移除屏幕并且销毁的时候的执行顺序，这个顺序差不多和上面的相反
+     1、viewWillDisappear            视图将被从屏幕上移除之前执行
+     2、viewDidDisappear             视图已经被从屏幕上移除，用户看不到这个视图了
+     3、dealloc                      视图被销毁，此处需要对你在init和viewDidLoad中创建的对象进行释放
+     */
     
-
+    
+    //MARK:View
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        print("viewWillAppear")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("viewDidAppear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        print("viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+       print("viewDidDisappear")
+    }
+    
     override func viewDidLoad() {
+        print("viewDidLoad")
         
         for a in 0...10 {
             print(a)
@@ -89,27 +114,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         super.viewDidLoad()
         
-        //datat["1"] = ["1":1]
-        //datt["1"] = "1"
-        
-        //print(datat["1"]!["1"])
-        //print(datt["1"])
-        
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
-        
-        datadetails[1] = [["sender":"宋喆"],["title":"老子干的"],["style":"Suit_1_big_photos"]]
-        datadetails[2] = [["sender":"马蓉"],["title":"老娘干的"],["style":"Suit_2_3_photos"]]
-        datadetails[3] = [["sender":"王宝强"],["title":"他俩干的"],["style":"Suit_4_5_6_photos"]]
-        datadetails[4] = [["sender":"隔壁老王"],["title":"不是我干的"],["style":"Suit_7_8_9_photos"]]
-        
-        /*
-         
-         */
-        print("------------------------------")
-        print(datadetails[1]![1]["title"])
-        print("------------------------------")
-        
         
         //读取数据，用户是否登录
         let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
@@ -138,6 +144,89 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     self.TimeTableView.reloadData()
                 }
         }
+        
+        //-------------------------------Reall----Start---------------------------------//
+        
+        Alamofire.request(.GET, "http://localhost:80/LALA/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        //在这里把数据写入字典里？
+                        print("--------------------start--------------------")
+                        
+                        //用两个Dictionary来存储下载下来的数据
+                        //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
+                        //从字典标识符1开始存储 ，0 表示不存在数据
+                        //var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
+                        
+                        for i in 0  ..< json.count
+                        {
+                            let newstime:String = json[i]["newstime"].string!
+                            let device:String = json[i]["device"].string!
+                            let senderid:String = json[i]["senderid"].string!
+                            let sendername:String = json[i]["sendername"].string!
+                            let photonumber = json[i]["photo"].count
+                            let s = self.datadetails.count
+                            
+                            var PhotoArray =  [String]()
+                            
+                            for j in 0  ..< photonumber
+                            {
+                                let path:String = json[i]["photo"][j].string!
+                                PhotoArray.append(path)
+                            }
+                            
+                            switch photonumber
+                            {
+                            case 1:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]]]
+                            case 2:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]]]
+                            case 3:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]]]
+                            case 4:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]]]
+                            case 5:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]]]
+                            case 6:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]]]
+                            case 7:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]]]
+                            case 8:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]]]
+                            case 9:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]],["Photo9":PhotoArray[8]]]
+                            default:
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"]]
+                                
+                            }
+                        }
+                        
+                        print(self.datadetails)
+                        print("")
+                        print(self.dataimage)
+                        
+                        print("---------------------end---------------------")
+                        
+                    }
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+        
+        //-------------------------------Reall----End-----------------------------------//
         
         /*
             Alamofire在异步获取数据之后，像数据数组插入数据
@@ -174,49 +263,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var height_tableview:CGFloat = 0
     
     
-    //set Footer Height
-//     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 15;
-//    }
-    
-    //set Header Height
-//     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 15;
-//    }
-    
-    //set Header Title
-//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Hello"
-//    }
-    
-    //set Footer Title
-//     func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "World"
-//    }
+    //MARK:Tableview
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("点击了"+String(indexPath.row))
     }
-    
-    // 在tableview 的headView 上添加个view 其实你可以在这个view 加很多组件 在添加在HeadView
-//     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-//        
-//        let view:UIView = UIView(frame: CGRectMake(0, 0,self.view.frame.size.width, 20));
-//        view.backgroundColor = UIColor.yellowColor();
-//        
-//        return  view;
-//    }
-    
-    //在footerView 添加个button
-//     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
-//        
-//        let myButton:UIButton = UIButton(frame: CGRectMake(0, 0, self.view.frame.size.width, 20));
-//        myButton.setTitle("I am a Button", forState: UIControlState.Normal);
-//        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-//        myButton.backgroundColor = UIColor.greenColor();
-//        return myButton;
-//    }
     
     //Tableview cell高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
@@ -240,11 +292,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         return datadetails.count
     }
     
-//    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-//        return ["a","b","c","d","e","f","g","h","i","j","k","l"]
-//    }
-    
-    
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("Tableview初始化")
@@ -258,21 +305,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             适用于 9，8，7等长宽 图片的载入方式 .
             适用于 6，5，4等长宽 图片的载入方式 .
             适用于 3，2等长宽 图片的载入方式    .
-            适用于 黄金比例 竖向 2图片的载入方式
             适用于 黄金比例 横向 1图片的载入方式.
+         
+            适用于无图片的载入方式。
             
             黄金比例：0.618
         */
         
         
-        if datadetails[indexPath.row + 1]![2]["style"] != nil {
+        if datadetails[indexPath.row]![4]["style"] != nil {
             
-            switch datadetails[indexPath.row + 1]![2]["style"]! {
+            switch datadetails[indexPath.row]![4]["style"]! {
             case "Suit_1_big_photos"://
                 print("Suit_1_big_photos")
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
-                if data3.isEmpty {
+                if datadetails.isEmpty || dataimage.isEmpty {
+ 
                     cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
                     cell1.UIImageView_Top_Left.clipsToBounds = true
                     cell1.UIImageView_Top_Left.image = Imageload
@@ -282,24 +331,38 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618 + 5
                 }
                 else{
-                    let v = data3[0]
+                    let detail = datadetails[indexPath.row]
+                    let images = dataimage[indexPath.row]
+                    
+                    cell1.UILabel_sender.text = detail![3]["sendername"]
+                    cell1.UILabel_detail.text = "我设置了哟~"
                     
                     cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
                     cell1.UIImageView_Top_Left.clipsToBounds = true
-                    cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
-                    
-                    cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
 
-                    cell1.UIImageView_Mian.image = v.UIImageView_Main
+                    cell1.UIImageView_Top_Left.image = Imageload
                     
-                    cell1.UIImageView_bottom.image = v.UIImageView_Bottom
+                    cell1.UIImageView_Top_Right.image = Imageload
+                    
+                    let server:String = "http://localhost:80/LALA/photo/"
+                    print(server)
+                    print(images)
+                    
+                    Alamofire.request(.GET, server + images![0]["Photo1"]!)
+                        .responseImage { response in
+                            if let image = response.result.value {
+                                cell1.UIImageView_Mian.image = image
+                            }
+                    }
+                    
+                    cell1.UIImageView_bottom.image = Imageload
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
 
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618
+                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618  + 5
                 }
                 return cell1
                 
@@ -319,7 +382,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_bottom.image = Imageload
                     
                     
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3 + 5
                 }
                 else{
                     let v = data3[0]
@@ -336,7 +399,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell2.image_bottom.image = v.UIImageView_Bottom
 
                     
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3
+                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3 + 5
                 }
                 return cell2
                 
@@ -361,7 +424,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15 + 5
                 }
                 else{
                     let v = data3[0]
@@ -382,7 +445,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15
+                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15 + 5
                 }
                 return cell3
                 
@@ -409,7 +472,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 5
                 }
                 else{
                     let v = data3[0]
@@ -433,7 +496,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
-                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 10
+                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 5
                     
                 }
                 return cell4
@@ -498,6 +561,41 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
 
     ///////////////tableView_end
+    
+    //MARK:Functions
+    
+    func getDeviceVersion () -> String? {
+        let name = UnsafeMutablePointer<utsname>.alloc(1)
+        uname(name)
+        let machine = withUnsafePointer(&name.memory.machine, { (ptr) -> String? in
+            
+            let int8Ptr = unsafeBitCast(ptr, UnsafePointer<CChar>.self)
+            return String.fromCString(int8Ptr)
+        })
+        name.dealloc(1)
+        if let deviceString = machine {
+            switch deviceString {
+            //iPhone
+            case "iPhone1,1":                return "iPhone 1G"
+            case "iPhone1,2":                return "iPhone 3G"
+            case "iPhone2,1":                return "iPhone 3GS"
+            case "iPhone3,1", "iPhone3,2":   return "iPhone 4"
+            case "iPhone4,1":                return "iPhone 4S"
+            case "iPhone5,1", "iPhone5,2":   return "iPhone 5"
+            case "iPhone5,3", "iPhone5,4":   return "iPhone 5C"
+            case "iPhone6,1", "iPhone6,2":   return "iPhone 5S"
+            case "iPhone7,1":                return "iPhone 6 Plus"
+            case "iPhone7,2":                return "iPhone 6"
+            case "iPhone8,1":                return "iPhone 6s"
+            case "iPhone8,2":                return "iPhone 6s Plus"
+            case "iPhone8,3":                return "iPhone SE"
+            default:
+                return deviceString
+            }
+        } else {
+            return nil
+        }
+    }
 
     
     @IBAction func ButtonTopLeftClick(sender: AnyObject) {
@@ -508,6 +606,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBAction func ButtonTopRightClick(sender: AnyObject) {
 
     }
+    
+    
+    //MARK:Others
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

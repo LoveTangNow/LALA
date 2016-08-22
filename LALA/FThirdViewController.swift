@@ -35,8 +35,9 @@ class FThirdViewController: UIViewController {
     //获取Plist中的数据
     @IBAction func CoreDaraClick(sender: AnyObject) {
         print("点击了plist")
-        //读取数据
+        //读取数据/
         let diaryList:String = NSBundle.mainBundle().pathForResource("/Shi_Fou_Deng_Lu", ofType:"plist")!
+        print(diaryList)
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
         let da:NSString = data.objectForKey("username") as! NSString
         
@@ -46,6 +47,7 @@ class FThirdViewController: UIViewController {
         //写入数据
         //手机上不可实现
         let plistpath:NSString = NSBundle.mainBundle().pathForResource("/Shi_Fou_Deng_Lu", ofType:"plist")!
+        print(plistpath)
         let usersdic:NSMutableDictionary = NSMutableDictionary(contentsOfFile:plistpath as String)!
         usersdic.setObject("Tang", forKey: "username")
         usersdic.writeToFile(plistpath as String,atomically: true)
