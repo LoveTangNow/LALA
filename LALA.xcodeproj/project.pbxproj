@@ -24,7 +24,6 @@
 		7F5632271D5FD6780017958A /* funccccccc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* funccccccc.swift */; };
 		7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */; };
 		7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFourthViewController.swift */; };
-		7F7701451D5B6386008D07A2 /* FFristTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */; };
 		7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImageDViewController.swift */; };
 		7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */; };
 		7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */; };
@@ -39,6 +38,9 @@
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
 		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
+		7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */; };
+		7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */; };
+		7FE37A451D6CA8B300813EED /* Simulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE37A441D6CA8B300813EED /* Simulator.png */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
 		7FFC423F1D65416A0085377B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFC423E1D65416A0085377B /* CoreData.framework */; };
@@ -88,7 +90,6 @@
 		7F5632261D5FD6780017958A /* funccccccc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funccccccc.swift; sourceTree = "<group>"; };
 		7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist23TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701411D5B629C008D07A2 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
-		7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristTableViewCell.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImageDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDViewController.swift; sourceTree = "<group>"; };
 		7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist789TableViewCell.swift; sourceTree = "<group>"; };
 		7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist456TableViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +104,9 @@
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_User_IF_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_Others_TableViewCell.swift; sourceTree = "<group>"; };
+		7FE37A441D6CA8B300813EED /* Simulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Simulator.png; path = ../../../../../Desktop/Simulator.png; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		7FFC423E1D65416A0085377B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				7F7701541D5CC66C008D07A2 /* aiqinhai04.jpg */,
+				7FE37A441D6CA8B300813EED /* Simulator.png */,
 			);
 			name = temp;
 			sourceTree = "<group>";
@@ -242,7 +247,8 @@
 				7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */,
 				7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */,
 				7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */,
-				7F7701441D5B6386008D07A2 /* FFristTableViewCell.swift */,
+				7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */,
+				7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE37A451D6CA8B300813EED /* Simulator.png in Resources */,
 				7F19A1311D58BCFD0030A16F /* Server.plist in Resources */,
 				7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */,
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
@@ -504,9 +511,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
+				7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */,
+				7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */,
 				7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
-				7F7701451D5B6386008D07A2 /* FFristTableViewCell.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,

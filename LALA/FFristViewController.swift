@@ -49,6 +49,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var listItems  = [NSManagedObject]()
     
     var Imageload:Image = UIImage(named: "Black.png")!
+    var Imageloadw:Image = UIImage(named: "White.png")!
     
     func saveItem(itemToSave: String) {
         
@@ -345,7 +346,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                     cell1.UIImageView_Top_Left.image = Imageload
                     
-                    cell1.UIImageView_Top_Right.image = Imageload
+                    cell1.UIImageView_Top_Right.image = Imageloadw
                     
                     let server:String = "http://localhost:80/LALA/photo/"
                     print(server)
