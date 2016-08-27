@@ -17,8 +17,6 @@ Pods/TOWebViewController/TOWebViewController/zh-Hant.lproj/TOWebViewControllerLo
 
 Pods/TOWebViewController/TOWebViewController/uk.lproj/TOWebViewControllerLocalizable.strings
 
-*.swift
-
 *.h
 
 *.m
