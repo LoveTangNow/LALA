@@ -18,18 +18,16 @@ class ImageUViewController: UIViewController {
         
         //let i = UIImageView_For_Upload.image
         let s = UIImageView_For_Upload.image!
-        
         print(s)
         
         let nsd:NSData = UIImageJPEGRepresentation(s, 1.0)!
         
-       // let fileURL = NSBundle.mainBundle().URLForResource("aiqinhai04", withExtension: "png")
-        print(nsd)
+        let fileURL = NSBundle.mainBundle().URLForResource("Simulator", withExtension: "png")
+        print(fileURL)
 
-        Alamofire.upload(.POST, "http://localhost:80/LALA/gotimage.php", data: nsd)
+        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", data: nsd)
             .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
-                print(totalBytesWritten)
-                
+                //print(totalBytesWritten)
                 // This closure is NOT called on the main queue for performance
                 // reasons. To update your ui, dispatch to the main queue.
                 dispatch_async(dispatch_get_main_queue()) {
@@ -38,15 +36,15 @@ class ImageUViewController: UIViewController {
             }
             .validate()
             .responseJSON { response in
-                print("回收数据")
-                print(response)
+                print("回收数据1")
+                debugPrint(response)
+        }
+        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", file: fileURL!)
+            .validate()
+            .responseJSON { response in
                 print("回收数据2")
                 debugPrint(response)
-                
         }
-
-    
-        
     }
         
 
