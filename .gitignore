@@ -106,3 +106,81 @@ Pods/SwiftyJSON/Source/SwiftyJSON.swift
 Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift
 
 Pods/Kingfisher/Sources/KingfisherManager.swift
+
+Pods/LTMorphingLabel/LTMorphingLabel/LTMorphingLabel.h
+
+Pods/Kingfisher/README.md
+
+Pods/Kingfisher/Sources/Kingfisher.h
+
+Pods/LTMorphingLabel/LTMorphingLabel/Particles/Fire.png
+
+Pods/LTMorphingLabel/README.md
+
+Pods/MBProgressHUD/MBProgressHUD.m
+
+Pods/MBProgressHUD/MBProgressHUD.h
+
+Pods/MBProgressHUD/README.mdown
+
+*.png
+
+Pods/TOWebViewController/TOWebViewController/zh-Hans.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/TOActivitySafari.h
+
+Pods/TOWebViewController/TOWebViewController/TOActivitySafari.m
+
+Pods/TOWebViewController/TOWebViewController/TOActivityChrome.h
+
+Pods/TOWebViewController/TOWebViewController/pl.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/NJKWebViewProgress/NJKWebViewProgressView.h
+
+Pods/TOWebViewController/TOWebViewController/NJKWebViewProgress/NJKWebViewProgressView.m
+
+Pods/TOWebViewController/TOWebViewController/NJKWebViewProgress/NJKWebViewProgress.m
+
+Pods/TOWebViewController/TOWebViewController/NJKWebViewProgress/NJKWebViewProgress.h
+
+Pods/TOWebViewController/TOWebViewController/ko.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/it.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/TOActivityChrome.m
+
+Pods/TOWebViewController/TOWebViewController/es.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/ru.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/fr.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/README.md
+
+Pods/TOWebViewController/TOWebViewController/ja.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/TOWebViewController/TOWebViewController/TOWebViewController.m
+
+Pods/Target Support Files/TOWebViewController/TOWebViewController.xcconfig
+
+Pods/Target Support Files/TOWebViewController/TOWebViewController-umbrella.h
+
+Pods/Target Support Files/TOWebViewController/TOWebViewController.modulemap
+
+Pods/Target Support Files/TOWebViewController/TOWebViewController-dummy.m
+
+Pods/TOWebViewController/TOWebViewController/en.lproj/TOWebViewControllerLocalizable.strings
+
+Pods/Target Support Files/TOWebViewController/Info.plist
+
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
+
+Pods/Target Support Files/TOWebViewController/TOWebViewController-prefix.pch
+
+Pods/TOWebViewController/TOWebViewController/UIImage+TOWebViewControllerIcons.h
+
+Pods/Target Support Files/SwiftyJSON/Info.plist
+
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD.modulemap
+
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-dummy.m
