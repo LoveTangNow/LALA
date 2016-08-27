@@ -123,8 +123,6 @@ Pods/MBProgressHUD/MBProgressHUD.h
 
 Pods/MBProgressHUD/README.mdown
 
-*.png
-
 Pods/TOWebViewController/TOWebViewController/zh-Hans.lproj/TOWebViewControllerLocalizable.strings
 
 Pods/TOWebViewController/TOWebViewController/TOActivitySafari.h
@@ -326,8 +324,6 @@ Pods/Target Support Files/MBProgressHUD/MBProgressHUD-umbrella.h
 Pods/Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch
 
 Pods/Target Support Files/MBProgressHUD/Info.plist
-
-*.m
 
 Pods/Target Support Files/MBProgressHUD/MBProgressHUD.modulemap
 
