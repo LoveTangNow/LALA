@@ -25,7 +25,7 @@ class FForth_User_IF_TableViewCell: UITableViewCell {
     @IBOutlet weak var Fans_Number: UILabel!
     @IBOutlet weak var Fans_Word: UILabel!
     
-    @IBOutlet weak var Space_Photo: UIView!
+    @IBOutlet weak var Image_Space: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
