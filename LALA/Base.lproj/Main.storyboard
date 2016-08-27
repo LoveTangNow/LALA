@@ -116,8 +116,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gci-or-quV">
-                                                    <rect key="frame" x="17" y="134" width="263" height="15.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-x4-agI">
+                                                    <rect key="frame" x="8" y="134" width="272" height="14.5"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -126,9 +126,9 @@
                                             <outlet property="Fans_Word" destination="udU-0J-pDS" id="jt3-zj-OX5"/>
                                             <outlet property="Focus_Word" destination="psr-m1-rvn" id="GSb-Rm-vVO"/>
                                             <outlet property="Fouse_Number" destination="fH5-sa-SOz" id="2Df-7g-mci"/>
+                                            <outlet property="Image_Space" destination="hR4-x4-agI" id="kTP-UC-ami"/>
                                             <outlet property="NEWS_NUMBERS" destination="um3-di-Wmg" id="Z8m-JI-eLQ"/>
                                             <outlet property="NEWS_WORD" destination="1Xp-O1-x31" id="hk8-Fh-9qv"/>
-                                            <outlet property="Space_Photo" destination="rNH-kQ-hwW" id="aS7-FU-ePF"/>
                                             <outlet property="USER_JIAN_JIE" destination="9iY-cf-5Of" id="qjg-dF-nbp"/>
                                             <outlet property="USER_NAME" destination="mgX-NG-IDe" id="rf2-Bf-NmZ"/>
                                             <outlet property="User_Icon" destination="I78-g5-VJH" id="TZe-p7-FzI"/>
