@@ -410,3 +410,75 @@ Pods/TOWebViewController/TOWebViewController/TOWebViewController.h
 Pods/ProtocolBuffers/src/runtime/Classes/MutableExtensionRegistry.h
 
 Pods/Pods.xcodeproj/xcuserdata/ThomasLiu.xcuserdatad/xcschemes/Kingfisher.xcscheme
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.m
+
+Pods/Target Support Files/AlamofireImage/AlamofireImage-dummy.m
+
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-dummy.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVRadialGradientLayer.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success@2x.png
+
+Pods/Target Support Files/Kingfisher/Kingfisher-dummy.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error@2x.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info@2x.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success@3x.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask@2x.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask@3x.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask.png
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressAnimatedView.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/WireFormat.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/Utilities.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/UnknownFieldSet.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error@3x.png
+
+Pods/ProtocolBuffers/src/runtime/Classes/TextFormat.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/ObjectivecDescriptor.pb.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/RingBuffer.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/PBArray.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/MutableField.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/MutableExtensionRegistry.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVIndefiniteAnimatedView.m
+
+Pods/Target Support Files/Onboard/Onboard-dummy.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/GeneratedMessage.m
+
+Pods/ProtocolBuffers/src/runtime/Classes/GeneratedMessageBuilder.m
+
+Pods/LTMorphingLabel/LTMorphingLabel/Particles/Sparkle.png
+
+Pods/ProtocolBuffers/src/runtime/Classes/UnknownFieldSetBuilder.m
+
+Pods/LTMorphingLabel/LTMorphingLabel/Particles/Smoke.png
+
+Pods/Target Support Files/LTMorphingLabel/LTMorphingLabel-dummy.m
+
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info@3x.png
+
+Pods/LTMorphingLabel/LTMorphingLabel/Particles/Fragment.png
