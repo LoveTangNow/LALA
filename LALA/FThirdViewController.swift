@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+import AlamofireImage
 import Alamofire
 import CoreData
 import Foundation
+import SwiftyJSON
 
 
 //Tab bar发现页面
