@@ -77,9 +77,9 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
     
         let cell = MainTableView.dequeueReusableCellWithIdentifier("FForth_User_IF_TableViewCell", forIndexPath: indexPath) as!  FForth_User_IF_TableViewCell
         
-        cell.User_VIP.image = Imageload
         cell.User_Icon.image = Imageload
-    
+        cell.User_VIP.image = Imageload
+        
         cell.USER_NAME.text = "Thomas Liu"
         cell.USER_JIAN_JIE.text = "简介：这是第一个简介"
         
@@ -92,21 +92,6 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
         cell.Focus_Word.text = "关注"
         
         cell.Image_Space.image = Imageload
-//        
-//        @IBOutlet weak var USER_NAME: UILabel!
-//        @IBOutlet weak var USER_JIAN_JIE: UILabel!
-//        
-//        @IBOutlet weak var NEWS_NUMBERS: UILabel!
-//        @IBOutlet weak var NEWS_WORD: UILabel!
-//        
-//        @IBOutlet weak var Fouse_Number: UILabel!
-//        @IBOutlet weak var Focus_Word: UILabel!
-//        
-//        @IBOutlet weak var Fans_Number: UILabel!
-//        @IBOutlet weak var Fans_Word: UILabel!
-//        
-//        @IBOutlet weak var Space_Photo: UIView!
-
     
         return cell
     
