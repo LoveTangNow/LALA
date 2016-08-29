@@ -200,60 +200,6 @@
             </objects>
             <point key="canvasLocation" x="906" y="2993"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="414-kL-98G">
-            <objects>
-                <viewController id="tGq-Xc-M9g" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2XY-WF-Tr9"/>
-                        <viewControllerLayoutGuide type="bottom" id="sp4-OB-o5M"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ro4-KY-cft">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-4E-DxY">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="cell详情" id="blk-9U-RFa"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oWn-1i-A5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-988" y="2993"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1XZ-EW-zOp">
-            <objects>
-                <viewController id="s9R-9A-ifa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RHJ-oa-8gl"/>
-                        <viewControllerLayoutGuide type="bottom" id="u77-7S-Te5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oFX-ux-67E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Doc-4W-aXr">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="评论" id="1V8-HI-aVb"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VAe-ll-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1342" y="2993"/>
-        </scene>
         <!--Send News View Controller-->
         <scene sceneID="3Jh-qK-k9R">
             <objects>
@@ -293,34 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pR-mm-uiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2090" y="2993"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="RCE-Ow-9nf">
-            <objects>
-                <viewController id="aRi-Zx-fct" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="phw-xK-n03"/>
-                        <viewControllerLayoutGuide type="bottom" id="V8c-DS-1EI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OV8-Hi-s7Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTw-cP-Qer">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="图片详情" id="6uJ-nH-0aq"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="02Q-xV-cM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1708" y="2993"/>
+            <point key="canvasLocation" x="-944" y="2993"/>
         </scene>
         <!--消息-->
         <scene sceneID="2b0-qE-RO7">
