@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+import AlamofireImage
 import Alamofire
-
+import CoreData
+import Foundation
+import SwiftyJSON
 
 //Tab bar消息页面
 class FSecondViewController: UIViewController {

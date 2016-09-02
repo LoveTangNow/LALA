@@ -142,7 +142,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         UIImageView_Main:image,
                         UIImageView_Bottom:image)
                     )
-                    self.TimeTableView.reloadData()
+                   
                 }
         }
         
@@ -220,6 +220,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         print(self.dataimage)
                         
                         print("---------------------end---------------------")
+                        self.TimeTableView.reloadData()
                         
                     }
                 case .Failure(let error):
