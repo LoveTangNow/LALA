@@ -40,7 +40,6 @@
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
 		7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */; };
 		7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */; };
-		7FE37A451D6CA8B300813EED /* Simulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE37A441D6CA8B300813EED /* Simulator.png */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
 		7FFC423F1D65416A0085377B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFC423E1D65416A0085377B /* CoreData.framework */; };
@@ -106,7 +105,6 @@
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_User_IF_TableViewCell.swift; sourceTree = "<group>"; };
 		7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_Others_TableViewCell.swift; sourceTree = "<group>"; };
-		7FE37A441D6CA8B300813EED /* Simulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Simulator.png; path = ../../../../../Desktop/Simulator.png; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
 		7FFC423E1D65416A0085377B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				7F7701541D5CC66C008D07A2 /* aiqinhai04.jpg */,
-				7FE37A441D6CA8B300813EED /* Simulator.png */,
 			);
 			name = temp;
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE37A451D6CA8B300813EED /* Simulator.png in Resources */,
 				7F19A1311D58BCFD0030A16F /* Server.plist in Resources */,
 				7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */,
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
