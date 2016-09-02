@@ -802,3 +802,97 @@ Pods/Qiniu/QiniuSDK/Recorder/QNFileRecorder.m
 Pods/Qiniu/QiniuSDK/Recorder/QNRecorderDelegate.h
 
 Pods/Qiniu/QiniuSDK/Recorder/QNFileRecorder.h
+
+Pods/Target Support Files/HappyDNS/HappyDNS-umbrella.h
+
+Pods/Target Support Files/HappyDNS/Info.plist
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.plist
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.plist
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.markdown
+
+Pods/Qiniu/QiniuSDK/Storage/QNUploadManager.m
+
+Pods/Qiniu/QiniuSDK/Storage/QNFormUpload.m
+
+Pods/Qiniu/QiniuSDK/Storage/QNConfiguration.h
+
+Pods/Qiniu/QiniuSDK/Storage/QNUploadManager.h
+
+Pods/Qiniu/QiniuSDK/Http/QNUserAgent.m
+
+Pods/Qiniu/QiniuSDK/Common/QNFile.h
+
+Pods/Qiniu/QiniuSDK/Common/QNFile.m
+
+Pods/Qiniu/QiniuSDK/Common/QNFileDelegate.h
+
+Pods/Qiniu/QiniuSDK/Common/QNPHAssetFile.m
+
+Pods/Qiniu/QiniuSDK/Common/QNPHAssetResource.h
+
+Pods/Qiniu/QiniuSDK/Common/QNPHAssetResource.m
+
+Pods/Qiniu/QiniuSDK/Common/QNSystem.h
+
+Pods/Qiniu/QiniuSDK/Common/QNPHAssetFile.h
+
+Pods/Qiniu/QiniuSDK/Common/QNUrlSafeBase64.h
+
+Pods/Qiniu/QiniuSDK/Common/QNUrlSafeBase64.m
+
+Pods/Qiniu/QiniuSDK/Common/QNVersion.h
+
+Pods/Qiniu/QiniuSDK/Http/QNHttpDelegate.h
+
+Pods/Qiniu/QiniuSDK/Common/QNSystem.m
+
+Pods/Qiniu/QiniuSDK/Http/QNResponseInfo.m
+
+Pods/Qiniu/QiniuSDK/Http/QNSessionManager.h
+
+Pods/Qiniu/QiniuSDK/Http/QNSessionManager.m
+
+Pods/Qiniu/QiniuSDK/Http/QNUserAgent.h
+
+Pods/Qiniu/QiniuSDK/Http/QNResponseInfo.h
+
+Pods/Qiniu/QiniuSDK/Common/QNALAssetFile.m
+
+Pods/Qiniu/QiniuSDK/Common/QNAsyncRun.h
+
+Pods/Qiniu/QiniuSDK/Common/QNAsyncRun.m
+
+Pods/Qiniu/QiniuSDK/Common/QNCrc32.h
+
+Pods/Qiniu/QiniuSDK/Common/QNCrc32.m
+
+Pods/Qiniu/QiniuSDK/Common/QNEtag.h
+
+Pods/Qiniu/QiniuSDK/Common/QNEtag.m
+
+Pods/Qiniu/QiniuSDK/QiniuSDK.h
+
+Pods/Target Support Files/AFNetworking/AFNetworking.modulemap
+
+Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h
+
+Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig
