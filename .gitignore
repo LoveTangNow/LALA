@@ -896,3 +896,9 @@ Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m
 Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig
 
 Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig
+
+Pods/HappyDNS/HappyDNS/Common/QNDnsManager.h
+
+Pods/Manifest.lock
+
+Pods/Pods.xcodeproj/project.pbxproj
