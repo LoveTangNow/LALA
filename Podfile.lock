@@ -1,12 +1,32 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Alamofire (3.4.1)
   - AlamofireImage (2.4.1):
     - Alamofire (~> 3.3)
+  - AliyunOSSiOS (2.5.1)
+  - HappyDNS (0.3.9)
   - Kingfisher (2.4.2)
   - LTMorphingLabel (0.2.1)
   - MBProgressHUD (1.0.0)
   - Onboard (2.2.1)
   - ProtocolBuffers (1.9.11)
+  - Qiniu (7.1.0.1):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - RAMAnimatedTabBarController (1.5.3)
   - SVProgressHUD (2.0.3)
   - SwiftRecord (0.0.5)
@@ -18,11 +38,13 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.0)
+  - AliyunOSSiOS (~> 2.5.0)
   - Kingfisher (~> 2.4)
   - LTMorphingLabel
   - MBProgressHUD (~> 1.0.0)
   - Onboard
   - ProtocolBuffers
+  - Qiniu (~> 7.1)
   - RAMAnimatedTabBarController
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - SwiftRecord
@@ -39,19 +61,23 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
+  AliyunOSSiOS: 0366ab7e52ef663cd1c950d63584ebb96b717c72
+  HappyDNS: 17be04178df2dd09f0ee6ac33628589b7f9910e8
   Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
   ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
+  Qiniu: 0e92ff0d1b9afbc55275306671284e4ebeb08d03
   RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftRecord: f7fed44d27ef7703afd4a87ebf0d57cb26aacf12
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 52b983dfc465c4817a37a64c2fcf76fdf8bbfc8d
+PODFILE CHECKSUM: 47ac93c4e0e47cb4f8654d78318da675fe32b4ee
 
 COCOAPODS: 1.0.1
