@@ -602,3 +602,87 @@ Pods/Pods.xcodeproj/xcuserdata/ThomasLiu.xcuserdatad/xcschemes/Qiniu.xcscheme
 Pods/Pods.xcodeproj/xcuserdata/ThomasLiu.xcuserdatad/xcschemes/HappyDNS.xcscheme
 
 Pods/Qiniu/LICENSE
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSClient.h
+
+Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSClient.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSCompat.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSCompat.h
+
+Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+
+Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSHttpdns.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSHttpdns.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSIPv6Adapter.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSIPv6PrefixResolver.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSIPv6PrefixResolver.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSReachabilityManager.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSReachabilityManager.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSLog.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSIPv6/OSSIPv6Adapter.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSModel.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSLog.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSNetworking.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSModel.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSNetworking.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSBolts.h
+
+Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSBolts.m
+
+Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig
+
+Pods/Target Support Files/AliyunOSSiOS/AliyunOSSiOS-dummy.m
+
+Pods/Target Support Files/AFNetworking/Info.plist
+
+Pods/Target Support Files/AliyunOSSiOS/AliyunOSSiOS-umbrella.h
+
+Pods/Target Support Files/AliyunOSSiOS/Info.plist
+
+Pods/Target Support Files/AliyunOSSiOS/AliyunOSSiOS.modulemap
+
+Pods/Target Support Files/HappyDNS/HappyDNS-dummy.m
+
+Pods/Target Support Files/AliyunOSSiOS/AliyunOSSiOS.xcconfig
+
+Pods/Target Support Files/AliyunOSSiOS/AliyunOSSiOS-prefix.pch
+
+Pods/Target Support Files/HappyDNS/HappyDNS-prefix.pch
+
+Pods/Target Support Files/HappyDNS/HappyDNS.modulemap
+
+Pods/Target Support Files/HappyDNS/HappyDNS.xcconfig
+
+Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.plist
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSExecutor.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSTask.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSTaskCompletionSource.h
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSTask.m
+
+Pods/AliyunOSSiOS/AliyunOSSiOS/OSSTask/OSSTaskCompletionSource.m
