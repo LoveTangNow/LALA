@@ -751,10 +751,6 @@ Pods/HappyDNS/HappyDNS/Common/QNDomain.m
 
 Pods/HappyDNS/HappyDNS/Common/QNLruCache.h
 
-Pods/Manifest.lock
-
-Pods/Manifest.lock
-
 Pods/Qiniu/QiniuSDK/Common/QN_GTM_Base64.h
 
 Pods/Qiniu/QiniuSDK/Common/QN_GTM_Base64.m
@@ -767,13 +763,7 @@ Pods/HappyDNS/HappyDNS/Common/QNDomain.h
 
 Pods/Qiniu/QiniuSDK/Common/QNALAssetFile.h
 
-Pods/Manifest.lock
-
 Pods/Pods.xcodeproj/project.pbxproj
-
-Pods/Pods.xcodeproj/project.pbxproj
-
-Pods/Manifest.lock
 
 Pods/Qiniu/QiniuSDK/Storage/QNUpToken.m
 
@@ -809,17 +799,7 @@ Pods/Target Support Files/HappyDNS/Info.plist
 
 Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
 
-Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
-
-Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
-
 Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.plist
-
-Pods/Target Support Files/Pods-LALA/Pods-LALA-acknowledgements.plist
-
-Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
-
-Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
 
 Pods/Target Support Files/Pods-LALA/Pods-LALA-frameworks.sh
 
@@ -898,10 +878,6 @@ Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig
 Pods/Target Support Files/Pods-LALA/Pods-LALA.debug.xcconfig
 
 Pods/HappyDNS/HappyDNS/Common/QNDnsManager.h
-
-Pods/Manifest.lock
-
-Pods/Pods.xcodeproj/project.pbxproj
 
 Pods/Manifest.lock
 
