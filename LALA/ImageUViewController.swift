@@ -17,55 +17,22 @@ class ImageUViewController: UIViewController {
     @IBAction func Upload_Click(sender: AnyObject) {
         
         //let i = UIImageView_For_Upload.image
-        let s = UIImageView_For_Upload.image!
-        print(s)
-        
-        let nsd:NSData = UIImageJPEGRepresentation(s, 1.0)!
-        
-        let fileURL = NSBundle.mainBundle().URLForResource("Simulator", withExtension: "png")
-        print(fileURL)
+        let fileURL = NSBundle.mainBundle().URLForResource("aiqinhai04", withExtension: "jpg")
 
-        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", data: nsd)
-            .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
-                //print(totalBytesWritten)
-                // This closure is NOT called on the main queue for performance
-                // reasons. To update your ui, dispatch to the main queue.
-                dispatch_async(dispatch_get_main_queue()) {
-                    print("Total bytes written on main queue: \(totalBytesWritten)")
-                }
-            }
-            .validate()
-            .responseJSON { response in
-                print("回收数据1")
-                debugPrint(response)
-        }
         Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", file: fileURL!)
-            .validate()
-            .responseJSON { response in
-                print("回收数据2")
-                debugPrint(response)
+            .response{ response in
+                print(response.0)//request
+                print(response.1)//response
+                print(response.2)//data
+                print(response.3)//error
         }
+//         Alamofire.request(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", parameters: nil)
+//            .validate()
+//            .responseJSON { response in
+//                print(response)
+//        }
     }
-        
-
-//    static func uploadImage(url:String,parameter:String,imagePath:NSURL ,requestDelegate:RequestDelegate){
-//        Alamofire.upload(.POST,URLString: url, multipartFormData: { multipartFormData in multipartFormData.appendBodyPart(fileURL: imagePath, name: "file") },            encodingCompletion: { encodingResult in
-//            switch encodingResult {
-//            case .Success(let upload, , ): upload.responseJSON {
-//                request, response, JSON, error in
-//                println(request)
-//                println(response)
-//                println(error)
-//                println(JSON)
-//                }
-//            case .Failure(let encodingError):
-//                println(encodingError)
-//            }
-//        }
-//        )
-//        }
-
-        
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
