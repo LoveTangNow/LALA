@@ -84,13 +84,17 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AliyunOSSiOS/AliyunOSSiOS.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HappyDNS/HappyDNS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Onboard/Onboard.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ProtocolBuffers/ProtocolBuffers.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Qiniu/Qiniu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftRecord/SwiftRecord.framework"
@@ -98,13 +102,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/TOWebViewController/TOWebViewController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AliyunOSSiOS/AliyunOSSiOS.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HappyDNS/HappyDNS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Onboard/Onboard.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ProtocolBuffers/ProtocolBuffers.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Qiniu/Qiniu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftRecord/SwiftRecord.framework"
