@@ -31,6 +31,7 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIImageView_Top_Right: UIImageView!
     @IBOutlet weak var UIImageView_Mian: UIImageView!
     @IBOutlet weak var UIImageView_bottom: UIImageView!
+    
     @IBOutlet weak var UILabel_sender: UILabel!
     @IBOutlet weak var UILabel_detail: UILabel!
     
@@ -40,6 +41,13 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
 
     override func awakeFromNib() {
+        
+        UIImageView_Top_Left.layer.cornerRadius = UIImageView_Top_Left.frame.width / 2
+        UIImageView_Top_Left.clipsToBounds = true
+        
+        UIImageView_Top_Right.layer.cornerRadius = UIImageView_Top_Right.frame.width / 6
+        UIImageView_Top_Right.clipsToBounds = true
+        
         super.awakeFromNib()
         // Initialization code
     }
