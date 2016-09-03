@@ -214,11 +214,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 
                             }
                         }
-                        
-                        print(self.datadetails)
-                        print("")
-                        print(self.dataimage)
-                        
                         print("---------------------end---------------------")
                         self.TimeTableView.reloadData()
                         
@@ -323,14 +318,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if datadetails.isEmpty || dataimage.isEmpty {
- 
+                    
                     cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
                     cell1.UIImageView_Top_Left.clipsToBounds = true
                     cell1.UIImageView_Top_Left.image = Imageload
                     cell1.UIImageView_Top_Right.image = Imageload
                     cell1.UIImageView_Mian.image = Imageload
                     cell1.UIImageView_bottom.image = Imageload
-        
+                    
                     let screenBounds = UIScreen.mainScreen().bounds.width
                     
                     height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618 + 5
@@ -342,11 +337,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UILabel_sender.text = detail![3]["sendername"]
                     cell1.UILabel_detail.text = "我设置了哟~"
                     
-                    cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
-                    cell1.UIImageView_Top_Left.clipsToBounds = true
-
                     cell1.UIImageView_Top_Left.image = Imageload
-                    
                     cell1.UIImageView_Top_Right.image = Imageloadw
                     
                     let server:String = "http://localhost:80/LALA/photo/"
@@ -363,9 +354,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_bottom.image = Imageload
                     
                     let screenBounds = UIScreen.mainScreen().bounds.width
-
+                    
                     height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618  + 5
+                    
+                   // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell1, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
                 }
+
                 return cell1
                 
             case "Suit_2_3_photos"://
