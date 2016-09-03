@@ -341,8 +341,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UIImageView_Top_Right.image = Imageloadw
                     
                     let server:String = "http://localhost:80/LALA/photo/"
-                    print(server)
-                    print(images)
                     
                     Alamofire.request(.GET, server + images![0]["Photo1"]!)
                         .responseImage { response in
@@ -358,6 +356,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618  + 5
                     
                    // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell1, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
+                    
+                    let imgbackV = UIImageView(image: Imageload)
+                    self.TimeTableView.backgroundView = imgbackV
                 }
 
                 return cell1
