@@ -52,10 +52,9 @@ class LoadTableViewCells {
             Alamofire.request(.GET, Server + MainImages)
                 .responseImage { response in
                     if let imageg = response.result.value {
-                        TableViewCell.UIImageView_Mian.image = MainImagei
+                        TableViewCell.UIImageView_Mian.image = imageg
                     }
             }
-            TableViewCell.UIImageView_bottom.image = BottomImage
             //WORDS
             TableViewCell.UILabel_sender.text  = Sender
             TableViewCell.UILabel_detail.text =  WrodDetile
