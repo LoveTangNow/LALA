@@ -38,25 +38,26 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
         }
 
     }
-
-
-    @IBOutlet weak var MainTableView: UITableView!
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         MainTableView.dataSource = self
         MainTableView.delegate = self
-    
+        
     }
-    //////////////////tableView_start
+    //MARK:TABLEVIEW
+    var cellheight:CGFloat = 100
+    
+    var Imageload:Image = UIImage(named: "Black.png")!
+    var Imageloadw:Image = UIImage(named: "White.png")!
 
+    @IBOutlet weak var MainTableView: UITableView!
 
     //tableview 的 高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
-        return 205
+        return cellheight
     }
 
     //TableView 中有几个 Section
@@ -68,9 +69,6 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-    var Imageload:Image = UIImage(named: "Black.png")!
-    var Imageloadw:Image = UIImage(named: "White.png")!
 
     //tableview 的集体内容的填充
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -91,13 +89,13 @@ class FFourthViewController: UIViewController,UITableViewDataSource, UITableView
         cell.Fans_Word.text = "粉丝"
         cell.Focus_Word.text = "关注"
         
-        cell.Image_Space.image = Imageload
-    
+        cellheight = 125
+        
         return cell
     
     }
 
-    /////////////tableView_end
+    //MARK:OTHERS
 
 
     override func didReceiveMemoryWarning() {
