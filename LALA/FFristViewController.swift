@@ -51,6 +51,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var Imageload:Image = UIImage(named: "Black.png")!
     var Imageloadw:Image = UIImage(named: "White.png")!
     var ImageloadBackGroud:Image = UIImage(named: "FirstBackGround.png")!
+    var ImageloadBackGroudn:Image = UIImage(named: "BackGround.png")!
     
     
     func saveItem(itemToSave: String) {
@@ -345,6 +346,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
                 else{
+                    let detail = datadetails[indexPath.row]
+                    let images = dataimage[indexPath.row]
                     
                     cell1.UIImageView_Top_Right.hidden = false
                     cell1.UIImageView_Top_Right.hidden = false
@@ -357,13 +360,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UILabel_Zan.hidden = false
                     cell1.UILabel_Cai.hidden = false
                     
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
                     cell1.UILabel_sender.text = detail![3]["sendername"]
                     cell1.UILabel_detail.text = "我设置了哟~"
                     
-                    cell1.UIImageView_BackGround.image = Imageloadw
+                    cell1.UIImageView_BackGround.image = ImageloadBackGroudn
                     cell1.UIImageView_Top_Left.image = Imageload
                     cell1.UIImageView_Top_Right.image = Imageloadw
                     
@@ -379,10 +379,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     
                    // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell1, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
                     
-                    let imgbackV = UIImageView(image: ImageloadBackGroud)
+                    let imgbackV = UIImageView(image: ImageloadBackGroudn)
                     self.TimeTableView.backgroundView = imgbackV
                 }
-
                 return cell1
                 
             case "Suit_2_3_photos"://
