@@ -5,8 +5,14 @@
 //  Created by Thomas Liu on 16/8/11.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
-
 import UIKit
+import AVKit
+import AVFoundation
+import AlamofireImage
+import Alamofire
+import CoreData
+import Foundation
+import SwiftyJSON
 
 
 
@@ -35,11 +41,18 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     @IBOutlet weak var UILabel_sender: UILabel!
     @IBOutlet weak var UILabel_detail: UILabel!
     
+    @IBOutlet weak var UIImageView_BackGround:UIImageView!
+    
+    @IBOutlet weak var ConteViewssssss: UIView!
+    
     var detail_height = 0
     
     let height_without_detail = 5 + 30 + 5 + 5 + 30 + 5 + 20 + 5
     // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
 
+    var Imageloads:Image = UIImage(named: "Black.png")!
+    
+    
     override func awakeFromNib() {
         
         UIImageView_Top_Left.layer.cornerRadius = UIImageView_Top_Left.frame.width / 2
@@ -47,6 +60,10 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
         
         UIImageView_Top_Right.layer.cornerRadius = UIImageView_Top_Right.frame.width / 6
         UIImageView_Top_Right.clipsToBounds = true
+        
+        UIImageView_BackGround.image = Imageloads
+        
+       // UIImageView_Mian.hidden  = true
         
         super.awakeFromNib()
         // Initialization code
