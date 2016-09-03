@@ -36,21 +36,34 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIImageView_Top_Left: UIImageView!
     @IBOutlet weak var UIImageView_Top_Right: UIImageView!
     @IBOutlet weak var UIImageView_Mian: UIImageView!
-    @IBOutlet weak var UIImageView_bottom: UIImageView!
     
     @IBOutlet weak var UILabel_sender: UILabel!
+    @IBOutlet weak var UILabel_Information: UILabel!
     @IBOutlet weak var UILabel_detail: UILabel!
+    
+    @IBOutlet weak var UILabel_Pinglun: UILabel!
+    @IBOutlet weak var UILabel_Zan: UILabel!
+    @IBOutlet weak var UILabel_Cai: UILabel!
     
     @IBOutlet weak var UIImageView_BackGround:UIImageView!
     
     @IBOutlet weak var ConteViewssssss: UIView!
-    
-    var detail_height = 0
-    
-    let height_without_detail = 5 + 30 + 5 + 5 + 30 + 5 + 20 + 5
-    // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
+
+    let Guding_Height = 50
+    /*
+     5
+     30 上图片行
+     5
+     ？ 文字
+     5
+     ? 主图片
+     5
+     25 下信息行
+     5
+     */
 
     var Imageloads:Image = UIImage(named: "Black.png")!
+    var ImageloadBackGroud:Image = UIImage(named: "FirstBackGround.png")!
     
     
     override func awakeFromNib() {
@@ -61,7 +74,7 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
         UIImageView_Top_Right.layer.cornerRadius = UIImageView_Top_Right.frame.width / 6
         UIImageView_Top_Right.clipsToBounds = true
         
-        UIImageView_BackGround.image = Imageloads
+        UIImageView_BackGround.image = ImageloadBackGroud
         
        // UIImageView_Mian.hidden  = true
         
