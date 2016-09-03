@@ -50,6 +50,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     var Imageload:Image = UIImage(named: "Black.png")!
     var Imageloadw:Image = UIImage(named: "White.png")!
+    var ImageloadBackGroud:Image = UIImage(named: "FirstBackGround.png")!
+    
     
     func saveItem(itemToSave: String) {
         
@@ -286,7 +288,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        return datadetails.count
+        if datadetails.isEmpty {
+            return 3
+        }
+        else{
+            return datadetails.count
+        }
     }
     
     //Tableview初始化
@@ -303,40 +310,60 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             适用于 6，5，4等长宽 图片的载入方式 .
             适用于 3，2等长宽 图片的载入方式    .
             适用于 黄金比例 横向 1图片的载入方式.
-         
             适用于无图片的载入方式。
             
             黄金比例：0.618
         */
-        
+        let screenBounds = UIScreen.mainScreen().bounds.width
+        // 当datadetails 等于 空
+        if  datadetails.isEmpty || dataimage.isEmpty {
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+            cell.UIImageView_BackGround.image = ImageloadBackGroud
+            
+            cell.UIImageView_Top_Right.hidden = true
+            cell.UIImageView_Top_Right.hidden = true
+            cell.UIImageView_Mian.hidden = true
+            
+            cell.UILabel_sender.hidden = true
+            cell.UILabel_Information.hidden = true
+            cell.UILabel_detail.hidden = true
+            cell.UILabel_Pinglun.hidden = true
+            cell.UILabel_Zan.hidden = true
+            cell.UILabel_Cai.hidden = true
+            
+            height_tableview = ( screenBounds - 10 ) * 0.618  + 5
+            
+            return cell
+        }
         
         if datadetails[indexPath.row]![4]["style"] != nil {
-            
             switch datadetails[indexPath.row]![4]["style"]! {
             case "Suit_1_big_photos"://
                 print("Suit_1_big_photos")
                 let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if datadetails.isEmpty || dataimage.isEmpty {
-                    
-                    cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
-                    cell1.UIImageView_Top_Left.clipsToBounds = true
-                    cell1.UIImageView_Top_Left.image = Imageload
-                    cell1.UIImageView_Top_Right.image = Imageload
-                    cell1.UIImageView_Mian.image = Imageload
-                    cell1.UIImageView_bottom.image = Imageload
-                    
-                    let screenBounds = UIScreen.mainScreen().bounds.width
-                    
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618 + 5
                 }
                 else{
+                    
+                    cell1.UIImageView_Top_Right.hidden = false
+                    cell1.UIImageView_Top_Right.hidden = false
+                    cell1.UIImageView_Mian.hidden = false
+                    
+                    cell1.UILabel_sender.hidden = false
+                    cell1.UILabel_Information.hidden = false
+                    cell1.UILabel_detail.hidden = false
+                    cell1.UILabel_Pinglun.hidden = false
+                    cell1.UILabel_Zan.hidden = false
+                    cell1.UILabel_Cai.hidden = false
+                    
                     let detail = datadetails[indexPath.row]
                     let images = dataimage[indexPath.row]
                     
                     cell1.UILabel_sender.text = detail![3]["sendername"]
                     cell1.UILabel_detail.text = "我设置了哟~"
                     
+                    cell1.UIImageView_BackGround.image = Imageloadw
                     cell1.UIImageView_Top_Left.image = Imageload
                     cell1.UIImageView_Top_Right.image = Imageloadw
                     
@@ -348,16 +375,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 cell1.UIImageView_Mian.image = image
                             }
                     }
-                    
-                    cell1.UIImageView_bottom.image = Imageload
-                    
-                    let screenBounds = UIScreen.mainScreen().bounds.width
-                    
-                    height_tableview = CGFloat(cell1.height_without_detail  + cell1.detail_height) + ( screenBounds - 10 ) * 0.618  + 5
+                    height_tableview = CGFloat(cell1.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 50
                     
                    // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell1, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
                     
-                    let imgbackV = UIImageView(image: Imageload)
+                    let imgbackV = UIImageView(image: ImageloadBackGroud)
                     self.TimeTableView.backgroundView = imgbackV
                 }
 
@@ -503,27 +525,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
             }
             
-            }
-        
+        }
 
         let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-        print("kan 2")
+        cell1.UIImageView_BackGround.image = ImageloadBackGroud
+        height_tableview = ( screenBounds - 10 ) * 0.618  + 5
         
-        if data3.isEmpty {
-        }
-        else{
-            let v = data3[0]
-            
-            cell1.UIImageView_Top_Left.layer.cornerRadius = cell1.UIImageView_Top_Left.frame.width/2
-            cell1.UIImageView_Top_Left.clipsToBounds = true
-            cell1.UIImageView_Top_Left.image = v.UIImageView_Top_Left
-            
-            cell1.UIImageView_Top_Right.image = v.UIImageView_Top_Right
-            cell1.UIImageView_Mian.image = v.UIImageView_Main
-            cell1.UIImageView_bottom.image = v.UIImageView_Bottom
-            
-            height_tableview = CGFloat(v.detail_height + v.height_without_detail)
-        }
         return cell1
         
 
