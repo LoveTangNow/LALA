@@ -24,8 +24,6 @@ class FForth_User_IF_TableViewCell: UITableViewCell {
     
     @IBOutlet weak var Fans_Number: UILabel!
     @IBOutlet weak var Fans_Word: UILabel!
-    
-    @IBOutlet weak var Image_Space: UIImageView!
 
     //整个 tableview cell 的造型初始化可以在这里！！！！
     override func awakeFromNib() {
