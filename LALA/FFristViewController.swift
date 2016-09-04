@@ -335,7 +335,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             switch datadetails[indexPath.row]![4]["style"]! {
             case "Suit_1_big_photos"://
                 print("Suit_1_big_photos")
-                let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
@@ -353,45 +353,45 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     let detail = datadetails[indexPath.row]
                     let images = dataimage[indexPath.row]
                     
-                    cell1.UIImageView_Top_Right.hidden = false
-                    cell1.UIImageView_Top_Right.hidden = false
-                    cell1.UIImageView_Mian.hidden = false
+                    cell.UIImageView_Top_Right.hidden = false
+                    cell.UIImageView_Top_Right.hidden = false
+                    cell.UIImageView_Mian.hidden = false
                     
-                    cell1.UILabel_sender.hidden = false
-                    cell1.UILabel_Information.hidden = false
-                    cell1.UILabel_detail.hidden = false
-                    cell1.UILabel_Pinglun.hidden = false
-                    cell1.UILabel_Zan.hidden = false
-                    cell1.UILabel_Cai.hidden = false
+                    cell.UILabel_sender.hidden = false
+                    cell.UILabel_Information.hidden = false
+                    cell.UILabel_detail.hidden = false
+                    cell.UILabel_Pinglun.hidden = false
+                    cell.UILabel_Zan.hidden = false
+                    cell.UILabel_Cai.hidden = false
                     
-                    cell1.UILabel_sender.text = detail![3]["sendername"]
-                    cell1.UILabel_detail.text = detail![5]["detail"]
-                    cell1.UILabel_Information.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
+                    cell.UILabel_sender.text = detail![3]["sendername"]
+                    cell.UILabel_detail.text = detail![5]["detail"]
+                    cell.UILabel_Information.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
-                    cell1.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell1.UIImageView_Top_Left.image = Imageload
-                    cell1.UIImageView_Top_Right.image = Imageloadw
+                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
+                    cell.UIImageView_Top_Left.image = Imageload
+                    cell.UIImageView_Top_Right.image = Imageloadw
                     
                     let server:String = "http://localhost:80/LALA/photo/"
                     
                     Alamofire.request(.GET, server + images![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
-                                cell1.UIImageView_Mian.image = image
+                                cell.UIImageView_Mian.image = image
                             }
                     }
-                    height_tableview = CGFloat(cell1.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 50
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 50
                     
-                   // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell1, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
+                   // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
                     
                     let imgbackV = UIImageView(image: ImageloadBackGroudn)
                     self.TimeTableView.backgroundView = imgbackV
                 }
-                return cell1
+                return cell
                 
             case "Suit_2_3_photos"://
                 print("Suit_2_3_photos")
-                let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
                 if datadetails.isEmpty || dataimage.isEmpty  {
                 }
                 else{
@@ -399,9 +399,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     let images = dataimage[indexPath.row]
                     
                     //文字
-                    cell2.lable_sender.text = detail![3]["sendername"]
-                    cell2.UILabel_Detail.text = detail![5]["detail"]
-                    cell2.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
+                    cell.lable_sender.text = detail![3]["sendername"]
+                    cell.UILabel_Detail.text = detail![5]["detail"]
+                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
                     //图片
                     
@@ -413,8 +413,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell2.UIImageView_Main1.image = image
-                                        case 1:cell2.UIImageView_Main2.image = image
+                                        case 0:cell.UIImageView_Main1.image = image
+                                        case 1:cell.UIImageView_Main2.image = image
                                         default: break
                                         }
                                         
@@ -429,9 +429,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell2.UIImageView_Main1.image = image
-                                        case 1:cell2.UIImageView_Main2.image = image
-                                        case 2:cell2.UIImageView_Main3.image = image
+                                        case 0:cell.UIImageView_Main1.image = image
+                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 2:cell.UIImageView_Main3.image = image
                                         default: break
                                         }
                                         
@@ -440,13 +440,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         }
                     }
                     
-                    cell2.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell2.image_left_top.image = Imageload
-                    cell2.image_right_top.image = Imageloadw
+                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
+                    cell.image_left_top.image = Imageload
+                    cell.image_right_top.image = Imageloadw
                     
-                    height_tableview = CGFloat(cell2.Guding_Height) + ( screenBounds - 10 ) / 3 + 50
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 + 50
                 }
-                return cell2
+                return cell
                 
                 
             case "Suit_4_5_6_photos"://
@@ -530,26 +530,102 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
             case "Suit_7_8_9_photos"://
                 print("Suit_7_8_9_photos")
-                let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
                 else{
-                    height_tableview = CGFloat(cell4.height_without_detail) + ( screenBounds - 10 ) + 50
+                    let detail = datadetails[indexPath.row]
+                    let images = dataimage[indexPath.row]
+                    
+                    //文字
+                    cell.UILabel_Sender.text = detail![3]["sendername"]
+                    cell.UILabel_Detail.text = detail![5]["detail"]
+                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
+                    
+                    //图片
+                    let server:String = "http://localhost:80/LALA/photo/"
+                    
+                    if images?.count == 7 {
+                        for i in 0..<7 {
+                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                                .responseImage { response in
+                                    if let image = response.result.value {
+                                        switch i{
+                                        case 0:cell.UIImageView_Main1.image = image
+                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 2:cell.UIImageView_Main3.image = image
+                                        case 3:cell.UIImageView_Main4.image = image
+                                        case 4:cell.UIImageView_Main5.image = image
+                                        case 5:cell.UIImageView_Main6.image = image
+                                        case 6:cell.UIImageView_Main7.image = image
+                                        default: break
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                    
+                    if images?.count == 8 {
+                        for i in 0..<8 {
+                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                                .responseImage { response in
+                                    if let image = response.result.value {
+                                        switch i{
+                                        case 0:cell.UIImageView_Main1.image = image
+                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 2:cell.UIImageView_Main3.image = image
+                                        case 3:cell.UIImageView_Main4.image = image
+                                        case 4:cell.UIImageView_Main5.image = image
+                                        case 5:cell.UIImageView_Main6.image = image
+                                        case 6:cell.UIImageView_Main7.image = image
+                                        case 7:cell.UIImageView_Main8.image = image
+                                        default: break
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                    
+                    if images?.count == 9 {
+                        for i in 0..<9 {
+                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                                .responseImage { response in
+                                    if let image = response.result.value {
+                                        switch i{
+                                        case 0:cell.UIImageView_Main1.image = image
+                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 2:cell.UIImageView_Main3.image = image
+                                        case 3:cell.UIImageView_Main4.image = image
+                                        case 4:cell.UIImageView_Main5.image = image
+                                        case 5:cell.UIImageView_Main6.image = image
+                                        case 6:cell.UIImageView_Main7.image = image
+                                        case 7:cell.UIImageView_Main8.image = image
+                                        case 8:cell.UIImageView_Main9.image = image
+                                        default: break
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                    
+                    cell.UIImageView_Backgroud.image = ImageloadBackGroudn
+                    cell.UIImageView_Top_Left.image = Imageload
+                    cell.UIImageView_Top_Right.image = Imageloadw
+                    
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) + 50
                 }
-                return cell4
-                
+                return cell
+            case "Suit_more_than_10_photos":
+                break
             default:
-                print("nothing")
-                
+                break
             }
             
         }
 
-        let cell1 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-        cell1.UIImageView_BackGround.image = ImageloadBackGroud
-        height_tableview = ( screenBounds - 10 ) * 0.618  + 5
-        
-        return cell1
+        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+    
+        return cell
         
 
         
