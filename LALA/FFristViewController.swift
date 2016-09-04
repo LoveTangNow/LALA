@@ -110,6 +110,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     override func viewDidLoad() {
+        
+        let imgbackV = UIImageView(image: ImageloadBackGroudn)
+        self.TimeTableView.backgroundView = imgbackV
+        
         print("viewDidLoad")
         
         for a in 0...10 {
@@ -300,10 +304,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("Tableview初始化")
-        print(indexPath.row + 1)
-        print("indexPath")
-        print(indexPath.section)
+        //print("Tableview初始化")
+        //print(indexPath.row + 1)
+        //print("indexPath")
+        //print(indexPath.section)
         
         /*
          indexPath.row 是从 “0” 开始的
@@ -342,22 +346,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         if datadetails[indexPath.row]![4]["style"] != nil {
             switch datadetails[indexPath.row]![4]["style"]! {
             case "Suit_1_big_photos"://
-                print("Suit_1_big_photos")
+                //print("Suit_1_big_photos")
                 let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
                 
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
                 else{
-                    /*
-                     newstime
-                     device
-                     senderid
-                     sendername
-                     style
-                     detail
-                     
-                     photo 1-9 ?
-                     */
                     let detail = datadetails[indexPath.row]
                     let images = dataimage[indexPath.row]
                     
@@ -386,17 +380,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 cell.UIImageView_Mian.image = image
                             }
                     }
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 50
+                    //print("11111111-------------1111111111111")
+                    //print(cell.UIImageView_Mian.frame.height / cell.UIImageView_Mian.frame.width)
                     
-                   // LoadTableViewCells().LoadOnePhoto(false, TableViewCell:cell, Server: "http://localhost:80/LALA/photo/", TableViewCellRow: indexPath, TopLeftImage: Imageload, TopRightImage: Imageload,MainImages:"4444",MainImagei:Imageload,BottomImage: Imageload, Sender:"11111", SendTime: "22222", SendDevice: "6666", TableViewHeight: 444, WrodDetile: "55555")
-                    
-                    let imgbackV = UIImageView(image: ImageloadBackGroudn)
-                    self.TimeTableView.backgroundView = imgbackV
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 60
+
                 }
                 return cell
                 
             case "Suit_2_3_photos"://
-                print("Suit_2_3_photos")
+                //print("Suit_2_3_photos")
                 let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
                 if datadetails.isEmpty || dataimage.isEmpty  {
                 }
@@ -447,13 +440,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.image_left_top.image = Imageload
                     cell.image_right_top.image = Imageloadw
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 + 50
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 + 60
                 }
                 return cell
                 
                 
             case "Suit_4_5_6_photos"://
-                print("Suit_4_5_6_photos")
+                //print("Suit_4_5_6_photos")
                 let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
@@ -525,12 +518,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.Image_top_left.image = Imageload
                     cell.Image_top_right.image = Imageloadw
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 * 2 + 50
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 * 2 + 60
                 }
                 return cell
                 
             case "Suit_7_8_9_photos"://
-                print("Suit_7_8_9_photos")
+                //print("Suit_7_8_9_photos")
                 let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
@@ -611,7 +604,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.UIImageView_Top_Left.image = Imageload
                     cell.UIImageView_Top_Right.image = Imageloadw
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) + 50
+                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) + 60
                 }
                 return cell
             case "Suit_more_than_10_photos":
