@@ -497,6 +497,7 @@
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
                                                     <rect key="frame" x="13" y="102" width="294" height="251"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
