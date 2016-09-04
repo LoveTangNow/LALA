@@ -245,7 +245,7 @@
         <!--Send News View Controller-->
         <scene sceneID="3Jh-qK-k9R">
             <objects>
-                <viewController storyboardIdentifier="SendNewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bu-7t-voj" customClass="SendNewsViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendNewsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bu-7t-voj" customClass="SendNewsViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y7O-Z2-ZWL"/>
                         <viewControllerLayoutGuide type="bottom" id="sqC-2h-avb"/>
