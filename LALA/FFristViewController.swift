@@ -269,14 +269,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     {
         //print("Tableview cell高度")
         return height_tableview
-        
-        
     }
     
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return 1
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
     }
     
     //几个Tableview cell
@@ -285,18 +287,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("几个Tableview cell")
         if datadetails.isEmpty {
             return 3
-        }
+        }//section 是从0开始的
         else{
-            return datadetails.count
+            if section == 1 {
+                return datadetails.count
+            }
+            else{
+                return 1
+            }
         }
     }
     
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("Tableview初始化")
-        
         print(indexPath.row + 1)
         print("indexPath")
+        print(indexPath.section)
         
         /*
          indexPath.row 是从 “0” 开始的
@@ -310,7 +317,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             黄金比例：0.618
         */
         let screenBounds = UIScreen.mainScreen().bounds.width
-        // 当datadetails 等于 空
+        let server:String = "http://localhost:80/LALA/photo/"
+        // 当datadetails 等于 空 没有数据的时候 用某某缩略图填充一下  感觉就像 Facebook了
         if  datadetails.isEmpty || dataimage.isEmpty {
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
             cell.UIImageView_BackGround.image = ImageloadBackGroud
@@ -371,9 +379,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.UIImageView_BackGround.image = ImageloadBackGroudn
                     cell.UIImageView_Top_Left.image = Imageload
                     cell.UIImageView_Top_Right.image = Imageloadw
-                    
-                    let server:String = "http://localhost:80/LALA/photo/"
-                    
+
                     Alamofire.request(.GET, server + images![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
@@ -404,9 +410,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
                     //图片
-                    
-                    let server:String = "http://localhost:80/LALA/photo/"
-                    
                     if images?.count == 2 {
                         for i in 0..<2 {
                             Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
@@ -464,8 +467,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.Label_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
                     //图片
-                    let server:String = "http://localhost:80/LALA/photo/"
-                    
                     if images?.count == 4 {
                         for i in 0..<4 {
                             Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
@@ -543,8 +544,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
                     //图片
-                    let server:String = "http://localhost:80/LALA/photo/"
-                    
                     if images?.count == 7 {
                         for i in 0..<7 {
                             Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
