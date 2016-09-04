@@ -534,9 +534,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
                 else{
-                    
                     height_tableview = CGFloat(cell4.height_without_detail) + ( screenBounds - 10 ) + 50
-                    
                 }
                 return cell4
                 
