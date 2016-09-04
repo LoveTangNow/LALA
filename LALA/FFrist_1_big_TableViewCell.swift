@@ -49,18 +49,7 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
     
     @IBOutlet weak var ConteViewssssss: UIView!
 
-    let Guding_Height = 50
-    /*
-     5
-     30 上图片行
-     5
-     ？ 文字
-     5
-     ? 主图片
-     5
-     25 下信息行
-     5
-     */
+    let Guding_Height = 80
 
     var Imageloads:Image = UIImage(named: "Black.png")!
     var ImageloadBackGroud:Image = UIImage(named: "FirstBackGround.png")!
@@ -74,10 +63,8 @@ class FFrist_1_big_TableViewCell: UITableViewCell {
         UIImageView_Top_Right.layer.cornerRadius = UIImageView_Top_Right.frame.width / 6
         UIImageView_Top_Right.clipsToBounds = true
         
-        UIImageView_BackGround.image = ImageloadBackGroud
-        
-       // UIImageView_Mian.hidden  = true
-        
+        //UIImageView_BackGround.image = ImageloadBackGroud
+
         super.awakeFromNib()
         // Initialization code
     }
