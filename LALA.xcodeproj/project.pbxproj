@@ -21,7 +21,7 @@
 		7F2181911D4B2BE00091B51F /* ThridSonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2181901D4B2BE00091B51F /* ThridSonViewController.swift */; };
 		7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */; };
 		7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */; };
-		7F5632271D5FD6780017958A /* funccccccc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* funccccccc.swift */; };
+		7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* LoadTableViewCells.swift */; };
 		7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */; };
 		7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFourthViewController.swift */; };
 		7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImageDViewController.swift */; };
@@ -42,6 +42,8 @@
 		7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
+		7FE9006E1D7A70B9007F4F90 /* FCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */; };
+		7FE900701D7A70D5007F4F90 /* FFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9006F1D7A70D5007F4F90 /* FFCollectionViewCell.swift */; };
 		7FFC423F1D65416A0085377B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFC423E1D65416A0085377B /* CoreData.framework */; };
 		7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */; };
 		7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */; };
@@ -86,7 +88,7 @@
 		7F288ADB1D4B649E00842A9C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/LALA-gcpqeuqtnmwzqncsdxsxanlvzlfi/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUViewController.swift; sourceTree = "<group>"; };
 		7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist_Without_Photo_TableViewCell.swift; sourceTree = "<group>"; };
-		7F5632261D5FD6780017958A /* funccccccc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funccccccc.swift; sourceTree = "<group>"; };
+		7F5632261D5FD6780017958A /* LoadTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTableViewCells.swift; sourceTree = "<group>"; };
 		7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist23TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701411D5B629C008D07A2 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImageDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_Others_TableViewCell.swift; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
+		7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCollectionViewController.swift; sourceTree = "<group>"; };
+		7FE9006F1D7A70D5007F4F90 /* FFCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FFC423E1D65416A0085377B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageD.storyboard; sourceTree = "<group>"; };
 		7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNewsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24461D4A00290083F7CC /* LALA */,
+				7F19A1301D58BCFD0030A16F /* Server.plist */,
+				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 				7F77013E1D5B3058008D07A2 /* temp */,
 				7F19A1421D58D9950030A16F /* Documents */,
 				7F0E245D1D4A00290083F7CC /* LALATests */,
@@ -200,8 +206,6 @@
 		7F19A1421D58D9950030A16F /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				7F19A1301D58BCFD0030A16F /* Server.plist */,
-				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 			);
 			name = Documents;
 			sourceTree = "<group>";
@@ -239,13 +243,15 @@
 		7F7701491D5B88D1008D07A2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */,
 				7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */,
 				7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */,
 				7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */,
 				7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */,
+				7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */,
 				7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */,
 				7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */,
+				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
+				7FE9006F1D7A70D5007F4F90 /* FFCollectionViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -259,10 +265,10 @@
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
 				7F7701411D5B629C008D07A2 /* FFourthViewController.swift */,
 				7FFD66211D5EA5ED002AC1F4 /* SendNewsViewController.swift */,
+				7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */,
 				7F7701491D5B88D1008D07A2 /* cells */,
 				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
 				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
-				7F5632261D5FD6780017958A /* funccccccc.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
+				7FE9006E1D7A70B9007F4F90 /* FCollectionViewController.swift in Sources */,
 				7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */,
 				7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */,
 				7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */,
@@ -527,9 +534,10 @@
 				7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
+				7FE900701D7A70D5007F4F90 /* FFCollectionViewCell.swift in Sources */,
 				7FFD66221D5EA5ED002AC1F4 /* SendNewsViewController.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
-				7F5632271D5FD6780017958A /* funccccccc.swift in Sources */,
+				7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

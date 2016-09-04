@@ -17,20 +17,38 @@ class ImageUViewController: UIViewController {
     @IBAction func Upload_Click(sender: AnyObject) {
         
         //let i = UIImageView_For_Upload.image
-        let fileURL = NSBundle.mainBundle().URLForResource("aiqinhai04", withExtension: "jpg")
+        //let fileURL = NSBundle.mainBundle().URLForResource("aiqinhai04", withExtension: "jpg")
 
-        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", file: fileURL!)
-            .response{ response in
-                print(response.0)//request
-                print(response.1)//response
-                print(response.2)//data
-                print(response.3)//error
-        }
+//        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", file: fileURL!)
+//            .response{ response in
+//                print(response.0)//request
+//                print(response.1)//response
+//                print(response.2)//data
+//                print(response.3)//error
+//        }
 //         Alamofire.request(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", parameters: nil)
 //            .validate()
 //            .responseJSON { response in
 //                print(response)
 //        }
+//        
+       let imageData = UIImageJPEGRepresentation(UIImageView_For_Upload.image!, 0.3) // 将图片转换成jpeg格式的NSData，压缩到0.3
+       let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) // 将图片转换为base64字符串
+//        print(imageStr)
+//        
+//        Alamofire.request(.POST, "http://localhost:80/LALA/GOT_PHOTO_2BYTES.php", parameters: ["file": imageStr!]).validate()
+//            .responseData { response in
+//                print(response.request)
+//                print(response.response)
+//                print(response.result)
+//        }
+        //test_post_get.php
+        Alamofire.request(.GET, "http://localhost:80/LALA/GOT_PHOTO_2BYTES.php", parameters: ["file": imageStr!]).validate()
+            .responseString { response in
+                print("Success: \(response.result.isSuccess)")
+                print("Response String: \(response.result.value)")
+        }
+        
     }
     
 
