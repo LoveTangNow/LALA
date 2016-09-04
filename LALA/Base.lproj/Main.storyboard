@@ -689,6 +689,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="362.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLI-1U-FK7">
+                                                    <rect key="frame" x="8" y="8" width="304" height="346.5"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-wu-Cf2">
                                                     <rect key="frame" x="13" y="13" width="35" height="35"/>
                                                     <constraints>
@@ -728,7 +731,7 @@
                                                     </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="53A-AJ-awm">
-                                                    <rect key="frame" x="13" y="324.5" width="294" height="25"/>
+                                                    <rect key="frame" x="13" y="325" width="294" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzO-iW-kuh">
                                                             <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
@@ -763,7 +766,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L0r-VZ-ql5">
-                                                    <rect key="frame" x="13" y="103" width="294" height="216.5"/>
+                                                    <rect key="frame" x="13" y="103" width="294" height="217"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QT6-d9-qtI">
                                                             <rect key="frame" x="0.0" y="0.0" width="294" height="106"/>
@@ -780,16 +783,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-Ok-ScR">
-                                                            <rect key="frame" x="0.0" y="111" width="294" height="105.5"/>
+                                                            <rect key="frame" x="0.0" y="111" width="294" height="106"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBB-3x-Htc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="105.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="106"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U13-n9-3Jb">
-                                                                    <rect key="frame" x="99" y="0.0" width="95" height="105.5"/>
+                                                                    <rect key="frame" x="99" y="0.0" width="95" height="106"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-uT-qnY">
-                                                                    <rect key="frame" x="199" y="0.0" width="94.5" height="105.5"/>
+                                                                    <rect key="frame" x="199" y="0.0" width="94.5" height="106"/>
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
@@ -799,6 +802,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="L0r-VZ-ql5" secondAttribute="trailing" constant="5" id="0vs-yS-NRv"/>
                                                 <constraint firstItem="53A-AJ-awm" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="2zX-uf-dK2"/>
+                                                <constraint firstItem="iLI-1U-FK7" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="6ps-Uq-w02"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="L0r-VZ-ql5" secondAttribute="trailing" constant="5" id="8Ee-cB-EY8"/>
                                                 <constraint firstItem="5qv-wu-Cf2" firstAttribute="top" secondItem="teP-9J-xOQ" secondAttribute="topMargin" constant="5" id="AWv-FS-ZbW"/>
                                                 <constraint firstItem="cpk-1v-yBj" firstAttribute="top" secondItem="5zC-6U-Qks" secondAttribute="bottom" constant="5" id="BJC-of-S01"/>
@@ -806,6 +810,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="53A-AJ-awm" secondAttribute="trailing" constant="5" id="K2M-Jy-kfm"/>
                                                 <constraint firstItem="8Pa-vk-9Nm" firstAttribute="leading" secondItem="5qv-wu-Cf2" secondAttribute="trailing" constant="5" id="Kvd-G3-gA2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5xj-QU-xiK" secondAttribute="trailing" constant="5" id="MFc-Zo-EH9"/>
+                                                <constraint firstItem="iLI-1U-FK7" firstAttribute="top" secondItem="teP-9J-xOQ" secondAttribute="topMargin" id="NUb-F9-gcc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="53A-AJ-awm" secondAttribute="bottom" constant="5" id="QIE-Q4-5NW"/>
                                                 <constraint firstItem="8Pa-vk-9Nm" firstAttribute="top" secondItem="teP-9J-xOQ" secondAttribute="topMargin" constant="5" id="SYt-hx-mqV"/>
                                                 <constraint firstItem="5xj-QU-xiK" firstAttribute="top" secondItem="teP-9J-xOQ" secondAttribute="topMargin" constant="5" id="U7c-jD-NX2"/>
@@ -815,10 +820,16 @@
                                                 <constraint firstItem="5zC-6U-Qks" firstAttribute="top" secondItem="8Pa-vk-9Nm" secondAttribute="bottom" id="c3J-Xu-MxR"/>
                                                 <constraint firstItem="53A-AJ-awm" firstAttribute="top" secondItem="L0r-VZ-ql5" secondAttribute="bottom" constant="5" id="dwA-hI-N81"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cpk-1v-yBj" secondAttribute="trailing" constant="5" id="gXN-ir-5LY"/>
+                                                <constraint firstItem="iLI-1U-FK7" firstAttribute="top" secondItem="teP-9J-xOQ" secondAttribute="topMargin" constant="5" id="hz2-ca-O8l"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iLI-1U-FK7" secondAttribute="bottom" id="nw1-4N-jgL"/>
+                                                <constraint firstItem="iLI-1U-FK7" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" id="oFx-lD-Rko"/>
                                                 <constraint firstItem="cpk-1v-yBj" firstAttribute="top" secondItem="5qv-wu-Cf2" secondAttribute="top" constant="40" id="q0C-ka-q1c"/>
                                                 <constraint firstItem="5xj-QU-xiK" firstAttribute="leading" secondItem="5zC-6U-Qks" secondAttribute="trailing" constant="5" id="qNG-xV-c7d"/>
                                                 <constraint firstItem="L0r-VZ-ql5" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="r4k-VB-L82"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iLI-1U-FK7" secondAttribute="trailing" constant="5" id="sO5-c6-v7R"/>
                                                 <constraint firstItem="cpk-1v-yBj" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="t4k-Ze-Xcm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iLI-1U-FK7" secondAttribute="trailing" id="tFw-jd-VD6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iLI-1U-FK7" secondAttribute="bottom" constant="-8" id="uID-4U-6KG"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cpk-1v-yBj" secondAttribute="trailing" constant="5" id="yWg-wG-wAP"/>
                                                 <constraint firstItem="cpk-1v-yBj" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="z3K-4n-DZQ"/>
                                                 <constraint firstItem="L0r-VZ-ql5" firstAttribute="leading" secondItem="teP-9J-xOQ" secondAttribute="leadingMargin" constant="5" id="zFK-Um-pjH"/>
@@ -826,6 +837,10 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="6ps-Uq-w02"/>
+                                                    <exclude reference="hz2-ca-O8l"/>
+                                                    <exclude reference="sO5-c6-v7R"/>
+                                                    <exclude reference="uID-4U-6KG"/>
                                                     <exclude reference="q0C-ka-q1c"/>
                                                     <exclude reference="yWg-wG-wAP"/>
                                                     <exclude reference="z3K-4n-DZQ"/>
@@ -844,8 +859,13 @@
                                             <outlet property="Image6" destination="TGC-uT-qnY" id="Wb6-zc-sRA"/>
                                             <outlet property="Image_top_left" destination="5qv-wu-Cf2" id="9lg-gn-nh7"/>
                                             <outlet property="Image_top_right" destination="5xj-QU-xiK" id="SZs-mD-P09"/>
+                                            <outlet property="Label_Time" destination="5zC-6U-Qks" id="97R-mO-03o"/>
                                             <outlet property="Lable_others" destination="cpk-1v-yBj" id="VnQ-bS-Fg3"/>
                                             <outlet property="Lable_sender" destination="8Pa-vk-9Nm" id="58z-zM-Mc7"/>
+                                            <outlet property="UIImageView_Background" destination="iLI-1U-FK7" id="SGa-HI-Mpv"/>
+                                            <outlet property="UILabel_cai" destination="0Rh-St-F9A" id="GEf-jI-Z1O"/>
+                                            <outlet property="UILabel_pinglun" destination="mzO-iW-kuh" id="BPP-Ud-bvt"/>
+                                            <outlet property="UILabel_zan" destination="5fe-39-nAP" id="UGp-N6-9ra"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FFrist789TableViewCell" rowHeight="451" id="OrU-3J-mKc" customClass="FFrist789TableViewCell" customModule="LALA" customModuleProvider="target">
