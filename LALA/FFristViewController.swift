@@ -26,9 +26,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet weak var TimeTableView: UITableView!
     
     var Tableview_count:Int = 0
-    
     var shifoudenglu :NSString = ""
     
+    var listItems  = [NSManagedObject]()
+    var data3:[TableViewCell_1_big] = []
+
     /*
      这里应该是这么几种不同的载入方式的数据
      适用于 9，8，7等长宽 图片的载入方式
@@ -37,8 +39,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      适用于 黄金比例 竖向 2图片的载入方式
      适用于 黄金比例 横向 1图片的载入方式.
      */
-    
-    var data3:[TableViewCell_1_big] = []
 
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
@@ -46,12 +46,15 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
     var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
     
-    var listItems  = [NSManagedObject]()
-    
+    //肌肤默认的图片
     var Imageload:Image = UIImage(named: "Black.png")!
     var Imageloadw:Image = UIImage(named: "White.png")!
     var ImageloadBackGroud:Image = UIImage(named: "FirstBackGround.png")!
     var ImageloadBackGroudn:Image = UIImage(named: "BackGround.png")!
+    
+    
+    var height_tableview:CGFloat = 0 //tableviewcell 的高度
+    var ShiFou_QingQiuDao_ShuJu = true
     
     
     func saveItem(itemToSave: String) {
@@ -156,6 +159,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             .responseJSON { response in
                 switch response.result {
                 case .Success:
+                    self.ShiFou_QingQiuDao_ShuJu = true
                     if let value = response.result.value {
                         let json = JSON(value)
                         //在这里把数据写入字典里？
@@ -173,6 +177,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             let senderid:String = json[i]["senderid"].string!
                             let sendername:String = json[i]["sendername"].string!
                             let photonumber = json[i]["photo"].count
+                            let newdetail:String = json[i]["detail"].string!
                             let s = self.datadetails.count
                             
                             var PhotoArray =  [String]()
@@ -186,42 +191,55 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             switch photonumber
                             {
                             case 1:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]]]
                             case 2:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]]]
                             case 3:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]]]
                             case 4:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]]]
                             case 5:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]]]
                             case 6:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]]]
                             case 7:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]]]
                             case 8:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]]]
                             case 9:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]],["Photo9":PhotoArray[8]]]
                             default:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"]]
-                                
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"],["detail":newdetail]]
+                                /*
+                                 newstime
+                                 device
+                                 senderid
+                                 sendername
+                                 style
+                                 
+                                 photo 1-9 ?
+                                 */
                             }
                         }
+                        
+                        print(self.datadetails)
+                        print(self.dataimage)
+                        
                         print("---------------------end---------------------")
                         self.TimeTableView.reloadData()
                         
                     }
                 case .Failure(let error):
+                    self.ShiFou_QingQiuDao_ShuJu = false
                     print(error)
                 }
         }
@@ -251,8 +269,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         // Notice the unwrapping given the NSString! optional
         // NSData returned
         let dataa = NSData(base64EncodedString: base64Encoded, options: NSDataBase64DecodingOptions(rawValue: 0))
-//        
-//        // Convert back to a string
+        
+        // Convert back to a string
         let base64Decoded = NSString(data: dataa!, encoding: NSUTF8StringEncoding)
         print("Decoded:  \(base64Decoded)")
         
@@ -260,7 +278,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     //////////////////tableView_start
 
-    var height_tableview:CGFloat = 0
     
     
     //MARK:Tableview
@@ -346,6 +363,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 if datadetails.isEmpty || dataimage.isEmpty {
                 }
                 else{
+                    /*
+                     newstime
+                     device
+                     senderid
+                     sendername
+                     style
+                     detail
+                     
+                     photo 1-9 ?
+                     */
                     let detail = datadetails[indexPath.row]
                     let images = dataimage[indexPath.row]
                     
@@ -361,7 +388,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     cell1.UILabel_Cai.hidden = false
                     
                     cell1.UILabel_sender.text = detail![3]["sendername"]
-                    cell1.UILabel_detail.text = "我设置了哟~"
+                    cell1.UILabel_detail.text = detail![5]["detail"]
+                    cell1.UILabel_Information.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
                     cell1.UIImageView_BackGround.image = ImageloadBackGroudn
                     cell1.UIImageView_Top_Left.image = Imageload
@@ -387,37 +415,59 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             case "Suit_2_3_photos"://
                 print("Suit_2_3_photos")
                 let cell2 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-                if data3.isEmpty {
-                    cell2.image_left_top.layer.cornerRadius = cell2.image_left_top.frame.width/2
-                    cell2.image_left_top.clipsToBounds = true
-                    cell2.image_left_top.image = Imageload
-                    cell2.image_right_top.image = Imageload
-                    
-                    cell2.image_mid_left.image = Imageload
-                    cell2.image_mid_mid.image = Imageload
-                    cell2.image_mid_right.image = Imageload
-                    
-                    cell2.image_bottom.image = Imageload
-                    
-                    
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 0 ) / 3 + 5
+                if datadetails.isEmpty || dataimage.isEmpty  {
                 }
                 else{
-                    let v = data3[0]
+                    let detail = datadetails[indexPath.row]
+                    let images = dataimage[indexPath.row]
                     
-                    cell2.image_left_top.layer.cornerRadius = cell2.image_left_top.frame.width/2
-                    cell2.image_left_top.clipsToBounds = true
-                    cell2.image_left_top.image = v.UIImageView_Bottom
-                    cell2.image_right_top.image = v.UIImageView_Bottom
+                    cell2.lable_sender.text = detail![3]["sendername"]
+                    cell2.UILabel_Time.text = detail![3]["newstime"]
                     
-                    cell2.image_mid_left.image = v.UIImageView_Bottom
-                    cell2.image_mid_mid.image = v.UIImageView_Bottom
-                    cell2.image_mid_right.image = v.UIImageView_Bottom
+                    cell2.lable_sender.text = detail![3]["sendername"]
+                    cell2.UILabel_Detail.text = detail![5]["detail"]
+                    cell2.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
                     
-                    cell2.image_bottom.image = v.UIImageView_Bottom
-
+                    let server:String = "http://localhost:80/LALA/photo/"
                     
-                    height_tableview = CGFloat(100 + cell2.detail_height) + ( UIScreen.mainScreen().bounds.width - 30 ) / 3 + 5
+                    if images?.count == 2 {
+                        for i in 0..<2 {
+                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                                .responseImage { response in
+                                    if let image = response.result.value {
+                                        switch i{
+                                        case 0:cell2.UIImageView_Main1.image = image
+                                        case 1:cell2.UIImageView_Main2.image = image
+                                        default: break
+                                        }
+                                        
+                                    }
+                            }
+                        }
+                    }
+                    
+                    if images?.count == 3 {
+                        for i in 0..<3 {
+                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                                .responseImage { response in
+                                    if let image = response.result.value {
+                                        switch i{
+                                        case 0:cell2.UIImageView_Main1.image = image
+                                        case 1:cell2.UIImageView_Main2.image = image
+                                        case 2:cell2.UIImageView_Main3.image = image
+                                        default: break
+                                        }
+                                        
+                                    }
+                            }
+                        }
+                    }
+                    
+                    cell2.UIImageView_BackGround.image = ImageloadBackGroudn
+                    cell2.image_left_top.image = Imageload
+                    cell2.image_right_top.image = Imageloadw
+                    
+                    height_tableview = CGFloat(cell2.Guding_Height) + ( screenBounds - 10 ) / 3 + 50
                 }
                 return cell2
                 
@@ -426,23 +476,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_4_5_6_photos")
                 let cell3 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
                 if data3.isEmpty {
-                    cell3.Image_top_left.layer.cornerRadius = cell3.Image_top_left.frame.width/2
-                    cell3.Image_top_left.clipsToBounds = true
-                    cell3.Image_top_left.image = Imageload
-                    cell3.Image_top_right.image = Imageload
-                    
-                    cell3.Image1.image =  Imageload
-                    cell3.Image2.image =  Imageload
-                    cell3.Image3.image =  Imageload
-                    cell3.Image4.image =  Imageload
-                    cell3.Image5.image = Imageload
-                    cell3.Image6.image =  Imageload
-                    
-                    cell3.Image_Bottom.image = Imageload
-                    
-                    let screenBounds = UIScreen.mainScreen().bounds.width
-                    
-                    height_tableview = CGFloat(95 + cell3.detail_height) + ( (screenBounds - 20) / 3 * 2 ) + 15 + 5
                 }
                 else{
                     let v = data3[0]
@@ -471,26 +504,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 print("Suit_7_8_9_photos")
                 let cell4 = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
                 if data3.isEmpty {
-                    cell4.UIImageView_Top_Left.layer.cornerRadius = cell4.UIImageView_Top_Left.frame.width/2
-                    cell4.UIImageView_Top_Left.clipsToBounds = true
-                    cell4.UIImageView_Top_Left.image = Imageload
-                    cell4.UIImageView_Top_Right.image = Imageload
-                    
-                    cell4.UIImageView_Main1.image = Imageload
-                    cell4.UIImageView_Main2.image = Imageload
-                    cell4.UIImageView_Main3.image = Imageload
-                    cell4.UIImageView_Main4.image = Imageload
-                    cell4.UIImageView_Main5.image = Imageload
-                    cell4.UIImageView_Main6.image = Imageload
-                    cell4.UIImageView_Main7.image = Imageload
-                    cell4.UIImageView_Main8.image = Imageload
-                    cell4.UIImageView_Main9.image = Imageload
-                    
-                    cell4.UIImageView_Bottom.image = Imageload
-                    
-                    let screenBounds = UIScreen.mainScreen().bounds.width
-                    
-                    height_tableview = CGFloat(100 + cell4.detail_height) + screenBounds - 5
                 }
                 else{
                     let v = data3[0]
