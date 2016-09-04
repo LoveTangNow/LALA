@@ -49,14 +49,25 @@ class FFrist789TableViewCell: UITableViewCell {
     @IBOutlet weak var UIImageView_Main8: UIImageView!
     @IBOutlet weak var UIImageView_Main9: UIImageView!
     
-    @IBOutlet weak var UIImageView_Bottom: UIImageView!
+    @IBOutlet weak var UIImageView_Backgroud: UIImageView!
     
-    var detail_height = 0
+    @IBOutlet weak var UILabel_Sender: UILabel!
+    @IBOutlet weak var UILabel_Time: UILabel!
+    @IBOutlet weak var UILabel_Detail: UILabel!
+
+    @IBOutlet weak var UILabel_Pinglun: UILabel!
+    @IBOutlet weak var UILabel_Zan: UILabel!
+    @IBOutlet weak var UILabel_cai: UILabel!
     
-    let height_without_detail = 5 + 30 + 5 + 5 + 90 + 5 + 90 + 5 + 90 + 5 + 30 + 5 + 20 + 5
-    // 顶部间隔 + 第一行 + 间隔 + 具体文字? + 间隔 + 中央图片一行 + 间隔 + 中央图片2行 + 间隔 + 评论行 + 间隔 +分界条 + 底部间隔
+    let Guding_Height = 80
 
     override func awakeFromNib() {
+        UIImageView_Top_Left.layer.cornerRadius = UIImageView_Top_Left.frame.width / 2
+        UIImageView_Top_Left.clipsToBounds = true
+        
+        UIImageView_Top_Right.layer.cornerRadius = UIImageView_Top_Right.frame.width / 6
+        UIImageView_Top_Right.clipsToBounds = true
+        
         super.awakeFromNib()
         // Initialization code
     }
