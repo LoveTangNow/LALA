@@ -242,47 +242,6 @@
             </objects>
             <point key="canvasLocation" x="906" y="2993"/>
         </scene>
-        <!--Send News View Controller-->
-        <scene sceneID="3Jh-qK-k9R">
-            <objects>
-                <viewController storyboardIdentifier="SendNewsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bu-7t-voj" customClass="SendNewsViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y7O-Z2-ZWL"/>
-                        <viewControllerLayoutGuide type="bottom" id="sqC-2h-avb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EAv-sx-9L2" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqG-TJ-s7X">
-                                <rect key="frame" x="145" y="370" width="30" height="30"/>
-                                <state key="normal" title="打印"/>
-                                <connections>
-                                    <action selector="printerrrrr:" destination="8bu-7t-voj" eventType="touchUpInside" id="Csw-A0-dqd"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yih-ta-Its">
-                                <rect key="frame" x="20" y="84" width="280" height="247"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <action selector="Shoujianpan:" destination="8bu-7t-voj" eventType="touchUpInside" id="tcz-wL-wEe"/>
-                        </connections>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="UITextView_M" destination="yih-ta-Its" id="UAb-1O-SRB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0pR-mm-uiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-944" y="2993"/>
-        </scene>
         <!--消息-->
         <scene sceneID="2b0-qE-RO7">
             <objects>
@@ -380,10 +339,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="nyb-gN-3dC">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="VI9-ht-mNM">
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VI9-ht-mNM">
                             <rect key="frame" x="8" y="7" width="304" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </navigationItem>
@@ -469,10 +429,6 @@
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
-                                                    <rect key="frame" x="18" y="107" width="284" height="241"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tZY-di-pwX">
                                                     <rect key="frame" x="18" y="353" width="284" height="25"/>
                                                     <subviews>
@@ -499,6 +455,10 @@
                                                         <constraint firstAttribute="height" constant="25" id="f4c-gy-UBx"/>
                                                     </constraints>
                                                 </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
+                                                    <rect key="frame" x="18" y="107" width="284" height="241"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ncE-AW-Z4d" firstAttribute="top" secondItem="mte-rr-6mC" secondAttribute="bottom" constant="5" id="4J5-ei-ART"/>
@@ -1142,18 +1102,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="时间线" id="Oum-bB-biL">
-                        <barButtonItem key="leftBarButtonItem" image="settings-vector" id="MOw-tl-oeb">
-                            <connections>
-                                <action selector="ButtonTopLeftClick:" destination="KBl-kg-NqP" id="ex7-K4-cUn"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" id="CER-fw-xhz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H1V-hd-Ecc">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发动态"/>
+                                <connections>
+                                    <action selector="Send_Dongtai:" destination="KBl-kg-NqP" eventType="touchUpInside" id="qXk-op-osG"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" id="nhI-YR-MhH">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="64Y-3H-tkA">
+                        <barButtonItem key="rightBarButtonItem" id="5Qb-KE-oqY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="063-2E-74x">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登录/注册"/>
+                                <state key="normal" title="扫一扫"/>
                                 <connections>
-                                    <action selector="ButtonTopRightClick:" destination="KBl-kg-NqP" eventType="touchUpInside" id="cNe-HL-o8l"/>
+                                    <action selector="Sao_yi_sao:" destination="KBl-kg-NqP" eventType="touchUpInside" id="x0L-5W-MZQ"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -1161,62 +1126,12 @@
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="504"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="ButtonTopLeft" destination="MOw-tl-oeb" id="v5a-zY-Iyk"/>
-                        <outlet property="ButtonTopRight" destination="64Y-3H-tkA" id="dEF-r0-aeN"/>
                         <outlet property="TimeTableView" destination="Qlp-lJ-lQe" id="Jht-nJ-330"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8y-hN-rPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-478" y="2993"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="lAY-ky-HQt">
-            <objects>
-                <collectionViewController storyboardIdentifier="FCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mhb-6b-FLO" customClass="FCollectionViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rma-9y-EAE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SdB-7t-Ife">
-                            <size key="itemSize" width="105" height="118"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FFCollectionViewCell" id="yri-Ek-tqE">
-                                <rect key="frame" x="0.0" y="0.0" width="105" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="105" height="118"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dS3-zZ-uAi">
-                                            <rect key="frame" x="8" y="13" width="90" height="90"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="2pS-7O-q3I"/>
-                                                <constraint firstAttribute="height" constant="90" id="e1h-F7-zzA"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="dS3-zZ-uAi" firstAttribute="leading" secondItem="yri-Ek-tqE" secondAttribute="leadingMargin" id="Bfm-xh-ACM"/>
-                                    <constraint firstItem="dS3-zZ-uAi" firstAttribute="top" secondItem="yri-Ek-tqE" secondAttribute="topMargin" constant="5" id="fO1-r6-S5m"/>
-                                </constraints>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Mhb-6b-FLO" id="j3Y-ZR-Tm5"/>
-                            <outlet property="delegate" destination="Mhb-6b-FLO" id="fb4-PL-5zh"/>
-                        </connections>
-                    </collectionView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FwF-os-JEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-54" y="3625"/>
         </scene>
         <!--Deng Lu View Controller-->
         <scene sceneID="Sez-R1-2FU">
@@ -1275,7 +1190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oZ-o7-Vxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1407" y="2993"/>
+            <point key="canvasLocation" x="-478" y="3814"/>
         </scene>
         <!--设置-->
         <scene sceneID="1YM-ey-NQG">
@@ -1451,7 +1366,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bah-Dg-Hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1407" y="3674"/>
+            <point key="canvasLocation" x="906" y="3814"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mLM-xM-4my">
@@ -1468,7 +1383,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kci-fS-Ol9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="3674"/>
+            <point key="canvasLocation" x="440" y="3814"/>
         </scene>
         <!--Zhu Ce View Controller-->
         <scene sceneID="jyr-hk-pl1">
@@ -1529,7 +1444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mS1-Iw-vcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="2993"/>
+            <point key="canvasLocation" x="-54" y="3814"/>
         </scene>
         <!--时间线-->
         <scene sceneID="g4z-mm-f00">
