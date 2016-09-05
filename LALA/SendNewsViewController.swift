@@ -2,33 +2,13 @@
 //  SendNewsViewController.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/8/13.
+//  Created by Thomas Liu on 16/9/5.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
-import AVKit
-import AVFoundation
-import AlamofireImage
-import Alamofire
-import CoreData
-import Foundation
-import SwiftyJSON
 
 class SendNewsViewController: UIViewController {
-    
-    @IBOutlet weak var UITextView_M: UITextView!
-    
-    @IBAction func printerrrrr(sender: AnyObject) {
-        print(UITextView_M.text)
-    }
-    
-    @IBAction func Shoujianpan(sender: AnyObject) {
-        UITextView_M.resignFirstResponder()
-        
-        //var a =
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +21,6 @@ class SendNewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
 
     /*
     // MARK: - Navigation
