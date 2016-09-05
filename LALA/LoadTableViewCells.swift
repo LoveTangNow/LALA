@@ -107,13 +107,13 @@ class LoadTableViewCells {
         switch Width {
         case 320:
             //每行20
-            return ((Words.characters.count - Words.characters.count % 20) / 20 + 1) * 14 + 10
+            return ((Words.characters.count - Words.characters.count % 20) / 20 + 1) * 15 + 15
         case 375.5:
             //每行24
-            return ((Words.characters.count - Words.characters.count % 24) / 24 + 1) * 14 + 10
+            return ((Words.characters.count - Words.characters.count % 24) / 24 + 1) * 15 + 15
         case 414:
             //每行27
-            return ((Words.characters.count - Words.characters.count % 27) / 27 + 1) * 14 + 10
+            return ((Words.characters.count - Words.characters.count % 27) / 27 + 1) * 15 + 15
         default:
             return 24
         }
