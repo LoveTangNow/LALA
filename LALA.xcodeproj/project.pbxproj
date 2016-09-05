@@ -187,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
+				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 				7FB8A89E1D4B27D200F2F22D /* Main */,
 				7FB8A89F1D4B27E700F2F22D /* 2 */,
 				7FB8A8A01D4B27F800F2F22D /* 3 */,
@@ -264,7 +265,6 @@
 				7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */,
 				7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */,
 				7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */,
-				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -289,8 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */,
-				7FE9007C1D7D2029007F4F90 /* SendNewsViewController.swift */,
 				7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */,
+				7FE9007C1D7D2029007F4F90 /* SendNewsViewController.swift */,
 				7FE900801D7D2B43007F4F90 /* cells */,
 				7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */,
 				7F19A0191D5866F80030A16F /* SecondSonViewController.swift */,
