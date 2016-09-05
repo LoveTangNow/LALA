@@ -172,6 +172,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             let sendername:String = json[i]["sendername"].string!
                             let photonumber = json[i]["photo"].count
                             let newdetail:String = json[i]["detail"].string!
+                            let newsid:String = json[i]["newsid"].string!
                             let s = self.datadetails.count
                             
                             var PhotoArray =  [String]()
@@ -185,34 +186,36 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             switch photonumber
                             {
                             case 1:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]]]
                             case 2:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]]]
                             case 3:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]]]
                             case 4:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]]]
                             case 5:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]]]
                             case 6:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]]]
                             case 7:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]]]
                             case 8:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]]]
                             case 9:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]],["Photo9":PhotoArray[8]]]
                             default:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"],["detail":newdetail]]
+                                //0
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"],["detail":newdetail],["newsid":newsid]]
+                                self.dataimage[s] = [["Photo":"null"]]
                                 /*
                                  newstime
                                  device
@@ -278,6 +281,46 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //var section_number = indexPath.section
+        //这里得到的是 news id
+        //self.datadetails[s] = 
+        //0[["newstime":newstime],
+        //1 ["device":device],
+        //2 ["senderid":senderid],
+        //3 ["sendername":sendername],
+        //4 ["style":"Without_Photos"],
+        //5 ["detail":newdetail],
+        //6 ["newsid":newsid]]
+        let newstime   = datadetails[indexPath.row]![0]["newstime"]
+        let device     = datadetails[indexPath.row]![1]["device"]
+        let sendername = datadetails[indexPath.row]![3]["sendername"]
+        let detail     = datadetails[indexPath.row]![5]["detail"]
+        let newsid     = datadetails[indexPath.row]![6]["newsid"]
+        
+        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024,diskCapacity: 30 * 1024 * 1024,diskPath: "adow.adimageloader.urlcache")
+
+        //--------跳转加传值--------//
+        /*
+         消息 id newsid
+         用户 昵称  sendername
+         消息的 时间 设备 senddevice
+         消息的 长文字 detail
+         消息的图片 缓存信息  ?????
+         
+         根据用户 id 去查询 评论   ????
+         */
+        //设置存储信息
+        NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
+        NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
+        NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
+        NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
+        NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+        //设置同步
+        NSUserDefaults.standardUserDefaults().synchronize()
+        //跳转
+        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+        //=========================//
         print("点击了"+String(indexPath.row))
     }
     
@@ -306,12 +349,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             return 3
         }//section 是从0开始的
         else{
-            if section == 1 {
-                return datadetails.count
-            }
-            else{
-                return 1
-            }
+            return datadetails.count
         }
     }
     
@@ -646,7 +684,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     // Override to support conditional editing of the table view.
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
-        return true
+        return false
      }
     
     
@@ -664,41 +702,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
 
     ///////////////tableView_end
-    
-    //MARK:Functions
-    
-    func getDeviceVersion () -> String? {
-        let name = UnsafeMutablePointer<utsname>.alloc(1)
-        uname(name)
-        let machine = withUnsafePointer(&name.memory.machine, { (ptr) -> String? in
-            
-            let int8Ptr = unsafeBitCast(ptr, UnsafePointer<CChar>.self)
-            return String.fromCString(int8Ptr)
-        })
-        name.dealloc(1)
-        if let deviceString = machine {
-            switch deviceString {
-            //iPhone
-            case "iPhone1,1":                return "iPhone 1G"
-            case "iPhone1,2":                return "iPhone 3G"
-            case "iPhone2,1":                return "iPhone 3GS"
-            case "iPhone3,1", "iPhone3,2":   return "iPhone 4"
-            case "iPhone4,1":                return "iPhone 4S"
-            case "iPhone5,1", "iPhone5,2":   return "iPhone 5"
-            case "iPhone5,3", "iPhone5,4":   return "iPhone 5C"
-            case "iPhone6,1", "iPhone6,2":   return "iPhone 5S"
-            case "iPhone7,1":                return "iPhone 6 Plus"
-            case "iPhone7,2":                return "iPhone 6"
-            case "iPhone8,1":                return "iPhone 6s"
-            case "iPhone8,2":                return "iPhone 6s Plus"
-            case "iPhone8,3":                return "iPhone SE"
-            default:
-                return deviceString
-            }
-        } else {
-            return nil
-        }
-    }
     
     //MARK:Others
     
