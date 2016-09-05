@@ -82,7 +82,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //发动态
     @IBAction func Send_Dongtai(sender: AnyObject) {
-        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("SendNewsViewController")
+        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("Send_News_TableViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -228,12 +228,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             }
                         }
                         
-                        print(self.datadetails)
-                        print(self.dataimage)
+                        //print(self.datadetails)
+                        //print(self.dataimage)
                         
                         print("---------------------end---------------------")
                         self.TimeTableView.reloadData()
-                        
                     }
                 case .Failure(let error):
                     self.ShiFou_QingQiuDao_ShuJu = false
@@ -291,13 +290,41 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         //4 ["style":"Without_Photos"],
         //5 ["detail":newdetail],
         //6 ["newsid":newsid]]
-        let newstime   = datadetails[indexPath.row]![0]["newstime"]
-        let device     = datadetails[indexPath.row]![1]["device"]
-        let sendername = datadetails[indexPath.row]![3]["sendername"]
-        let detail     = datadetails[indexPath.row]![5]["detail"]
-        let newsid     = datadetails[indexPath.row]![6]["newsid"]
         
-        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024,diskCapacity: 30 * 1024 * 1024,diskPath: "adow.adimageloader.urlcache")
+        if datadetails.isEmpty {
+            let newstime  :String = "NO NEWSTIME"
+            let device    :String = "NO DEVICE"
+            let sendername:String = "NO SENDER"
+            let detail    :String = "NO DETAIL"
+            let newsid    :String = "NO ID"
+            let photonumber:Int   = 1
+            
+            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
+            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
+            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
+            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
+            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
+        }
+        else
+        {   let newstime  :String = datadetails[indexPath.row]![0]["newstime"]!
+            let device    :String = datadetails[indexPath.row]![1]["device"]!
+            let sendername:String = datadetails[indexPath.row]![3]["sendername"]!
+            let detail    :String = datadetails[indexPath.row]![5]["detail"]!
+            let newsid    :String = datadetails[indexPath.row]![6]["newsid"]!
+            let photonumber:Int   = (dataimage[indexPath.row]?.count)!
+            
+            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
+            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
+            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
+            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
+            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
+
+        }
+        
+        
+        //let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024,diskCapacity: 30 * 1024 * 1024,diskPath: "adow.adimageloader.urlcache")
 
         //--------跳转加传值--------//
         /*
@@ -310,11 +337,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
          根据用户 id 去查询 评论   ????
          */
         //设置存储信息
-        NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
-        NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
-        NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
-        NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
-        NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+        
+        
         //设置同步
         NSUserDefaults.standardUserDefaults().synchronize()
         //跳转
@@ -431,8 +455,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 cell.UIImageView_Mian.image = image
                             }
                     }
-                    //print("11111111-------------1111111111111")
-                    //print(cell.UIImageView_Mian.frame.height / cell.UIImageView_Mian.frame.width)
                     
                     height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 60
 
