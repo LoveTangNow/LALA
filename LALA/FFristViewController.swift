@@ -72,6 +72,19 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             print("error")
         }
     }
+    //MARK:ButtonClick
+    
+    //扫一扫
+    @IBAction func Sao_yi_sao(sender: AnyObject) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //发动态
+    @IBAction func Send_Dongtai(sender: AnyObject) {
+        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("SendNewsViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     
     /*
@@ -278,7 +291,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return 2
+        return 1
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -321,7 +334,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             黄金比例：0.618
         */
         let screenBounds = UIScreen.mainScreen().bounds.width
-        let server:String = "http://localhost:80/LALA/photo/"
+        let server:String = "http://localhost:80/LALA/photo/TEST_PHOTOS/"
         // 当datadetails 等于 空 没有数据的时候 用某某缩略图填充一下  感觉就像 Facebook了
         if  datadetails.isEmpty || dataimage.isEmpty {
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
@@ -686,17 +699,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             return nil
         }
     }
-
-    
-    @IBAction func ButtonTopLeftClick(sender: AnyObject) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendNewsViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func ButtonTopRightClick(sender: AnyObject) {
-
-    }
-    
     
     //MARK:Others
     
