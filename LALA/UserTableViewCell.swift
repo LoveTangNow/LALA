@@ -15,7 +15,9 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var UILabel_SenderName: UILabel!
     @IBOutlet weak var UILabel_News_Information: UILabel!
     @IBOutlet weak var UILabel_Detail: UILabel!
-
+    
+    let Guding_Height:CGFloat = 65
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
