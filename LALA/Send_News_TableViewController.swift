@@ -10,14 +10,18 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import SwiftyJSON
+import MobileCoreServices
 
-class Send_News_TableViewController: UITableViewController {
+class Send_News_TableViewController: UITableViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
     
     // MARK: - BIAN LIANG
     
     var TableViewCell_Height:CGFloat = 0
     
     var Imageload:Image = UIImage(named: "Black.png")!
+    var imagePicker     : UIImagePickerController!
+    var imagelist = [UIImage]()
+    
     
     // MARK: - FUNCS
 
@@ -33,6 +37,27 @@ class Send_News_TableViewController: UITableViewController {
     
     @IBAction func UIButton_TOPRIGHT_Click(sender: AnyObject) {
         print("a")
+        /*获取到的是:
+         *          用户的 id、
+         *          一段文字(文字需要在 ios 端校验文字数目)、
+         *          发送的设备、
+         */
+        
+        //let imageData = UIImageJPEGRepresentation(UIImageView_For_Upload.image!, 1) // 将图片转换成jpeg格式的NSData，压缩到1
+        //let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) // 将图片转换为base64字符串
+        
+        let parameters = [
+            "senderid": "1",
+            "words": "你他妈的是傻逼",
+            "device":"se",
+            "photonumber":3,
+            "photos":[
+                "photo1": 1,
+                "photo2": 2,
+                "photo3": 3
+            ]
+        ]
+        Alamofire.request(.POST, "http://localhost:80/LALA/SEND_NEWS_WORD.php", parameters: parameters)
     }
     
 
@@ -40,6 +65,60 @@ class Send_News_TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let mediaType = info[UIImagePickerControllerMediaType] as! String
+        let compareResult = CFStringCompare(mediaType as NSString!, kUTTypeMovie, CFStringCompareFlags.CompareCaseInsensitive)
+        
+        if compareResult == CFComparisonResult.CompareEqualTo {
+            let moviePath = info[UIImagePickerControllerMediaURL] as? NSURL
+            //获取路径
+            let moviePathString = moviePath!.relativePath
+            
+            if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePathString!)
+            {
+                UISaveVideoAtPathToSavedPhotosAlbum(moviePathString!, nil, nil, nil)
+            }
+            print("视频")
+        }
+        else {
+            print("图片")
+            let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            imagelist.append(image!)
+            
+            self.tableView.reloadData()
+            //得到了 image //怎么传达 tableview 的控件上？、
+            //self.imageView!.image =  image;
+        }
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func initWithImagePickView(type:NSString){
+        
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate      = self;
+        self.imagePicker.allowsEditing = true;
+        
+        switch type{
+        case "拍照":
+            self.imagePicker.sourceType = .Camera
+        case "相册":
+            self.imagePicker.sourceType = .PhotoLibrary
+        case "摄像":
+            self.imagePicker.sourceType = .Camera
+            self.imagePicker.videoMaximumDuration = 60 * 3
+            self.imagePicker.videoQuality = .Type640x480
+            self.imagePicker.mediaTypes = [String(kUTTypeMovie)]
+        default:
+            print("error")
+        }
+        
+        self.presentViewController(self.imagePicker, animated: true, completion: nil)
+    }
+
 
     // MARK: - Table view data source
     
@@ -83,9 +162,23 @@ class Send_News_TableViewController: UITableViewController {
                 let cell = tableView.dequeueReusableCellWithIdentifier("SN_PIKEIMAGE_TableViewCell", forIndexPath: indexPath) as! SN_PIKEIMAGE_TableViewCell
                 // Configure the cell...
                 
-                cell.UIImageView1.image = Imageload
-                cell.UIImageView2.image = Imageload
-                cell.UIImageView3.image = Imageload
+                switch imagelist.count {
+                case 0:
+                    cell.UIImageView1.image = Imageload
+                case 1:
+                    cell.UIImageView1.image = imagelist[0]
+                case 2:
+                    cell.UIImageView1.image = imagelist[0]
+                    cell.UIImageView2.image = imagelist[1]
+                case 3:
+                    cell.UIImageView1.image = imagelist[0]
+                    cell.UIImageView2.image = imagelist[1]
+                    cell.UIImageView3.image = imagelist[2]
+                default:
+                    cell.UIImageView1.image = imagelist[0]
+                    cell.UIImageView2.image = imagelist[1]
+                    cell.UIImageView3.image = Imageload
+                }
                 
                 TableViewCell_Height = UIScreen.mainScreen().bounds.width / 3 + 42
                 
@@ -115,6 +208,38 @@ class Send_News_TableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && indexPath.row == 1 {
+            
+            let actionSheetController: UIAlertController = UIAlertController(title: "请选择", message:nil, preferredStyle: .ActionSheet)
+            
+            //取消按钮
+            let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style: .Cancel) { action -> Void in
+                //Just dismiss the action sheet
+            }
+            //拍照
+            let takePictureAction: UIAlertAction = UIAlertAction(title: "拍照", style: .Default){ action -> Void in
+                self .initWithImagePickView("拍照")
+            }
+            //相册选择
+            let choosePictureAction: UIAlertAction = UIAlertAction(title: "相册", style: .Default){ action -> Void in
+                self .initWithImagePickView("相册")
+            }
+            //摄像
+            let moviePictureAction: UIAlertAction = UIAlertAction(title: "摄像", style: .Default){ action -> Void in
+                self .initWithImagePickView("摄像")
+            }
+            
+            actionSheetController.addAction(cancelAction)
+            actionSheetController.addAction(takePictureAction)
+            actionSheetController.addAction(choosePictureAction)
+            actionSheetController.addAction(moviePictureAction)
+            
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+        }
+        print("aaaaaa")
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
