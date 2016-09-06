@@ -33,7 +33,6 @@
 		7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */; };
 		7F7701511D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */; };
 		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
-		7F7701551D5CC66C008D07A2 /* aiqinhai04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701541D5CC66C008D07A2 /* aiqinhai04.jpg */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
@@ -110,7 +109,6 @@
 		7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist456TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701501D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist_1_big_TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
-		7F7701541D5CC66C008D07A2 /* aiqinhai04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aiqinhai04.jpg; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
@@ -171,8 +169,6 @@
 				7F0E24461D4A00290083F7CC /* LALA */,
 				7F19A1301D58BCFD0030A16F /* Server.plist */,
 				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
-				7F77013E1D5B3058008D07A2 /* temp */,
-				7F19A1421D58D9950030A16F /* Documents */,
 				7F0E245D1D4A00290083F7CC /* LALATests */,
 				7F0E24681D4A00290083F7CC /* LALAUITests */,
 				7F0E24451D4A00290083F7CC /* Products */,
@@ -226,13 +222,6 @@
 			path = LALAUITests;
 			sourceTree = "<group>";
 		};
-		7F19A1421D58D9950030A16F /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Documents;
-			sourceTree = "<group>";
-		};
 		7F515F991D7DC51C0018354F /* Cells_Send */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,14 +250,6 @@
 				7FC8D7D21D65FF6400EBC8AD /* User.swift */,
 			);
 			name = datasss;
-			sourceTree = "<group>";
-		};
-		7F77013E1D5B3058008D07A2 /* temp */ = {
-			isa = PBXGroup;
-			children = (
-				7F7701541D5CC66C008D07A2 /* aiqinhai04.jpg */,
-			);
-			name = temp;
 			sourceTree = "<group>";
 		};
 		7F7701461D5B87F2008D07A2 /* Setting_shezhi */ = {
@@ -506,7 +487,6 @@
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
 				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
-				7F7701551D5CC66C008D07A2 /* aiqinhai04.jpg in Resources */,
 				7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */,
 				7F19A12D1D58695B0030A16F /* Assets.xcassets in Resources */,
 				7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */,

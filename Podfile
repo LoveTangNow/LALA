@@ -13,6 +13,7 @@ target ‘LALA’ do
     pod 'Kingfisher', '~> 2.4'
     pod 'TOWebViewController'
     pod 'SwiftRecord'
+    pod 'HanekeSwift'
     
     pod 'LTMorphingLabel'
     pod 'RAMAnimatedTabBarController'
