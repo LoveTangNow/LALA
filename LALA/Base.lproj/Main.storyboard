@@ -275,6 +275,20 @@
                                     <action selector="Upload_Image:" destination="6Hu-4V-fE0" eventType="touchUpInside" id="2VO-Ee-RhE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-QP-8AB">
+                                <rect key="frame" x="145" y="365" width="30" height="30"/>
+                                <state key="normal" title="停"/>
+                                <connections>
+                                    <action selector="UIButton_Ting_Click:" destination="6Hu-4V-fE0" eventType="touchUpInside" id="ESH-Mq-wzt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDx-lr-Kfj">
+                                <rect key="frame" x="145" y="327" width="30" height="30"/>
+                                <state key="normal" title="转"/>
+                                <connections>
+                                    <action selector="UIButton_Zhuan_Click:" destination="6Hu-4V-fE0" eventType="touchUpInside" id="Gao-XI-D3h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -422,7 +436,7 @@
                                                     <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="aiqinhai04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-AW-Z4d">
                                                     <rect key="frame" x="18" y="108" width="284" height="240"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
@@ -1514,7 +1528,6 @@
     </scenes>
     <resources>
         <image name=" " width="30" height="30"/>
-        <image name="aiqinhai04.jpg" width="960" height="1441"/>
         <image name="archive-vector" width="30" height="30"/>
         <image name="box-vector" width="30" height="30"/>
         <image name="contacts-vector" width="30" height="30"/>
