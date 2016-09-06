@@ -217,7 +217,7 @@ class NewsDetailTableViewController: UITableViewController {
             //评论部分Pinglun_TableViewCell
             let cell = tableView.dequeueReusableCellWithIdentifier("Pinglun_TableViewCell", forIndexPath: indexPath) as! Pinglun_TableViewCell
             cell.UIImageView_SenderIcon.image = Imageload
-            cell.UIImageView_Zan.image = Imageload
+            //cell.UIImageView_Zan.image = Imageload
             
             cell.UILabel_SenderName.text = "某某某"
             cell.UILabel_Pinglun_Information.text = "某某某时间？"
