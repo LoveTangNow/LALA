@@ -59,13 +59,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-3t-MW8">
                                             <rect key="frame" x="18" y="30" width="284" height="100"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuP-aD-coK">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuP-aD-coK">
                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="100"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-ng-Rgh">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-ng-Rgh">
                                                     <rect key="frame" x="97" y="0.0" width="91" height="100"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-H2-s6p">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-H2-s6p">
                                                     <rect key="frame" x="193" y="0.0" width="92" height="100"/>
                                                 </imageView>
                                             </subviews>
@@ -122,6 +122,13 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1NM-P6-QNu">
                                             <rect key="frame" x="21" y="8" width="39" height="43"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwe-U7-1d3">
+                                            <rect key="frame" x="68" y="8" width="239" height="43"/>
+                                            <state key="normal" title="Button" backgroundImage="BackGround"/>
+                                            <connections>
+                                                <action selector="Button_Click:" destination="99P-Ba-4Hi" eventType="touchUpInside" id="dx1-zM-gK1"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -158,7 +165,18 @@
                             <outlet property="delegate" destination="iKl-eq-DKD" id="CFa-nA-FpG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="发动态" id="VZB-hD-NyW"/>
+                    <navigationItem key="navigationItem" title="发动态" id="VZB-hD-NyW">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="L2s-KK-GkO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hNp-Ks-Rdn">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发送"/>
+                                <connections>
+                                    <action selector="UIButton_TOPRIGHT_Click:" destination="iKl-eq-DKD" eventType="touchUpInside" id="7Mh-Y9-O4y"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIO-zx-fnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,6 +740,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackGround" width="239" height="148"/>
         <image name="Black" width="30" height="30"/>
     </resources>
 </document>

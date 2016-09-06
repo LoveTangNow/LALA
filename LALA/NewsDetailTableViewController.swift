@@ -30,6 +30,7 @@ class NewsDetailTableViewController: UITableViewController {
     
     var Imageload:Image = UIImage(named: "Black.png")!
     
+    
     // MARK: - FUNCS
     
     override func viewDidLoad() {
