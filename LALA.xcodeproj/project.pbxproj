@@ -167,13 +167,13 @@
 			isa = PBXGroup;
 			children = (
 				7F0E24461D4A00290083F7CC /* LALA */,
-				7F19A1301D58BCFD0030A16F /* Server.plist */,
-				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 				7F0E245D1D4A00290083F7CC /* LALATests */,
 				7F0E24681D4A00290083F7CC /* LALAUITests */,
 				7F0E24451D4A00290083F7CC /* Products */,
 				F1D80D2772AECD6960B037E4 /* Pods */,
 				FDFE9952A379317531B78C99 /* Frameworks */,
+				7F19A1301D58BCFD0030A16F /* Server.plist */,
+				7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +197,7 @@
 				7FB8A8A01D4B27F800F2F22D /* 3 */,
 				7FE900791D7D159D007F4F90 /* 4 */,
 				7FE9007A1D7D15A0007F4F90 /* 5 */,
-				7F5632281D6178230017958A /* datasss */,
+				7F5632281D6178230017958A /* data */,
 				7F19A12C1D58695B0030A16F /* Assets.xcassets */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
 				7F0E24551D4A00290083F7CC /* Info.plist */,
@@ -242,14 +242,14 @@
 			name = cells_4;
 			sourceTree = "<group>";
 		};
-		7F5632281D6178230017958A /* datasss */ = {
+		7F5632281D6178230017958A /* data */ = {
 			isa = PBXGroup;
 			children = (
 				7F19A1361D58C1020030A16F /* Data.xcdatamodeld */,
 				7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */,
 				7FC8D7D21D65FF6400EBC8AD /* User.swift */,
 			);
-			name = datasss;
+			name = data;
 			sourceTree = "<group>";
 		};
 		7F7701461D5B87F2008D07A2 /* Setting_shezhi */ = {

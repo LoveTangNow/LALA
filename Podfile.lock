@@ -18,6 +18,7 @@ PODS:
   - AlamofireImage (2.4.1):
     - Alamofire (~> 3.3)
   - AliyunOSSiOS (2.5.1)
+  - DGElasticPullToRefresh (1.0.3)
   - HanekeSwift (0.10.1)
   - HappyDNS (0.3.9)
   - Kingfisher (2.4.2)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.0)
   - AliyunOSSiOS (~> 2.5.0)
+  - DGElasticPullToRefresh
   - HanekeSwift
   - Kingfisher (~> 2.4)
   - LTMorphingLabel
@@ -67,6 +69,7 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
   AliyunOSSiOS: 0366ab7e52ef663cd1c950d63584ebb96b717c72
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   HappyDNS: 17be04178df2dd09f0ee6ac33628589b7f9910e8
   Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
@@ -81,6 +84,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 79df7724f4f7a6904e985a6ce0cf44eb7a50fea3
+PODFILE CHECKSUM: b5c5025f81120dacfa496abdc7a6ce14610f00d4
 
 COCOAPODS: 1.0.1
