@@ -15,8 +15,11 @@ class SN_PIKEIMAGE_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIImageView1: UIImageView!
     @IBOutlet weak var UIImageView2: UIImageView!
     @IBOutlet weak var UIImageView3: UIImageView!
-
+    
+    
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }
