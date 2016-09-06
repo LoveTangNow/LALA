@@ -14,6 +14,7 @@ import Alamofire
 import CoreData
 import Foundation
 import SwiftyJSON
+import SVProgressHUD
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
@@ -106,28 +107,26 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //MARK:View
     
     
-    override func viewWillAppear(animated: Bool) {
-        print("viewWillAppear")
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        print("viewDidAppear")
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        print("viewWillDisappear")
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-       print("viewDidDisappear")
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        print("viewWillAppear")
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        print("viewDidAppear")
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        print("viewWillDisappear")
+//    }
+//    
+//    override func viewDidDisappear(animated: Bool) {
+//       print("viewDidDisappear")
+//    }
     
     override func viewDidLoad() {
         
         let imgbackV = UIImageView(image: ImageloadBackGroudn)
         self.TimeTableView.backgroundView = imgbackV
-        
-        print("viewDidLoad")
         
         for a in 0...10 {
             print(a)
@@ -153,6 +152,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             .responseJSON { response in
                 switch response.result {
                 case .Success:
+                    SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Dark)//前后颜色
+                    SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.Native)//菊花
+                    SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.Black)
+                    SVProgressHUD.show()
+
                     self.ShiFou_QingQiuDao_ShuJu = true
                     if let value = response.result.value {
                         let json = JSON(value)
@@ -233,6 +237,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         
                         print("---------------------end---------------------")
                         self.TimeTableView.reloadData()
+                        SVProgressHUD.dismiss()
                     }
                 case .Failure(let error):
                     self.ShiFou_QingQiuDao_ShuJu = false
