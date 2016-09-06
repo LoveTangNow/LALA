@@ -14,8 +14,8 @@ import UIKit
 import AVFoundation
 import SwiftyJSON
 import WebKit
-import MBProgressHUD
 import SwiftRecord
+import SVProgressHUD
 
 /*
  这是一个 tableview cell 各种砸入方法的一个类
@@ -118,4 +118,5 @@ class LoadTableViewCells {
             return 24
         }
     }
+   
 }
