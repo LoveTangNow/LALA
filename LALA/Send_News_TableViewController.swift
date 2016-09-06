@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import SwiftyJSON
 
 class Send_News_TableViewController: UITableViewController {
     
@@ -14,6 +17,7 @@ class Send_News_TableViewController: UITableViewController {
     
     var TableViewCell_Height:CGFloat = 0
     
+    var Imageload:Image = UIImage(named: "Black.png")!
     
     // MARK: - FUNCS
 
@@ -26,6 +30,11 @@ class Send_News_TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    @IBAction func UIButton_TOPRIGHT_Click(sender: AnyObject) {
+        print("a")
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,23 +69,49 @@ class Send_News_TableViewController: UITableViewController {
          */
         
         if indexPath.section == 0 {
-            if indexPath.rows == 0 {
+            if indexPath.row == 0 {
                 //文字框
-                let cell = tableView.dequeueReusableCellWithIdentifier("SN_words_TableViewCell", forIndexPath: indexPath) as! SN_words_TableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("SN_WORDS_TableViewCell", forIndexPath: indexPath) as! SN_WORDS_TableViewCell
                 // Configure the cell...
+                
+                TableViewCell_Height = 200
+                
                 return cell
             }
             else{
                 //图片选择
+                let cell = tableView.dequeueReusableCellWithIdentifier("SN_PIKEIMAGE_TableViewCell", forIndexPath: indexPath) as! SN_PIKEIMAGE_TableViewCell
+                // Configure the cell...
+                
+                cell.UIImageView1.image = Imageload
+                cell.UIImageView2.image = Imageload
+                cell.UIImageView3.image = Imageload
+                
+                TableViewCell_Height = UIScreen.mainScreen().bounds.width / 3 + 42
+                
+                return cell
             }
         }
         else{
-            if indexPath.rows == 0 {
-                //地点
-                <#code#>
+            if indexPath.row == 0 {
+                //选取地点
+                let cell = tableView.dequeueReusableCellWithIdentifier("SN_PIKELOCA_TableViewCell", forIndexPath: indexPath) as! SN_PIKELOCA_TableViewCell
+                // Configure the cell...
+                
+                TableViewCell_Height = 44
+                
+                return cell
             }
             else{
                 //分享
+                let cell = tableView.dequeueReusableCellWithIdentifier("SN_SHARE_TableViewCell", forIndexPath: indexPath) as! SN_SHARE_TableViewCell
+                // Configure the cell...
+                
+                cell.UIImageView1.image = Imageload
+                
+                TableViewCell_Height = 60
+                
+                return cell
             }
         }
         
