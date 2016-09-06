@@ -1,5 +1,5 @@
 //
-//  SN_SHARE_TableViewCell.swift
+//  SN_PIKELOCA_TableViewCell.swift
 //  LALA
 //
 //  Created by Thomas Liu on 16/9/6.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SN_SHARE_TableViewCell: UITableViewCell {
+class SN_PIKELOCA_TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var UIImageView1: UIImageView!
+    @IBOutlet weak var UILabel_Mian: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
