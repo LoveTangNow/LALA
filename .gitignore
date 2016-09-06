@@ -882,3 +882,61 @@ Pods/HappyDNS/HappyDNS/Common/QNDnsManager.h
 Pods/Manifest.lock
 
 Pods/Pods.xcodeproj/project.pbxproj
+
+Pods/HanekeSwift/Haneke/Cache.swift
+
+Pods/HanekeSwift/Haneke/CGSize+Swift.swift
+
+Pods/HanekeSwift/Haneke/CryptoSwiftMD5.swift
+
+Pods/HanekeSwift/Haneke/Data.swift
+
+Pods/HanekeSwift/Haneke/DiskCache.swift
+
+Pods/HanekeSwift/Haneke/DiskFetcher.swift
+
+Pods/HanekeSwift/Haneke/Fetch.swift
+
+Pods/HanekeSwift/Haneke/Fetcher.swift
+
+Pods/HanekeSwift/Haneke/Format.swift
+
+Pods/HanekeSwift/Haneke/Haneke.swift
+
+Pods/HanekeSwift/Haneke/Log.swift
+
+Pods/HanekeSwift/Haneke/NetworkFetcher.swift
+
+Pods/HanekeSwift/Haneke/NSFileManager+Haneke.swift
+
+Pods/HanekeSwift/Haneke/NSHTTPURLResponse+Haneke.swift
+
+Pods/HanekeSwift/Haneke/NSURLResponse+Haneke.swift
+
+Pods/HanekeSwift/Haneke/String+Haneke.swift
+
+Pods/HanekeSwift/Haneke/UIButton+Haneke.swift
+
+Pods/HanekeSwift/Haneke/UIImage+Haneke.swift
+
+Pods/HanekeSwift/Haneke/UIImageView+Haneke.swift
+
+Pods/HanekeSwift/Haneke/UIView+Haneke.swift
+
+Pods/HanekeSwift/LICENSE
+
+Pods/HanekeSwift/README.md
+
+Pods/Pods.xcodeproj/xcuserdata/ThomasLiu.xcuserdatad/xcschemes/HanekeSwift.xcscheme
+
+Pods/Target Support Files/HanekeSwift/HanekeSwift-dummy.m
+
+Pods/Target Support Files/HanekeSwift/HanekeSwift-prefix.pch
+
+Pods/Target Support Files/HanekeSwift/HanekeSwift-umbrella.h
+
+Pods/Target Support Files/HanekeSwift/HanekeSwift.modulemap
+
+Pods/Target Support Files/HanekeSwift/HanekeSwift.xcconfig
+
+Pods/Target Support Files/HanekeSwift/Info.plist
