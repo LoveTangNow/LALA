@@ -19,10 +19,7 @@ import SVProgressHUD
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
-    //MARK:Data
-    
-    @IBOutlet weak var ButtonTopRight: UIButton!
-    @IBOutlet weak var ButtonTopLeft: UIBarButtonItem!
+    //MARK: - Data
     
     @IBOutlet weak var TimeTableView: UITableView!
     
@@ -42,8 +39,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
     //从字典标识符1开始存储 ，0 表示不存在数据
-    var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
-    var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
+    
     
     //肌肤默认的图片
     var Imageload:Image = UIImage(named: "Black.png")!
@@ -54,26 +50,43 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     var height_tableview:CGFloat = 0 //tableviewcell 的高度
     var ShiFou_QingQiuDao_ShuJu = true
+    //MARK: - DATA SAVE
     
+    /*
+     存储了一条多信息数据
+        1、信息的发送时间
+        2、发送的设备
+        3、发送者的 ID
+        4、发送者的 NAME
+        5、风格
+        6、详情
+        7、信息 ID
+     按序号排列，（序号，【一个数组《字典中用一个键值对：信息名：信息》】）
+     */
+    var datadetails = Dictionary<Int,[Dictionary<String,String>]>()
     
-    func saveItem(itemToSave: String) {
-        
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContex = appDelegate.managedObjectContext
-        
-        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
-        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
-        
-        item.setValue(itemToSave, forKey: "userid")
-        
-        do {
-            try managedContex.save()
-            listItems.append(item)
-        } catch {
-            print("error")
-        }
-    }
-    //MARK:ButtonClick
+    /*
+     存储一组图片名称
+     按序号排列 【一个数组《字典键值对：这里的图片名称：图片名称》】
+     */
+    var dataimage   = Dictionary<Int,[Dictionary<String,String>]>()
+    
+    /*
+     存储一组图片
+     按序号排列 【一个数组《字典键值对：这里的图片名称：图片 image》】
+     */
+    var image       = Dictionary<Int,[Dictionary<String,Image >]>()
+    
+    /*
+     相同序号表示同一组数据
+     datadetails\dataimage\image 添加数据的时候都是要从头部添加数据 保持数据准确的按照时间来排列顺序
+        【时间顺序：服务器查询的时候 应该先排序 然后再查询 保证返回数据的顺序是按照时间先后来排列的】
+     比同：
+        【下拉刷新的请求：要携带现在存储的最新的一条数据的 ID。】
+        【             我们这是一个类似于微博的项目，要求“所有”的数据都要请求下来。】
+     */
+    
+    //MARK: - ButtonClick
     
     //扫一扫
     @IBAction func Sao_yi_sao(sender: AnyObject) {
@@ -104,7 +117,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      */
     
     
-    //MARK:View
+    //MARK: - View
     
     
 //    override func viewWillAppear(animated: Bool) {
@@ -281,7 +294,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     
     
-    //MARK:Tableview
+    //MARK: - Tableview
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -731,6 +744,24 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     ///////////////tableView_end
     
     //MARK:Others
+    func saveItem(itemToSave: String) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContex = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
+        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
+        
+        item.setValue(itemToSave, forKey: "userid")
+        
+        do {
+            try managedContex.save()
+            listItems.append(item)
+        } catch {
+            print("error")
+        }
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
