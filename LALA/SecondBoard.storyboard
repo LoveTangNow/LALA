@@ -14,14 +14,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="195" id="Bdm-q9-p5L">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SN_WORDS_TableViewCell" rowHeight="195" id="Bdm-q9-p5L" customClass="SN_WORDS_TableViewCell" customModule="LALA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="195"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bdm-q9-p5L" id="Gj3-aX-9p8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="194.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-am-1NA">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-am-1NA" customClass="SN_">
                                             <rect key="frame" x="18" y="18" width="304" height="178.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -36,8 +36,11 @@
                                         <constraint firstItem="WGb-am-1NA" firstAttribute="trailing" secondItem="Gj3-aX-9p8" secondAttribute="trailingMargin" constant="10" id="rKY-cw-mz7"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="UITextView1" destination="WGb-am-1NA" id="wWT-aJ-3Nt"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="uoi-9E-8bz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SN_PIKEIMAGE_TableViewCell" rowHeight="148" id="uoi-9E-8bz" customClass="SN_PIKEIMAGE_TableViewCell" customModule="LALA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="287" width="320" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uoi-9E-8bz" id="CrA-wu-vrm">
@@ -78,8 +81,14 @@
                                         <constraint firstItem="eVg-3t-MW8" firstAttribute="leading" secondItem="CrA-wu-vrm" secondAttribute="leadingMargin" constant="10" id="dB6-Ch-a81"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="UIImageView1" destination="SuP-aD-coK" id="gS1-0g-RYA"/>
+                                    <outlet property="UIImageView2" destination="QEV-ng-Rgh" id="so5-kG-IUT"/>
+                                    <outlet property="UIImageView3" destination="uUe-H2-s6p" id="JsO-jS-u7M"/>
+                                    <outlet property="UILabel_Main" destination="fKP-ZY-Wa0" id="kxm-yb-uqa"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="72" id="P3x-zZ-v9l">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SN_PIKELOCA_TableViewCell" rowHeight="72" id="P3x-zZ-v9l" customClass="SN_PIKELOCA_TableViewCell" customModule="LALA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="435" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P3x-zZ-v9l" id="btI-IW-gPd">
@@ -99,8 +108,11 @@
                                         <constraint firstItem="EVv-vz-AX2" firstAttribute="leading" secondItem="btI-IW-gPd" secondAttribute="leadingMargin" constant="10" id="aJT-rb-GkL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="UILabel_Mian" destination="EVv-vz-AX2" id="FNn-sh-Ajw"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="99P-Ba-4Hi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SN_SHARE_TableViewCell" rowHeight="64" id="99P-Ba-4Hi" customClass="SN_SHARE_TableViewCell" customModule="LALA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="507" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99P-Ba-4Hi" id="nQH-lN-wil">
@@ -112,6 +124,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="UIImageView1" destination="1NM-P6-QNu" id="Sh9-or-QeN"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="gL9-Kg-IlR">
                                 <rect key="frame" x="0.0" y="571" width="320" height="125"/>
@@ -147,6 +162,51 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIO-zx-fnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wJT-6V-5iu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" id="MYJ-py-Sx2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CxD-Ab-QiL">
+                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fQK-Ce-qfu"/>
+                        <barButtonItem style="plain" id="XgS-8W-2tQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zyO-Hx-NPl">
+                                <rect key="frame" x="77" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oqN-ix-r8R"/>
+                        <barButtonItem style="plain" id="GNs-yo-zc1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tNV-Wf-JZk">
+                                <rect key="frame" x="137" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wvp-Rx-MSL"/>
+                        <barButtonItem style="plain" id="zUo-wf-XEA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wkt-U9-SgK">
+                                <rect key="frame" x="198" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iHi-Is-nzq"/>
+                        <barButtonItem style="plain" id="5XJ-xe-faa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Lv-rS-QOx">
+                                <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="5"/>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-503" y="1074"/>
         </scene>

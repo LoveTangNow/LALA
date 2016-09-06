@@ -21,10 +21,6 @@
 		7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */; };
 		7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */; };
 		7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */; };
-		7F515F9D1D7DC57B0018354F /* SN_words_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515F9C1D7DC57B0018354F /* SN_words_TableViewCell.swift */; };
-		7F515F9F1D7DC5A40018354F /* SN_pikephoto_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515F9E1D7DC5A40018354F /* SN_pikephoto_TableViewCell.swift */; };
-		7F515FA11D7DC5D20018354F /* SN_PikrLocation_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515FA01D7DC5D20018354F /* SN_PikrLocation_TableViewCell.swift */; };
-		7F515FA31D7DC5E20018354F /* SN_Share_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515FA21D7DC5E20018354F /* SN_Share_TableViewCell.swift */; };
 		7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* LoadTableViewCells.swift */; };
 		7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */; };
 		7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFourthViewController.swift */; };
@@ -38,6 +34,10 @@
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
+		7FC0894C1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */; };
+		7FC0894E1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894D1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift */; };
+		7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */; };
+		7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */; };
 		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
 		7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */; };
@@ -97,10 +97,6 @@
 		7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUViewController.swift; sourceTree = "<group>"; };
 		7F4896801D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist_Without_Photo_TableViewCell.swift; sourceTree = "<group>"; };
 		7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Send_News_TableViewController.swift; sourceTree = "<group>"; };
-		7F515F9C1D7DC57B0018354F /* SN_words_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_words_TableViewCell.swift; sourceTree = "<group>"; };
-		7F515F9E1D7DC5A40018354F /* SN_pikephoto_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_pikephoto_TableViewCell.swift; sourceTree = "<group>"; };
-		7F515FA01D7DC5D20018354F /* SN_PikrLocation_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_PikrLocation_TableViewCell.swift; sourceTree = "<group>"; };
-		7F515FA21D7DC5E20018354F /* SN_Share_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_Share_TableViewCell.swift; sourceTree = "<group>"; };
 		7F5632261D5FD6780017958A /* LoadTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTableViewCells.swift; sourceTree = "<group>"; };
 		7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist23TableViewCell.swift; sourceTree = "<group>"; };
 		7F7701411D5B629C008D07A2 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +110,10 @@
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
+		7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_WORDS_TableViewCell.swift; sourceTree = "<group>"; };
+		7FC0894D1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_PIKEIMAGE_TableViewCell.swift; sourceTree = "<group>"; };
+		7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_PIKELOCA_TableViewCell.swift; sourceTree = "<group>"; };
+		7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_SHARE_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_User_IF_TableViewCell.swift; sourceTree = "<group>"; };
@@ -225,10 +225,10 @@
 		7F515F991D7DC51C0018354F /* Cells_Send */ = {
 			isa = PBXGroup;
 			children = (
-				7F515F9C1D7DC57B0018354F /* SN_words_TableViewCell.swift */,
-				7F515F9E1D7DC5A40018354F /* SN_pikephoto_TableViewCell.swift */,
-				7F515FA01D7DC5D20018354F /* SN_PikrLocation_TableViewCell.swift */,
-				7F515FA21D7DC5E20018354F /* SN_Share_TableViewCell.swift */,
+				7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */,
+				7FC0894D1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift */,
+				7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */,
+				7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */,
 			);
 			name = Cells_Send;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 				7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */,
 				7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */,
 				7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */,
-				7FE900801D7D2B43007F4F90 /* Cells_Detail */,
 				7F515F991D7DC51C0018354F /* Cells_Send */,
+				7FE900801D7D2B43007F4F90 /* Cells_Detail */,
 				7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */,
 				7F19A0191D5866F80030A16F /* SecondSonViewController.swift */,
 			);
@@ -562,25 +562,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F515FA31D7DC5E20018354F /* SN_Share_TableViewCell.swift in Sources */,
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
 				7FE9006E1D7A70B9007F4F90 /* FCollectionViewController.swift in Sources */,
 				7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */,
 				7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */,
 				7FE900821D7D2B6E007F4F90 /* UserTableViewCell.swift in Sources */,
 				7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */,
-				7F515F9F1D7DC5A40018354F /* SN_pikephoto_TableViewCell.swift in Sources */,
 				7FE9008A1D7D2BF8007F4F90 /* Seven_Eight_Nine_TableViewCell.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
+				7FC0894C1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,
 				7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */,
 				7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */,
-				7F515FA11D7DC5D20018354F /* SN_PikrLocation_TableViewCell.swift in Sources */,
 				7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */,
 				7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */,
-				7F515F9D1D7DC57B0018354F /* SN_words_TableViewCell.swift in Sources */,
+				7FC0894E1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift in Sources */,
 				7FE900861D7D2BA9007F4F90 /* Two_Three_TableViewCell.swift in Sources */,
 				7FE900841D7D2B84007F4F90 /* One_Photo_TableViewCell.swift in Sources */,
 				7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */,
@@ -588,9 +586,11 @@
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
 				7FE9008E1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift in Sources */,
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
+				7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7F4896811D69E90300845E82 /* FFrist_Without_Photo_TableViewCell.swift in Sources */,
+				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */,
