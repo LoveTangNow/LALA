@@ -38,6 +38,8 @@
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
+		7FBED7B71D7FCFBF00F2AD3A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBED7B61D7FCFBF00F2AD3A /* MapKit.framework */; };
+		7FBED7B91D7FCFDE00F2AD3A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBED7B81D7FCFDE00F2AD3A /* HealthKit.framework */; };
 		7FC0894C1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */; };
 		7FC0894E1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894D1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift */; };
 		7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */; };
@@ -115,6 +117,9 @@
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
+		7FBED7B51D7FCFBB00F2AD3A /* LALA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LALA.entitlements; sourceTree = "<group>"; };
+		7FBED7B61D7FCFBF00F2AD3A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7FBED7B81D7FCFDE00F2AD3A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_WORDS_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC0894D1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_PIKEIMAGE_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_PIKELOCA_TableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFC423F1D65416A0085377B /* CoreData.framework in Frameworks */,
+				7FBED7B91D7FCFDE00F2AD3A /* HealthKit.framework in Frameworks */,
+				7FBED7B71D7FCFBF00F2AD3A /* MapKit.framework in Frameworks */,
 				503FCDD6036AD8007E3A79CA /* Pods_LALA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +199,7 @@
 		7F0E24461D4A00290083F7CC /* LALA */ = {
 			isa = PBXGroup;
 			children = (
+				7FBED7B51D7FCFBB00F2AD3A /* LALA.entitlements */,
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
 				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 				7FB8A89E1D4B27D200F2F22D /* Main */,
@@ -350,6 +358,8 @@
 		FDFE9952A379317531B78C99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FBED7B81D7FCFDE00F2AD3A /* HealthKit.framework */,
+				7FBED7B61D7FCFBF00F2AD3A /* MapKit.framework */,
 				7FFC423E1D65416A0085377B /* CoreData.framework */,
 				7F19A13D1D58C5080030A16F /* libsqlite3.tbd */,
 				7F288ADB1D4B649E00842A9C /* Alamofire.framework */,
@@ -430,6 +440,20 @@
 					7F0E24431D4A00290083F7CC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5898723MBJ;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7F0E24591D4A00290083F7CC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -728,6 +752,7 @@
 			baseConfigurationReference = AF56A6972222C5FEEB0D681F /* Pods-LALA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LALA/LALA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;
@@ -744,6 +769,7 @@
 			baseConfigurationReference = 13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LALA/LALA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LALA/Info.plist;
