@@ -46,9 +46,19 @@
 		7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */; };
 		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
+		7FDAAAEC1D7FF9F300BA5D1A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAEB1D7FF9F300BA5D1A /* Second.storyboard */; };
+		7FDAAAF01D7FFAB900BA5D1A /* Thrid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */; };
+		7FDAAAF21D7FFAC600BA5D1A /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */; };
+		7FDAAAF51D800B0400BA5D1A /* Information_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAAF41D800B0400BA5D1A /* Information_TableViewCell.swift */; };
+		7FDAAAF71D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAAF61D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift */; };
+		7FDAAAF91D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAAF81D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift */; };
+		7FDAAAFB1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAAFA1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift */; };
+		7FDAAAFF1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAAFE1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift */; };
+		7FDAAB011D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAB001D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift */; };
+		7FDAAB031D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAAB021D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
-		7FE900781D7D14FD007F4F90 /* SecondBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */; };
+		7FE900781D7D14FD007F4F90 /* Frist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900771D7D14FD007F4F90 /* Frist.storyboard */; };
 		7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */; };
 		7FE900821D7D2B6E007F4F90 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE900811D7D2B6E007F4F90 /* UserTableViewCell.swift */; };
 		7FE900841D7D2B84007F4F90 /* One_Photo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE900831D7D2B84007F4F90 /* One_Photo_TableViewCell.swift */; };
@@ -126,9 +136,19 @@
 		7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_SHARE_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FDAAAEB1D7FF9F300BA5D1A /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thrid.storyboard; sourceTree = "<group>"; };
+		7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
+		7FDAAAF41D800B0400BA5D1A /* Information_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Information_TableViewCell.swift; path = Page1/cells/Information_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAAF61D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnePhoto_H_TableViewCell.swift; path = Page1/cells/OnePhoto_H_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAAF81D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnePhoto_S_TableViewCell.swift; path = Page1/cells/OnePhoto_S_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAAFA1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwoThreePhoto_TableViewCell.swift; path = Page1/cells/TwoThreePhoto_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAAFE1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SevenEightNinePhoto_TableViewCell.swift; path = Page1/cells/SevenEightNinePhoto_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAB001D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourFiveSixPhoto_TableViewCell.swift; path = Page1/cells/FourFiveSixPhoto_TableViewCell.swift; sourceTree = "<group>"; };
+		7FDAAB021D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinglunZanO_TableViewCell.swift; path = Page1/cells/PinglunZanO_TableViewCell.swift; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
-		7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondBoard.storyboard; sourceTree = "<group>"; };
+		7FE900771D7D14FD007F4F90 /* Frist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frist.storyboard; sourceTree = "<group>"; };
 		7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailTableViewController.swift; sourceTree = "<group>"; };
 		7FE900811D7D2B6E007F4F90 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7FE900831D7D2B84007F4F90 /* One_Photo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = One_Photo_TableViewCell.swift; sourceTree = "<group>"; };
@@ -203,7 +223,10 @@
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
 				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 				7FB8A89E1D4B27D200F2F22D /* Main */,
-				7FB8A89F1D4B27E700F2F22D /* 2 */,
+				7FB8A89F1D4B27E700F2F22D /* 1-第一页面的子控制类们【主视图】 */,
+				7FDAAAEA1D7FF9DA00BA5D1A /* 2-第二页面的子控制类们【IM】 */,
+				7FDAAAEE1D7FFA8900BA5D1A /* 3-第三页面的子控制类们【发现】 */,
+				7FDAAAED1D7FFA8500BA5D1A /* 4-第四页面的子控制类们【我的】 */,
 				7FE9007A1D7D15A0007F4F90 /* Others */,
 				7F5632281D6178230017958A /* data */,
 				7F19A12C1D58695B0030A16F /* Assets.xcassets */,
@@ -230,7 +253,7 @@
 			path = LALAUITests;
 			sourceTree = "<group>";
 		};
-		7F515F991D7DC51C0018354F /* Cells_Send */ = {
+		7F515F991D7DC51C0018354F /* 发动态——cell */ = {
 			isa = PBXGroup;
 			children = (
 				7FC0894B1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift */,
@@ -238,7 +261,7 @@
 				7FC0894F1D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift */,
 				7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */,
 			);
-			name = Cells_Send;
+			name = "发动态——cell";
 			sourceTree = "<group>";
 		};
 		7F515FA41D7DC6060018354F /* cells_4 */ = {
@@ -261,7 +284,7 @@
 			name = data;
 			sourceTree = "<group>";
 		};
-		7F7701461D5B87F2008D07A2 /* Setting_shezhi */ = {
+		7F7701461D5B87F2008D07A2 /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
@@ -270,7 +293,7 @@
 				7F7701521D5CB69F008D07A2 /* ImageU.storyboard */,
 				7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */,
 			);
-			name = Setting_shezhi;
+			name = "设置";
 			sourceTree = "<group>";
 		};
 		7F7701491D5B88D1008D07A2 /* cells_1 */ = {
@@ -293,35 +316,74 @@
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
 				7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */,
+				7FDAAAF31D800AA300BA5D1A /* 页面1的 cell */,
 				7F7701491D5B88D1008D07A2 /* cells_1 */,
 				7F515FA41D7DC6060018354F /* cells_4 */,
-				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
-				7FE705AF1D57291C0025A0E5 /* denglu_zhuce */,
+				7F7701461D5B87F2008D07A2 /* 设置 */,
+				7FE705AF1D57291C0025A0E5 /* 登录 和 注册 */,
 			);
 			name = Main;
 			sourceTree = "<group>";
 		};
-		7FB8A89F1D4B27E700F2F22D /* 2 */ = {
+		7FB8A89F1D4B27E700F2F22D /* 1-第一页面的子控制类们【主视图】 */ = {
 			isa = PBXGroup;
 			children = (
-				7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */,
+				7FE900771D7D14FD007F4F90 /* Frist.storyboard */,
 				7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */,
 				7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */,
-				7F515F991D7DC51C0018354F /* Cells_Send */,
-				7FE900801D7D2B43007F4F90 /* Cells_Detail */,
+				7F515F991D7DC51C0018354F /* 发动态——cell */,
+				7FE900801D7D2B43007F4F90 /* 动态详情——cell */,
 				7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */,
 				7F19A0191D5866F80030A16F /* SecondSonViewController.swift */,
 			);
-			name = 2;
+			name = "1-第一页面的子控制类们【主视图】";
 			sourceTree = "<group>";
 		};
-		7FE705AF1D57291C0025A0E5 /* denglu_zhuce */ = {
+		7FDAAAEA1D7FF9DA00BA5D1A /* 2-第二页面的子控制类们【IM】 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDAAAEB1D7FF9F300BA5D1A /* Second.storyboard */,
+			);
+			name = "2-第二页面的子控制类们【IM】";
+			sourceTree = "<group>";
+		};
+		7FDAAAED1D7FFA8500BA5D1A /* 4-第四页面的子控制类们【我的】 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */,
+			);
+			name = "4-第四页面的子控制类们【我的】";
+			sourceTree = "<group>";
+		};
+		7FDAAAEE1D7FFA8900BA5D1A /* 3-第三页面的子控制类们【发现】 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */,
+			);
+			name = "3-第三页面的子控制类们【发现】";
+			sourceTree = "<group>";
+		};
+		7FDAAAF31D800AA300BA5D1A /* 页面1的 cell */ = {
+			isa = PBXGroup;
+			children = (
+				7FDAAAF41D800B0400BA5D1A /* Information_TableViewCell.swift */,
+				7FDAAB021D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift */,
+				7FDAAAF61D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift */,
+				7FDAAAF81D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift */,
+				7FDAAAFA1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift */,
+				7FDAAB001D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift */,
+				7FDAAAFE1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift */,
+			);
+			name = "页面1的 cell";
+			sourceTree = "<group>";
+		};
+		7FE705AF1D57291C0025A0E5 /* 登录 和 注册 */ = {
 			isa = PBXGroup;
 			children = (
 				7F9C494D1D5618790017D282 /* DengLuViewController.swift */,
 				7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */,
 			);
-			name = denglu_zhuce;
+			name = "登录 和 注册";
 			sourceTree = "<group>";
 		};
 		7FE9007A1D7D15A0007F4F90 /* Others */ = {
@@ -332,7 +394,7 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
-		7FE900801D7D2B43007F4F90 /* Cells_Detail */ = {
+		7FE900801D7D2B43007F4F90 /* 动态详情——cell */ = {
 			isa = PBXGroup;
 			children = (
 				7FE900811D7D2B6E007F4F90 /* UserTableViewCell.swift */,
@@ -343,7 +405,7 @@
 				7FE9008B1D7D2C0C007F4F90 /* ADS_TableViewCell.swift */,
 				7FE9008D1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift */,
 			);
-			name = Cells_Detail;
+			name = "动态详情——cell";
 			sourceTree = "<group>";
 		};
 		F1D80D2772AECD6960B037E4 /* Pods */ = {
@@ -494,9 +556,12 @@
 			files = (
 				7F19A1311D58BCFD0030A16F /* Server.plist in Resources */,
 				7FFD66201D5E3BF3002AC1F4 /* ImageD.storyboard in Resources */,
-				7FE900781D7D14FD007F4F90 /* SecondBoard.storyboard in Resources */,
+				7FDAAAEC1D7FF9F300BA5D1A /* Second.storyboard in Resources */,
+				7FE900781D7D14FD007F4F90 /* Frist.storyboard in Resources */,
 				7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */,
 				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
+				7FDAAAF01D7FFAB900BA5D1A /* Thrid.storyboard in Resources */,
+				7FDAAAF21D7FFAC600BA5D1A /* Fourth.storyboard in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
 				7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */,
 				7FB640D51D7FC6D800737517 /* Others.storyboard in Resources */,
@@ -574,17 +639,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDAAAF71D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift in Sources */,
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
 				7FE900821D7D2B6E007F4F90 /* UserTableViewCell.swift in Sources */,
 				7FE9008A1D7D2BF8007F4F90 /* Seven_Eight_Nine_TableViewCell.swift in Sources */,
 				7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */,
+				7FDAAAFF1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift in Sources */,
 				7FB640DF1D7FCBB800737517 /* FFrist789TableViewCell.swift in Sources */,
+				7FDAAAF51D800B0400BA5D1A /* Information_TableViewCell.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
+				7FDAAB031D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
+				7FDAAAF91D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift in Sources */,
 				7FC0894C1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift in Sources */,
 				7FB640CF1D7FC13800737517 /* USER_TableViewCell.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,
+				7FDAAAFB1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift in Sources */,
 				7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */,
 				7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */,
 				7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */,
@@ -606,6 +677,7 @@
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
+				7FDAAB011D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift in Sources */,
 				7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */,
 				7FE9008C1D7D2C0C007F4F90 /* ADS_TableViewCell.swift in Sources */,
 				7FB640DD1D7FCBB800737517 /* FFrist23TableViewCell.swift in Sources */,

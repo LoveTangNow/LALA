@@ -96,7 +96,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //发动态
     @IBAction func Send_Dongtai(sender: AnyObject) {
-        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("Send_News_TableViewController")
+        let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("Send_News_TableViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -360,7 +360,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         //设置同步
         NSUserDefaults.standardUserDefaults().synchronize()
         //跳转
-        let vc = UIStoryboard(name: "SecondBoard", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
+        let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
         self.navigationController?.pushViewController(vc, animated: true)
         //=========================//
         print("点击了"+String(indexPath.row))
