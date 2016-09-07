@@ -376,7 +376,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return 1
+        if datadetails.count == 0 {
+            return 1
+        }
+        return datadetails.count
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -387,12 +390,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        if datadetails.isEmpty {
-            return 3
-        }//section 是从0开始的
-        else{
-            return datadetails.count
-        }
+        return 3
     }
     
     //Tableview初始化
@@ -416,301 +414,248 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         let screenBounds = UIScreen.mainScreen().bounds.width
         let server:String = "http://localhost:80/LALA/photo/TEST_PHOTOS/"
         // 当datadetails 等于 空 没有数据的时候 用某某缩略图填充一下  感觉就像 Facebook了
-        if  datadetails.isEmpty || dataimage.isEmpty {
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-            cell.UIImageView_BackGround.image = ImageloadBackGroud
+        if  datadetails.isEmpty  {
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
+            cell.UIImageView_Background.image = ImageloadBackGroud
             
-            cell.UIImageView_Top_Right.hidden = true
-            cell.UIImageView_Top_Right.hidden = true
-            cell.UIImageView_Mian.hidden = true
-            
-            cell.UILabel_sender.hidden = true
+            cell.UIImageView_UserIcon.hidden = true
+            cell.UIImageView_Setting.hidden = true
+            cell.UILabel_SenderName.hidden = true
             cell.UILabel_Information.hidden = true
-            cell.UILabel_detail.hidden = true
-            cell.UILabel_Pinglun.hidden = true
-            cell.UILabel_Zan.hidden = true
-            cell.UILabel_Cai.hidden = true
+            cell.UILabel_MainDetail.hidden = true
             
             height_tableview = ( screenBounds - 10 ) * 0.618  + 5
             
             return cell
-        }
-        
-        if datadetails[indexPath.row]![4]["style"] != nil {
-            switch datadetails[indexPath.row]![4]["style"]! {
-            case "Suit_1_big_photos"://
-                //print("Suit_1_big_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+        } else {
+            //现在我们有数据 那就展示出来吧
+            switch indexPath.row {
+            case 0://第一部分：文字组合
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
                 
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
+                cell.UIImageView_UserIcon.hidden = false
+                cell.UIImageView_Setting.hidden = false
+                
+                cell.UILabel_SenderName.hidden = false
+                cell.UILabel_Information.hidden = false
+                cell.UILabel_MainDetail.hidden = false
+                
+                cell.UIImageView_Background.hidden = true
+                
+                cell.UIImageView_UserIcon.image = Imageload
+                cell.UIImageView_Setting.image = Imageload
+                
+                cell.UILabel_SenderName.text = datadetails[indexPath.section]![3]["sendername"]
+                cell.UILabel_Information.text = datadetails[indexPath.section]![0]["newstime"]! + datadetails[indexPath.section]![1]["device"]!
+                cell.UILabel_MainDetail.text = datadetails[indexPath.section]![5]["detail"]
+                
+                height_tableview = 100
+                return cell
+            case 1://第二部分：照片
+                switch dataimage[indexPath.section]!.count {
+                case 1:
+                    //判断得到的图片的高度 宽度比值
+                    //确定样式
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("OnePhoto_H_TableViewCell", forIndexPath: indexPath) as! OnePhoto_H_TableViewCell
                     
-                    cell.UIImageView_Top_Right.hidden = false
-                    cell.UIImageView_Top_Right.hidden = false
-                    cell.UIImageView_Mian.hidden = false
-                    
-                    cell.UILabel_sender.hidden = false
-                    cell.UILabel_Information.hidden = false
-                    cell.UILabel_detail.hidden = false
-                    cell.UILabel_Pinglun.hidden = false
-                    cell.UILabel_Zan.hidden = false
-                    cell.UILabel_Cai.hidden = false
-                    
-                    cell.UILabel_sender.text = detail![3]["sendername"]
-                    cell.UILabel_detail.text = detail![5]["detail"]
-                    cell.UILabel_Information.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell.UIImageView_Top_Left.image = Imageload
-                    cell.UIImageView_Top_Right.image = Imageloadw
-
-                    Alamofire.request(.GET, server + images![0]["Photo1"]!)
+                    Alamofire.request(.GET, server + dataimage[indexPath.section]![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
-                                cell.UIImageView_Mian.image = image
+                                cell.UIButton_Main.setBackgroundImage(image, forState: .Normal)
                             }
                     }
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 60
+                    height_tableview = 100
+                    return cell
 
-                }
-                return cell
-                
-            case "Suit_2_3_photos"://
-                //print("Suit_2_3_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty  {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.lable_sender.text = detail![3]["sendername"]
-                    cell.UILabel_Detail.text = detail![5]["detail"]
-                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 2 {
+                case 2,3:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("TwoThreePhoto_TableViewCell", forIndexPath: indexPath) as! TwoThreePhoto_TableViewCell
+                    switch dataimage[indexPath.section]!.count {
+                    case 2:
                         for i in 0..<2 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
-                                        
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 3 {
+                    default:
                         for i in 0..<3 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
-                                        
                                     }
                             }
                         }
+
                     }
                     
-                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell.image_left_top.image = Imageload
-                    cell.image_right_top.image = Imageloadw
-                    
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 + 60
-                }
-                return cell
-                
-                
-            case "Suit_4_5_6_photos"://
-                //print("Suit_4_5_6_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.Lable_sender.text = detail![3]["sendername"]
-                    cell.Lable_others.text = detail![5]["detail"]
-                    cell.Label_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 4 {
+                    height_tableview = 100
+                    return cell
+
+                case 4,5,6:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("FourFiveSixPhoto_TableViewCell", forIndexPath: indexPath) as! FourFiveSixPhoto_TableViewCell
+                    switch dataimage[indexPath.section]!.count {
+                    case 4:
                         for i in 0..<4 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 5 {
+
+                    case 5:
                         for i in 0..<5 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
-                                        case 4:cell.Image5.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 6 {
+
+                    default:
                         for i in 0..<6 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
-                                        case 4:cell.Image5.image = image
-                                        case 5:cell.Image6.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
+
                     }
                     
-                    cell.UIImageView_Background.image = ImageloadBackGroudn
-                    cell.Image_top_left.image = Imageload
-                    cell.Image_top_right.image = Imageloadw
-                    
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 * 2 + 60
-                }
-                return cell
-                
-            case "Suit_7_8_9_photos"://
-                //print("Suit_7_8_9_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.UILabel_Sender.text = detail![3]["sendername"]
-                    cell.UILabel_Detail.text = detail![5]["detail"]
-                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 7 {
+                    height_tableview = 100
+                    return cell
+
+                case 7,8,9:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("SevenEightNinePhoto_TableViewCell", forIndexPath: indexPath) as! SevenEightNinePhoto_TableViewCell
+                    switch dataimage[indexPath.section]!.count {
+                    case 7:
                         for i in 0..<7 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 8 {
+                        
+                    case 8:
                         for i in 0..<8 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
-                                        case 7:cell.UIImageView_Main8.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 9 {
+                        
+                    default:
                         for i in 0..<9 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
-                                        case 7:cell.UIImageView_Main8.image = image
-                                        case 8:cell.UIImageView_Main9.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
+                                        case 8:cell.UIButton_9.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
+                        
                     }
+
                     
-                    cell.UIImageView_Backgroud.image = ImageloadBackGroudn
-                    cell.UIImageView_Top_Left.image = Imageload
-                    cell.UIImageView_Top_Right.image = Imageloadw
+                    height_tableview = 100
+                    return cell
+
+                default:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) + 60
+                    height_tableview = 100
+                    return cell
+
                 }
+                            case 2://第三部分：评论等
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("PinglunZanO_TableViewCell", forIndexPath: indexPath) as! PinglunZanO_TableViewCell
+                cell.UIButton1.setTitle("评论", forState:.Normal)
+                
+                cell.UIButton2.setTitle("赞", forState:.Normal)
+                
+                cell.UIButton3.setTitle("踩", forState:.Normal)
+                
+                height_tableview = 55
                 return cell
-            case "Suit_more_than_10_photos":
-                break
             default:
-                break
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
+                
+                height_tableview = 100
+                return cell
             }
-            
         }
-
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-    
-        return cell
-        
-
         
     }
     

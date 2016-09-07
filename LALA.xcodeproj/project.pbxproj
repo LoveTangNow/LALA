@@ -367,12 +367,12 @@
 			isa = PBXGroup;
 			children = (
 				7FDAAAF41D800B0400BA5D1A /* Information_TableViewCell.swift */,
-				7FDAAB021D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift */,
 				7FDAAAF61D800B2500BA5D1A /* OnePhoto_H_TableViewCell.swift */,
 				7FDAAAF81D800B4000BA5D1A /* OnePhoto_S_TableViewCell.swift */,
 				7FDAAAFA1D800B6E00BA5D1A /* TwoThreePhoto_TableViewCell.swift */,
 				7FDAAB001D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift */,
 				7FDAAAFE1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift */,
+				7FDAAB021D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift */,
 			);
 			name = "页面1的 cell";
 			sourceTree = "<group>";
