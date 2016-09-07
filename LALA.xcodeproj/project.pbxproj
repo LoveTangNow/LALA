@@ -23,7 +23,6 @@
 		7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */; };
 		7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* LoadTableViewCells.swift */; };
 		7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */; };
-		7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701411D5B629C008D07A2 /* FFourthViewController.swift */; };
 		7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImageDViewController.swift */; };
 		7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */; };
 		7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */; };
@@ -31,6 +30,16 @@
 		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
+		7FB640C71D7FB55900737517 /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640C21D7FB55900737517 /* DGElasticPullToRefreshConstants.swift */; };
+		7FB640C81D7FB55900737517 /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640C31D7FB55900737517 /* DGElasticPullToRefreshExtensions.swift */; };
+		7FB640C91D7FB55900737517 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640C41D7FB55900737517 /* DGElasticPullToRefreshLoadingView.swift */; };
+		7FB640CA1D7FB55900737517 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640C51D7FB55900737517 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		7FB640CB1D7FB55900737517 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640C61D7FB55900737517 /* DGElasticPullToRefreshView.swift */; };
+		7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */; };
+		7FB640CF1D7FC13800737517 /* USER_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640CE1D7FC13800737517 /* USER_TableViewCell.swift */; };
+		7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */; };
+		7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D21D7FC17200737517 /* USER_OTHERS_TableViewCell.swift */; };
+		7FB640D51D7FC6D800737517 /* Others.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB640D41D7FC6D800737517 /* Others.storyboard */; };
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
@@ -40,11 +49,8 @@
 		7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */; };
 		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
-		7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */; };
-		7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */; };
 		7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE705B01D5729460025A0E5 /* FFristViewController.swift */; };
 		7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */; };
-		7FE9006E1D7A70B9007F4F90 /* FCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */; };
 		7FE900781D7D14FD007F4F90 /* SecondBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */; };
 		7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */; };
 		7FE900821D7D2B6E007F4F90 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE900811D7D2B6E007F4F90 /* UserTableViewCell.swift */; };
@@ -99,7 +105,6 @@
 		7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Send_News_TableViewController.swift; sourceTree = "<group>"; };
 		7F5632261D5FD6780017958A /* LoadTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTableViewCells.swift; sourceTree = "<group>"; };
 		7F77013F1D5B476C008D07A2 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist23TableViewCell.swift; sourceTree = "<group>"; };
-		7F7701411D5B629C008D07A2 /* FFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFourthViewController.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImageDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDViewController.swift; sourceTree = "<group>"; };
 		7F77014C1D5BA67C008D07A2 /* FFrist789TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist789TableViewCell.swift; sourceTree = "<group>"; };
 		7F77014E1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFrist456TableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +112,16 @@
 		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
+		7FB640C21D7FB55900737517 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshConstants.swift; path = ../../../demo/DGElasticPullToRefresh/DGElasticPullToRefresh/DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		7FB640C31D7FB55900737517 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshExtensions.swift; path = ../../../demo/DGElasticPullToRefresh/DGElasticPullToRefresh/DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		7FB640C41D7FB55900737517 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingView.swift; path = ../../../demo/DGElasticPullToRefresh/DGElasticPullToRefresh/DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		7FB640C51D7FB55900737517 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingViewCircle.swift; path = ../../../demo/DGElasticPullToRefresh/DGElasticPullToRefresh/DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		7FB640C61D7FB55900737517 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshView.swift; path = ../../../demo/DGElasticPullToRefresh/DGElasticPullToRefresh/DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForthTableViewController.swift; sourceTree = "<group>"; };
+		7FB640CE1D7FC13800737517 /* USER_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USER_TableViewCell.swift; path = CELLS/USER_TableViewCell.swift; sourceTree = "<group>"; };
+		7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PCC_TableViewCell.swift; path = CELLS/PCC_TableViewCell.swift; sourceTree = "<group>"; };
+		7FB640D21D7FC17200737517 /* USER_OTHERS_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USER_OTHERS_TableViewCell.swift; path = CELLS/USER_OTHERS_TableViewCell.swift; sourceTree = "<group>"; };
+		7FB640D41D7FC6D800737517 /* Others.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Others.storyboard; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
@@ -116,11 +131,8 @@
 		7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_SHARE_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_User_IF_TableViewCell.swift; sourceTree = "<group>"; };
-		7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForth_Others_TableViewCell.swift; sourceTree = "<group>"; };
 		7FE705B01D5729460025A0E5 /* FFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFristViewController.swift; sourceTree = "<group>"; };
 		7FE705B21D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shi_Fou_Deng_Lu.plist; path = LALA/Shi_Fou_Deng_Lu.plist; sourceTree = "<group>"; };
-		7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCollectionViewController.swift; sourceTree = "<group>"; };
 		7FE900771D7D14FD007F4F90 /* SecondBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondBoard.storyboard; sourceTree = "<group>"; };
 		7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailTableViewController.swift; sourceTree = "<group>"; };
 		7FE900811D7D2B6E007F4F90 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -194,9 +206,7 @@
 				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 				7FB8A89E1D4B27D200F2F22D /* Main */,
 				7FB8A89F1D4B27E700F2F22D /* 2 */,
-				7FB8A8A01D4B27F800F2F22D /* 3 */,
-				7FE900791D7D159D007F4F90 /* 4 */,
-				7FE9007A1D7D15A0007F4F90 /* 5 */,
+				7FE9007A1D7D15A0007F4F90 /* Others */,
 				7F5632281D6178230017958A /* data */,
 				7F19A12C1D58695B0030A16F /* Assets.xcassets */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
@@ -236,8 +246,9 @@
 		7F515FA41D7DC6060018354F /* cells_4 */ = {
 			isa = PBXGroup;
 			children = (
-				7FDCDFBB1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift */,
-				7FDCDFB91D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift */,
+				7FB640CE1D7FC13800737517 /* USER_TableViewCell.swift */,
+				7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */,
+				7FB640D21D7FC17200737517 /* USER_OTHERS_TableViewCell.swift */,
 			);
 			name = cells_4;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 		7F5632281D6178230017958A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				7FC089531D7F1487000AA6A7 /* PullToRefresh */,
 				7F19A1361D58C1020030A16F /* Data.xcdatamodeld */,
 				7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */,
 				7FC8D7D21D65FF6400EBC8AD /* User.swift */,
@@ -283,8 +295,7 @@
 				7FE705B01D5729460025A0E5 /* FFristViewController.swift */,
 				7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */,
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
-				7F7701411D5B629C008D07A2 /* FFourthViewController.swift */,
-				7FE9006D1D7A70B9007F4F90 /* FCollectionViewController.swift */,
+				7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */,
 				7F7701491D5B88D1008D07A2 /* cells_1 */,
 				7F515FA41D7DC6060018354F /* cells_4 */,
 				7F7701461D5B87F2008D07A2 /* Setting_shezhi */,
@@ -307,11 +318,16 @@
 			name = 2;
 			sourceTree = "<group>";
 		};
-		7FB8A8A01D4B27F800F2F22D /* 3 */ = {
+		7FC089531D7F1487000AA6A7 /* PullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				7FB640C21D7FB55900737517 /* DGElasticPullToRefreshConstants.swift */,
+				7FB640C31D7FB55900737517 /* DGElasticPullToRefreshExtensions.swift */,
+				7FB640C41D7FB55900737517 /* DGElasticPullToRefreshLoadingView.swift */,
+				7FB640C51D7FB55900737517 /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				7FB640C61D7FB55900737517 /* DGElasticPullToRefreshView.swift */,
 			);
-			name = 3;
+			name = PullToRefresh;
 			sourceTree = "<group>";
 		};
 		7FE705AF1D57291C0025A0E5 /* denglu_zhuce */ = {
@@ -323,18 +339,12 @@
 			name = denglu_zhuce;
 			sourceTree = "<group>";
 		};
-		7FE900791D7D159D007F4F90 /* 4 */ = {
+		7FE9007A1D7D15A0007F4F90 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				7FB640D41D7FC6D800737517 /* Others.storyboard */,
 			);
-			name = 4;
-			sourceTree = "<group>";
-		};
-		7FE9007A1D7D15A0007F4F90 /* 5 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = 5;
+			name = Others;
 			sourceTree = "<group>";
 		};
 		7FE900801D7D2B43007F4F90 /* Cells_Detail */ = {
@@ -488,6 +498,7 @@
 				7FE705B31D5748430025A0E5 /* Shi_Fou_Deng_Lu.plist in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
 				7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */,
+				7FB640D51D7FC6D800737517 /* Others.storyboard in Resources */,
 				7F19A12D1D58695B0030A16F /* Assets.xcassets in Resources */,
 				7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */,
 			);
@@ -563,24 +574,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */,
-				7FE9006E1D7A70B9007F4F90 /* FCollectionViewController.swift in Sources */,
-				7FDCDFBC1D71A64D0045EF78 /* FForth_Others_TableViewCell.swift in Sources */,
-				7FDCDFBA1D71A24A0045EF78 /* FForth_User_IF_TableViewCell.swift in Sources */,
+				7FB640CB1D7FB55900737517 /* DGElasticPullToRefreshView.swift in Sources */,
+				7FB640C81D7FB55900737517 /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				7FE900821D7D2B6E007F4F90 /* UserTableViewCell.swift in Sources */,
-				7F7701421D5B629C008D07A2 /* FFourthViewController.swift in Sources */,
 				7FE9008A1D7D2BF8007F4F90 /* Seven_Eight_Nine_TableViewCell.swift in Sources */,
+				7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */,
+				7FB640C91D7FB55900737517 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
 				7FC0894C1D7E50DF000AA6A7 /* SN_WORDS_TableViewCell.swift in Sources */,
+				7FB640CF1D7FC13800737517 /* USER_TableViewCell.swift in Sources */,
 				7F19A01A1D5866F80030A16F /* SecondSonViewController.swift in Sources */,
 				7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */,
 				7F77014F1D5BA6A8008D07A2 /* FFrist456TableViewCell.swift in Sources */,
+				7FB640C71D7FB55900737517 /* DGElasticPullToRefreshConstants.swift in Sources */,
+				7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */,
 				7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */,
 				7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */,
 				7FC0894E1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift in Sources */,
 				7FE900861D7D2BA9007F4F90 /* Two_Three_TableViewCell.swift in Sources */,
 				7FE900841D7D2B84007F4F90 /* One_Photo_TableViewCell.swift in Sources */,
+				7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */,
 				7F77014D1D5BA67C008D07A2 /* FFrist789TableViewCell.swift in Sources */,
 				7F7701511D5BA6DF008D07A2 /* FFrist_1_big_TableViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
@@ -593,6 +608,7 @@
 				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
+				7FB640CA1D7FB55900737517 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				7F7701401D5B476C008D07A2 /* FFrist23TableViewCell.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
