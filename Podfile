@@ -14,7 +14,6 @@ target ‘LALA’ do
     pod 'TOWebViewController'
     pod 'SwiftRecord'
     pod 'HanekeSwift'
-    pod 'DGElasticPullToRefresh'
     
     pod 'LTMorphingLabel'
     pod 'RAMAnimatedTabBarController'
