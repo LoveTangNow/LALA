@@ -89,6 +89,7 @@ class LoadTableViewCells {
             case "iPhone8,1":                return "iPhone 6s"
             case "iPhone8,2":                return "iPhone 6s Plus"
             case "iPhone8,3":                return "iPhone SE"
+            case "iPhone8,4":                return "iPhone SE"
             default:
                 return deviceString
             }
