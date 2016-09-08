@@ -16,15 +16,6 @@ class SN_WORDS_TableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if text.containsString("\n") {
-            self.UITextView_Main.endEditing(true)
-            return false
-        }
-        return true
-    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
