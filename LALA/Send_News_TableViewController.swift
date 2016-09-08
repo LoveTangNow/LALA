@@ -27,7 +27,6 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
     var Words_S:String = ""
     
     // MARK: - FUNCS
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,17 +48,32 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
         
         //let imageData = UIImageJPEGRepresentation(UIImageView_For_Upload.image!, 1) // 将图片转换成jpeg格式的NSData，压缩到1
         //let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) // 将图片转换为base64字符串
+        var parameters = (senderid :"",words:"",device:"",photonumber:1,photo:[""])
         
-        let parameters = [
-            "senderid": "1",
-            "words": Words_S,
-            "device": LoadTableViewCells().getDeviceVersion(),
-            "photonumber": imagelist.count,
-            "photos":[
-                "photo1": 1
-            ]
+        parameters.senderid = "1"
+        parameters.words = Words_S
+        parameters.photonumber = imagelist.count
+        parameters.device = LoadTableViewCells().getDeviceVersion()
+        
+        if parameters.photonumber > 0 {
+            for i in 0..<parameters.photonumber {
+                let imageData = UIImagePNGRepresentation(imagelist[i]) // 将图片转换成jpeg格式的NSData，压缩到1
+                let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) // 将图片转换为base64字符串
+                parameters.photo[i] = imageStr!
+            }
+        }
+
+        let parameterss = [
+            "senderid":parameters.senderid,
+            "words":parameters.words,
+            "device":parameters.device,
+            "photonumber":parameters.photonumber,
+            "photo":parameters.photo[0]
         ]
-        Alamofire.request(.POST, "http://localhost:80/LALA/SEND_NEWS_WORD.php", parameters: parameters as? [String : AnyObject])
+
+        Alamofire.request(.POST, "http://localhost:80/LALA/SEND_NEWS_WORD.php", parameters: parameterss as? [String : AnyObject])
+//        self.dismissViewControllerAnimated(true, completion:nil)
+        print(parameterss)
     }
     
 
@@ -67,8 +81,6 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
@@ -120,8 +132,16 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
         
         self.presentViewController(self.imagePicker, animated: true, completion: nil)
     }
+    
+    @IBOutlet var UITableView_Main: UITableView!
 
+    @IBAction func XiaLa(sender: AnyObject) {
+        print("XL")
+    }
 
+    @IBAction func ChangAn(sender: AnyObject) {
+        print("CA")
+    }
     // MARK: - Table view data source
     
     //TableView中有几个Sections
