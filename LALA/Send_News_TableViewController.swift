@@ -21,9 +21,13 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
     var Imageload:Image = UIImage(named: "Black.png")!
     var imagePicker     : UIImagePickerController!
     var imagelist = [UIImage]()
-    
+    /*
+     
+     */
+    var Words_S:String = ""
     
     // MARK: - FUNCS
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +52,14 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
         
         let parameters = [
             "senderid": "1",
-            "words": "你他妈的是傻逼",
-            "device":"se",
-            "photonumber":3,
+            "words": Words_S,
+            "device": LoadTableViewCells().getDeviceVersion(),
+            "photonumber": imagelist.count,
             "photos":[
-                "photo1": 1,
-                "photo2": 2,
-                "photo3": 3
+                "photo1": 1
             ]
         ]
-        Alamofire.request(.POST, "http://localhost:80/LALA/SEND_NEWS_WORD.php", parameters: parameters)
+        Alamofire.request(.POST, "http://localhost:80/LALA/SEND_NEWS_WORD.php", parameters: parameters as? [String : AnyObject])
     }
     
 
@@ -152,9 +154,9 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
                 //文字框
                 let cell = tableView.dequeueReusableCellWithIdentifier("SN_WORDS_TableViewCell", forIndexPath: indexPath) as! SN_WORDS_TableViewCell
                 // Configure the cell...
-                
+                Words_S = cell.UITextView_Main.text
                 TableViewCell_Height = 200
-                
+                print(Words_S)
                 return cell
             }
             else{
@@ -211,6 +213,8 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //self.resignFirstResponder()
+        self.tableView.reloadData()
         if indexPath.section == 0 && indexPath.row == 1 {
             
             let actionSheetController: UIAlertController = UIAlertController(title: "请选择", message:nil, preferredStyle: .ActionSheet)
@@ -239,7 +243,6 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
             
             self.presentViewController(actionSheetController, animated: true, completion: nil)
         }
-        print("aaaaaa")
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
