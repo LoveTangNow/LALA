@@ -27,14 +27,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var shifoudenglu :NSString = ""
     
     var listItems  = [NSManagedObject]()
-    /*
-     这里应该是这么几种不同的载入方式的数据
-     适用于 9，8，7等长宽 图片的载入方式
-     适用于 6，5，4等长宽 图片的载入方式.
-     适用于 3，2等长宽 图片的载入方式.
-     适用于 黄金比例 竖向 2图片的载入方式
-     适用于 黄金比例 横向 1图片的载入方式.
-     */
 
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
@@ -50,6 +42,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     var height_tableview:CGFloat = 0 //tableviewcell 的高度
     var ShiFou_QingQiuDao_ShuJu = true
+    
+    var SheBei_Width = UIScreen.mainScreen().bounds.width
+    var server:String = ""
+    var serverimage:String = ""
+    
+    
     //MARK: - DATA SAVE
     
     /*
@@ -138,6 +136,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         
+        //MARK:
         let imgbackV = UIImageView(image: ImageloadBackGroudn)
         self.TimeTableView.backgroundView = imgbackV
         
@@ -146,21 +145,20 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             saveItem(String(a))
         }
         
-        super.viewDidLoad()
+
         
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
         
-        //读取数据，用户是否登录
-        let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
+        //读取plist数据，用户是否登录
+        let diaryList:String = NSBundle.mainBundle().pathForResource("/Server", ofType:"plist")!
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
-        let da:NSString = data.objectForKey("islog") as! NSString
-        print(da)
-        shifoudenglu = da
+        server = data.objectForKey("Server") as! String
+        serverimage = server + "photo/TEST_PHOTOS/"
+        print(serverimage)
+        //MARK:ALAMOFIRE START
         
-        //-------------------------------Reall----Start---------------------------------//
-        
-        Alamofire.request(.GET, "http://localhost:80/LALA/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
+        Alamofire.request(.GET, server + "/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
             .validate()
             .responseJSON { response in
                 switch response.result {
@@ -258,12 +256,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 }
         }
         
-        //-------------------------------Reall----End-----------------------------------//
-        
-        /*
-            Alamofire在异步获取数据之后，像数据数组插入数据
-            数据插入之后 重新 load Data
-        */
+
+        //MARK: BASE64 INCODE
         let str = "iOS Developer Tips encoded in Base64"
         print("Original: \(str)")
         
@@ -289,6 +283,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("Decoded:  \(base64Decoded)")
         
         //解密也可以了
+        super.viewDidLoad()
     }
     //////////////////tableView_start
 
@@ -309,39 +304,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         //5 ["detail":newdetail],
         //6 ["newsid":newsid]]
         
-        if datadetails.isEmpty {
-            let newstime  :String = "NO NEWSTIME"
-            let device    :String = "NO DEVICE"
-            let sendername:String = "NO SENDER"
-            let detail    :String = "NO DETAIL"
-            let newsid    :String = "NO ID"
-            let photonumber:Int   = 1
-            
-            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
-            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
-            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
-            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
-            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
-            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
-        }
-        else
-        {   let newstime  :String = datadetails[indexPath.row]![0]["newstime"]!
-            let device    :String = datadetails[indexPath.row]![1]["device"]!
-            let sendername:String = datadetails[indexPath.row]![3]["sendername"]!
-            let detail    :String = datadetails[indexPath.row]![5]["detail"]!
-            let newsid    :String = datadetails[indexPath.row]![6]["newsid"]!
-            let photonumber:Int   = (dataimage[indexPath.row]?.count)!
-            
-            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
-            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
-            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
-            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
-            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
-            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
-
-        }
-        
-        
         //let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024,diskCapacity: 30 * 1024 * 1024,diskPath: "adow.adimageloader.urlcache")
 
         //--------跳转加传值--------//
@@ -355,15 +317,28 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
          根据用户 id 去查询 评论   ????
          */
         //设置存储信息
-        
-        
-        //设置同步
-        NSUserDefaults.standardUserDefaults().synchronize()
-        //跳转
-        let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+        if !datadetails.isEmpty && indexPath.row == 0 {
+            let newstime  :String = datadetails[indexPath.section]![0]["newstime"]!
+            let device    :String = datadetails[indexPath.section]![1]["device"]!
+            let sendername:String = datadetails[indexPath.section]![3]["sendername"]!
+            let detail    :String = datadetails[indexPath.section]![5]["detail"]!
+            let newsid    :String = datadetails[indexPath.section]![6]["newsid"]!
+            let photonumber:Int   = (dataimage[indexPath.section]?.count)!
+            
+            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
+            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
+            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
+            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
+            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
+            
+            //设置同步
+            NSUserDefaults.standardUserDefaults().synchronize()
+            //跳转
+            let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         //=========================//
-        print("点击了"+String(indexPath.row))
     }
     
     //Tableview cell高度
@@ -395,24 +370,19 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //print("Tableview初始化")
-        //print(indexPath.row + 1)
-        //print("indexPath")
-        //print(indexPath.section)
         
         /*
          indexPath.row 是从 “0” 开始的
-            这里应该有这么几种不同的载入方式
-            适用于 9，8，7等长宽 图片的载入方式 .
-            适用于 6，5，4等长宽 图片的载入方式 .
-            适用于 3，2等长宽 图片的载入方式    .
-            适用于 黄金比例 横向 1图片的载入方式.
-            适用于无图片的载入方式。
-            
+         /*
+         这里应该是这么几种不同的载入方式的数据
+         适用于 9，8，7等长宽 图片的载入方式
+         适用于 6，5，4等长宽 图片的载入方式.
+         适用于 3，2等长宽 图片的载入方式.
+         适用于 黄金比例 竖向 2图片的载入方式
+         适用于 黄金比例 横向 1图片的载入方式.
+         */
             黄金比例：0.618
         */
-        let screenBounds = UIScreen.mainScreen().bounds.width
-        let server:String = "http://localhost:80/LALA/photo/TEST_PHOTOS/"
         // 当datadetails 等于 空 没有数据的时候 用某某缩略图填充一下  感觉就像 Facebook了
         if  datadetails.isEmpty  {
             let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
@@ -424,7 +394,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.UILabel_Information.hidden = true
             cell.UILabel_MainDetail.hidden = true
             
-            height_tableview = ( screenBounds - 10 ) * 0.618  + 5
+            height_tableview = ( SheBei_Width - 10 ) * 0.618  + 5
             
             return cell
         } else {
@@ -457,23 +427,28 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     //判断得到的图片的高度 宽度比值
                     //确定样式
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("OnePhoto_H_TableViewCell", forIndexPath: indexPath) as! OnePhoto_H_TableViewCell
+                    cell.UIButton_Main.setTitle("", forState: .Normal)
                     
-                    Alamofire.request(.GET, server + dataimage[indexPath.section]![0]["Photo1"]!)
+                    Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
                                 cell.UIButton_Main.setBackgroundImage(image, forState: .Normal)
                             }
                     }
                     
-                    height_tableview = 100
+                    height_tableview = SheBei_Width * 0.618
                     return cell
 
                 case 2,3:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("TwoThreePhoto_TableViewCell", forIndexPath: indexPath) as! TwoThreePhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+
                     switch dataimage[indexPath.section]!.count {
                     case 2:
                         for i in 0..<2 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -486,7 +461,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         }
                     default:
                         for i in 0..<3 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -501,15 +476,21 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                     }
                     
-                    height_tableview = 100
+                    height_tableview = SheBei_Width / 3
                     return cell
 
                 case 4,5,6:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("FourFiveSixPhoto_TableViewCell", forIndexPath: indexPath) as! FourFiveSixPhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+                    cell.UIButton_4.setTitle("", forState: .Normal)
+                    cell.UIButton_5.setTitle("", forState: .Normal)
+                    cell.UIButton_6.setTitle("", forState: .Normal)
                     switch dataimage[indexPath.section]!.count {
                     case 4:
                         for i in 0..<4 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -525,7 +506,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                     case 5:
                         for i in 0..<5 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -542,7 +523,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                     default:
                         for i in 0..<6 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -560,15 +541,25 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                     }
                     
-                    height_tableview = 100
+                    height_tableview = SheBei_Width / 3 * 2
                     return cell
 
                 case 7,8,9:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("SevenEightNinePhoto_TableViewCell", forIndexPath: indexPath) as! SevenEightNinePhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+                    cell.UIButton_4.setTitle("", forState: .Normal)
+                    cell.UIButton_5.setTitle("", forState: .Normal)
+                    cell.UIButton_6.setTitle("", forState: .Normal)
+                    cell.UIButton_7.setTitle("", forState: .Normal)
+                    cell.UIButton_8.setTitle("", forState: .Normal)
+                    cell.UIButton_9.setTitle("", forState: .Normal)
+                    
                     switch dataimage[indexPath.section]!.count {
                     case 7:
                         for i in 0..<7 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -587,7 +578,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         
                     case 8:
                         for i in 0..<8 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
@@ -607,19 +598,28 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                         
                     default:
                         for i in 0..<9 {
-                            Alamofire.request(.GET, server + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
                                         case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_1.setTitle("", forState:.Normal)
                                         case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_2.setTitle("", forState:.Normal)
                                         case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_3.setTitle("", forState:.Normal)
                                         case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_4.setTitle("", forState:.Normal)
                                         case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_5.setTitle("", forState:.Normal)
                                         case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_6.setTitle("", forState:.Normal)
                                         case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_7.setTitle("", forState:.Normal)
                                         case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_8.setTitle("", forState:.Normal)
                                         case 8:cell.UIButton_9.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_9.setTitle("", forState:.Normal)
                                         default: break
                                         }
                                     }
@@ -629,7 +629,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     }
 
                     
-                    height_tableview = 100
+                    height_tableview = SheBei_Width
                     return cell
 
                 default:
@@ -639,13 +639,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     return cell
 
                 }
-                            case 2://第三部分：评论等
+            case 2://第三部分：评论等
                 let cell = TimeTableView.dequeueReusableCellWithIdentifier("PinglunZanO_TableViewCell", forIndexPath: indexPath) as! PinglunZanO_TableViewCell
-                cell.UIButton1.setTitle("评论", forState:.Normal)
+                cell.UIButton1.setTitle("评论" + String(cell.Pinglun_NUM), forState:.Normal)
                 
-                cell.UIButton2.setTitle("赞", forState:.Normal)
+                cell.UIButton2.setTitle("赞" + String(cell.Zan_NUM), forState:.Normal)
                 
-                cell.UIButton3.setTitle("踩", forState:.Normal)
+                cell.UIButton3.setTitle("踩" + String(cell.Cai_NUM), forState:.Normal)
                 
                 height_tableview = 55
                 return cell
