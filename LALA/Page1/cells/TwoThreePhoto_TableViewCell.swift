@@ -1,20 +1,19 @@
 //
-//  FForth_Others_TableViewCell.swift
+//  TwoThreePhoto_TableViewCell.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/8/27.
-//  Copyright © 2016 Thomas Liu. All rights reserved.
+//  Created by Thomas Liu on 16/9/7.
+//  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 
-class FForth_Others_TableViewCell: UITableViewCell {
+class TwoThreePhoto_TableViewCell: UITableViewCell {
     
+    @IBOutlet weak var UIButton_1: UIButton!
+    @IBOutlet weak var UIButton_2: UIButton!
+    @IBOutlet weak var UIButton_3: UIButton!
     
-    @IBOutlet weak var Main_Image: UIImageView!
-    @IBOutlet weak var Main_Word: UILabel!
-    
-    @IBOutlet weak var Miao_Shu_Word: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,14 +14,12 @@ import Alamofire
 import CoreData
 import Foundation
 import SwiftyJSON
+import SVProgressHUD
 
 //Tab bar我的页面
 class FFristViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
-    //MARK:Data
-    
-    @IBOutlet weak var ButtonTopRight: UIButton!
-    @IBOutlet weak var ButtonTopLeft: UIBarButtonItem!
+    //MARK: - Data
     
     @IBOutlet weak var TimeTableView: UITableView!
     
@@ -29,20 +27,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var shifoudenglu :NSString = ""
     
     var listItems  = [NSManagedObject]()
-    /*
-     这里应该是这么几种不同的载入方式的数据
-     适用于 9，8，7等长宽 图片的载入方式
-     适用于 6，5，4等长宽 图片的载入方式.
-     适用于 3，2等长宽 图片的载入方式.
-     适用于 黄金比例 竖向 2图片的载入方式
-     适用于 黄金比例 横向 1图片的载入方式.
-     */
 
     //用两个Dictionary来存储下载下来的数据
     //同样猪标记符的是一组数据，dataimage是图片，datadetails是文字
     //从字典标识符1开始存储 ，0 表示不存在数据
-    var dataimage = Dictionary<Int,[Dictionary<String,String>]>()
-    var datadetails = Dictionary<Int,[Dictionary<String,String>]>();
+    
     
     //肌肤默认的图片
     var Imageload:Image = UIImage(named: "Black.png")!
@@ -54,23 +43,64 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var height_tableview:CGFloat = 0 //tableviewcell 的高度
     var ShiFou_QingQiuDao_ShuJu = true
     
+    var SheBei_Width = UIScreen.mainScreen().bounds.width
+    var server:String = ""
+    var serverimage:String = ""
     
-    func saveItem(itemToSave: String) {
+    
+    //MARK: - DATA SAVE
+    
+    /*
+     存储了一条多信息数据
+        1、信息的发送时间
+        2、发送的设备
+        3、发送者的 ID
+        4、发送者的 NAME
+        5、风格
+        6、详情
+        7、信息 ID
+     按序号排列，（序号，【一个数组《字典中用一个键值对：信息名：信息》】）
+     */
+    var datadetails = Dictionary<Int,[Dictionary<String,String>]>()
+    
+    /*
+     存储一组图片名称
+     按序号排列 【一个数组《字典键值对：这里的图片名称：图片名称》】
+     */
+    var dataimage   = Dictionary<Int,[Dictionary<String,String>]>()
+    
+    /*
+     存储一组图片
+     按序号排列 【一个数组《字典键值对：这里的图片名称：图片 image》】
+     */
+    var image       = Dictionary<Int,[Dictionary<String,Image >]>()
+    
+    /*
+     相同序号表示同一组数据
+     datadetails\dataimage\image 添加数据的时候都是要从头部添加数据 保持数据准确的按照时间来排列顺序
+        【时间顺序：服务器查询的时候 应该先排序 然后再查询 保证返回数据的顺序是按照时间先后来排列的】
+     比同：
+        【下拉刷新的请求：要携带现在存储的最新的一条数据的 ID。】
+        【             我们这是一个类似于微博的项目，要求“所有”的数据都要请求下来。】
+     */
+    
+    //MARK: - ButtonClick
+    
+    //扫一扫
+    @IBAction func Sao_yi_sao(sender: AnyObject) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //发动态
+    @IBAction func Send_Dongtai(sender: AnyObject) {
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContex = appDelegate.managedObjectContext
+        //let sb = UIStoryboard(name: "Frist", bundle:nil)
+        //let vc = sb.instantiateViewControllerWithIdentifier("Send_News_TableViewController") as UIViewController
+        //self.presentViewController(vc, animated: true, completion: nil)
         
-        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
-        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
-        
-        item.setValue(itemToSave, forKey: "userid")
-        
-        do {
-            try managedContex.save()
-            listItems.append(item)
-        } catch {
-            print("error")
-        }
+        let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("Send_News_TableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -90,56 +120,59 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
      */
     
     
-    //MARK:View
+    //MARK: - View
     
     
-    override func viewWillAppear(animated: Bool) {
-        print("viewWillAppear")
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        print("viewDidAppear")
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        print("viewWillDisappear")
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-       print("viewDidDisappear")
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        print("viewWillAppear")
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        print("viewDidAppear")
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        print("viewWillDisappear")
+//    }
+//    
+//    override func viewDidDisappear(animated: Bool) {
+//       print("viewDidDisappear")
+//    }
     
     override func viewDidLoad() {
         
+        //MARK:
         let imgbackV = UIImageView(image: ImageloadBackGroudn)
         self.TimeTableView.backgroundView = imgbackV
-        
-        print("viewDidLoad")
         
         for a in 0...10 {
             print(a)
             saveItem(String(a))
         }
         
-        super.viewDidLoad()
+
         
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
         
-        //读取数据，用户是否登录
-        let diaryList:String = NSBundle.mainBundle().pathForResource("Shi_Fou_Deng_Lu", ofType:"plist")!
+        //读取plist数据，用户是否登录
+        let diaryList:String = NSBundle.mainBundle().pathForResource("/Server", ofType:"plist")!
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
-        let da:NSString = data.objectForKey("islog") as! NSString
-        print(da)
-        shifoudenglu = da
+        server = data.objectForKey("Server") as! String
+        serverimage = server + "photo/TEST_PHOTOS/"
+        print(serverimage)
+        //MARK:ALAMOFIRE START
         
-        //-------------------------------Reall----Start---------------------------------//
-        
-        Alamofire.request(.GET, "http://localhost:80/LALA/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
+        Alamofire.request(.GET, server + "/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
             .validate()
             .responseJSON { response in
                 switch response.result {
                 case .Success:
+                    SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Dark)//前后颜色
+                    SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.Native)//菊花
+                    SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.Black)
+                    SVProgressHUD.show()
+
                     self.ShiFou_QingQiuDao_ShuJu = true
                     if let value = response.result.value {
                         let json = JSON(value)
@@ -159,6 +192,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             let sendername:String = json[i]["sendername"].string!
                             let photonumber = json[i]["photo"].count
                             let newdetail:String = json[i]["detail"].string!
+                            let newsid:String = json[i]["newsid"].string!
                             let s = self.datadetails.count
                             
                             var PhotoArray =  [String]()
@@ -172,34 +206,36 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             switch photonumber
                             {
                             case 1:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_1_big_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]]]
                             case 2:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]]]
                             case 3:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_2_3_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]]]
                             case 4:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]]]
                             case 5:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]]]
                             case 6:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_4_5_6_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]]]
                             case 7:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]]]
                             case 8:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]]]
                             case 9:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail]]
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Suit_7_8_9_photos"],["detail":newdetail],["newsid":newsid]]
                                 self.dataimage[s] = [["Photo1":PhotoArray[0]],["Photo2":PhotoArray[1]],["Photo3":PhotoArray[2]],["Photo4":PhotoArray[3]],["Photo5":PhotoArray[4]],["Photo6":PhotoArray[5]],["Photo7":PhotoArray[6]],["Photo8":PhotoArray[7]],["Photo9":PhotoArray[8]]]
                             default:
-                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"],["detail":newdetail]]
+                                //0
+                                self.datadetails[s] = [["newstime":newstime],["device":device],["senderid":senderid],["sendername":sendername],["style":"Without_Photos"],["detail":newdetail],["newsid":newsid]]
+                                self.dataimage[s] = [["Photo":"null"]]
                                 /*
                                  newstime
                                  device
@@ -212,12 +248,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             }
                         }
                         
-                        print(self.datadetails)
-                        print(self.dataimage)
+                        //print(self.datadetails)
+                        //print(self.dataimage)
                         
                         print("---------------------end---------------------")
                         self.TimeTableView.reloadData()
-                        
+                        SVProgressHUD.dismiss()
                     }
                 case .Failure(let error):
                     self.ShiFou_QingQiuDao_ShuJu = false
@@ -225,12 +261,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 }
         }
         
-        //-------------------------------Reall----End-----------------------------------//
-        
-        /*
-            Alamofire在异步获取数据之后，像数据数组插入数据
-            数据插入之后 重新 load Data
-        */
+
+        //MARK: BASE64 INCODE
         let str = "iOS Developer Tips encoded in Base64"
         print("Original: \(str)")
         
@@ -256,16 +288,62 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("Decoded:  \(base64Decoded)")
         
         //解密也可以了
+        super.viewDidLoad()
     }
     //////////////////tableView_start
 
     
     
-    //MARK:Tableview
+    //MARK: - Tableview
     
     //cell  DidSelectAction
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("点击了"+String(indexPath.row))
+        //var section_number = indexPath.section
+        //这里得到的是 news id
+        //self.datadetails[s] = 
+        //0[["newstime":newstime],
+        //1 ["device":device],
+        //2 ["senderid":senderid],
+        //3 ["sendername":sendername],
+        //4 ["style":"Without_Photos"],
+        //5 ["detail":newdetail],
+        //6 ["newsid":newsid]]
+        
+        //let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024,diskCapacity: 30 * 1024 * 1024,diskPath: "adow.adimageloader.urlcache")
+
+        //--------跳转加传值--------//
+        /*
+         消息 id newsid
+         用户 昵称  sendername
+         消息的 时间 设备 senddevice
+         消息的 长文字 detail
+         消息的图片 缓存信息  ?????
+         
+         根据用户 id 去查询 评论   ????
+         */
+        //设置存储信息
+        if !datadetails.isEmpty && indexPath.row == 0 {
+            let newstime  :String = datadetails[indexPath.section]![0]["newstime"]!
+            let device    :String = datadetails[indexPath.section]![1]["device"]!
+            let sendername:String = datadetails[indexPath.section]![3]["sendername"]!
+            let detail    :String = datadetails[indexPath.section]![5]["detail"]!
+            let newsid    :String = datadetails[indexPath.section]![6]["newsid"]!
+            let photonumber:Int   = (dataimage[indexPath.section]?.count)!
+            
+            NSUserDefaults.standardUserDefaults().setObject(newstime, forKey: "newstime")
+            NSUserDefaults.standardUserDefaults().setObject(device, forKey: "device")
+            NSUserDefaults.standardUserDefaults().setObject(sendername, forKey: "sendername")
+            NSUserDefaults.standardUserDefaults().setObject(detail, forKey: "detail")
+            NSUserDefaults.standardUserDefaults().setObject(newsid, forKey: "newsid")
+            NSUserDefaults.standardUserDefaults().setObject(photonumber, forKey: "photonumber")
+            
+            //设置同步
+            NSUserDefaults.standardUserDefaults().synchronize()
+            //跳转
+            let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailTableViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        //=========================//
     }
     
     //Tableview cell高度
@@ -278,7 +356,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         print("TableView中Sections的数量")
-        return 2
+        if datadetails.count == 0 {
+            return 1
+        }
+        return datadetails.count
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -289,337 +370,297 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         print("几个Tableview cell")
-        if datadetails.isEmpty {
-            return 3
-        }//section 是从0开始的
-        else{
-            if section == 1 {
-                return datadetails.count
-            }
-            else{
-                return 1
-            }
-        }
+        return 3
     }
     
     //Tableview初始化
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //print("Tableview初始化")
-        //print(indexPath.row + 1)
-        //print("indexPath")
-        //print(indexPath.section)
         
         /*
          indexPath.row 是从 “0” 开始的
-            这里应该有这么几种不同的载入方式
-            适用于 9，8，7等长宽 图片的载入方式 .
-            适用于 6，5，4等长宽 图片的载入方式 .
-            适用于 3，2等长宽 图片的载入方式    .
-            适用于 黄金比例 横向 1图片的载入方式.
-            适用于无图片的载入方式。
-            
+         /*
+         这里应该是这么几种不同的载入方式的数据
+         适用于 9，8，7等长宽 图片的载入方式
+         适用于 6，5，4等长宽 图片的载入方式.
+         适用于 3，2等长宽 图片的载入方式.
+         适用于 黄金比例 竖向 2图片的载入方式
+         适用于 黄金比例 横向 1图片的载入方式.
+         */
             黄金比例：0.618
         */
-        let screenBounds = UIScreen.mainScreen().bounds.width
-        let server:String = "http://localhost:80/LALA/photo/"
         // 当datadetails 等于 空 没有数据的时候 用某某缩略图填充一下  感觉就像 Facebook了
-        if  datadetails.isEmpty || dataimage.isEmpty {
-            let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-            cell.UIImageView_BackGround.image = ImageloadBackGroud
+        if  datadetails.isEmpty  {
+            let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
+            cell.UIImageView_Background.image = ImageloadBackGroud
             
-            cell.UIImageView_Top_Right.hidden = true
-            cell.UIImageView_Top_Right.hidden = true
-            cell.UIImageView_Mian.hidden = true
-            
-            cell.UILabel_sender.hidden = true
+            cell.UIImageView_UserIcon.hidden = true
+            cell.UIImageView_Setting.hidden = true
+            cell.UILabel_SenderName.hidden = true
             cell.UILabel_Information.hidden = true
-            cell.UILabel_detail.hidden = true
-            cell.UILabel_Pinglun.hidden = true
-            cell.UILabel_Zan.hidden = true
-            cell.UILabel_Cai.hidden = true
+            cell.UILabel_MainDetail.hidden = true
             
-            height_tableview = ( screenBounds - 10 ) * 0.618  + 5
+            height_tableview = ( SheBei_Width - 10 ) * 0.618  + 5
             
             return cell
-        }
-        
-        if datadetails[indexPath.row]![4]["style"] != nil {
-            switch datadetails[indexPath.row]![4]["style"]! {
-            case "Suit_1_big_photos"://
-                //print("Suit_1_big_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
+        } else {
+            //现在我们有数据 那就展示出来吧
+            switch indexPath.row {
+            case 0://第一部分：文字组合
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
                 
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
+                cell.UIImageView_UserIcon.hidden = false
+                cell.UIImageView_Setting.hidden = false
+                
+                cell.UILabel_SenderName.hidden = false
+                cell.UILabel_Information.hidden = false
+                cell.UILabel_MainDetail.hidden = false
+                
+                cell.UIImageView_Background.hidden = true
+                
+                cell.UIImageView_UserIcon.image = Imageload
+                cell.UIImageView_Setting.image = Imageload
+                
+                cell.UILabel_SenderName.text = datadetails[indexPath.section]![3]["sendername"]
+                cell.UILabel_Information.text = datadetails[indexPath.section]![0]["newstime"]! + datadetails[indexPath.section]![1]["device"]!
+                cell.UILabel_MainDetail.text = datadetails[indexPath.section]![5]["detail"]
+                
+                height_tableview = 100
+                return cell
+            case 1://第二部分：照片
+                switch dataimage[indexPath.section]!.count {
+                case 1:
+                    //判断得到的图片的高度 宽度比值
+                    //确定样式
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("OnePhoto_H_TableViewCell", forIndexPath: indexPath) as! OnePhoto_H_TableViewCell
+                    cell.UIButton_Main.setTitle("", forState: .Normal)
                     
-                    cell.UIImageView_Top_Right.hidden = false
-                    cell.UIImageView_Top_Right.hidden = false
-                    cell.UIImageView_Mian.hidden = false
-                    
-                    cell.UILabel_sender.hidden = false
-                    cell.UILabel_Information.hidden = false
-                    cell.UILabel_detail.hidden = false
-                    cell.UILabel_Pinglun.hidden = false
-                    cell.UILabel_Zan.hidden = false
-                    cell.UILabel_Cai.hidden = false
-                    
-                    cell.UILabel_sender.text = detail![3]["sendername"]
-                    cell.UILabel_detail.text = detail![5]["detail"]
-                    cell.UILabel_Information.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell.UIImageView_Top_Left.image = Imageload
-                    cell.UIImageView_Top_Right.image = Imageloadw
-
-                    Alamofire.request(.GET, server + images![0]["Photo1"]!)
+                    Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
-                                cell.UIImageView_Mian.image = image
+                                cell.UIButton_Main.setBackgroundImage(image, forState: .Normal)
                             }
                     }
-                    //print("11111111-------------1111111111111")
-                    //print(cell.UIImageView_Mian.frame.height / cell.UIImageView_Mian.frame.width)
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) * 0.618  + 60
+                    height_tableview = SheBei_Width * 0.618
+                    return cell
 
-                }
-                return cell
-                
-            case "Suit_2_3_photos"://
-                //print("Suit_2_3_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist23TableViewCell", forIndexPath: indexPath) as! FFrist23TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty  {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.lable_sender.text = detail![3]["sendername"]
-                    cell.UILabel_Detail.text = detail![5]["detail"]
-                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 2 {
+                case 2,3:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("TwoThreePhoto_TableViewCell", forIndexPath: indexPath) as! TwoThreePhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+
+                    switch dataimage[indexPath.section]!.count {
+                    case 2:
                         for i in 0..<2 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
-                                        
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 3 {
+                    default:
                         for i in 0..<3 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
-                                        
                                     }
                             }
                         }
+
                     }
                     
-                    cell.UIImageView_BackGround.image = ImageloadBackGroudn
-                    cell.image_left_top.image = Imageload
-                    cell.image_right_top.image = Imageloadw
-                    
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 + 60
-                }
-                return cell
-                
-                
-            case "Suit_4_5_6_photos"://
-                //print("Suit_4_5_6_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist456TableViewCell", forIndexPath: indexPath) as! FFrist456TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.Lable_sender.text = detail![3]["sendername"]
-                    cell.Lable_others.text = detail![5]["detail"]
-                    cell.Label_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 4 {
+                    height_tableview = SheBei_Width / 3
+                    return cell
+
+                case 4,5,6:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("FourFiveSixPhoto_TableViewCell", forIndexPath: indexPath) as! FourFiveSixPhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+                    cell.UIButton_4.setTitle("", forState: .Normal)
+                    cell.UIButton_5.setTitle("", forState: .Normal)
+                    cell.UIButton_6.setTitle("", forState: .Normal)
+                    switch dataimage[indexPath.section]!.count {
+                    case 4:
                         for i in 0..<4 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 5 {
+
+                    case 5:
                         for i in 0..<5 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
-                                        case 4:cell.Image5.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 6 {
+
+                    default:
                         for i in 0..<6 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.Image1.image = image
-                                        case 1:cell.Image2.image = image
-                                        case 2:cell.Image3.image = image
-                                        case 3:cell.Image4.image = image
-                                        case 4:cell.Image5.image = image
-                                        case 5:cell.Image6.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
+
                     }
                     
-                    cell.UIImageView_Background.image = ImageloadBackGroudn
-                    cell.Image_top_left.image = Imageload
-                    cell.Image_top_right.image = Imageloadw
+                    height_tableview = SheBei_Width / 3 * 2
+                    return cell
+
+                case 7,8,9:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("SevenEightNinePhoto_TableViewCell", forIndexPath: indexPath) as! SevenEightNinePhoto_TableViewCell
+                    cell.UIButton_1.setTitle("", forState: .Normal)
+                    cell.UIButton_2.setTitle("", forState: .Normal)
+                    cell.UIButton_3.setTitle("", forState: .Normal)
+                    cell.UIButton_4.setTitle("", forState: .Normal)
+                    cell.UIButton_5.setTitle("", forState: .Normal)
+                    cell.UIButton_6.setTitle("", forState: .Normal)
+                    cell.UIButton_7.setTitle("", forState: .Normal)
+                    cell.UIButton_8.setTitle("", forState: .Normal)
+                    cell.UIButton_9.setTitle("", forState: .Normal)
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) / 3 * 2 + 60
-                }
-                return cell
-                
-            case "Suit_7_8_9_photos"://
-                //print("Suit_7_8_9_photos")
-                let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist789TableViewCell", forIndexPath: indexPath) as! FFrist789TableViewCell
-                if datadetails.isEmpty || dataimage.isEmpty {
-                }
-                else{
-                    let detail = datadetails[indexPath.row]
-                    let images = dataimage[indexPath.row]
-                    
-                    //文字
-                    cell.UILabel_Sender.text = detail![3]["sendername"]
-                    cell.UILabel_Detail.text = detail![5]["detail"]
-                    cell.UILabel_Time.text = detail![0]["newstime"]! + " 来自" + detail![1]["device"]!
-                    
-                    //图片
-                    if images?.count == 7 {
+                    switch dataimage[indexPath.section]!.count {
+                    case 7:
                         for i in 0..<7 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 8 {
+                        
+                    case 8:
                         for i in 0..<8 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
-                                        case 7:cell.UIImageView_Main8.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
-                    }
-                    
-                    if images?.count == 9 {
+                        
+                    default:
                         for i in 0..<9 {
-                            Alamofire.request(.GET, server + images![i]["Photo" + String(i + 1)]!)
+                            Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![i]["Photo" + String(i + 1)]!)
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIImageView_Main1.image = image
-                                        case 1:cell.UIImageView_Main2.image = image
-                                        case 2:cell.UIImageView_Main3.image = image
-                                        case 3:cell.UIImageView_Main4.image = image
-                                        case 4:cell.UIImageView_Main5.image = image
-                                        case 5:cell.UIImageView_Main6.image = image
-                                        case 6:cell.UIImageView_Main7.image = image
-                                        case 7:cell.UIImageView_Main8.image = image
-                                        case 8:cell.UIImageView_Main9.image = image
+                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_1.setTitle("", forState:.Normal)
+                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_2.setTitle("", forState:.Normal)
+                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_3.setTitle("", forState:.Normal)
+                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_4.setTitle("", forState:.Normal)
+                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_5.setTitle("", forState:.Normal)
+                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_6.setTitle("", forState:.Normal)
+                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_7.setTitle("", forState:.Normal)
+                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_8.setTitle("", forState:.Normal)
+                                        case 8:cell.UIButton_9.setBackgroundImage(image, forState: .Normal)
+                                            cell.UIButton_9.setTitle("", forState:.Normal)
                                         default: break
                                         }
                                     }
                             }
                         }
+                        
                     }
+
                     
-                    cell.UIImageView_Backgroud.image = ImageloadBackGroudn
-                    cell.UIImageView_Top_Left.image = Imageload
-                    cell.UIImageView_Top_Right.image = Imageloadw
+                    height_tableview = SheBei_Width
+                    return cell
+
+                default:
+                    let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
                     
-                    height_tableview = CGFloat(cell.Guding_Height) + ( screenBounds - 10 ) + 60
+                    height_tableview = 100
+                    return cell
+
                 }
+            case 2://第三部分：评论等
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("PinglunZanO_TableViewCell", forIndexPath: indexPath) as! PinglunZanO_TableViewCell
+                cell.UIButton1.setTitle("评论" + String(cell.Pinglun_NUM), forState:.Normal)
+                
+                cell.UIButton2.setTitle("赞" + String(cell.Zan_NUM), forState:.Normal)
+                
+                cell.UIButton3.setTitle("踩" + String(cell.Cai_NUM), forState:.Normal)
+                
+                height_tableview = 55
                 return cell
-            case "Suit_more_than_10_photos":
-                break
             default:
-                break
+                let cell = TimeTableView.dequeueReusableCellWithIdentifier("Information_TableViewCell", forIndexPath: indexPath) as! Information_TableViewCell
+                
+                height_tableview = 100
+                return cell
             }
-            
         }
-
-        let cell = TimeTableView.dequeueReusableCellWithIdentifier("FFrist_1_big_TableViewCell", forIndexPath: indexPath) as! FFrist_1_big_TableViewCell
-    
-        return cell
-        
-
         
     }
     
@@ -633,7 +674,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     // Override to support conditional editing of the table view.
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
-        return true
+        return false
      }
     
     
@@ -652,53 +693,25 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     ///////////////tableView_end
     
-    //MARK:Functions
-    
-    func getDeviceVersion () -> String? {
-        let name = UnsafeMutablePointer<utsname>.alloc(1)
-        uname(name)
-        let machine = withUnsafePointer(&name.memory.machine, { (ptr) -> String? in
-            
-            let int8Ptr = unsafeBitCast(ptr, UnsafePointer<CChar>.self)
-            return String.fromCString(int8Ptr)
-        })
-        name.dealloc(1)
-        if let deviceString = machine {
-            switch deviceString {
-            //iPhone
-            case "iPhone1,1":                return "iPhone 1G"
-            case "iPhone1,2":                return "iPhone 3G"
-            case "iPhone2,1":                return "iPhone 3GS"
-            case "iPhone3,1", "iPhone3,2":   return "iPhone 4"
-            case "iPhone4,1":                return "iPhone 4S"
-            case "iPhone5,1", "iPhone5,2":   return "iPhone 5"
-            case "iPhone5,3", "iPhone5,4":   return "iPhone 5C"
-            case "iPhone6,1", "iPhone6,2":   return "iPhone 5S"
-            case "iPhone7,1":                return "iPhone 6 Plus"
-            case "iPhone7,2":                return "iPhone 6"
-            case "iPhone8,1":                return "iPhone 6s"
-            case "iPhone8,2":                return "iPhone 6s Plus"
-            case "iPhone8,3":                return "iPhone SE"
-            default:
-                return deviceString
-            }
-        } else {
-            return nil
+    //MARK:Others
+    func saveItem(itemToSave: String) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContex = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContex)
+        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContex)
+        
+        item.setValue(itemToSave, forKey: "userid")
+        
+        do {
+            try managedContex.save()
+            listItems.append(item)
+        } catch {
+            print("error")
         }
     }
 
-    
-    @IBAction func ButtonTopLeftClick(sender: AnyObject) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendNewsViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func ButtonTopRightClick(sender: AnyObject) {
-
-    }
-    
-    
-    //MARK:Others
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

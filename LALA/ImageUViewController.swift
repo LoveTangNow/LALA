@@ -9,32 +9,27 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SVProgressHUD
 
 class ImageUViewController: UIViewController {
+    
+    var YaSuoLV:CGFloat = 1
+    var server:String = ""
+    var serverimage:String = ""
+    
+    
     
     @IBOutlet weak var UIImageView_For_Upload: UIImageView!
     
     @IBAction func Upload_Click(sender: AnyObject) {
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Dark)//前后颜色
+        SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.Native)//菊花
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.Black)
         
-        //let i = UIImageView_For_Upload.image
-        //let fileURL = NSBundle.mainBundle().URLForResource("aiqinhai04", withExtension: "jpg")
+        SVProgressHUD.show()
 
-//        Alamofire.upload(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", file: fileURL!)
-//            .response{ response in
-//                print(response.0)//request
-//                print(response.1)//response
-//                print(response.2)//data
-//                print(response.3)//error
-//        }
-//         Alamofire.request(.POST, "http://localhost:80/LALA/GOT_PHOTO.php", parameters: nil)
-//            .validate()
-//            .responseJSON { response in
-//                print(response)
-//        }
-//        
-       let imageData = UIImageJPEGRepresentation(UIImageView_For_Upload.image!, 0.3) // 将图片转换成jpeg格式的NSData，压缩到0.3
+       let imageData = UIImagePNGRepresentation(UIImageView_For_Upload.image!) // 将图片转换成jpeg格式的NSData，压缩到0.3
        let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) // 将图片转换为base64字符串
-//        print(imageStr)
 //        
 //        Alamofire.request(.POST, "http://localhost:80/LALA/GOT_PHOTO_2BYTES.php", parameters: ["file": imageStr!]).validate()
 //            .responseData { response in
@@ -43,10 +38,28 @@ class ImageUViewController: UIViewController {
 //                print(response.result)
 //        }
         //test_post_get.php
-        Alamofire.request(.GET, "http://localhost:80/LALA/GOT_PHOTO_2BYTES.php", parameters: ["file": imageStr!]).validate()
+        Alamofire.request(.POST, server + "GOT_PHOTO_2BYTES.php", parameters: ["file": imageStr!])
+            .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
+                print(totalBytesWritten)
+                //这个进度不好用啊。。
+                // This closure is NOT called on the main queue for performance
+                // reasons. To update your ui, dispatch to the main queue.
+                dispatch_async(dispatch_get_main_queue()) {
+                    print("Total bytes written on main queue: \(totalBytesWritten)")
+                }
+            }
+            .validate()
             .responseString { response in
-                print("Success: \(response.result.isSuccess)")
-                print("Response String: \(response.result.value)")
+                switch response.result {
+                case .Success:
+                    print("Success?: \(response.result.isSuccess)")
+                    print("Response String: \(response.result.value)")
+                    SVProgressHUD.dismiss()
+                default:
+                    print("Success?: \(response.result.isSuccess)")
+                    print("Response String: \(response.result.value)")
+                    SVProgressHUD.dismiss()
+                }
         }
         
     }
@@ -54,6 +67,11 @@ class ImageUViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let diaryList:String = NSBundle.mainBundle().pathForResource("/Server", ofType:"plist")!
+        let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
+        server = data.objectForKey("Server") as! String
+        serverimage = server + "photo/TEST_PHOTOS/"
 
         // Do any additional setup after loading the view.
     }

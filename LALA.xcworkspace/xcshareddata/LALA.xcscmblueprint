@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CA22995E16ADB940ED328330E7D37E4BEB09C583" : 0,
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 0,
     "C1CDE7F158321A6367AF34F5A9F12693DD8D3AB2" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3EDA0451-96FD-4D04-A46C-B82F1D6DADEF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CA22995E16ADB940ED328330E7D37E4BEB09C583" : "..\/demo\/DGElasticPullToRefresh",
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "..\/demo\/SwiftyJSON",
     "C1CDE7F158321A6367AF34F5A9F12693DD8D3AB2" : "LALA\/"
   },
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lingoer\/SwiftyJSON.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gontovnik\/DGElasticPullToRefresh.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CA22995E16ADB940ED328330E7D37E4BEB09C583"
     }
   ]
 }

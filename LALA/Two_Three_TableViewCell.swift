@@ -1,14 +1,18 @@
 //
-//  FFourth_User_Information_TableViewCell.swift
+//  Two_Three_TableViewCell.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/8/27.
+//  Created by Thomas Liu on 16/9/5.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 
-class FFourth_User_Information_TableViewCell: UITableViewCell {
+class Two_Three_TableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var UIImageView1: UIImageView!
+    @IBOutlet weak var UIImageView2: UIImageView!
+    @IBOutlet weak var UIImageView3: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
