@@ -94,6 +94,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //发动态
     @IBAction func Send_Dongtai(sender: AnyObject) {
+        
+        //let sb = UIStoryboard(name: "Frist", bundle:nil)
+        //let vc = sb.instantiateViewControllerWithIdentifier("Send_News_TableViewController") as UIViewController
+        //self.presentViewController(vc, animated: true, completion: nil)
+        
         let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("Send_News_TableViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
