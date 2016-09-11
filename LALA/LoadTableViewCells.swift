@@ -40,29 +40,6 @@ class LoadTableViewCells {
         return 1
     }
     
-    func LoadOnePhoto(DataDetailIsEmpty:Bool,TableViewCell:FFrist_1_big_TableViewCell,Server:String,TableViewCellRow:NSIndexPath,TopLeftImage:UIImage,TopRightImage:UIImage,MainImages:String,MainImagei:UIImage,BottomImage:UIImage,Sender:String,SendTime:String,SendDevice:String,TableViewHeight:Int,WrodDetile:String)
-    {
-        switch DataDetailIsEmpty {
-        case true://还未请求到数据
-            break
-        case false://请求到了数据
-            //IMAGE
-            TableViewCell.UIImageView_Top_Left.image = TopLeftImage
-            TableViewCell.UIImageView_Top_Right.image = TopRightImage
-            Alamofire.request(.GET, Server + MainImages)
-                .responseImage { response in
-                    if let imageg = response.result.value {
-                        TableViewCell.UIImageView_Mian.image = imageg
-                    }
-            }
-            //WORDS
-            TableViewCell.UILabel_sender.text  = Sender
-            TableViewCell.UILabel_detail.text =  WrodDetile
-            
-        }
-    }
-    
-    
     //判断设备的方法
     func getDeviceVersion () -> String {
         let name = UnsafeMutablePointer<utsname>.alloc(1)
