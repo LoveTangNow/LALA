@@ -17,6 +17,24 @@ class FourFiveSixPhoto_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIButton_4: UIButton!
     @IBOutlet weak var UIButton_5: UIButton!
     @IBOutlet weak var UIButton_6: UIButton!
+    
+    @IBAction func UIButton_Click(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click2(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click3(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click4(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click5(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click6(sender: AnyObject) {
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,6 +14,16 @@ class TwoThreePhoto_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIButton_2: UIButton!
     @IBOutlet weak var UIButton_3: UIButton!
     
+    @IBAction func UIButton1_Click(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func UIButton2_Click(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func UIButton3_Click(sender: AnyObject) {
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

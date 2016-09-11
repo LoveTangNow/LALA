@@ -10,7 +10,12 @@ import UIKit
 
 class OnePhoto_H_TableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var UIButton_Main: UIButton!
+    
+    @IBAction func UIButton_Click(sender: AnyObject) {
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

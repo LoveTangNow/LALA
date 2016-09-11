@@ -21,6 +21,33 @@ class SevenEightNinePhoto_TableViewCell: UITableViewCell {
     @IBOutlet weak var UIButton_7: UIButton!
     @IBOutlet weak var UIButton_8: UIButton!
     @IBOutlet weak var UIButton_9: UIButton!
+    
+    @IBAction func UIButton_Click1(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click2(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click3(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click4(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click5(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click6(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click7(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click8(sender: AnyObject) {
+    }
+    
+    @IBAction func UIButton_Click9(sender: AnyObject) {
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
