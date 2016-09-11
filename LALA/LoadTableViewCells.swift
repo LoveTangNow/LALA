@@ -65,8 +65,7 @@ class LoadTableViewCells {
             case "iPhone7,2":                return "iPhone 6"
             case "iPhone8,1":                return "iPhone 6s"
             case "iPhone8,2":                return "iPhone 6s Plus"
-            case "iPhone8,3":                return "iPhone SE"
-            case "iPhone8,4":                return "iPhone SE"
+            case "iPhone8,3","iPhone8,4":    return "iPhone SE"
             default:
                 return deviceString
             }
@@ -85,13 +84,13 @@ class LoadTableViewCells {
         switch Width {
         case 320:
             //每行20
-            return ((Words.characters.count - Words.characters.count % 20) / 20 + 1) * 15 + 15
+            return ((Words.characters.count - Words.characters.count % 20) / 20 + 1) * 19 + 15
         case 375.5:
             //每行24
-            return ((Words.characters.count - Words.characters.count % 24) / 24 + 1) * 15 + 15
+            return ((Words.characters.count - Words.characters.count % 24) / 24 + 1) * 19 + 15
         case 414:
             //每行27
-            return ((Words.characters.count - Words.characters.count % 27) / 27 + 1) * 15 + 15
+            return ((Words.characters.count - Words.characters.count % 27) / 27 + 1) * 19 + 15
         default:
             return 24
         }

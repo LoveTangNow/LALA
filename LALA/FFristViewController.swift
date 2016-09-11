@@ -450,7 +450,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 let dateString = formatter.stringFromDate(date)
                 //let dateString = "9999-12-31 22:38:00"
-                print(dateString)
+                //print(dateString)
                 
                 var time1 = ["","","","",""]
                 var time2 = ["","","","",""]
@@ -517,7 +517,23 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
                 cell.UILabel_MainDetail.text = datadetails[indexPath.section]![5]["detail"]
                 
-                height_tableview = 100
+                let A = datadetails[indexPath.section]![5]["detail"]!
+                var o = 0
+                
+                //文字是14号字体
+                //固定高度 10 + 45 + 5 + ？ + 10
+                switch LoadTableViewCells().getDeviceVersion() {
+                case "iPhone SE","iPhone 5","iPhone 5S","iPhone 5C":
+                    o = (A.characters.count - A.characters.count % 22) / 22 + 1
+                case "iPhone 6" ,"iPhone 6S":
+                    o = (A.characters.count - A.characters.count % 26) / 26 + 1
+                case "iPhone 6 Plus","iPhone 6s Plus":
+                    o = (A.characters.count - A.characters.count % 28) / 28 + 1
+                default:
+                    o = (A.characters.count - A.characters.count % 22) / 22 + 1
+                }
+            
+                height_tableview = 75 + CGFloat( 20 * o)
                 return cell
             case 1://第二部分：照片
                 switch dataimage[indexPath.section]!.count {

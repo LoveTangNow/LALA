@@ -140,6 +140,8 @@ class NewsDetailTableViewController: UITableViewController {
             
             Tableviewcell_Height = cell.Guding_Height + CGFloat(LoadTableViewCells().Height_Work(detail, Width: UIScreen.mainScreen().bounds.width))
             
+            //Tableviewcell_Height = 200
+            
             return cell
 
         }
