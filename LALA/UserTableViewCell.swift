@@ -19,6 +19,8 @@ class UserTableViewCell: UITableViewCell {
     let Guding_Height:CGFloat = 65
     
     override func awakeFromNib() {
+        
+        
         super.awakeFromNib()
         // Initialization code
     }
