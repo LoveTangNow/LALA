@@ -9,9 +9,39 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>LALAU.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>LALAshare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
+		<key>LALAspot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7F051EB21D8529A9005AD96F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F051EC71D852B8A005AD96F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F051ED61D852BE0005AD96F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7F0E24431D4A00290083F7CC</key>
 		<dict>
 			<key>primary</key>

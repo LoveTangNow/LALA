@@ -538,6 +538,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tC-WN-gz3">
                                                     <rect key="frame" x="18" y="8" width="284" height="131.5"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="UIButton_Click:" destination="DnI-fO-S2B" eventType="touchUpInside" id="mjH-U2-gtV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -564,6 +567,9 @@
                                                         <constraint firstAttribute="width" secondItem="aMh-vg-o4w" secondAttribute="height" multiplier="31:50" id="xnj-IX-Sqm"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="UIButton_Click:" destination="0us-sX-g8q" eventType="touchUpInside" id="2Ob-be-rdL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -589,14 +595,23 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-Qz-n72">
                                                             <rect key="frame" x="0.0" y="0.0" width="92" height="98"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="UIButton1_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="h4e-Br-Tbj"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eo-Au-JM4">
                                                             <rect key="frame" x="97" y="0.0" width="91" height="98"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="UIButton2_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="0pv-dx-50a"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Q-kl-Cxt">
                                                             <rect key="frame" x="193" y="0.0" width="92" height="98"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="UIButton3_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="geh-74-PxY"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -630,14 +645,23 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X76-TU-W65">
                                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="BSD-38-QX6"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-0c-3Z3">
                                                                     <rect key="frame" x="97" y="0.0" width="91" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click2:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="DSg-hI-oa4"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-eh-tLL">
                                                                     <rect key="frame" x="193" y="0.0" width="92" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click3:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="Ppf-Tf-8Vc"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -647,14 +671,23 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-Bk-kvo">
                                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click4:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="fnp-6M-Q0S"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-ia-gH1">
                                                                     <rect key="frame" x="97" y="0.0" width="91" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click5:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="RRN-Kz-zw2"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e81-j4-zde">
                                                                     <rect key="frame" x="193" y="0.0" width="92" height="102"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click6:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="g3D-NF-Xh6"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -693,14 +726,23 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-JM-Piy">
                                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click1:" destination="Tat-TB-jc2" eventType="touchUpInside" id="gGd-sx-4N4"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YH-KZ-kic">
                                                                     <rect key="frame" x="97" y="0.0" width="91" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click2:" destination="Tat-TB-jc2" eventType="touchUpInside" id="hgK-4h-aYG"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S99-GP-UsE">
                                                                     <rect key="frame" x="193" y="0.0" width="92" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click3:" destination="Tat-TB-jc2" eventType="touchUpInside" id="DE1-HR-yEX"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -710,14 +752,23 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arf-4P-Xc1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="91"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click4:" destination="Tat-TB-jc2" eventType="touchUpInside" id="fgb-Id-V0I"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-2u-4m9">
                                                                     <rect key="frame" x="97" y="0.0" width="91" height="91"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click5:" destination="Tat-TB-jc2" eventType="touchUpInside" id="7fV-lU-Etq"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-E6-50L">
                                                                     <rect key="frame" x="193" y="0.0" width="92" height="91"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click6:" destination="Tat-TB-jc2" eventType="touchUpInside" id="0ia-FG-m9o"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -727,14 +778,23 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-7P-q3b">
                                                                     <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click7:" destination="Tat-TB-jc2" eventType="touchUpInside" id="bXI-zo-mkv"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-Jb-pBM">
                                                                     <rect key="frame" x="97" y="0.0" width="91" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click8:" destination="Tat-TB-jc2" eventType="touchUpInside" id="saC-hR-9pQ"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DK-CR-orW">
                                                                     <rect key="frame" x="193" y="0.0" width="92" height="92"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="UIButton_Click9:" destination="Tat-TB-jc2" eventType="touchUpInside" id="s46-SV-GxD"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>

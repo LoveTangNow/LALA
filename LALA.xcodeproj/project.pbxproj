@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		503FCDD6036AD8007E3A79CA /* Pods_LALA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */; };
+		7F051EB51D8529A9005AD96F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F051EB41D8529A9005AD96F /* NotificationCenter.framework */; };
+		7F051EB81D8529A9005AD96F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F051EB71D8529A9005AD96F /* TodayViewController.swift */; };
+		7F051EBB1D8529A9005AD96F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F051EB91D8529A9005AD96F /* MainInterface.storyboard */; };
+		7F051EBF1D8529A9005AD96F /* LALAU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7F051EB31D8529A9005AD96F /* LALAU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7F051ECB1D852B8A005AD96F /* IndexRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F051ECA1D852B8A005AD96F /* IndexRequestHandler.swift */; };
+		7F051ECF1D852B8A005AD96F /* LALAspot.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7F051EC81D852B8A005AD96F /* LALAspot.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7F051EDA1D852BE0005AD96F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F051ED91D852BE0005AD96F /* ShareViewController.swift */; };
+		7F051EDD1D852BE0005AD96F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F051EDB1D852BE0005AD96F /* MainInterface.storyboard */; };
+		7F051EE11D852BE0005AD96F /* LALAshare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7F051ED71D852BE0005AD96F /* LALAshare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E24471D4A00290083F7CC /* AppDelegate.swift */; };
 		7F0E244F1D4A00290083F7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E244D1D4A00290083F7CC /* Main.storyboard */; };
 		7F0E24541D4A00290083F7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */; };
@@ -72,6 +81,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7F051EBD1D8529A9005AD96F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0E243C1D4A00290083F7CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F051EB21D8529A9005AD96F;
+			remoteInfo = LALAU;
+		};
+		7F051ECD1D852B8A005AD96F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0E243C1D4A00290083F7CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F051EC71D852B8A005AD96F;
+			remoteInfo = LALAspot;
+		};
+		7F051EDF1D852BE0005AD96F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0E243C1D4A00290083F7CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F051ED61D852BE0005AD96F;
+			remoteInfo = LALAshare;
+		};
 		7F0E245B1D4A00290083F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F0E243C1D4A00290083F7CC /* Project object */;
@@ -88,8 +118,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7F051EC31D8529A9005AD96F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7F051ECF1D852B8A005AD96F /* LALAspot.appex in Embed App Extensions */,
+				7F051EBF1D8529A9005AD96F /* LALAU.appex in Embed App Extensions */,
+				7F051EE11D852BE0005AD96F /* LALAshare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		13F23AC936DBF903106564B3 /* Pods-LALA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LALA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LALA/Pods-LALA.release.xcconfig"; sourceTree = "<group>"; };
+		7F051EB31D8529A9005AD96F /* LALAU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LALAU.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F051EB41D8529A9005AD96F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		7F051EB71D8529A9005AD96F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		7F051EBA1D8529A9005AD96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7F051EBC1D8529A9005AD96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F051EC81D852B8A005AD96F /* LALAspot.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LALAspot.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F051ECA1D852B8A005AD96F /* IndexRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRequestHandler.swift; sourceTree = "<group>"; };
+		7F051ECC1D852B8A005AD96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F051ED71D852BE0005AD96F /* LALAshare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LALAshare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F051ED91D852BE0005AD96F /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		7F051EDC1D852BE0005AD96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7F051EDE1D852BE0005AD96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F0E24441D4A00290083F7CC /* LALA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LALA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E24471D4A00290083F7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0E244E1D4A00290083F7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +222,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F051EB01D8529A9005AD96F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051EB51D8529A9005AD96F /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051EC51D852B8A005AD96F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051ED41D852BE0005AD96F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F0E24411D4A00290083F7CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,12 +272,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F051EB61D8529A9005AD96F /* LALAU */ = {
+			isa = PBXGroup;
+			children = (
+				7F051EB71D8529A9005AD96F /* TodayViewController.swift */,
+				7F051EB91D8529A9005AD96F /* MainInterface.storyboard */,
+				7F051EBC1D8529A9005AD96F /* Info.plist */,
+			);
+			path = LALAU;
+			sourceTree = "<group>";
+		};
+		7F051EC91D852B8A005AD96F /* LALAspot */ = {
+			isa = PBXGroup;
+			children = (
+				7F051ECA1D852B8A005AD96F /* IndexRequestHandler.swift */,
+				7F051ECC1D852B8A005AD96F /* Info.plist */,
+			);
+			path = LALAspot;
+			sourceTree = "<group>";
+		};
+		7F051ED81D852BE0005AD96F /* LALAshare */ = {
+			isa = PBXGroup;
+			children = (
+				7F051ED91D852BE0005AD96F /* ShareViewController.swift */,
+				7F051EDB1D852BE0005AD96F /* MainInterface.storyboard */,
+				7F051EDE1D852BE0005AD96F /* Info.plist */,
+			);
+			path = LALAshare;
+			sourceTree = "<group>";
+		};
 		7F0E243B1D4A00290083F7CC = {
 			isa = PBXGroup;
 			children = (
 				7F0E24461D4A00290083F7CC /* LALA */,
 				7F0E245D1D4A00290083F7CC /* LALATests */,
 				7F0E24681D4A00290083F7CC /* LALAUITests */,
+				7F051EB61D8529A9005AD96F /* LALAU */,
+				7F051EC91D852B8A005AD96F /* LALAspot */,
+				7F051ED81D852BE0005AD96F /* LALAshare */,
 				7F0E24451D4A00290083F7CC /* Products */,
 				F1D80D2772AECD6960B037E4 /* Pods */,
 				FDFE9952A379317531B78C99 /* Frameworks */,
@@ -212,6 +324,9 @@
 				7F0E24441D4A00290083F7CC /* LALA.app */,
 				7F0E245A1D4A00290083F7CC /* LALA.xctest */,
 				7F0E24651D4A00290083F7CC /* LALA.xctest */,
+				7F051EB31D8529A9005AD96F /* LALAU.appex */,
+				7F051EC81D852B8A005AD96F /* LALAspot.appex */,
+				7F051ED71D852BE0005AD96F /* LALAshare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,9 +334,7 @@
 		7F0E24461D4A00290083F7CC /* LALA */ = {
 			isa = PBXGroup;
 			children = (
-				7FBED7B51D7FCFBB00F2AD3A /* LALA.entitlements */,
 				7F0E24471D4A00290083F7CC /* AppDelegate.swift */,
-				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 				7FB8A89E1D4B27D200F2F22D /* Main */,
 				7FB8A89F1D4B27E700F2F22D /* 1-第一页面的子控制类们【主视图】 */,
 				7FDAAAEA1D7FF9DA00BA5D1A /* 2-第二页面的子控制类们【IM】 */,
@@ -230,8 +343,10 @@
 				7FE9007A1D7D15A0007F4F90 /* Others */,
 				7F5632281D6178230017958A /* data */,
 				7F19A12C1D58695B0030A16F /* Assets.xcassets */,
+				7FBED7B51D7FCFBB00F2AD3A /* LALA.entitlements */,
 				7F0E24521D4A00290083F7CC /* LaunchScreen.storyboard */,
 				7F0E24551D4A00290083F7CC /* Info.plist */,
+				7F5632261D5FD6780017958A /* LoadTableViewCells.swift */,
 			);
 			path = LALA;
 			sourceTree = "<group>";
@@ -426,6 +541,7 @@
 				7F19A13D1D58C5080030A16F /* libsqlite3.tbd */,
 				7F288ADB1D4B649E00842A9C /* Alamofire.framework */,
 				C5A309EE86C372DAD972AC1E /* Pods_LALA.framework */,
+				7F051EB41D8529A9005AD96F /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -433,6 +549,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F051EB21D8529A9005AD96F /* LALAU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F051EC21D8529A9005AD96F /* Build configuration list for PBXNativeTarget "LALAU" */;
+			buildPhases = (
+				7F051EAF1D8529A9005AD96F /* Sources */,
+				7F051EB01D8529A9005AD96F /* Frameworks */,
+				7F051EB11D8529A9005AD96F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LALAU;
+			productName = LALAU;
+			productReference = 7F051EB31D8529A9005AD96F /* LALAU.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7F051EC71D852B8A005AD96F /* LALAspot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F051ED01D852B8A005AD96F /* Build configuration list for PBXNativeTarget "LALAspot" */;
+			buildPhases = (
+				7F051EC41D852B8A005AD96F /* Sources */,
+				7F051EC51D852B8A005AD96F /* Frameworks */,
+				7F051EC61D852B8A005AD96F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LALAspot;
+			productName = LALAspot;
+			productReference = 7F051EC81D852B8A005AD96F /* LALAspot.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7F051ED61D852BE0005AD96F /* LALAshare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F051EE21D852BE0005AD96F /* Build configuration list for PBXNativeTarget "LALAshare" */;
+			buildPhases = (
+				7F051ED31D852BE0005AD96F /* Sources */,
+				7F051ED41D852BE0005AD96F /* Frameworks */,
+				7F051ED51D852BE0005AD96F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LALAshare;
+			productName = LALAshare;
+			productReference = 7F051ED71D852BE0005AD96F /* LALAshare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7F0E24431D4A00290083F7CC /* LALA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F0E246E1D4A00290083F7CC /* Build configuration list for PBXNativeTarget "LALA" */;
@@ -443,10 +610,14 @@
 				7F0E24421D4A00290083F7CC /* Resources */,
 				9809B5F4A8A1F9D4A55E86A7 /* [CP] Embed Pods Frameworks */,
 				2AFC620EE51E4F835028F1C9 /* [CP] Copy Pods Resources */,
+				7F051EC31D8529A9005AD96F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7F051EBE1D8529A9005AD96F /* PBXTargetDependency */,
+				7F051ECE1D852B8A005AD96F /* PBXTargetDependency */,
+				7F051EE01D852BE0005AD96F /* PBXTargetDependency */,
 			);
 			name = LALA;
 			productName = LALA;
@@ -499,6 +670,18 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Thomas Liu";
 				TargetAttributes = {
+					7F051EB21D8529A9005AD96F = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5898723MBJ;
+					};
+					7F051EC71D852B8A005AD96F = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5898723MBJ;
+					};
+					7F051ED61D852BE0005AD96F = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5898723MBJ;
+					};
 					7F0E24431D4A00290083F7CC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5898723MBJ;
@@ -545,11 +728,37 @@
 				7F0E24431D4A00290083F7CC /* LALA */,
 				7F0E24591D4A00290083F7CC /* LALATests */,
 				7F0E24641D4A00290083F7CC /* LALAUITests */,
+				7F051EB21D8529A9005AD96F /* LALAU */,
+				7F051EC71D852B8A005AD96F /* LALAspot */,
+				7F051ED61D852BE0005AD96F /* LALAshare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F051EB11D8529A9005AD96F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051EBB1D8529A9005AD96F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051EC61D852B8A005AD96F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051ED51D852BE0005AD96F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051EDD1D852BE0005AD96F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F0E24421D4A00290083F7CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,6 +844,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F051EAF1D8529A9005AD96F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051EB81D8529A9005AD96F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051EC41D852B8A005AD96F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051ECB1D852B8A005AD96F /* IndexRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F051ED31D852BE0005AD96F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F051EDA1D852BE0005AD96F /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F0E24401D4A00290083F7CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,6 +937,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7F051EBE1D8529A9005AD96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F051EB21D8529A9005AD96F /* LALAU */;
+			targetProxy = 7F051EBD1D8529A9005AD96F /* PBXContainerItemProxy */;
+		};
+		7F051ECE1D852B8A005AD96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F051EC71D852B8A005AD96F /* LALAspot */;
+			targetProxy = 7F051ECD1D852B8A005AD96F /* PBXContainerItemProxy */;
+		};
+		7F051EE01D852BE0005AD96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F051ED61D852BE0005AD96F /* LALAshare */;
+			targetProxy = 7F051EDF1D852BE0005AD96F /* PBXContainerItemProxy */;
+		};
 		7F0E245C1D4A00290083F7CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7F0E24431D4A00290083F7CC /* LALA */;
@@ -717,6 +965,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7F051EB91D8529A9005AD96F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F051EBA1D8529A9005AD96F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		7F051EDB1D852BE0005AD96F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F051EDC1D852BE0005AD96F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		7F0E244D1D4A00290083F7CC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -736,6 +1000,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7F051EC01D8529A9005AD96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7F051EC11D8529A9005AD96F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7F051ED11D852B8A005AD96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAspot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAspot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7F051ED21D852B8A005AD96F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAspot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAspot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7F051EE31D852BE0005AD96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAshare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAshare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7F051EE41D852BE0005AD96F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LALAshare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasLiu.jiacheng.link.LALAshare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		7F0E246C1D4A00290083F7CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -827,6 +1169,7 @@
 				CODE_SIGN_ENTITLEMENTS = LALA/LALA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = LALA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -844,6 +1187,7 @@
 				CODE_SIGN_ENTITLEMENTS = LALA/LALA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = LALA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -902,6 +1246,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F051EC21D8529A9005AD96F /* Build configuration list for PBXNativeTarget "LALAU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F051EC01D8529A9005AD96F /* Debug */,
+				7F051EC11D8529A9005AD96F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F051ED01D852B8A005AD96F /* Build configuration list for PBXNativeTarget "LALAspot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F051ED11D852B8A005AD96F /* Debug */,
+				7F051ED21D852B8A005AD96F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F051EE21D852BE0005AD96F /* Build configuration list for PBXNativeTarget "LALAshare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F051EE31D852BE0005AD96F /* Debug */,
+				7F051EE41D852BE0005AD96F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F0E243F1D4A00290083F7CC /* Build configuration list for PBXProject "LALA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
