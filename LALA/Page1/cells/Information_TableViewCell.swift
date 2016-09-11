@@ -21,6 +21,11 @@ class Information_TableViewCell: UITableViewCell {
     
 
     override func awakeFromNib() {
+        UIImageView_UserIcon.layer.cornerRadius = UIImageView_UserIcon.frame.width / 2
+        UIImageView_UserIcon.clipsToBounds = true
+        
+        UIImageView_Setting.layer.cornerRadius = UIImageView_Setting.frame.width / 6
+        UIImageView_Setting.clipsToBounds = true
         super.awakeFromNib()
         // Initialization code
     }
