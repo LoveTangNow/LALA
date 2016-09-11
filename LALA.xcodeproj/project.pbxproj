@@ -34,6 +34,7 @@
 		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
 		7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494D1D5618790017D282 /* DengLuViewController.swift */; };
+		7FAD11F41D8534F500A18E94 /* ShowPhtoto_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD11F31D8534F500A18E94 /* ShowPhtoto_ViewController.swift */; };
 		7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */; };
 		7FB640CF1D7FC13800737517 /* USER_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640CE1D7FC13800737517 /* USER_TableViewCell.swift */; };
 		7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */; };
@@ -172,6 +173,7 @@
 		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
 		7F9C494D1D5618790017D282 /* DengLuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DengLuViewController.swift; sourceTree = "<group>"; };
+		7FAD11F31D8534F500A18E94 /* ShowPhtoto_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowPhtoto_ViewController.swift; path = Page1/ShowPhtoto_ViewController.swift; sourceTree = "<group>"; };
 		7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FForthTableViewController.swift; sourceTree = "<group>"; };
 		7FB640CE1D7FC13800737517 /* USER_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USER_TableViewCell.swift; path = CELLS/USER_TableViewCell.swift; sourceTree = "<group>"; };
 		7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PCC_TableViewCell.swift; path = CELLS/PCC_TableViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				7FE900771D7D14FD007F4F90 /* Frist.storyboard */,
 				7FE9007E1D7D207A007F4F90 /* NewsDetailTableViewController.swift */,
 				7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */,
+				7FAD11F31D8534F500A18E94 /* ShowPhtoto_ViewController.swift */,
 				7F515F991D7DC51C0018354F /* 发动态——cell */,
 				7FE900801D7D2B43007F4F90 /* 动态详情——cell */,
 				7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */,
@@ -879,6 +882,7 @@
 				7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */,
 				7FDAAAFF1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift in Sources */,
 				7FB640DF1D7FCBB800737517 /* FFrist789TableViewCell.swift in Sources */,
+				7FAD11F41D8534F500A18E94 /* ShowPhtoto_ViewController.swift in Sources */,
 				7FDAAAF51D800B0400BA5D1A /* Information_TableViewCell.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
 				7FDAAB031D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift in Sources */,

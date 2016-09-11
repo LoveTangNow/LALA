@@ -535,23 +535,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="147.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tC-WN-gz3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a6R-lg-oyC">
                                                     <rect key="frame" x="18" y="8" width="284" height="131.5"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <connections>
-                                                        <action selector="UIButton_Click:" destination="DnI-fO-S2B" eventType="touchUpInside" id="mjH-U2-gtV"/>
-                                                    </connections>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3tC-WN-gz3" firstAttribute="top" secondItem="lPn-G9-CBk" secondAttribute="topMargin" id="3cB-Tq-lIz"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3tC-WN-gz3" secondAttribute="bottom" id="5WP-x7-gHf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3tC-WN-gz3" secondAttribute="trailing" constant="10" id="qx0-vU-h4D"/>
-                                                <constraint firstItem="3tC-WN-gz3" firstAttribute="leading" secondItem="lPn-G9-CBk" secondAttribute="leadingMargin" constant="10" id="xQp-XX-78X"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="a6R-lg-oyC" secondAttribute="bottom" id="21E-7a-msW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="a6R-lg-oyC" secondAttribute="trailing" constant="10" id="9Y6-cX-z93"/>
+                                                <constraint firstItem="a6R-lg-oyC" firstAttribute="leading" secondItem="lPn-G9-CBk" secondAttribute="leadingMargin" constant="10" id="TRm-6B-5cZ"/>
+                                                <constraint firstItem="a6R-lg-oyC" firstAttribute="top" secondItem="lPn-G9-CBk" secondAttribute="topMargin" id="pVG-Bp-bFV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="UIButton_Main" destination="3tC-WN-gz3" id="n4c-gK-1yS"/>
+                                            <outlet property="UIImageView_Main" destination="a6R-lg-oyC" id="Qdj-xV-0un"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OnePhoto_S_TableViewCell" rowHeight="156" id="0us-sX-g8q" customClass="OnePhoto_S_TableViewCell" customModule="LALA" customModuleProvider="target">
@@ -561,25 +557,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMh-vg-o4w">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2wi-D3-wrZ">
                                                     <rect key="frame" x="18" y="8" width="86.5" height="139.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="aMh-vg-o4w" secondAttribute="height" multiplier="31:50" id="xnj-IX-Sqm"/>
+                                                        <constraint firstAttribute="width" secondItem="2wi-D3-wrZ" secondAttribute="height" multiplier="31:50" id="I73-GA-8M4"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <connections>
-                                                        <action selector="UIButton_Click:" destination="0us-sX-g8q" eventType="touchUpInside" id="2Ob-be-rdL"/>
-                                                    </connections>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aMh-vg-o4w" secondAttribute="bottom" id="FBg-uO-Qpp"/>
-                                                <constraint firstItem="aMh-vg-o4w" firstAttribute="leading" secondItem="K7G-pE-obB" secondAttribute="leadingMargin" constant="10" id="I6Z-pP-xv0"/>
-                                                <constraint firstItem="aMh-vg-o4w" firstAttribute="top" secondItem="K7G-pE-obB" secondAttribute="topMargin" id="QgE-3w-KiG"/>
+                                                <constraint firstItem="2wi-D3-wrZ" firstAttribute="leading" secondItem="K7G-pE-obB" secondAttribute="leadingMargin" constant="10" id="WsP-SX-sZt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2wi-D3-wrZ" secondAttribute="bottom" id="hC9-4e-mbv"/>
+                                                <constraint firstItem="2wi-D3-wrZ" firstAttribute="top" secondItem="K7G-pE-obB" secondAttribute="topMargin" id="k5Z-AX-rtC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="UIButton_Main" destination="aMh-vg-o4w" id="aRf-dk-FWZ"/>
+                                            <outlet property="UIImageView_Main" destination="2wi-D3-wrZ" id="nwV-3n-x9V"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TwoThreePhoto_TableViewCell" rowHeight="114" id="znl-0e-UBe" customClass="TwoThreePhoto_TableViewCell" customModule="LALA" customModuleProvider="target">
@@ -592,27 +584,15 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4cc-4Q-Yrr">
                                                     <rect key="frame" x="18" y="8" width="284" height="98"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-Qz-n72">
-                                                            <rect key="frame" x="0.0" y="0.0" width="92" height="98"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <connections>
-                                                                <action selector="UIButton1_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="h4e-Br-Tbj"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eo-Au-JM4">
-                                                            <rect key="frame" x="97" y="0.0" width="91" height="98"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <connections>
-                                                                <action selector="UIButton2_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="0pv-dx-50a"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Q-kl-Cxt">
-                                                            <rect key="frame" x="193" y="0.0" width="92" height="98"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <connections>
-                                                                <action selector="UIButton3_Click:" destination="znl-0e-UBe" eventType="touchUpInside" id="geh-74-PxY"/>
-                                                            </connections>
-                                                        </button>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-9w-Okp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="98"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-S2-9YK">
+                                                            <rect key="frame" x="96" y="0.0" width="91" height="98"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-Yl-LZd">
+                                                            <rect key="frame" x="192" y="0.0" width="91.5" height="98"/>
+                                                        </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -624,9 +604,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="UIButton_1" destination="bZL-Qz-n72" id="hpg-vW-JG0"/>
-                                            <outlet property="UIButton_2" destination="6eo-Au-JM4" id="daW-E4-ltn"/>
-                                            <outlet property="UIButton_3" destination="i2Q-kl-Cxt" id="2zU-T3-SIb"/>
+                                            <outlet property="UIImageView1" destination="9ps-9w-Okp" id="On0-C1-6Zf"/>
+                                            <outlet property="UIImageView2" destination="mWE-S2-9YK" id="Ux6-lY-KbH"/>
+                                            <outlet property="UIImageView3" destination="qHb-Yl-LZd" id="roU-dT-HrK"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FourFiveSixPhoto_TableViewCell" rowHeight="225" id="6uE-CA-Cbn" customClass="FourFiveSixPhoto_TableViewCell" customModule="LALA" customModuleProvider="target">
@@ -642,53 +622,29 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PRh-7u-xh6">
                                                             <rect key="frame" x="0.0" y="0.0" width="284" height="102"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X76-TU-W65">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="BSD-38-QX6"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-0c-3Z3">
-                                                                    <rect key="frame" x="97" y="0.0" width="91" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click2:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="DSg-hI-oa4"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-eh-tLL">
-                                                                    <rect key="frame" x="193" y="0.0" width="92" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click3:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="Ppf-Tf-8Vc"/>
-                                                                    </connections>
-                                                                </button>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="as3-zf-vJZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="102"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Svg-vX-1A9">
+                                                                    <rect key="frame" x="96" y="0.0" width="91" height="102"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-LA-dEh">
+                                                                    <rect key="frame" x="192" y="0.0" width="91.5" height="102"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-Eo-9wk">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mw1-r0-6cA">
                                                             <rect key="frame" x="0.0" y="107" width="284" height="102"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-Bk-kvo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click4:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="fnp-6M-Q0S"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-ia-gH1">
-                                                                    <rect key="frame" x="97" y="0.0" width="91" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click5:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="RRN-Kz-zw2"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e81-j4-zde">
-                                                                    <rect key="frame" x="193" y="0.0" width="92" height="102"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click6:" destination="6uE-CA-Cbn" eventType="touchUpInside" id="g3D-NF-Xh6"/>
-                                                                    </connections>
-                                                                </button>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQ7-5z-5Xg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="102"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-R4-cSv">
+                                                                    <rect key="frame" x="96" y="0.0" width="91" height="102"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9F-KA-5db">
+                                                                    <rect key="frame" x="192" y="0.0" width="91.5" height="102"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
@@ -702,12 +658,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="UIButton_1" destination="X76-TU-W65" id="edX-fD-PEh"/>
-                                            <outlet property="UIButton_2" destination="ySt-0c-3Z3" id="RXN-nD-Ety"/>
-                                            <outlet property="UIButton_3" destination="PYC-eh-tLL" id="Hxc-r0-xn3"/>
-                                            <outlet property="UIButton_4" destination="A0a-Bk-kvo" id="giW-yJ-qgb"/>
-                                            <outlet property="UIButton_5" destination="VCa-ia-gH1" id="Gbo-Ko-eQ1"/>
-                                            <outlet property="UIButton_6" destination="e81-j4-zde" id="mxf-X7-n3j"/>
+                                            <outlet property="UIImageView_1" destination="as3-zf-vJZ" id="qeC-qy-Z2o"/>
+                                            <outlet property="UIImageView_2" destination="Svg-vX-1A9" id="8Tf-mo-NeX"/>
+                                            <outlet property="UIImageView_3" destination="q5A-LA-dEh" id="2Ve-Wu-tP7"/>
+                                            <outlet property="UIImageView_4" destination="GQ7-5z-5Xg" id="7f5-VY-i4c"/>
+                                            <outlet property="UIImageView_5" destination="rYP-R4-cSv" id="OPw-in-hrZ"/>
+                                            <outlet property="UIImageView_6" destination="K9F-KA-5db" id="6eW-wE-lIy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SevenEightNinePhoto_TableViewCell" rowHeight="300" id="Tat-TB-jc2" customClass="SevenEightNinePhoto_TableViewCell" customModule="LALA" customModuleProvider="target">
@@ -721,81 +677,45 @@
                                                     <rect key="frame" x="18" y="8" width="284" height="284"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A8Q-iO-xru">
-                                                            <rect key="frame" x="0.0" y="0.0" width="284" height="92"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="284" height="91.5"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-JM-Piy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click1:" destination="Tat-TB-jc2" eventType="touchUpInside" id="gGd-sx-4N4"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YH-KZ-kic">
-                                                                    <rect key="frame" x="97" y="0.0" width="91" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click2:" destination="Tat-TB-jc2" eventType="touchUpInside" id="hgK-4h-aYG"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S99-GP-UsE">
-                                                                    <rect key="frame" x="193" y="0.0" width="92" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click3:" destination="Tat-TB-jc2" eventType="touchUpInside" id="DE1-HR-yEX"/>
-                                                                    </connections>
-                                                                </button>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-OZ-VLd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-Es-Oxt">
+                                                                    <rect key="frame" x="96" y="0.0" width="91" height="91.5"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6im-Ie-Ov2">
+                                                                    <rect key="frame" x="192" y="0.0" width="91.5" height="91.5"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="45g-kL-ben">
-                                                            <rect key="frame" x="0.0" y="97" width="284" height="91"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cjj-LL-OQ7">
+                                                            <rect key="frame" x="0.0" y="96" width="284" height="91"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arf-4P-Xc1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="91"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click4:" destination="Tat-TB-jc2" eventType="touchUpInside" id="fgb-Id-V0I"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-2u-4m9">
-                                                                    <rect key="frame" x="97" y="0.0" width="91" height="91"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click5:" destination="Tat-TB-jc2" eventType="touchUpInside" id="7fV-lU-Etq"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-E6-50L">
-                                                                    <rect key="frame" x="193" y="0.0" width="92" height="91"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click6:" destination="Tat-TB-jc2" eventType="touchUpInside" id="0ia-FG-m9o"/>
-                                                                    </connections>
-                                                                </button>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VhB-xQ-aO1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="91"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-aI-P2q">
+                                                                    <rect key="frame" x="96" y="0.0" width="91" height="91"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ucY-qR-Oky">
+                                                                    <rect key="frame" x="192" y="0.0" width="91.5" height="91"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3kX-nS-ZrE">
-                                                            <rect key="frame" x="0.0" y="193" width="284" height="92"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-wS-l45">
+                                                            <rect key="frame" x="0.0" y="192" width="284" height="91.5"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-7P-q3b">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click7:" destination="Tat-TB-jc2" eventType="touchUpInside" id="bXI-zo-mkv"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-Jb-pBM">
-                                                                    <rect key="frame" x="97" y="0.0" width="91" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click8:" destination="Tat-TB-jc2" eventType="touchUpInside" id="saC-hR-9pQ"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DK-CR-orW">
-                                                                    <rect key="frame" x="193" y="0.0" width="92" height="92"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="UIButton_Click9:" destination="Tat-TB-jc2" eventType="touchUpInside" id="s46-SV-GxD"/>
-                                                                    </connections>
-                                                                </button>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LYM-MG-A7O">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-PZ-sgc">
+                                                                    <rect key="frame" x="96" y="0.0" width="91" height="91.5"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2A9-7r-V1c">
+                                                                    <rect key="frame" x="192.5" y="0.0" width="91.5" height="91.5"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
@@ -809,15 +729,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="UIButton_1" destination="NLu-JM-Piy" id="aBN-6D-zlk"/>
-                                            <outlet property="UIButton_2" destination="4YH-KZ-kic" id="RqP-L7-vRr"/>
-                                            <outlet property="UIButton_3" destination="S99-GP-UsE" id="zVQ-uH-SJk"/>
-                                            <outlet property="UIButton_4" destination="arf-4P-Xc1" id="TKm-HJ-ZSQ"/>
-                                            <outlet property="UIButton_5" destination="uOG-2u-4m9" id="Kpq-jO-yxc"/>
-                                            <outlet property="UIButton_6" destination="ohh-E6-50L" id="YHe-fc-Ram"/>
-                                            <outlet property="UIButton_7" destination="BmL-7P-q3b" id="XRM-Ju-1TT"/>
-                                            <outlet property="UIButton_8" destination="qdb-Jb-pBM" id="BI2-oM-bcf"/>
-                                            <outlet property="UIButton_9" destination="9DK-CR-orW" id="MZw-qJ-3E1"/>
+                                            <outlet property="UIImageView_1" destination="K7T-OZ-VLd" id="Xbc-oI-u22"/>
+                                            <outlet property="UIImageView_2" destination="gtw-Es-Oxt" id="k2w-da-wJg"/>
+                                            <outlet property="UIImageView_3" destination="6im-Ie-Ov2" id="eyf-nz-QLK"/>
+                                            <outlet property="UIImageView_4" destination="VhB-xQ-aO1" id="hzL-XR-j3H"/>
+                                            <outlet property="UIImageView_5" destination="Xxv-aI-P2q" id="ahk-GL-VDx"/>
+                                            <outlet property="UIImageView_6" destination="ucY-qR-Oky" id="Dco-FT-hky"/>
+                                            <outlet property="UIImageView_7" destination="LYM-MG-A7O" id="oR6-f2-h57"/>
+                                            <outlet property="UIImageView_8" destination="QVj-PZ-sgc" id="IKt-zA-HJf"/>
+                                            <outlet property="UIImageView_9" destination="2A9-7r-V1c" id="rud-Os-wEF"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="RWI-dA-t6k">
