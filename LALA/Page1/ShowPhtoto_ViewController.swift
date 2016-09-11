@@ -49,6 +49,7 @@ class ShowPhtoto_ViewController: UIViewController {
                     self.UIImageView_Main.image = image
                     SVProgressHUD.dismiss()
                 }
+                SVProgressHUD.dismiss()
         }
 
         // Do any additional setup after loading the view.
@@ -100,6 +101,7 @@ class ShowPhtoto_ViewController: UIViewController {
                             self.imagenumber_max = self.imagenumber_now
                             SVProgressHUD.dismiss()
                         }
+                        SVProgressHUD.dismiss()
                 }
             }
             else {
