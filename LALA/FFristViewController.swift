@@ -46,6 +46,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     var SheBei_Width = UIScreen.mainScreen().bounds.width
     var server:String = ""
     var serverimage:String = ""
+    var servericon = ""
+    
     
     
     //MARK: - DATA SAVE
@@ -160,6 +162,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         let data:NSMutableDictionary = NSMutableDictionary(contentsOfFile:diaryList)!
         server = data.objectForKey("Server") as! String
         serverimage = server + "photo/TEST_PHOTOS/"
+        servericon = server + "photo/USER_ICONS/"
+        
         print(serverimage)
         //MARK:ALAMOFIRE START
         
@@ -428,11 +432,89 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
                 cell.UIImageView_Background.hidden = true
                 
-                cell.UIImageView_UserIcon.image = Imageload
+                //cell.UIImageView_UserIcon.image = Imageload
+                
+                Alamofire.request(.GET, servericon + datadetails[indexPath.section]![2]["senderid"]! + ".png")
+                    .responseImage { response in
+                        if let image = response.result.value {
+                            cell.UIImageView_UserIcon.image = image
+                        }
+                }
                 cell.UIImageView_Setting.image = Imageload
                 
                 cell.UILabel_SenderName.text = datadetails[indexPath.section]![3]["sendername"]
-                cell.UILabel_Information.text = datadetails[indexPath.section]![0]["newstime"]! + datadetails[indexPath.section]![1]["device"]!
+                let aa = datadetails[indexPath.section]![0]["newstime"]!
+                
+                let date = NSDate()
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                let dateString = formatter.stringFromDate(date)
+                //let dateString = "9999-12-31 22:38:00"
+                print(dateString)
+                
+                var time1 = ["","","","",""]
+                var time2 = ["","","","",""]
+                
+                var flag1 = 0
+                var flag2 = 0
+                
+                
+                
+                for (i) in (aa.characters) {
+                    //发送时间
+                    switch flag1 {
+                    case 0,1,2,3:
+                        time1[0].append(i)
+                    case 5,6:
+                        time1[1].append(i)
+                    case 8,9:
+                        time1[2].append(i)
+                    case 11,12:
+                        time1[3].append(i)
+                    case 14,15:
+                        time1[4].append(i)
+                    default:
+                        break
+                    }
+                    flag1 += 1
+                }
+                
+                for (i) in (dateString.characters) {
+                    //系统时间
+                    switch flag2 {
+                    case 0,1,2,3:
+                        time2[0].append(i)
+                    case 5,6:
+                        time2[1].append(i)
+                    case 8,9:
+                        time2[2].append(i)
+                    case 11,12:
+                        time2[3].append(i)
+                    case 14,15:
+                        time2[4].append(i)
+
+                    default:
+                        break
+                    }
+                    flag2 += 1
+                }
+                
+                if time1[0] == time2[0] && time1[1] == time2[1] && time1[2] == time2[2]{
+                    //同一天
+                    if  Int(time1[3])! - Int(time2[3])! == 0 ||   Int(time1[3])! - Int(time2[3])! == 1 ||  Int(time1[3])! - Int(time2[3])! == -1 {
+                        //小时一样 或接近
+                        cell.UILabel_Information.text = "刚刚" + "  来自" + datadetails[indexPath.section]![1]["device"]!
+                    }
+                    else{
+                        cell.UILabel_Information.text = "今天" + "  来自" + datadetails[indexPath.section]![1]["device"]!
+                    }
+                    
+                }
+                else{
+                    cell.UILabel_Information.text = time1[0] + "年" + time1[1] + "月" + time1[2] + "日 " + time1[3] + "时" + time1[4] + "分" + "  来自" + datadetails[indexPath.section]![1]["device"]!
+                }
+                
+                
                 cell.UILabel_MainDetail.text = datadetails[indexPath.section]![5]["detail"]
                 
                 height_tableview = 100
