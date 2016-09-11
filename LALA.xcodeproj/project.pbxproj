@@ -40,11 +40,6 @@
 		7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */; };
 		7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D21D7FC17200737517 /* USER_OTHERS_TableViewCell.swift */; };
 		7FB640D51D7FC6D800737517 /* Others.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB640D41D7FC6D800737517 /* Others.storyboard */; };
-		7FB640DB1D7FCBB800737517 /* FFrist_1_big_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D61D7FCBB800737517 /* FFrist_1_big_TableViewCell.swift */; };
-		7FB640DC1D7FCBB800737517 /* FFrist_Without_Photo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D71D7FCBB800737517 /* FFrist_Without_Photo_TableViewCell.swift */; };
-		7FB640DD1D7FCBB800737517 /* FFrist23TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D81D7FCBB800737517 /* FFrist23TableViewCell.swift */; };
-		7FB640DE1D7FCBB800737517 /* FFrist456TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640D91D7FCBB800737517 /* FFrist456TableViewCell.swift */; };
-		7FB640DF1D7FCBB800737517 /* FFrist789TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB640DA1D7FCBB800737517 /* FFrist789TableViewCell.swift */; };
 		7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */; };
 		7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */; };
 		7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */; };
@@ -179,11 +174,6 @@
 		7FB640D01D7FC15600737517 /* PCC_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PCC_TableViewCell.swift; path = CELLS/PCC_TableViewCell.swift; sourceTree = "<group>"; };
 		7FB640D21D7FC17200737517 /* USER_OTHERS_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USER_OTHERS_TableViewCell.swift; path = CELLS/USER_OTHERS_TableViewCell.swift; sourceTree = "<group>"; };
 		7FB640D41D7FC6D800737517 /* Others.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Others.storyboard; sourceTree = "<group>"; };
-		7FB640D61D7FCBB800737517 /* FFrist_1_big_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FFrist_1_big_TableViewCell.swift; path = CELLS/FFrist_1_big_TableViewCell.swift; sourceTree = "<group>"; };
-		7FB640D71D7FCBB800737517 /* FFrist_Without_Photo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FFrist_Without_Photo_TableViewCell.swift; path = CELLS/FFrist_Without_Photo_TableViewCell.swift; sourceTree = "<group>"; };
-		7FB640D81D7FCBB800737517 /* FFrist23TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FFrist23TableViewCell.swift; path = CELLS/FFrist23TableViewCell.swift; sourceTree = "<group>"; };
-		7FB640D91D7FCBB800737517 /* FFrist456TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FFrist456TableViewCell.swift; path = CELLS/FFrist456TableViewCell.swift; sourceTree = "<group>"; };
-		7FB640DA1D7FCBB800737517 /* FFrist789TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FFrist789TableViewCell.swift; path = CELLS/FFrist789TableViewCell.swift; sourceTree = "<group>"; };
 		7FB8A8A11D4B285100F2F22D /* FSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSecondViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FThirdViewController.swift; sourceTree = "<group>"; };
 		7FB8A8A71D4B298800F2F22D /* SecondSon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondSon.storyboard; sourceTree = "<group>"; };
@@ -413,18 +403,6 @@
 			name = "设置";
 			sourceTree = "<group>";
 		};
-		7F7701491D5B88D1008D07A2 /* cells_1 */ = {
-			isa = PBXGroup;
-			children = (
-				7FB640D61D7FCBB800737517 /* FFrist_1_big_TableViewCell.swift */,
-				7FB640D71D7FCBB800737517 /* FFrist_Without_Photo_TableViewCell.swift */,
-				7FB640D81D7FCBB800737517 /* FFrist23TableViewCell.swift */,
-				7FB640D91D7FCBB800737517 /* FFrist456TableViewCell.swift */,
-				7FB640DA1D7FCBB800737517 /* FFrist789TableViewCell.swift */,
-			);
-			name = cells_1;
-			sourceTree = "<group>";
-		};
 		7FB8A89E1D4B27D200F2F22D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +412,6 @@
 				7FB8A8A51D4B28BB00F2F22D /* FThirdViewController.swift */,
 				7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */,
 				7FDAAAF31D800AA300BA5D1A /* 页面1的 cell */,
-				7F7701491D5B88D1008D07A2 /* cells_1 */,
 				7F515FA41D7DC6060018354F /* cells_4 */,
 				7F7701461D5B87F2008D07A2 /* 设置 */,
 				7FE705AF1D57291C0025A0E5 /* 登录 和 注册 */,
@@ -881,7 +858,6 @@
 				7FE9008A1D7D2BF8007F4F90 /* Seven_Eight_Nine_TableViewCell.swift in Sources */,
 				7FB640CD1D7FB90D00737517 /* FForthTableViewController.swift in Sources */,
 				7FDAAAFF1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift in Sources */,
-				7FB640DF1D7FCBB800737517 /* FFrist789TableViewCell.swift in Sources */,
 				7FAD11F41D8534F500A18E94 /* ShowPhtoto_ViewController.swift in Sources */,
 				7FDAAAF51D800B0400BA5D1A /* Information_TableViewCell.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
@@ -905,20 +881,16 @@
 				7FE9008E1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift in Sources */,
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
 				7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */,
-				7FB640DB1D7FCBB800737517 /* FFrist_1_big_TableViewCell.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,
-				7FB640DC1D7FCBB800737517 /* FFrist_Without_Photo_TableViewCell.swift in Sources */,
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
 				7FDAAB011D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift in Sources */,
 				7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */,
 				7FE9008C1D7D2C0C007F4F90 /* ADS_TableViewCell.swift in Sources */,
-				7FB640DD1D7FCBB800737517 /* FFrist23TableViewCell.swift in Sources */,
-				7FB640DE1D7FCBB800737517 /* FFrist456TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
