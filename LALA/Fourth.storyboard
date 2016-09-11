@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -34,6 +35,51 @@
             </objects>
             <point key="canvasLocation" x="251" y="1116"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="oQR-ew-ZmU">
+            <objects>
+                <collectionViewController storyboardIdentifier="MYPHOTO_CollectionViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="78W-5u-eLf" customClass="MYPHOTO_CollectionViewController" customModule="LALA" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="flT-Zs-KwH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="IOr-b6-1Pf"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AIMAGE_CollectionViewCell" id="JkO-TE-sRr" customClass="AIMAGE_CollectionViewCell" customModule="LALA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arU-7O-sTn">
+                                            <rect key="frame" x="8" y="8" width="84" height="83"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="arU-7O-sTn" secondAttribute="bottom" id="DbR-R7-9Vg"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="arU-7O-sTn" secondAttribute="trailing" id="KQr-0C-Gri"/>
+                                    <constraint firstItem="arU-7O-sTn" firstAttribute="leading" secondItem="JkO-TE-sRr" secondAttribute="leadingMargin" id="WhT-I4-Az8"/>
+                                    <constraint firstItem="arU-7O-sTn" firstAttribute="top" secondItem="JkO-TE-sRr" secondAttribute="topMargin" id="oFg-e9-TaU"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="104"/>
+                                <connections>
+                                    <outlet property="UIImageView_Main" destination="arU-7O-sTn" id="cro-KD-GCg"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="78W-5u-eLf" id="s5W-CE-spR"/>
+                            <outlet property="delegate" destination="78W-5u-eLf" id="dnn-3d-Q7P"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="vHq-TB-WRe"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVR-eM-oFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="1116"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ej1-XA-5lM">
             <objects>
@@ -51,36 +97,6 @@
             </objects>
             <point key="canvasLocation" x="251" y="452"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="tcI-lQ-DXd">
-            <objects>
-                <tableViewController id="9NE-nE-8k5" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eYN-Nb-bUV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uOC-6R-9fm">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uOC-6R-9fm" id="bF0-2S-z7V">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9NE-nE-8k5" id="rGV-qg-Htp"/>
-                            <outlet property="delegate" destination="9NE-nE-8k5" id="5Fi-BP-6Q7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qJI-UV-T38"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K6A-3j-hRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="611" y="1116"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1MR-z4-gH9">
             <objects>
@@ -91,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="9NE-nE-8k5" kind="relationship" relationship="rootViewController" id="2np-Gm-Oyb"/>
+                        <segue destination="78W-5u-eLf" kind="relationship" relationship="rootViewController" id="rxv-qn-X8C"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bng-vQ-SUH" userLabel="First Responder" sceneMemberID="firstResponder"/>

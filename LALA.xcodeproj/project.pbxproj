@@ -51,6 +51,8 @@
 		7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */; };
 		7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */; };
 		7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8D7D21D65FF6400EBC8AD /* User.swift */; };
+		7FD1C17C1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1C17B1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift */; };
+		7FD1C17F1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1C17E1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift */; };
 		7FDAAAEC1D7FF9F300BA5D1A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAEB1D7FF9F300BA5D1A /* Second.storyboard */; };
 		7FDAAAF01D7FFAB900BA5D1A /* Thrid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */; };
 		7FDAAAF21D7FFAC600BA5D1A /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */; };
@@ -186,6 +188,8 @@
 		7FC089511D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN_SHARE_TableViewCell.swift; sourceTree = "<group>"; };
 		7FC8D7D11D65FF6400EBC8AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FC8D7D21D65FF6400EBC8AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FD1C17B1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MYPHOTO_CollectionViewController.swift; path = Page4/MYPHOTO_CollectionViewController.swift; sourceTree = "<group>"; };
+		7FD1C17E1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AIMAGE_CollectionViewCell.swift; path = Page4/CELL/AIMAGE_CollectionViewCell.swift; sourceTree = "<group>"; };
 		7FDAAAEB1D7FF9F300BA5D1A /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thrid.storyboard; sourceTree = "<group>"; };
 		7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
@@ -434,6 +438,14 @@
 			name = "1-第一页面的子控制类们【主视图】";
 			sourceTree = "<group>";
 		};
+		7FD1C17D1D85B2D400B9E11B /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FD1C17E1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		7FDAAAEA1D7FF9DA00BA5D1A /* 2-第二页面的子控制类们【IM】 */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +458,8 @@
 			isa = PBXGroup;
 			children = (
 				7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */,
+				7FD1C17B1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift */,
+				7FD1C17D1D85B2D400B9E11B /* cells */,
 			);
 			name = "4-第四页面的子控制类们【我的】";
 			sourceTree = "<group>";
@@ -879,9 +893,11 @@
 				7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
 				7FE9008E1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift in Sources */,
+				7FD1C17C1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift in Sources */,
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
 				7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
+				7FD1C17F1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,

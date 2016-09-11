@@ -342,7 +342,7 @@
                                     <outlet property="UILabel3" destination="1BM-Ym-AfN" id="lO3-l7-5xh"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="USER_OTHERS_TableViewCell" rowHeight="45" id="BCq-Ht-0hQ" customClass="USER_OTHERS_TableViewCell" customModule="LALA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="USER_OTHERS_TableViewCell" rowHeight="45" id="BCq-Ht-0hQ" customClass="USER_OTHERS_TableViewCell" customModule="LALA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="247" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BCq-Ht-0hQ" id="r5q-Sh-MDI">
