@@ -344,6 +344,17 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
             self.navigationController?.pushViewController(vc, animated: true)
         }
         //=========================//
+        //图片行
+        if  indexPath.row == 1 && !dataimage[indexPath.section]!.isEmpty {
+            let imagelist  = dataimage[indexPath.section]!
+            
+            NSUserDefaults.standardUserDefaults().setObject(imagelist, forKey: "imagelist")
+            //设置同步
+            NSUserDefaults.standardUserDefaults().synchronize()
+            //跳转
+            let vc = UIStoryboard(name: "Frist", bundle: nil).instantiateViewControllerWithIdentifier("ShowPhtoto_ViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     //Tableview cell高度
@@ -432,12 +443,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                     //判断得到的图片的高度 宽度比值
                     //确定样式
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("OnePhoto_H_TableViewCell", forIndexPath: indexPath) as! OnePhoto_H_TableViewCell
-                    cell.UIButton_Main.setTitle("", forState: .Normal)
                     
                     Alamofire.request(.GET, serverimage + dataimage[indexPath.section]![0]["Photo1"]!)
                         .responseImage { response in
                             if let image = response.result.value {
-                                cell.UIButton_Main.setBackgroundImage(image, forState: .Normal)
+                                //cell.UIButton_Main.setBackgroundImage(image, forState: .Normal)
+                                cell.UIImageView_Main.image = image
                             }
                     }
                     
@@ -446,9 +457,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                 case 2,3:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("TwoThreePhoto_TableViewCell", forIndexPath: indexPath) as! TwoThreePhoto_TableViewCell
-                    cell.UIButton_1.setTitle("", forState: .Normal)
-                    cell.UIButton_2.setTitle("", forState: .Normal)
-                    cell.UIButton_3.setTitle("", forState: .Normal)
+                    //cell.UIButton_1.setTitle("", forState: .Normal)
 
                     switch dataimage[indexPath.section]!.count {
                     case 2:
@@ -457,8 +466,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView1.image = image
+                                        case 1:cell.UIImageView2.image = image
                                         default: break
                                         }
                                     }
@@ -470,9 +479,9 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView1.image = image
+                                        case 1:cell.UIImageView2.image = image
+                                        case 2:cell.UIImageView3.image = image
                                         default: break
                                         }
                                     }
@@ -486,12 +495,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                 case 4,5,6:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("FourFiveSixPhoto_TableViewCell", forIndexPath: indexPath) as! FourFiveSixPhoto_TableViewCell
-                    cell.UIButton_1.setTitle("", forState: .Normal)
-                    cell.UIButton_2.setTitle("", forState: .Normal)
-                    cell.UIButton_3.setTitle("", forState: .Normal)
-                    cell.UIButton_4.setTitle("", forState: .Normal)
-                    cell.UIButton_5.setTitle("", forState: .Normal)
-                    cell.UIButton_6.setTitle("", forState: .Normal)
+
                     switch dataimage[indexPath.section]!.count {
                     case 4:
                         for i in 0..<4 {
@@ -499,10 +503,10 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
                                         default: break
                                         }
                                     }
@@ -515,11 +519,11 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
-                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
+                                        case 4:cell.UIImageView_5.image = image
                                         default: break
                                         }
                                     }
@@ -532,12 +536,12 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
-                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
-                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
+                                        case 4:cell.UIImageView_5.image = image
+                                        case 5:cell.UIImageView_6.image = image
                                         default: break
                                         }
                                     }
@@ -551,15 +555,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
 
                 case 7,8,9:
                     let cell = TimeTableView.dequeueReusableCellWithIdentifier("SevenEightNinePhoto_TableViewCell", forIndexPath: indexPath) as! SevenEightNinePhoto_TableViewCell
-                    cell.UIButton_1.setTitle("", forState: .Normal)
-                    cell.UIButton_2.setTitle("", forState: .Normal)
-                    cell.UIButton_3.setTitle("", forState: .Normal)
-                    cell.UIButton_4.setTitle("", forState: .Normal)
-                    cell.UIButton_5.setTitle("", forState: .Normal)
-                    cell.UIButton_6.setTitle("", forState: .Normal)
-                    cell.UIButton_7.setTitle("", forState: .Normal)
-                    cell.UIButton_8.setTitle("", forState: .Normal)
-                    cell.UIButton_9.setTitle("", forState: .Normal)
                     
                     switch dataimage[indexPath.section]!.count {
                     case 7:
@@ -568,13 +563,13 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
-                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
-                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
-                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
+                                        case 4:cell.UIImageView_5.image = image
+                                        case 5:cell.UIImageView_6.image = image
+                                        case 6:cell.UIImageView_7.image = image
                                         default: break
                                         }
                                     }
@@ -587,14 +582,14 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
-                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
-                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
-                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
-                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
+                                        case 4:cell.UIImageView_5.image = image
+                                        case 5:cell.UIImageView_6.image = image
+                                        case 6:cell.UIImageView_7.image = image
+                                        case 7:cell.UIImageView_8.image = image
                                         default: break
                                         }
                                     }
@@ -607,24 +602,16 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                                 .responseImage { response in
                                     if let image = response.result.value {
                                         switch i{
-                                        case 0:cell.UIButton_1.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_1.setTitle("", forState:.Normal)
-                                        case 1:cell.UIButton_2.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_2.setTitle("", forState:.Normal)
-                                        case 2:cell.UIButton_3.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_3.setTitle("", forState:.Normal)
-                                        case 3:cell.UIButton_4.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_4.setTitle("", forState:.Normal)
-                                        case 4:cell.UIButton_5.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_5.setTitle("", forState:.Normal)
-                                        case 5:cell.UIButton_6.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_6.setTitle("", forState:.Normal)
-                                        case 6:cell.UIButton_7.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_7.setTitle("", forState:.Normal)
-                                        case 7:cell.UIButton_8.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_8.setTitle("", forState:.Normal)
-                                        case 8:cell.UIButton_9.setBackgroundImage(image, forState: .Normal)
-                                            cell.UIButton_9.setTitle("", forState:.Normal)
+                                        case 0:cell.UIImageView_1.image = image
+                                        case 1:cell.UIImageView_2.image = image
+                                        case 2:cell.UIImageView_3.image = image
+                                        case 3:cell.UIImageView_4.image = image
+                                        case 4:cell.UIImageView_5.image = image
+                                        case 5:cell.UIImageView_6.image = image
+                                        case 6:cell.UIImageView_7.image = image
+                                        case 7:cell.UIImageView_8.image = image
+                                        case 8:cell.UIImageView_9.image = image
+
                                         default: break
                                         }
                                     }
