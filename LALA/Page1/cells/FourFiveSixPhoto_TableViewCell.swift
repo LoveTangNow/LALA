@@ -9,32 +9,20 @@
 import UIKit
 
 class FourFiveSixPhoto_TableViewCell: UITableViewCell {
+    var imageid1:Int = 0
+    var imageid2:Int = 0
+    var imageid3:Int = 0
+    var imageid4:Int = 0
+    var imageid5:Int = 0
+    var imageid6:Int = 0
     
-    @IBOutlet weak var UIButton_1: UIButton!
-    @IBOutlet weak var UIButton_2: UIButton!
-    @IBOutlet weak var UIButton_3: UIButton!
-    
-    @IBOutlet weak var UIButton_4: UIButton!
-    @IBOutlet weak var UIButton_5: UIButton!
-    @IBOutlet weak var UIButton_6: UIButton!
-    
-    @IBAction func UIButton_Click(sender: AnyObject) {
-    }
-    
-    @IBAction func UIButton_Click2(sender: AnyObject) {
-    }
-    
-    @IBAction func UIButton_Click3(sender: AnyObject) {
-    }
-    
-    @IBAction func UIButton_Click4(sender: AnyObject) {
-    }
-    
-    @IBAction func UIButton_Click5(sender: AnyObject) {
-    }
-    
-    @IBAction func UIButton_Click6(sender: AnyObject) {
-    }
+    @IBOutlet weak var UIImageView_1: UIImageView!
+    @IBOutlet weak var UIImageView_2: UIImageView!
+    @IBOutlet weak var UIImageView_3: UIImageView!
+
+    @IBOutlet weak var UIImageView_4: UIImageView!
+    @IBOutlet weak var UIImageView_5: UIImageView!
+    @IBOutlet weak var UIImageView_6: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,21 +9,13 @@
 import UIKit
 
 class TwoThreePhoto_TableViewCell: UITableViewCell {
+    var imageid1:Int = 0
+    var imageid2:Int = 0
+    var imageid3:Int = 0
     
-    @IBOutlet weak var UIButton_1: UIButton!
-    @IBOutlet weak var UIButton_2: UIButton!
-    @IBOutlet weak var UIButton_3: UIButton!
-    
-    @IBAction func UIButton1_Click(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func UIButton2_Click(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func UIButton3_Click(sender: AnyObject) {
-    }
+    @IBOutlet weak var UIImageView1: UIImageView!
+    @IBOutlet weak var UIImageView2: UIImageView!
+    @IBOutlet weak var UIImageView3: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

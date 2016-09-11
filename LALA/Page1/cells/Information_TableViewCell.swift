@@ -18,6 +18,7 @@ class Information_TableViewCell: UITableViewCell {
     @IBOutlet weak var UILabel_SenderName: UILabel!
     @IBOutlet weak var UILabel_Information: UILabel!
     @IBOutlet weak var UILabel_MainDetail: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
