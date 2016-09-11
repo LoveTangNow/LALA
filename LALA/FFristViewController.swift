@@ -349,7 +349,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         }
         //=========================//
         //图片行
-        if  indexPath.row == 1 && !dataimage[indexPath.section]!.isEmpty {
+        if  !datadetails.isEmpty && indexPath.row == 1 && !dataimage[indexPath.section]!.isEmpty {
             let imagelist  = dataimage[indexPath.section]!
             
             NSUserDefaults.standardUserDefaults().setObject(imagelist, forKey: "imagelist")

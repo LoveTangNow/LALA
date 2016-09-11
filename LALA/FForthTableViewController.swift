@@ -47,6 +47,13 @@ class FForthTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let vc = UIStoryboard(name: "Fourth", bundle: nil).instantiateViewControllerWithIdentifier("MYPHOTO_CollectionViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
