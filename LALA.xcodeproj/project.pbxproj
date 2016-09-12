@@ -41,6 +41,9 @@
 		7F6778441D86D278003A1CEF /* AccountTongYongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778431D86D278003A1CEF /* AccountTongYongTableViewController.swift */; };
 		7F6778461D86D2DD003A1CEF /* AccountSecurityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778451D86D2DD003A1CEF /* AccountSecurityTableViewController.swift */; };
 		7F6778481D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778471D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift */; };
+		7F67784C1D86F667003A1CEF /* TuijianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67784B1D86F667003A1CEF /* TuijianViewController.swift */; };
+		7F67784F1D86F7F9003A1CEF /* UsersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67784E1D86F7F9003A1CEF /* UsersCollectionViewCell.swift */; };
+		7F6778531D870011003A1CEF /* OnePhotoTwoLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778521D870011003A1CEF /* OnePhotoTwoLabelTableViewCell.swift */; };
 		7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImageDViewController.swift */; };
 		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
@@ -188,6 +191,9 @@
 		7F6778431D86D278003A1CEF /* AccountTongYongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTongYongTableViewController.swift; path = Setting/AccountTongYongTableViewController.swift; sourceTree = "<group>"; };
 		7F6778451D86D2DD003A1CEF /* AccountSecurityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountSecurityTableViewController.swift; path = Setting/AccountSecurityTableViewController.swift; sourceTree = "<group>"; };
 		7F6778471D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneLabelOneSwitchTableViewCell.swift; path = Setting/cells/OneLabelOneSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		7F67784B1D86F667003A1CEF /* TuijianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TuijianViewController.swift; path = page3/TuijianViewController.swift; sourceTree = "<group>"; };
+		7F67784E1D86F7F9003A1CEF /* UsersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersCollectionViewCell.swift; path = page3/cells/UsersCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F6778521D870011003A1CEF /* OnePhotoTwoLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnePhotoTwoLabelTableViewCell.swift; path = page3/cells/OnePhotoTwoLabelTableViewCell.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImageDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDViewController.swift; sourceTree = "<group>"; };
 		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
@@ -445,6 +451,15 @@
 			name = Security_Cells;
 			sourceTree = "<group>";
 		};
+		7F67784D1D86F7DB003A1CEF /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7F67784E1D86F7F9003A1CEF /* UsersCollectionViewCell.swift */,
+				7F6778521D870011003A1CEF /* OnePhotoTwoLabelTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		7F7701461D5B87F2008D07A2 /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				7FDAAAEF1D7FFAB900BA5D1A /* Thrid.storyboard */,
+				7F67784B1D86F667003A1CEF /* TuijianViewController.swift */,
+				7F67784D1D86F7DB003A1CEF /* cells */,
 			);
 			name = "3-第三页面的子控制类们【发现】";
 			sourceTree = "<group>";
@@ -955,7 +972,9 @@
 				7FE900841D7D2B84007F4F90 /* One_Photo_TableViewCell.swift in Sources */,
 				7F6778361D865819003A1CEF /* AccountTableViewController.swift in Sources */,
 				7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */,
+				7F67784F1D86F7F9003A1CEF /* UsersCollectionViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
+				7F6778531D870011003A1CEF /* OnePhotoTwoLabelTableViewCell.swift in Sources */,
 				7FE9008E1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift in Sources */,
 				7FD1C17C1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift in Sources */,
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
@@ -965,6 +984,7 @@
 				7F67783D1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift in Sources */,
 				7FD1C17F1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
+				7F67784C1D86F667003A1CEF /* TuijianViewController.swift in Sources */,
 				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
