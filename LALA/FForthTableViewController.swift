@@ -21,6 +21,7 @@ class FForthTableViewController: UITableViewController {
         "我的相册",
         "我的评论",
         "我的赞",
+        "设置",
         "更多"]
     var list_Numbers = [Int]()
     
@@ -37,6 +38,7 @@ class FForthTableViewController: UITableViewController {
         
         //获取到本人的“用户头像” - “用户昵称” - “用户介绍” - “是否 VIP”
         print(list_["jie"])
+        self.title = "我的"
         
         super.viewDidLoad()
     }
@@ -45,11 +47,22 @@ class FForthTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func SettingButton_Click(sender: AnyObject) {
+        let vc = UIStoryboard(name: "Setting", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
             let vc = UIStoryboard(name: "Fourth", bundle: nil).instantiateViewControllerWithIdentifier("MYPHOTO_CollectionViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        if indexPath.section == 1 && indexPath.row == 3 {
+            let vc = UIStoryboard(name: "Setting", bundle: nil).instantiateViewControllerWithIdentifier("SettingTableViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             
         }
