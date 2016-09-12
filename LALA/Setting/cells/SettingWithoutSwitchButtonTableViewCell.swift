@@ -1,17 +1,18 @@
 //
-//  SN_WORDS_TableViewCell.swift
+//  SettingWithoutSwitchButtonTableViewCell.swift
 //  LALA
 //
-//  Created by Thomas Liu on 16/9/6.
+//  Created by Thomas Liu on 16/9/12.
 //  Copyright © 2016年 Thomas Liu. All rights reserved.
 //
 
 import UIKit
 
-class SN_WORDS_TableViewCell: UITableViewCell {
+class SettingWithoutSwitchButtonTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var UITextView_Main: UITextView!
+    @IBOutlet weak var UIImageView_Main: UIImageView!
     
+    @IBOutlet weak var UILabel_Main: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,13 +23,6 @@ class SN_WORDS_TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        if selected {
-            //选中。
-            print("textview line seleccted")
-        } else {
-            //不再选中。
-            print("textview line no seleccted")
-        }
     }
 
 }
