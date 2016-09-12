@@ -147,13 +147,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         let imgbackV = UIImageView(image: ImageloadBackGroudn)
         self.TimeTableView.backgroundView = imgbackV
         
-        for a in 0...10 {
-            print(a)
-            saveItem(String(a))
-        }
-        
-
-        
         TimeTableView.dataSource = self
         TimeTableView.delegate = self
         
@@ -164,7 +157,6 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
         serverimage = server + "photo/TEST_PHOTOS/"
         servericon = server + "photo/USER_ICONS/"
         
-        print(serverimage)
         //MARK:ALAMOFIRE START
         
         Alamofire.request(.GET, server + "/GIVE_BACK_PHOTO.php",parameters: ["data": "bar"])
@@ -370,7 +362,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //TableView中Sections的数量
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        print("TableView中Sections的数量")
+        //print("TableView中Sections的数量")
         if datadetails.count == 0 {
             return 1
         }
@@ -383,8 +375,7 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     //几个Tableview cell
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        print("几个Tableview cell")
+        //print("几个Tableview cell")
         return 3
     }
     
@@ -550,7 +541,8 @@ class FFristViewController: UIViewController,UITableViewDataSource, UITableViewD
                             }
                     }
                     
-                    height_tableview = SheBei_Width * 0.618
+                    height_tableview =  SheBei_Width * 0.618 - SheBei_Width * 0.618 % 1
+                    print(height_tableview)
                     return cell
 
                 case 2,3:
