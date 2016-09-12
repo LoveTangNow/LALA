@@ -42,13 +42,18 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="flT-Zs-KwH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="IOr-b6-1Pf"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yRy-Vn-WnS">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AIMAGE_CollectionViewCell" id="JkO-TE-sRr" customClass="AIMAGE_CollectionViewCell" customModule="LALA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="100" height="104"/>
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arU-7O-sTn">
@@ -63,7 +68,7 @@
                                     <constraint firstItem="arU-7O-sTn" firstAttribute="leading" secondItem="JkO-TE-sRr" secondAttribute="leadingMargin" id="WhT-I4-Az8"/>
                                     <constraint firstItem="arU-7O-sTn" firstAttribute="top" secondItem="JkO-TE-sRr" secondAttribute="topMargin" id="oFg-e9-TaU"/>
                                 </constraints>
-                                <size key="customSize" width="100" height="104"/>
+                                <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="UIImageView_Main" destination="arU-7O-sTn" id="cro-KD-GCg"/>
                                 </connections>

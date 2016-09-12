@@ -30,6 +30,17 @@
 		7F2E096F1D5DE8EC00810787 /* ImageUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */; };
 		7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */; };
 		7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5632261D5FD6780017958A /* LoadTableViewCells.swift */; };
+		7F67782E1D864CE9003A1CEF /* SettingWithoutSwitchButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67782D1D864CE9003A1CEF /* SettingWithoutSwitchButtonTableViewCell.swift */; };
+		7F6778301D864D00003A1CEF /* SettingWithSwitchButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67782F1D864D00003A1CEF /* SettingWithSwitchButtonTableViewCell.swift */; };
+		7F6778321D864F2F003A1CEF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6778311D864F2F003A1CEF /* Setting.storyboard */; };
+		7F6778341D865326003A1CEF /* OnlyLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778331D865326003A1CEF /* OnlyLabelTableViewCell.swift */; };
+		7F6778361D865819003A1CEF /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778351D865819003A1CEF /* AccountTableViewController.swift */; };
+		7F67783B1D86618D003A1CEF /* TwoLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67783A1D86618D003A1CEF /* TwoLabelTableViewCell.swift */; };
+		7F67783D1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67783C1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift */; };
+		7F67783F1D8662AA003A1CEF /* AImageAndALabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67783E1D8662AA003A1CEF /* AImageAndALabelTableViewCell.swift */; };
+		7F6778441D86D278003A1CEF /* AccountTongYongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778431D86D278003A1CEF /* AccountTongYongTableViewController.swift */; };
+		7F6778461D86D2DD003A1CEF /* AccountSecurityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778451D86D2DD003A1CEF /* AccountSecurityTableViewController.swift */; };
+		7F6778481D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6778471D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift */; };
 		7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7701471D5B8824008D07A2 /* ImageDViewController.swift */; };
 		7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7701521D5CB69F008D07A2 /* ImageU.storyboard */; };
 		7F9C494C1D5618640017D282 /* ZhuCeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */; };
@@ -166,6 +177,17 @@
 		7F2E096E1D5DE8EC00810787 /* ImageUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUViewController.swift; sourceTree = "<group>"; };
 		7F515F971D7DC3FB0018354F /* Send_News_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Send_News_TableViewController.swift; sourceTree = "<group>"; };
 		7F5632261D5FD6780017958A /* LoadTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTableViewCells.swift; sourceTree = "<group>"; };
+		7F67782D1D864CE9003A1CEF /* SettingWithoutSwitchButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingWithoutSwitchButtonTableViewCell.swift; path = Setting/cells/SettingWithoutSwitchButtonTableViewCell.swift; sourceTree = "<group>"; };
+		7F67782F1D864D00003A1CEF /* SettingWithSwitchButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingWithSwitchButtonTableViewCell.swift; path = Setting/cells/SettingWithSwitchButtonTableViewCell.swift; sourceTree = "<group>"; };
+		7F6778311D864F2F003A1CEF /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		7F6778331D865326003A1CEF /* OnlyLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyLabelTableViewCell.swift; path = Setting/cells/OnlyLabelTableViewCell.swift; sourceTree = "<group>"; };
+		7F6778351D865819003A1CEF /* AccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewController.swift; path = Setting/AccountTableViewController.swift; sourceTree = "<group>"; };
+		7F67783A1D86618D003A1CEF /* TwoLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwoLabelTableViewCell.swift; path = Setting/AccountCells/TwoLabelTableViewCell.swift; sourceTree = "<group>"; };
+		7F67783C1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwoLabelButOneOfThenReallyBigTableViewCell.swift; path = Setting/AccountCells/TwoLabelButOneOfThenReallyBigTableViewCell.swift; sourceTree = "<group>"; };
+		7F67783E1D8662AA003A1CEF /* AImageAndALabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AImageAndALabelTableViewCell.swift; path = Setting/AccountCells/AImageAndALabelTableViewCell.swift; sourceTree = "<group>"; };
+		7F6778431D86D278003A1CEF /* AccountTongYongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTongYongTableViewController.swift; path = Setting/AccountTongYongTableViewController.swift; sourceTree = "<group>"; };
+		7F6778451D86D2DD003A1CEF /* AccountSecurityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountSecurityTableViewController.swift; path = Setting/AccountSecurityTableViewController.swift; sourceTree = "<group>"; };
+		7F6778471D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneLabelOneSwitchTableViewCell.swift; path = Setting/cells/OneLabelOneSwitchTableViewCell.swift; sourceTree = "<group>"; };
 		7F7701471D5B8824008D07A2 /* ImageDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDViewController.swift; sourceTree = "<group>"; };
 		7F7701521D5CB69F008D07A2 /* ImageU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageU.storyboard; sourceTree = "<group>"; };
 		7F9C494B1D5618640017D282 /* ZhuCeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuCeViewController.swift; sourceTree = "<group>"; };
@@ -395,10 +417,45 @@
 			name = data;
 			sourceTree = "<group>";
 		};
+		7F67782C1D864C99003A1CEF /* cells_main */ = {
+			isa = PBXGroup;
+			children = (
+				7F67782D1D864CE9003A1CEF /* SettingWithoutSwitchButtonTableViewCell.swift */,
+				7F67782F1D864D00003A1CEF /* SettingWithSwitchButtonTableViewCell.swift */,
+				7F6778331D865326003A1CEF /* OnlyLabelTableViewCell.swift */,
+			);
+			name = cells_main;
+			sourceTree = "<group>";
+		};
+		7F6778371D865823003A1CEF /* Account_Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7F67783E1D8662AA003A1CEF /* AImageAndALabelTableViewCell.swift */,
+				7F67783A1D86618D003A1CEF /* TwoLabelTableViewCell.swift */,
+				7F67783C1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift */,
+				7F6778471D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift */,
+			);
+			name = Account_Cells;
+			sourceTree = "<group>";
+		};
+		7F6778421D866A0D003A1CEF /* Security_Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Security_Cells;
+			sourceTree = "<group>";
+		};
 		7F7701461D5B87F2008D07A2 /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
+				7F6778311D864F2F003A1CEF /* Setting.storyboard */,
 				7F19A12E1D586DFD0030A16F /* SettingTableViewController.swift */,
+				7F6778351D865819003A1CEF /* AccountTableViewController.swift */,
+				7F6778451D86D2DD003A1CEF /* AccountSecurityTableViewController.swift */,
+				7F6778431D86D278003A1CEF /* AccountTongYongTableViewController.swift */,
+				7F67782C1D864C99003A1CEF /* cells_main */,
+				7F6778371D865823003A1CEF /* Account_Cells */,
+				7F6778421D866A0D003A1CEF /* Security_Cells */,
 				7FFD661F1D5E3BF3002AC1F4 /* ImageD.storyboard */,
 				7F7701471D5B8824008D07A2 /* ImageDViewController.swift */,
 				7F7701521D5CB69F008D07A2 /* ImageU.storyboard */,
@@ -417,8 +474,6 @@
 				7FB640CC1D7FB90D00737517 /* FForthTableViewController.swift */,
 				7FDAAAF31D800AA300BA5D1A /* 页面1的 cell */,
 				7F515FA41D7DC6060018354F /* cells_4 */,
-				7F7701461D5B87F2008D07A2 /* 设置 */,
-				7FE705AF1D57291C0025A0E5 /* 登录 和 注册 */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -460,6 +515,8 @@
 				7FDAAAF11D7FFAC600BA5D1A /* Fourth.storyboard */,
 				7FD1C17B1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift */,
 				7FD1C17D1D85B2D400B9E11B /* cells */,
+				7F7701461D5B87F2008D07A2 /* 设置 */,
+				7FE705AF1D57291C0025A0E5 /* 登录 和 注册 */,
 			);
 			name = "4-第四页面的子控制类们【我的】";
 			sourceTree = "<group>";
@@ -766,6 +823,7 @@
 				7FDAAAF01D7FFAB900BA5D1A /* Thrid.storyboard in Resources */,
 				7FDAAAF21D7FFAC600BA5D1A /* Fourth.storyboard in Resources */,
 				7FB8A8A81D4B298800F2F22D /* SecondSon.storyboard in Resources */,
+				7F6778321D864F2F003A1CEF /* Setting.storyboard in Resources */,
 				7F7701531D5CB69F008D07A2 /* ImageU.storyboard in Resources */,
 				7FB640D51D7FC6D800737517 /* Others.storyboard in Resources */,
 				7F19A12D1D58695B0030A16F /* Assets.xcassets in Resources */,
@@ -874,7 +932,10 @@
 				7FDAAAFF1D800BBC00BA5D1A /* SevenEightNinePhoto_TableViewCell.swift in Sources */,
 				7FAD11F41D8534F500A18E94 /* ShowPhtoto_ViewController.swift in Sources */,
 				7FDAAAF51D800B0400BA5D1A /* Information_TableViewCell.swift in Sources */,
+				7F67783F1D8662AA003A1CEF /* AImageAndALabelTableViewCell.swift in Sources */,
 				7F9C494E1D5618790017D282 /* DengLuViewController.swift in Sources */,
+				7F6778441D86D278003A1CEF /* AccountTongYongTableViewController.swift in Sources */,
+				7F67782E1D864CE9003A1CEF /* SettingWithoutSwitchButtonTableViewCell.swift in Sources */,
 				7FDAAB031D800D6300BA5D1A /* PinglunZanO_TableViewCell.swift in Sources */,
 				7FB8A8A21D4B285100F2F22D /* FSecondViewController.swift in Sources */,
 				7FB8A8A61D4B28BB00F2F22D /* FThirdViewController.swift in Sources */,
@@ -887,24 +948,31 @@
 				7FB640D11D7FC15600737517 /* PCC_TableViewCell.swift in Sources */,
 				7FE9007F1D7D207A007F4F90 /* NewsDetailTableViewController.swift in Sources */,
 				7FC8D7D41D65FF6400EBC8AD /* User.swift in Sources */,
+				7F6778301D864D00003A1CEF /* SettingWithSwitchButtonTableViewCell.swift in Sources */,
+				7F6778461D86D2DD003A1CEF /* AccountSecurityTableViewController.swift in Sources */,
 				7FC0894E1D7E5172000AA6A7 /* SN_PIKEIMAGE_TableViewCell.swift in Sources */,
 				7FE900861D7D2BA9007F4F90 /* Two_Three_TableViewCell.swift in Sources */,
 				7FE900841D7D2B84007F4F90 /* One_Photo_TableViewCell.swift in Sources */,
+				7F6778361D865819003A1CEF /* AccountTableViewController.swift in Sources */,
 				7FB640D31D7FC17200737517 /* USER_OTHERS_TableViewCell.swift in Sources */,
 				7F19A1381D58C1020030A16F /* Data.xcdatamodeld in Sources */,
 				7FE9008E1D7D2C1D007F4F90 /* Pinglun_TableViewCell.swift in Sources */,
 				7FD1C17C1D85B2A100B9E11B /* MYPHOTO_CollectionViewController.swift in Sources */,
 				7F7701481D5B8824008D07A2 /* ImageDViewController.swift in Sources */,
 				7FC089521D7E5191000AA6A7 /* SN_SHARE_TableViewCell.swift in Sources */,
+				7F6778341D865326003A1CEF /* OnlyLabelTableViewCell.swift in Sources */,
 				7F19A12F1D586DFD0030A16F /* SettingTableViewController.swift in Sources */,
+				7F67783D1D8661C9003A1CEF /* TwoLabelButOneOfThenReallyBigTableViewCell.swift in Sources */,
 				7FD1C17F1D85B2F600B9E11B /* AIMAGE_CollectionViewCell.swift in Sources */,
 				7F0E24481D4A00290083F7CC /* AppDelegate.swift in Sources */,
 				7FC089501D7E5186000AA6A7 /* SN_PIKELOCA_TableViewCell.swift in Sources */,
 				7FE900881D7D2BE6007F4F90 /* Four_Five_Six_TableViewCell.swift in Sources */,
 				7F515F981D7DC3FB0018354F /* Send_News_TableViewController.swift in Sources */,
+				7F67783B1D86618D003A1CEF /* TwoLabelTableViewCell.swift in Sources */,
 				7FC8D7D31D65FF6400EBC8AD /* User+CoreDataProperties.swift in Sources */,
 				7FE705B11D5729460025A0E5 /* FFristViewController.swift in Sources */,
 				7FDAAB011D800BDC00BA5D1A /* FourFiveSixPhoto_TableViewCell.swift in Sources */,
+				7F6778481D86E47B003A1CEF /* OneLabelOneSwitchTableViewCell.swift in Sources */,
 				7F5632271D5FD6780017958A /* LoadTableViewCells.swift in Sources */,
 				7FE9008C1D7D2C0C007F4F90 /* ADS_TableViewCell.swift in Sources */,
 			);
