@@ -137,6 +137,7 @@ class Send_News_TableViewController: UITableViewController,UINavigationControlle
 
     @IBAction func XiaLa(sender: AnyObject) {
         print("XL")
+        
     }
 
     @IBAction func ChangAn(sender: AnyObject) {
